@@ -1,0 +1,101 @@
+@import "./imports/variables.css";
+
+/* ==========================================================================
+   Fonts
+
+   If you are going to include custom fonts please use the /shared/media/fonts
+   directory.
+   ========================================================================== */
+
+/* @font-face {
+    font-family: "CustomFont";
+    font-weight: 800;
+    font-style: normal;
+    src:
+         url("shared/media/fonts/custom-font/CustomFont.woff2") format("woff2"),
+         url("shared/media/fonts/custom-font/CustomFont.woff") format("woff"),
+         url("shared/media/fonts/custom-font/CustomFont.eot") format("embedded-opentype"),
+ } */
+
+/* ==========================================================================
+   Typography Defaults
+   ========================================================================== */
+
+body {
+    color: var(--color-black);
+    font-family: var(--typography-text-font);
+    font-size: 16px;
+    overflow-wrap: break-word;  /* Break long words by default */
+}
+
+::selection {
+    background: color(var(--color-black) lightness(25%));
+    color: var(--color-white);
+}
+
+strong {
+    font-weight: 500;
+}
+
+/* ==========================================================================
+  Links
+  ========================================================================== */
+
+a {
+    color: var(--color-black);
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: color(var(--color-black) lightness(25%));
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+  Headings
+  ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-family: var(--typography-display-font);
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+/* ==========================================================================
+  Paragraphs
+  ========================================================================== */
+
+p {
+    margin-top: 0;
+}

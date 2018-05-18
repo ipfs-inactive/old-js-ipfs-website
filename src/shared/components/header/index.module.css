@@ -1,0 +1,6 @@
+@import "shared/styles/imports/variables.css";
+
+.header {
+    background: var(--color-grey);
+    color: var(--color-white);
+}

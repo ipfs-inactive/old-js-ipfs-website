@@ -1,2 +1,5 @@
 # js.ipfs.io
-(WIP) js-ipfs Website with demos, docs and tutorials
+
+The [js.ipfs.io](https://js.ipfs.io) website.
+
+The README will be written soon.
