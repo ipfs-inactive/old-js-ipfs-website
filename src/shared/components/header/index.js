@@ -2,11 +2,13 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
 import Link from 'shared/components/link';
+import Banner from 'shared/components/banner';
 import styles from './index.module.css';
 
 const Header = ({ className }) => (
     <header
         className={ classNames(styles.header, className) }>
+        <Banner />
         <div
             style={ {
                 margin: '0 auto',

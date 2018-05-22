@@ -1,0 +1,18 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+.container {
+    width: 100vw;
+    padding: 33px 0 26px 0;
+    display: flex;
+    justify-content: center;
+    background: var(--color-yellow);
+    color: var(--color-text);
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.container .text {
+    padding: 0 13px 0 11px;
+}
