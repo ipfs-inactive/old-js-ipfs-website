@@ -2,20 +2,25 @@
 
 /* ==========================================================================
    Fonts
-
-   If you are going to include custom fonts please use the /shared/media/fonts
-   directory.
    ========================================================================== */
 
-/* @font-face {
-    font-family: "CustomFont";
-    font-weight: 800;
+@font-face {
+    font-family: "Montserrat";
+    font-weight: normal;
     font-style: normal;
     src:
-         url("shared/media/fonts/custom-font/CustomFont.woff2") format("woff2"),
-         url("shared/media/fonts/custom-font/CustomFont.woff") format("woff"),
-         url("shared/media/fonts/custom-font/CustomFont.eot") format("embedded-opentype"),
- } */
+        url("../media/fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
+        url("../media/fonts/montserrat/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-style: normal;
+    src:
+        url("../media/fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2"),
+        url("../media/fonts/montserrat/Montserrat-SemiBold.woff") format("woff");
+}
 
 /* ==========================================================================
    Typography Defaults
@@ -31,10 +36,6 @@ body {
 ::selection {
     background: color(var(--color-black) lightness(25%));
     color: var(--color-white);
-}
-
-strong {
-    font-weight: 500;
 }
 
 /* ==========================================================================

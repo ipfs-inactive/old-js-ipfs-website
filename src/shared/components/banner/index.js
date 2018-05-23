@@ -11,9 +11,9 @@ const Banner = () => (
             <img src={ alphaSvg } />
         </div>
         <div className={ styles.text }>
-            <p>
-                <b><FormattedMessage id="bannerHighlightMessage" />.</b> <FormattedMessage id="bannerMessage" />
-            </p>
+            <div>
+                <FormattedMessage tagName="strong" id="bannerHighlightMessage" /> <FormattedMessage id="bannerMessage" />
+            </div>
         </div>
         <div className={ styles.closeButtonContainer }>
             <img src={ closeSvg } />

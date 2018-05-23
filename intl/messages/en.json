@@ -1,5 +1,5 @@
 {
     "bannerHighlightMessage": "The js-ipfs library is in Alpha state",
-    "bannerMessage": "The codebase hasnt been audited by Security specialists and it shouldnt be used to store, share or publish sensitive information",
+    "bannerMessage": "The codebase hasn't been audited by Security specialists and it shouldn't be used to store, share or publish sensitive information.",
     "service-worker": "Enable Service Worker"
 }

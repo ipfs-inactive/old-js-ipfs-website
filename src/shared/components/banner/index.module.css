@@ -8,6 +8,7 @@
     justify-content: center;
     background: var(--color-yellow);
     color: var(--color-text);
+    font-family: var(--typography-text-font);
     font-size: 14px;
     text-align: justify;
 
@@ -23,10 +24,6 @@
         padding: 0 13px 0 11px;
         display: flex;
         align-items: center;
-
-        & p {
-            margin: 0;
-        }
     }
 
     & .closeButtonContainer {
