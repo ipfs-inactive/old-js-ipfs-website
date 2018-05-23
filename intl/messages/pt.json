@@ -1,4 +1,5 @@
 {
-    "foo": "foo-pt",
+    "highlightMessage": "A biblioteca js-ipfs ainda está em versão Alfa",
+    "bannerMessage": "O código ainda não foi validado por especialistas em segurança e não deve ser usado para guardar, partilhar ou publicar informação privada",
     "service-worker": "Iniciar Service Worker"
 }

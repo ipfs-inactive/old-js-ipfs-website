@@ -3,16 +3,55 @@
 
 .container {
     width: 100vw;
-    padding: 33px 0 26px 0;
+    padding: 25px;
     display: flex;
     justify-content: center;
     background: var(--color-yellow);
     color: var(--color-text);
     font-size: 14px;
-    text-align: center;
+    text-align: justify;
 
+    & .iconContainer {
+        flex: 0 0 26px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & .text {
+        padding: 0 13px 0 11px;
+        display: flex;
+        align-items: center;
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    & .closeButtonContainer {
+        display: flex;
+        flex: 0 0 16px;
+        align-items: center;
+
+        & img {
+            width: 100%;
+        }
+    }
 }
 
-.container .text {
-    padding: 0 13px 0 11px;
+@media (--layout-lte-small) {
+    .container {
+        font-size: 13px;
+
+        & .closeButtonContainer {
+            align-items: flex-start;
+        }
+    }
+}
+
+@media (--layout-lte-xsmall) {
+    .container {
+        font-size: 12px;
+    }
 }

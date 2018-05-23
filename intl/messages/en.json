@@ -1,4 +1,5 @@
 {
-    "foo": "foo-en",
+    "bannerHighlightMessage": "The js-ipfs library is in Alpha state",
+    "bannerMessage": "The codebase hasnt been audited by Security specialists and it shouldnt be used to store, share or publish sensitive information",
     "service-worker": "Enable Service Worker"
 }
