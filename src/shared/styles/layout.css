@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Sane box-sizing
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   Document
+   ========================================================================== */
+
+/*
+   1. Stretch <html> to fill our screen height
+   2. Make children of html (body) occupy at least 100% of the screen
+   3. Viewport is scalable and occupies at least 320px (iPhone 5)
+*/
+
+html {
+    min-width: 320px;
+    height: 0; /* 3 */
+    min-height: 100%; /* 1 */
+    display: flex; /* 2 */
+    flex-direction: column; /* 2 */
+}
+
+/* ==========================================================================
+   Body & ___gatsby
+   ========================================================================== */
+
+/*
+   1. Force scroll always to prevent scrollbars to appear/disappear based on the page contents
+   2. Make sure that we occupy 100% of our parent and allow our child elements to do the same
+   3. Needed for IE11 otherwise flex wouldn't grow vertically, see https://stackoverflow.com/a/42930574
+*/
+
+body {
+    overflow-y: scroll;  /* 1 */
+    display: flex; /* 2 */
+    flex: 1 0 auto;  /* 2 */
+    flex-direction: column;  /* 2 */
+}
+
+:global(#___gatsby) {
+    display: flex;  /* 2 */
+    flex: 1 0 auto; /* 2 */
+    flex-direction: column;  /* 2 */
+}

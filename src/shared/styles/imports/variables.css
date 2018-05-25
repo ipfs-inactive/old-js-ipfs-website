@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Colors
+   ========================================================================== */
+
+/*
+   See: https://davidwalsh.name/sass-color-variables-dont-suck
+        http://chir.ag/projects/name-that-color
+*/
+
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-grey: #444;
+    --color-yellow: #fdd52d;
+    --color-text: #0b1632;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+:root {
+    --typography-display-font: "Helvetica", sans-serif;
+    --typography-text-font: "Helvetica", sans-serif;
+}

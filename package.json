@@ -1,0 +1,48 @@
+{
+  "name": "js-ipfs-www",
+  "description": "JS IPFS website",
+  "version": "0.0.0",
+  "author": "Pedro Santos <pedro.santos@moxy.studio>",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "gatsby": "^1.9.247",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "lodash": "^4.17.10",
+    "normalize.css": "^8.0.0",
+    "react-helmet": "^5.2.0",
+    "react-intl": "^2.4.0"
+  },
+  "keywords": [
+    "ipfs",
+    "website",
+    "www",
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "lint": "eslint . && stylelint \"**/*.css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "babel-preset-moxy": "^2.3.3",
+    "browserslist-config-google": "^1.5.0",
+    "eslint": "^4.19.1",
+    "eslint-config-moxy": "^5.4.1",
+    "postcss-reporter": "^5.0.0",
+    "stylelint": "^9.2.0",
+    "stylelint-config-moxy": "^5.0.0"
+  },
+  "browserslist": [
+    "last 1 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "last 1 IE versions",
+    "last 3 ChromeAndroid versions",
+    "last 2 iOS versions"
+  ],
+  "private": true
+}
