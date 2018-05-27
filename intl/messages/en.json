@@ -1,3 +1,4 @@
 {
-    "foo": "foo-en"
+    "foo": "foo-en",
+    "service-worker": "Enable Service Worker"
 }
