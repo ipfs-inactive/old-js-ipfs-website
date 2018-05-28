@@ -7,7 +7,7 @@
     display: flex;
     justify-content: center;
     background: var(--color-yellow);
-    color: var(--color-text);
+    color: var(--color-dark-blue);
     font-family: var(--typography-text-font);
     font-size: 14px;
     text-align: justify;

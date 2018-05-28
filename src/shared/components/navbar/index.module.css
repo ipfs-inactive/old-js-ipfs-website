@@ -1,0 +1,17 @@
+@import "shared/styles/imports/variables.css";
+
+.container {
+    width: 100vw;
+    padding: 60px 0 50px 0;
+    text-align: center;
+
+    & a {
+        margin-right: 3%;
+        color: var(--color-white);
+        text-decoration: none;
+
+        &:last {
+            margin-right: 0;
+        }
+    }
+}

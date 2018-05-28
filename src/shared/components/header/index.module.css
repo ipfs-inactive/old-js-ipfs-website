@@ -1,6 +1,11 @@
 @import "shared/styles/imports/variables.css";
 
 .header {
-    background: var(--color-grey);
-    color: var(--color-white);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: transparent;
 }

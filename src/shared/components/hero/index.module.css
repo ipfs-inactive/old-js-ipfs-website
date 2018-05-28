@@ -1,0 +1,102 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+.container {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - var(--bottom-half-height));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-dark-blue) url("../../media/backgrounds/stars.png") no-repeat center center;
+    color: var(--color-white);
+
+    & .content {
+        width: 89%;
+        height: 100%;
+        padding-top: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            width: 310px;
+            height: auto;
+            margin-bottom: 5%;
+        }
+
+        & h1 {
+            font-weight: bold;
+            text-align: center;
+            line-height: 48px;
+        }
+
+        & p {
+            font-size: 15px;
+            font-weight: 300;
+            text-align: center;
+            line-height: 27px;
+        }
+
+        & .infoContainer {
+            width: 100%;
+            margin-top: 1%;
+            padding-bottom: calc(var(--bottom-half-height) * 2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            color: var(--color-light-blue);
+            font-size: 12px;
+
+            & span {
+                margin-right: 2%;
+            }
+        }
+
+        & .buttonContent {
+            position: absolute;
+            bottom: calc(var(--bottom-half-height) * -1);
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .container {
+        background-image: none;
+
+        & .content {
+            padding-top: 15%;
+
+            & h1 {
+                font-size: 36px;
+            }
+
+            & p {
+                font-size: 14px;
+            }
+
+            & .infoContainer {
+                flex-direction: column;
+
+                & span {
+                    margin-top: 2%;
+                }
+            }
+
+            & .button {
+                margin-top: 10%;
+
+            }
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .container {
+        & .content {
+            padding-top: 25%;
+        }
+    }
+}

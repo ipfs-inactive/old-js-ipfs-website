@@ -22,6 +22,16 @@
         url("../media/fonts/montserrat/Montserrat-SemiBold.woff") format("woff");
 }
 
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url("../media/fonts/montserrat/Montserrat-Light.woff2") format("woff2"),
+        url("../media/fonts/montserrat/Montserrat-Light.woff") format("woff");
+}
+
+
 /* ==========================================================================
    Typography Defaults
    ========================================================================== */

@@ -12,7 +12,9 @@
     --color-black: #000;
     --color-grey: #444;
     --color-yellow: #fdd52d;
-    --color-text: #0b1632;
+    --color-yellow-hover: #feda7b;
+    --color-dark-blue: #0b1632;
+    --color-light-blue: #59e5ff;
 }
 
 /* ==========================================================================
@@ -22,4 +24,12 @@
 :root {
     --typography-display-font: "Montserrat", sans-serif;
     --typography-text-font: "Montserrat", sans-serif;
+}
+
+/* ==========================================================================
+   Constants
+   ========================================================================== */
+
+:root {
+    --bottom-half-height: 22px;
 }
