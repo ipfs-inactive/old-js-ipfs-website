@@ -2,8 +2,8 @@
 
 .container {
     width: 100vw;
-    padding: 60px 0 50px 0;
     text-align: center;
+    transition: 500ms ease;
 
     & a {
         margin-right: 3%;
@@ -13,5 +13,18 @@
         &:last {
             margin-right: 0;
         }
+    }
+}
+
+.default {
+    padding: 60px 0 50px 0;
+}
+
+.scrolled {
+    padding: 30px 0 25px 0;
+    background-color: var(--color-white);
+
+    & a {
+        color: var(--color-dark-blue);
     }
 }
