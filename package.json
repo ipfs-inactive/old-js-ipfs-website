@@ -8,10 +8,13 @@
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "ipfs-postmsg-proxy": "^2.16.1",
     "lodash": "^4.17.10",
     "normalize.css": "^8.0.0",
     "react-helmet": "^5.2.0",
-    "react-intl": "^2.4.0"
+    "react-intl": "^2.4.0",
+    "service-worker-gateway": "^0.1.2",
+    "serviceworker-webpack-plugin": "^0.2.3"
   },
   "keywords": [
     "ipfs",

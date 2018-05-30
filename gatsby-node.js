@@ -11,6 +11,7 @@ const fs = require('fs');
 const template = require('lodash/template');
 const wrap = require('lodash/wrap');
 const { availableLocales, defaultLocale } = require('./intl/config');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 
 module.exports.modifyWebpackConfig = ({ config, program }) => {
     // Allow requires from the src/ folder
@@ -63,6 +64,15 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
 
             return current;
         });
+
+        return current;
+    });
+
+    // Setup service worker gateway
+    config.merge((current) => {
+        current.plugins.push(new ServiceWorkerWebpackPlugin({
+            entry: path.join(__dirname, 'src/shared/service-worker/sw.js'),
+        }));
 
         return current;
     });

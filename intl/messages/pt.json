@@ -1,3 +1,4 @@
 {
-    "foo": "foo-pt"
+    "foo": "foo-pt",
+    "service-worker": "Iniciar Service Worker"
 }
