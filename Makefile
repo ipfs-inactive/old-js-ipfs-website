@@ -1,8 +1,6 @@
 build:
 	npm --version
 	node --version
-	npm install -g yarn@1.5.1
-	yarn --version
-	yarn
-	yarn lint
-	yarn build
+	npm install
+	npm run lint
+	npm run build
