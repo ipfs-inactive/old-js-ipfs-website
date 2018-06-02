@@ -19,6 +19,7 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
         resolve: {
             root: path.join(__dirname, 'src'),
         },
+        target: 'web',
     });
 
     // Allow requires from the src/ folder for postcss
@@ -64,6 +65,18 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
 
             return current;
         });
+
+        return current;
+    });
+
+    // Optimize bundle
+    config.merge((current) => {
+        current.node = {
+            ...current.node,
+            module: false,
+            clearImmediate: false,
+            setImmediate: false,
+        };
 
         return current;
     });
