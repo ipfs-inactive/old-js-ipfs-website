@@ -12,7 +12,7 @@
     color: var(--color-white);
 
     & .content {
-        width: 89%;
+        width: var(--container-width);
         height: 100%;
         padding-top: 10%;
         display: flex;

@@ -1,0 +1,49 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+.container {
+    width: 100vw;
+    text-align: center;
+    transition: 500ms ease;
+
+    & .navbarMenu {
+        position: relative;
+
+        & a {
+            margin-right: 3%;
+            color: var(--color-white);
+            text-decoration: none;
+            transition: 600ms ease;
+
+            &:nth-child(4) {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: var(--color-yellow);
+            }
+        }
+
+        & iframe {
+            position: absolute;
+            bottom: 2px;
+        }
+    }
+}
+
+.default {
+    padding: 60px 0 50px 0;
+}
+
+.scrolled {
+    padding: 25px 0 25px 0;
+    background: var(--color-menu-dark-blue);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
+}
+
+/* Do not display container when screen is less or equal to 768px */
+@media (--layout-lte-small) {
+    .container {
+        display: none;
+    }
+}

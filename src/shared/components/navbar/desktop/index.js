@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import Helmet from 'react-helmet';
+
 import Link from 'shared/components/link';
+import LocalesDropdown from 'shared/components/locales-dropdown';
 import styles from './index.module.css';
 
-class Navbar extends Component {
+class DesktopNavbar extends Component {
     constructor() {
         super();
 
@@ -31,10 +34,19 @@ class Navbar extends Component {
 
         return (
             <div className={ navbarClasses }>
-                <Link to="/"> TUTORIALS </Link>
-                <Link to="/"> API </Link>
-                <Link to="/"> CONTRIBUTE </Link>
-                <Link to="/"> OPEN SOURCE </Link>
+                <div className={ styles.navbarMenu }>
+                    <Helmet>
+                        <script async defer src="https://buttons.github.io/buttons.js" />
+                    </Helmet>
+                    <Link to="/"> TUTORIALS </Link>
+                    <Link to="/"> API </Link>
+                    <Link to="/"> CONTRIBUTE </Link>
+                    <Link to="/"> OPEN SOURCE </Link>
+                    <a className="github-button" href="https://github.com/ntkme/github-buttons" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">
+                        Star
+                    </a>
+                    <LocalesDropdown desktopMargin />
+                </div>
             </div>
         );
     }
@@ -54,4 +66,4 @@ class Navbar extends Component {
     }
 }
 
-export default Navbar;
+export default DesktopNavbar;

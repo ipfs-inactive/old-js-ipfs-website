@@ -1,0 +1,80 @@
+@import "shared/styles/imports/custom-medias.css";
+@import "shared/styles/imports/variables.css";
+
+.featureItem {
+    width: calc(20% - 5px);
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:last-child {
+        margin-right: unset;
+    }
+
+    & .image {
+        width: 70%;
+        margin-bottom: 15px;
+
+        & svg g {
+            &:hover {
+                cursor: pointer;
+
+                & path[id="back"] {
+                    fill: var(--color-yellow);
+                }
+            }
+
+            & path {
+                transition: 600ms ease;
+            }
+        }
+    }
+
+    & .title {
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    & .description {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+}
+
+@media (--layout-lte-medium) {
+    .featureItem {
+        margin-top: 50px;
+    }
+}
+
+@media (--layout-medium) {
+    .featureItem {
+        width: calc(33.3% - 5px);
+
+        &:nth-child(3),
+        &:nth-child(5) {
+            margin-right: unset;
+        }
+
+        &:nth-child(-n+3) {
+            margin-top: unset;
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .featureItem {
+        width: calc(50% - 5px);
+
+        &:nth-child(even) {
+            margin-right: unset;
+        }
+
+        &:nth-child(-n+2) {
+            margin-top: unset;
+        }
+    }
+}

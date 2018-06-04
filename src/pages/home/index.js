@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import Hero from 'shared/components/hero';
-import Features from 'shared/components/features';
+import Hero from 'shared/components/hero-section';
+import Features from 'shared/components/features-section';
 import styles from './index.module.css';
 
 import { register, unregister } from 'shared/service-worker/register';

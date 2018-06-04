@@ -14,6 +14,7 @@
     --color-yellow: #fdd52d;
     --color-yellow-hover: #feda7b;
     --color-dark-blue: #0b1632;
+    --color-menu-dark-blue: #0e204c;
     --color-light-blue: #59e5ff;
 }
 
@@ -32,4 +33,5 @@
 
 :root {
     --bottom-half-height: 22px;
+    --container-width: 89%;
 }

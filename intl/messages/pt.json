@@ -1,5 +1,7 @@
 {
     "highlightMessage": "A biblioteca js-ipfs ainda está em versão Alfa.",
     "bannerMessage": "O código ainda não foi validado por especialistas em segurança e não deve ser usado para guardar, partilhar ou publicar informação privada.",
+    "heroWelcomeMessage": "Mensagem de Boas vindas",
+    "heroTextDescription": "Nullam quis risus eget urna mollis ornare vel eu leo. s eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "service-worker": "Iniciar Service Worker"
 }
