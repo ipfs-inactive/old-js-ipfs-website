@@ -16,10 +16,12 @@ class Home extends Component {
                 <h1>Hi people</h1>
                 <p>Welcome to your new Gatsby site.</p>
                 <p>Now go build something great <FormattedMessage id="foo" />.</p>
-                <Link to="/page-2/">Go to page 2</Link>
-                <button onClick={ this.handleServiceWorkerClick }>
-                    <FormattedMessage id="service-worker" />
-                </button>
+                <p><Link to="/page-2/">Go to page 2</Link></p>
+                <div>
+                    <button onClick={ this.handleServiceWorkerClick }>
+                        <FormattedMessage id="service-worker" />
+                    </button>
+                </div>
             </div>
         );
     }
