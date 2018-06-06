@@ -1,6 +1,3 @@
-@import "shared/styles/imports/custom-medias.css";
-@import "shared/styles/imports/variables.css";
-
 .header {
     position: fixed;
     width: 100%;

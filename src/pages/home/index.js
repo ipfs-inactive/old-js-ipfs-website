@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl';
 
 import Hero from 'shared/components/hero-section';
 import Features from 'shared/components/features-section';
+import GettingStarted from 'shared/components/getting-started-section';
 import styles from './index.module.css';
 
 import { register, unregister } from 'shared/service-worker/register';
@@ -18,6 +19,7 @@ class Home extends Component {
             <div className={ styles.container }>
                 <Hero />
                 <Features />
+                <GettingStarted />
                 <div>
                     <button onClick={ this.handleServiceWorkerClick }>
                         <FormattedMessage id="service-worker" />

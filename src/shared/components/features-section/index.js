@@ -48,7 +48,7 @@ const Features = ({ intl }) => {
             <div className={ styles.content } >
                 <FormattedMessage tagName="h1" id="featuresTitle" />
                 <span className={ styles.sectionDescription }>
-                    <FormattedMessage tagName="p" id="featuresTextDescription" />
+                    <FormattedMessage tagName="p" id="featuresSectionDesc" />
                 </span>
                 <div className={ styles.featuresContainer }>
                     { feats }

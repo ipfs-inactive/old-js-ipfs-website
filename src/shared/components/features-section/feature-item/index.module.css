@@ -1,5 +1,5 @@
-@import "shared/styles/imports/custom-medias.css";
 @import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
 
 .featureItem {
     width: calc(20% - 5px);

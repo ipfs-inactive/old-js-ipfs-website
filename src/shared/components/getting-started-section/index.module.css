@@ -1,0 +1,98 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-light-grey);
+
+    & .backgroundSvg {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+
+        & .hex1,
+        & .hex2 {
+            width: 20%;
+            height: 100%;
+            fill: var(--color-hex-svg-fill);
+        }
+
+        & .hex2 {
+            transform: translateY(200%);
+        }
+    }
+
+    & .content {
+        width: var(--container-width);
+        z-index: 2;
+        padding: 10% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        & h1 {
+            font-weight: bold;
+            text-align: center;
+            line-height: 48px;
+        }
+
+        & .sectionDescription {
+            display: flex;
+            justify-content: center;
+
+            & p {
+                width: 60%;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 27px;
+            }
+        }
+
+        & .panel {
+            width: 100%;
+            margin: 5% 0;
+
+            & .command {
+                margin-top: 75px;
+
+                &:first-child {
+                    margin-top: unset;
+                }
+
+                & .title {
+                    color: var(--color-syntax-highlighter-background);
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                & .desc,
+                & .note {
+                    font-size: 15px;
+                }
+
+                & .desc {
+                    /* margin-bottom: 30px; */
+                    line-height: 1.5;
+                }
+
+                & .note {
+                    margin-top: 15px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .container .backgroundSvg {
+        display: none;
+    }
+}
