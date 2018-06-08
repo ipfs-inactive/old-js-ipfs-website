@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import classNames from 'classnames';
+import { injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import LocalesDropdown from 'shared/components/locales-dropdown';
 import Link from 'shared/components/link';
 import styles from './index.module.css';
 
 class MobileNavbar extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             isOpened: false,
@@ -36,6 +38,7 @@ class MobileNavbar extends Component {
         const menuIconClass = classNames(styles.menuIconWrapper, {
             [styles.openedMenuIcon]: this.state.isOpened,
         });
+        const { messages } = this.props.intl;
 
         return (
             <div className={ styles.container }>
@@ -45,25 +48,17 @@ class MobileNavbar extends Component {
                         <div className={ styles.bar2 } />
                         <div className={ styles.bar3 } />
                     </div>
-                    <div className={ styles.localesDropdownContainer }>
-                        <LocalesDropdown />
-                    </div>
+                    <div className={ styles.localesDropdownContainer }> <LocalesDropdown /> </div>
                 </div>
                 <ul className={ styles.menuList } ref={ this.handleMenuListRef } style={ { maxHeight: menuListHeight } } >
                     <Helmet>
                         <script async defer src="https://buttons.github.io/buttons.js" />
                     </Helmet>
-                    <li>
-                        <Link className={ styles.menuLink } to="/"> TUTORIALS </Link>
-                    </li>
-                    <li>
-                        <Link className={ styles.menuLink } to="/"> API </Link>
-                    </li>
-                    <li>
-                        <Link className={ styles.menuLink } to="/"> CONTRIBUTE </Link>
-                    </li>
+                    <li><Link className={ styles.menuLink } to="/"> { messages.navMenuItem1.toUpperCase() } </Link> </li>
+                    <li><Link className={ styles.menuLink } to="/"> { messages.navMenuItem2.toUpperCase() } </Link> </li>
+                    <li><Link className={ styles.menuLink } to="/"> { messages.navMenuItem3.toUpperCase() } </Link> </li>
                     <li className={ styles.githubContributers }>
-                        <Link className={ styles.menuLink } to="/"> OPEN SOURCE </Link>
+                        <Link className={ styles.menuLink } to="/"> { messages.navMenuItem4.toUpperCase() } </Link>
                         <a className="github-button" href="https://github.com/ntkme/github-buttons" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">
                             Star
                         </a>
@@ -96,4 +91,8 @@ class MobileNavbar extends Component {
     }
 }
 
-export default MobileNavbar;
+MobileNavbar.propTypes = {
+    intl: PropTypes.object.isRequired,
+};
+
+export default injectIntl(MobileNavbar);

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import Helmet from 'react-helmet';
+import { injectIntl } from 'react-intl';
+import PropTypes from 'prop-types';
 
 import Link from 'shared/components/link';
 import LocalesDropdown from 'shared/components/locales-dropdown';
 import styles from './index.module.css';
 
 class DesktopNavbar extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             scrolled: false,
@@ -31,6 +33,7 @@ class DesktopNavbar extends Component {
                 [styles.default]: !this.state.scrolled,
                 [styles.scrolled]: this.state.scrolled,
             });
+        const { messages } = this.props.intl;
 
         return (
             <div className={ navbarClasses }>
@@ -38,10 +41,10 @@ class DesktopNavbar extends Component {
                     <Helmet>
                         <script async defer src="https://buttons.github.io/buttons.js" />
                     </Helmet>
-                    <Link to="/"> TUTORIALS </Link>
-                    <Link to="/"> API </Link>
-                    <Link to="/"> CONTRIBUTE </Link>
-                    <Link to="/"> OPEN SOURCE </Link>
+                    <Link to="/"> { messages.navMenuItem1.toUpperCase() } </Link>
+                    <Link to="/"> { messages.navMenuItem2.toUpperCase() } </Link>
+                    <Link to="/"> { messages.navMenuItem3.toUpperCase() } </Link>
+                    <Link to="/"> { messages.navMenuItem4.toUpperCase() } </Link>
                     <a className="github-button" href="https://github.com/ntkme/github-buttons" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">
                         Star
                     </a>
@@ -66,4 +69,8 @@ class DesktopNavbar extends Component {
     }
 }
 
-export default DesktopNavbar;
+DesktopNavbar.propTypes = {
+    intl: PropTypes.object.isRequired,
+};
+
+export default injectIntl(DesktopNavbar);
