@@ -88,9 +88,7 @@ class MobileNavbar extends Component {
     }
 
     handleMenuClick() {
-        this.setState({
-            isOpened: !this.state.isOpened,
-        });
+        this.setState(({ isOpened }) => ({ isOpened: !isOpened }));
     }
 
     handleMenuListRef(element) {

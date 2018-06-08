@@ -1,10 +1,15 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
+:root {
+    --typography-menu-text-size: calc(var(--typography-text-size) + 1px);
+}
+
 .container {
     width: 100vw;
+    font-size: var(--typography-menu-text-size);
     text-align: center;
-    transition: 500ms ease;
+    transition: var(--transition-default-duration) ease;
 
     & .navbarMenu {
         position: relative;
@@ -13,7 +18,7 @@
             margin-right: 3%;
             color: var(--color-white);
             text-decoration: none;
-            transition: 600ms ease;
+            transition: var(--transition-default-duration) ease;
 
             &:nth-child(4) {
                 margin-right: 10px;

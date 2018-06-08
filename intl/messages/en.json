@@ -1,4 +1,5 @@
 {
+    "buttonLearnMore": "Learn More",
     "bannerHighlightMessage": "The js-ipfs library is in Alpha state.",
     "bannerMessage": "The codebase hasn't been audited by Security specialists and it shouldn't be used to store, share or publish sensitive information.",
     "heroWelcomeMessage": "Welcome Message",

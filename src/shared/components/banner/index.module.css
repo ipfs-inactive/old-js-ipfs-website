@@ -9,7 +9,7 @@
     background: var(--color-yellow);
     color: var(--color-dark-blue);
     font-family: var(--typography-text-font);
-    font-size: 14px;
+    font-size: var(--typography-text-size);
     text-align: justify;
 
     & .iconContainer {
@@ -24,6 +24,10 @@
         padding: 0 13px 0 11px;
         display: flex;
         align-items: center;
+
+        & > *:not(:last-child) {
+            margin-right: 10px;
+        }
     }
 
     & .closeButtonContainer {
@@ -39,7 +43,7 @@
 
 @media (--layout-lte-small) {
     .container {
-        font-size: 13px;
+        font-size: var(--typography-text-size-xsmall);
 
         & .closeButtonContainer {
             align-items: flex-start;
@@ -49,6 +53,6 @@
 
 @media (--layout-lte-xsmall) {
     .container {
-        font-size: 12px;
+        font-size: var(--typography-text-size-xsmall);
     }
 }

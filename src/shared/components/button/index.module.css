@@ -1,17 +1,17 @@
 @import "shared/styles/imports/variables.css";
 
-.testing {
+a.link {
     text-decoration: none;
 
     & .customButton {
-        padding: 15px 10px 15px 10px;
+        padding: 15px 10px;
         background-color: var(--color-yellow);
         border-radius: 2px;
         color: var(--color-dark-blue);
-        font-size: 15px;
-        font-weight: bold;
+        font-size: var(--typography-text-size);
+        font-weight: var(--typography-text-weight-bold);
         letter-spacing: 0.8px;
-        transition-duration: 0.6s;
+        transition-duration: var(--transition-button-duration);
 
         &:hover {
             background-color: var(--color-yellow-hover);

@@ -1,28 +1,13 @@
 import React from 'react';
-import { FormattedMessage, injectIntl } from 'react-intl';
-import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 
 import HexSvg from 'shared/media/backgrounds/hexagons.svg';
-import stepsArr from 'shared/data/getting-started';
-import SyntaxHighlighter from 'shared/components/syntax-highlighter';
+import StepsList from 'shared/components/getting-started-section/steps-list';
 import Button from 'shared/components/button';
 import styles from './index.module.css';
 
-const GettingStarted = ({ intl }) => {
-    const messages = intl.messages;
-
-    const steps = stepsArr.map((step, index) =>
-        (
-            <div className={ styles.command } key={ index }>
-                <p className={ styles.title }>{ messages[step.title] }</p>
-                <p className={ styles.desc }>{ newLineToBreak(messages[step.desc]) }</p>
-                <SyntaxHighlighter codeStr={ step.codeStr } />
-                { step.note && <p className={ styles.note } >{ messages[step.note] }</p> }
-            </div>
-        )
-    );
-
-    return (
+const GettingStarted = () =>
+    (
         <div className={ styles.container }>
             <div className={ styles.backgroundSvg }>
                 <div className={ styles.hex1 }><HexSvg /></div>
@@ -34,20 +19,11 @@ const GettingStarted = ({ intl }) => {
                     <FormattedMessage tagName="p" id="gettingStartedSectionDesc" />
                 </span>
                 <div className={ styles.panel } >
-                    { steps }
+                    <StepsList />
                 </div>
-                <Button text="LEARN MORE" path="test" />
+                <Button translationId="buttonLearnMore" path="test" />
             </div>
         </div>
     );
-};
 
-function newLineToBreak(str) {
-    return str.split('\n').map((text, index) => <span key={ index }>{ text }<br /></span>);
-}
-
-GettingStarted.propTypes = {
-    intl: PropTypes.object.isRequired,
-};
-
-export default injectIntl(GettingStarted);
+export default GettingStarted;

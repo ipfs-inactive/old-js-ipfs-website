@@ -1,6 +1,11 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
+:root {
+    --transition-duration-double: calc(var(--transition-default-duration) * 2);
+    --transition-duration-half: calc(var(--transition-default-duration) / 2);
+}
+
 .container {
     width: 100vw;
     display: flex;
@@ -12,7 +17,7 @@
         display: flex;
         justify-content: space-between;
         background: transparent;
-        transition: background 1400ms ease;
+        transition: background var(--transition-duration-double) ease;
 
         & .menuIconWrapper {
             display: inline-block;
@@ -25,7 +30,7 @@
                 height: 2px;
                 margin: 5px 0;
                 background: var(--color-white);
-                transition: 400ms;
+                transition: var(--transition-duration-half);
             }
         }
 
@@ -47,7 +52,7 @@
     & .navbarContainerScrolled {
         background: var(--color-menu-dark-blue);
         box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
-        transition: all 600ms ease;
+        transition: all var(--transition-default-duration) ease;
     }
 
     & ul {
@@ -65,7 +70,7 @@
                 padding: 10px 20px;
                 display: block;
                 color: var(--color-white);
-                font-size: 18px;
+                font-size: var(--typography-text-size-large);
                 text-decoration: none;
                 text-transform: uppercase;
             }
@@ -84,7 +89,7 @@
     & .menuList {
         max-height: 0;
         clear: both;
-        transition: max-height 400ms ease;
+        transition: max-height var(--transition-duration-half) ease;
     }
 
     /* & .menuListOpened {

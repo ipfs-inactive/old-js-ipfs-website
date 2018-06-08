@@ -26,20 +26,20 @@
             }
 
             & path {
-                transition: 600ms ease;
+                transition: var(--transition-default-duration) ease;
             }
         }
     }
 
     & .title {
-        font-size: 15px;
-        font-weight: 600;
+        font-size: var(--typography-text-size);
+        font-weight: var(--typography-text-weight-bold);
         line-height: 24px;
     }
 
     & .description {
-        font-size: 13px;
-        font-weight: 400;
+        font-size: var(--typography-text-size-small);
+        font-weight: var(--typography-text-weight);
         line-height: 21px;
     }
 }

@@ -17,7 +17,7 @@ const Hero = () => (
                 <FormattedMessage tagName="span" id="heroDownloadsLastMonth" />
             </div>
             <div className={ styles.buttonContent }>
-                <Button text="LEARN MORE" path="test" />
+                <Button translationId="buttonLearnMore" path="test" />
             </div>
         </div>
     </div>

@@ -38,7 +38,7 @@
 body {
     color: var(--color-black);
     font-family: var(--typography-text-font);
-    font-size: 16px;
+    font-size: var(--typography-text-size);
     overflow-wrap: break-word;  /* Break long words by default */
 }
 
@@ -53,7 +53,7 @@ body {
 
 a {
     color: var(--color-black);
-    transition: color 0.2s;
+    transition: color 200ms;
 }
 
 a:hover {

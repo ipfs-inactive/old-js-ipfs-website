@@ -27,14 +27,14 @@
         }
 
         & h1 {
-            font-weight: bold;
+            font-weight: var(--typography-text-weight-bold);
             text-align: center;
             line-height: 48px;
         }
 
         & p {
-            font-size: 15px;
-            font-weight: 300;
+            font-size: var(--typography-text-size);
+            font-weight: var(--typography-text-weight-light);
             text-align: center;
             line-height: 27px;
         }
@@ -48,7 +48,7 @@
             justify-content: center;
             align-items: center;
             color: var(--color-light-blue);
-            font-size: 12px;
+            font-size: var(--typography-text-size-xsmall);
 
             & span {
                 margin-right: 2%;
@@ -69,12 +69,8 @@
         & .content {
             padding-top: 15%;
 
-            & h1 {
-                font-size: 36px;
-            }
-
             & p {
-                font-size: 14px;
+                font-size: var(--typography-text-size);
             }
 
             & .infoContainer {
