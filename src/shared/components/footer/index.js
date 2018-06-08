@@ -1,16 +1,17 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
+import { injectIntl } from 'react-intl';
 
 import ProtocolIcon from '-!svg-react-loader!shared/media/images/pl-logo.svg';
 import styles from './index.module.css';
 
-const Footer = ({ className }) => (
+const Footer = ({ className, intl: { messages } }) => (
     <footer className={ classNames(styles.footer, className) }>
         <div className={ styles.container }>
-            <div className={ styles.leftContent }>© Protocol Labs | Except as noted, content licensed CC-BY 3.0</div>
+            <div className={ styles.leftContent }>&copy; { messages.footerLeftContent }</div>
             <div className={ styles.rightContent }>
-                <div className={ styles.text }>IPFS.JS was started and is sponsored by</div>
+                <div className={ styles.text }>{ messages.footerRightContent }</div>
                 <ProtocolIcon />
             </div>
         </div>
@@ -19,6 +20,7 @@ const Footer = ({ className }) => (
 
 Footer.propTypes = {
     className: PropTypes.string,
+    intl: PropTypes.object.isRequired,
 };
 
-export default Footer;
+export default injectIntl(Footer);
