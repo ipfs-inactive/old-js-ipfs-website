@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
-import Link from 'shared/components/link';
+
+import Hero from 'shared/components/hero-section';
+import Features from 'shared/components/features-section';
+import GettingStarted from 'shared/components/getting-started-section';
+import styles from './index.module.css';
 
 import { register, unregister } from 'shared/service-worker/register';
 
@@ -12,11 +16,10 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Hi people</h1>
-                <p>Welcome to your new Gatsby site.</p>
-                <p>Now go build something great <FormattedMessage id="foo" />.</p>
-                <p><Link to="/page-2/">Go to page 2</Link></p>
+            <div className={ styles.container }>
+                <Hero />
+                <Features />
+                <GettingStarted />
                 <div>
                     <button onClick={ this.handleServiceWorkerClick }>
                         <FormattedMessage id="service-worker" />

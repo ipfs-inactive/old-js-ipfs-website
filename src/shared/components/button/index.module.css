@@ -1,0 +1,21 @@
+@import "shared/styles/imports/variables.css";
+
+a.link {
+    text-decoration: none;
+
+    & .customButton {
+        padding: 15px 10px;
+        background-color: var(--color-yellow);
+        border-radius: 2px;
+        color: var(--color-dark-blue);
+        font-size: var(--typography-text-size);
+        font-weight: var(--typography-text-weight-bold);
+        letter-spacing: 0.8px;
+        transition-duration: var(--transition-button-duration);
+
+        &:hover {
+            background-color: var(--color-yellow-hover);
+            cursor: pointer;
+        }
+    }
+}

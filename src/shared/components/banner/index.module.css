@@ -1,0 +1,58 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+.container {
+    width: 100vw;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    background: var(--color-yellow);
+    color: var(--color-dark-blue);
+    font-family: var(--typography-text-font);
+    font-size: var(--typography-text-size);
+    text-align: justify;
+
+    & .iconContainer {
+        flex: 0 0 26px;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+    & .text {
+        padding: 0 13px 0 11px;
+        display: flex;
+        align-items: center;
+
+        & > *:not(:last-child) {
+            margin-right: 10px;
+        }
+    }
+
+    & .closeButtonContainer {
+        display: flex;
+        flex: 0 0 16px;
+        align-items: center;
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .container {
+        font-size: var(--typography-text-size-xsmall);
+
+        & .closeButtonContainer {
+            align-items: flex-start;
+        }
+    }
+}
+
+@media (--layout-lte-xsmall) {
+    .container {
+        font-size: var(--typography-text-size-xsmall);
+    }
+}

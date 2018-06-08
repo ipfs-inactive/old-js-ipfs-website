@@ -1,0 +1,69 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-light-grey);
+
+    & .backgroundSvg {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+
+        & .hex1,
+        & .hex2 {
+            width: 20%;
+            height: 100%;
+            fill: var(--color-hex-svg-fill);
+        }
+
+        & .hex2 {
+            transform: translateY(200%);
+        }
+    }
+
+    & .content {
+        width: var(--container-width);
+        z-index: 2;
+        padding: 10% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        & h1 {
+            font-weight: var(--typography-text-weight-bold);
+            text-align: center;
+            line-height: 48px;
+        }
+
+        & .sectionDescription {
+            display: flex;
+            justify-content: center;
+
+            & p {
+                width: 60%;
+                font-size: var(--typography-text-size);
+                font-weight: var(--typography-text-weight);
+                line-height: 27px;
+            }
+        }
+
+        & .panel {
+            width: 100%;
+            margin: 5% 0;
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .container .backgroundSvg {
+        display: none;
+    }
+}

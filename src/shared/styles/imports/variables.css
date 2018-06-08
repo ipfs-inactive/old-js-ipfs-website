@@ -12,7 +12,13 @@
     --color-black: #000;
     --color-grey: #444;
     --color-yellow: #fdd52d;
-    --color-text: #0b1632;
+    --color-yellow-hover: #feda7b;
+    --color-dark-blue: #0b1632;
+    --color-menu-dark-blue: #0e204c;
+    --color-light-blue: #59e5ff;
+    --color-light-grey: #f5f6fd;
+    --color-syntax-highlighter-background: #122147;
+    --color-hex-svg-fill: #c6c9e2;
 }
 
 /* ==========================================================================
@@ -20,6 +26,24 @@
    ========================================================================== */
 
 :root {
-    --typography-display-font: "Helvetica", sans-serif;
-    --typography-text-font: "Helvetica", sans-serif;
+    --typography-display-font: "Montserrat", sans-serif;
+    --typography-text-font: "Montserrat", sans-serif;
+    --typography-text-size-large: 18px;
+    --typography-text-size: 15px;
+    --typography-text-size-small: 13px;
+    --typography-text-size-xsmall: 12px;
+    --typography-text-weight: 400;
+    --typography-text-weight-bold: 600;
+    --typography-text-weight-light: 300;
+}
+
+/* ==========================================================================
+   Constants
+   ========================================================================== */
+
+:root {
+    --bottom-half-height: 22px;
+    --container-width: 89%;
+    --transition-default-duration: 600ms;
+    --transition-button-duration: 300ms;
 }

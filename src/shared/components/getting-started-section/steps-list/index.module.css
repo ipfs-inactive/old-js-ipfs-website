@@ -1,0 +1,24 @@
+@import "shared/styles/imports/variables.css";
+
+.command {
+    margin-top: 75px;
+    font-size: var(--typography-text-size);
+
+    &:first-child {
+        margin-top: unset;
+    }
+
+    & .title {
+        color: var(--color-syntax-highlighter-background);
+        font-weight: var(--typography-text-weight-bold);
+    }
+
+    & .desc {
+        line-height: 1.5;
+    }
+
+    & .note {
+        margin-top: 15px;
+        line-height: 1.5;
+    }
+}

@@ -23,11 +23,7 @@ const Layout = ({ children }) => (
                 ] } />
 
             <Header className={ styles.header } />
-            <main className={ styles.children } style={ {
-                margin: '0 auto',
-                maxWidth: 960,
-                padding: '1.45rem 1.0875rem',
-            } }>
+            <main className={ styles.children }>
                 { children() }
             </main>
             <Footer className={ styles.footer } />
