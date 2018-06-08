@@ -1,6 +1,48 @@
 @import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
 
 .footer {
-    background: var(--color-grey);
-    color: var(--color-white);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--color-dark-blue);
+    color: var(--color-text-footer);
+    font-size: 13px;
+
+    & .container {
+        width: var(--container-width);
+        padding: 25px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .rightContent {
+            margin-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .text {
+                margin-right: 5px;
+                text-align: right;
+            }
+
+            & svg {
+                height: 35px;
+                fill: var(--color-text-footer);
+            }
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .footer .container {
+        padding: 35px 0;
+        flex-direction: column;
+        text-align: center;
+
+        & .leftContent {
+            margin-bottom: 15px;
+        }
+    }
 }
