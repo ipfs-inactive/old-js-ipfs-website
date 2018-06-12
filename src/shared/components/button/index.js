@@ -6,9 +6,9 @@ import Link from 'shared/components/link';
 
 import styles from './index.module.css';
 
-const Button = ({ translationId, path, customClass, intl: { messages } }) => (
+const Button = ({ translationId, path, className, intl: { messages } }) => (
     <Link to={ path } className={ styles.link } >
-        <div className={ classNames(styles.customButton, customClass) }>
+        <div className={ classNames(styles.customButton, className) }>
             { messages[translationId].toUpperCase() }
         </div>
     </Link>
@@ -18,7 +18,7 @@ Button.propTypes = {
     intl: PropTypes.object.isRequired,
     translationId: PropTypes.string.isRequired,
     path: PropTypes.string.isRequired,
-    customClass: PropTypes.string,
+    className: PropTypes.string,
 };
 
 export default injectIntl(Button);

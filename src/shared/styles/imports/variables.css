@@ -18,6 +18,7 @@
     --color-light-blue: #59e5ff;
     --color-light-grey: #f5f6fd;
     --color-syntax-highlighter-background: #122147;
+    --color-accordion-buttons: #17264d;
     --color-hex-svg-fill: #c6c9e2;
     --color-text-footer: #aab2b9;
 }
@@ -45,6 +46,7 @@
 :root {
     --bottom-half-height: 22px;
     --container-width: 89%;
+    --accordion-content-width: 79%;
     --transition-default-duration: 600ms;
     --transition-button-duration: 300ms;
 }

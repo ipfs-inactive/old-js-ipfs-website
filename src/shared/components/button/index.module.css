@@ -5,6 +5,7 @@ a.link {
 
     & .customButton {
         padding: 15px 10px;
+        display: inline-block;
         background-color: var(--color-yellow);
         border-radius: 2px;
         color: var(--color-dark-blue);

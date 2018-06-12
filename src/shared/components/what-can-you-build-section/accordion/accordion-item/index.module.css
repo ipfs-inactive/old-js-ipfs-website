@@ -1,0 +1,184 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+:root {
+    --vertical-padding-button: 20px;
+    --vertical-padding-panel: 50px;
+    --vertical-margin-content: 25px;
+    --video-ratio: 56.25%; /* ratio: 720 / 1280 = 0.5625 */
+}
+
+.accordionButton {
+    width: 100%;
+    margin-bottom: 3px;
+    padding: var(--vertical-padding-button);
+    border: none;
+    outline: none;
+    background-color: var(--color-accordion-buttons);
+    color: var(--color-white);
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.panel {
+    position: relative;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    transition: max-height var(--transition-default-duration) ease;
+
+    & .backgroundSvgLine1 {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & .hex1,
+        & .hex2 {
+            width: 30%;
+            height: auto;
+        }
+
+        & .hex1 {
+            margin-top: 1%;
+            margin-left: 12%;
+        }
+    }
+
+    & .backgroundSvgLine2 {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & .hex3 {
+            width: 30%;
+            height: auto;
+            transform: translate(-21%, 100%);
+        }
+    }
+
+    & .panelContent {
+        width: var(--accordion-content-width);
+        height: 100%;
+        padding: var(--vertical-padding-panel) 0;
+        display: flex;
+
+        & .panelLeftContent,
+        & .panelRightContent {
+            width: 50%;
+        }
+
+        & .panelLeftContent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            & .imageAndTextContainer {
+                position: relative;
+                width: 100%;
+                height: auto;
+                margin-right: 50px;
+
+                & h2 {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    max-width: 55%;
+                    color: var(--color-light-blue);
+                    font-weight: var(--typography-text-weight-bold);
+                    text-align: right;
+                }
+
+                & .img {
+                    width: 90%;
+                    transform: translateY(-50px);
+                }
+            }
+        }
+
+        & .panelRightContent {
+            & h2,
+            & h6 {
+                text-transform: capitalize;
+            }
+
+            & h6 {
+                margin: var(--vertical-margin-content) 0;
+                line-height: 34.7px;
+            }
+
+            & p {
+                margin-bottom: var(--vertical-margin-content);
+                line-height: 27.7px;
+            }
+
+            & .videoWrapper {
+                position: relative;
+                padding-top: var(--video-ratio);
+
+                & .reactPlayer {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (--layout-lte-small) {
+    .panel {
+        & .panelContent {
+            width: var(--container-width);
+            flex-direction: column;
+
+            & .panelLeftContent,
+            & .panelRightContent {
+                width: 100%;
+            }
+
+            & .panelLeftContent {
+                & .imageAndTextContainer {
+                    margin-bottom: var(--vertical-margin-content);
+                    margin-right: unset;
+                    display: flex;
+                    flex-direction: column-reverse;
+
+                    & h2 {
+                        position: unset;
+                        width: 100%;
+                        max-width: unset;
+                        margin-right: unset;
+                        text-align: center;
+                    }
+
+                    & .img {
+                        margin: auto;
+                        transform: unset;
+                    }
+                }
+            }
+
+            & .panelRightContent {
+                & h2 {
+                    text-align: center;
+                }
+
+                & .button {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        & .backgroundSvgLine1,
+        & .backgroundSvgLine2 {
+            display: none;
+        }
+    }
+}

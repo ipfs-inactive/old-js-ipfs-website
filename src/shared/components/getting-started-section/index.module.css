@@ -63,7 +63,14 @@
 }
 
 @media (--layout-lte-small) {
-    .container .backgroundSvg {
-        display: none;
+    .container {
+        & .backgroundSvg {
+            display: none;
+        }
+
+        & .content .sectionDescription p {
+            width: 90%;
+        }
     }
+
 }
