@@ -15,7 +15,7 @@ const items = [
             text: 'buttonLearnMore',
             path: '/',
         },
-        videoLink: 'https://www.youtube.com/watch?v=pnpLVgRXUK8',
+        videoLink: 'https://www.youtube.com/watch?v=5Uj6uR3fp-U',
     },
     {
         name: 'whatCanYouBuildItem2Name',
@@ -27,7 +27,7 @@ const items = [
             text: 'buttonLearnMore',
             path: '/',
         },
-        videoLink: 'https://www.youtube.com/watch?v=iDo4tqzmVoA',
+        videoLink: 'https://www.youtube.com/watch?v=5Uj6uR3fp-U',
     },
     {
         name: 'whatCanYouBuildItem3Name',
@@ -39,7 +39,7 @@ const items = [
             text: 'buttonLearnMore',
             path: '/',
         },
-        videoLink: 'https://www.youtube.com/watch?v=iDo4tqzmVoA',
+        videoLink: 'https://www.youtube.com/watch?v=5Uj6uR3fp-U',
     },
 ];
 
