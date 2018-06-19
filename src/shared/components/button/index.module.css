@@ -5,11 +5,13 @@ a.link {
 
     & .customButton {
         padding: 15px 10px;
+        display: inline-block;
         background-color: var(--color-yellow);
         border-radius: 2px;
         color: var(--color-dark-blue);
         font-size: var(--typography-text-size);
         font-weight: var(--typography-text-weight-bold);
+        text-transform: uppercase;
         letter-spacing: 0.8px;
         transition-duration: var(--transition-button-duration);
 

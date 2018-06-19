@@ -22,6 +22,20 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
         target: 'web',
     });
 
+    // Add prefix to all svg class or id selectors to avoid styles override
+    // config.merge((current) => {
+    //     config.loader('svg-react-loader', (current) => {
+    //         current.query = {
+    //             ...current.query,
+    //             classIdPrefix: true,
+    //         };
+    //
+    //         return current;
+    //     });
+    //
+    //     return current;
+    // });
+
     // Allow requires from the src/ folder for postcss
     config.merge((current) => {
         const importPath = [
