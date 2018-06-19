@@ -9,7 +9,7 @@ import styles from './index.module.css';
 const Button = ({ translationId, path, className, intl: { messages } }) => (
     <Link to={ path } className={ styles.link } >
         <div className={ classNames(styles.customButton, className) }>
-            { messages[translationId].toUpperCase() }
+            { messages[translationId] }
         </div>
     </Link>
 );

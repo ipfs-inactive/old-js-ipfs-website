@@ -12,7 +12,7 @@ class LocalesDropdown extends Component {
         super(props);
 
         this.state = {
-            isOpened: false,
+            isOpen: false,
         };
 
         this.availableLocales = localesConfig.availableLocales;
@@ -35,14 +35,14 @@ class LocalesDropdown extends Component {
             [styles.desktopMargin]: !!this.props.desktopMargin,
         });
         const dropButtonClasses = classNames(styles.dropButton, {
-            [styles.openedDropdown]: this.state.isOpened,
+            [styles.openedDropdown]: this.state.isOpen,
         });
         const arrowClasses = classNames(styles.arrowIcon, styles.arrowBottom, {
-            [styles.arrowBottom]: !this.state.isOpened,
-            [styles.arrowTop]: this.state.isOpened,
+            [styles.arrowBottom]: !this.state.isOpen,
+            [styles.arrowTop]: this.state.isOpen,
         });
         const dropdownContentClasses = classNames(styles.dropdownContent, {
-            [styles.show]: this.state.isOpened,
+            [styles.show]: this.state.isOpen,
         });
 
         const availableLocalesOptions = this.availableLocales.map((locale, index) => {
@@ -70,16 +70,16 @@ class LocalesDropdown extends Component {
 
     handleToggleDropdown() {
         this.setState({
-            isOpened: !this.state.isOpened,
+            isOpen: !this.state.isOpen,
         });
     }
 
     handleOutsideClick(event) {
         const btnClass = `.${styles.dropButton}`;
 
-        if (!event.target.matches(btnClass) && this.state.isOpened) {
+        if (!event.target.matches(btnClass) && this.state.isOpen) {
             this.setState({
-                isOpened: false,
+                isOpen: false,
             });
         }
     }

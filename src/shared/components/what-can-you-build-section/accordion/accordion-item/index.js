@@ -15,9 +15,9 @@ class AccordionItem extends Component {
         this.handlePanelRef = this.handlePanelRef.bind(this);
     }
     render() {
-        const { isOpened, item: { name, image, title, subtitle, desc, buttonInfo, videoLink }, intl: { messages } } = this.props;
+        const { isOpen, item: { name, image, title, subtitle, desc, buttonInfo, videoLink }, intl: { messages } } = this.props;
         const panelVerticalPadding = this.panelElem && this.panelElem.offsetHeight;
-        const panelHeight = isOpened ? this.panelElem && (panelVerticalPadding + this.panelElem.scrollHeight) : 0;
+        const panelHeight = isOpen ? this.panelElem && (panelVerticalPadding + this.panelElem.scrollHeight) : 0;
 
         return (
             <div>
@@ -77,7 +77,7 @@ AccordionItem.propTypes = {
     item: PropTypes.object.isRequired,
     index: PropTypes.number.isRequired,
     onClick: PropTypes.func.isRequired,
-    isOpened: PropTypes.bool.isRequired,
+    isOpen: PropTypes.bool.isRequired,
     intl: PropTypes.object.isRequired,
 };
 

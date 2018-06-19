@@ -22,7 +22,7 @@ class Accordion extends Component {
         const accordionClasses = classNames(styles.accordion, className);
         const { openedItemIndex } = this.state;
         const items = itemsArr.map((item, index) => {
-            const isOpened = openedItemIndex === index;
+            const isOpen = openedItemIndex === index;
 
             return (
                 <AccordionItem
@@ -30,7 +30,7 @@ class Accordion extends Component {
                     item={ item }
                     index={ index }
                     onClick={ this.handleAccordionItemClick }
-                    isOpened={ isOpened } />
+                    isOpen={ isOpen } />
             );
         });
 
@@ -42,7 +42,9 @@ class Accordion extends Component {
     }
 
     handleAccordionItemClick(accordionItemIndex) {
-        this.setState(({ openedItemIndex }) => ({ openedItemIndex: accordionItemIndex === openedItemIndex ? -1 : accordionItemIndex }));
+        this.setState(({ openedItemIndex }) => ({
+            openedItemIndex: accordionItemIndex === openedItemIndex ? -1 : accordionItemIndex,
+        }));
     }
 }
 

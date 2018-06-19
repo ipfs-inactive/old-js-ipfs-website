@@ -13,7 +13,7 @@ class MobileNavbar extends Component {
         super(props);
 
         this.state = {
-            isOpened: false,
+            isOpen: false,
             scrolled: false,
         };
 
@@ -31,12 +31,12 @@ class MobileNavbar extends Component {
     }
 
     render() {
-        const menuListHeight = this.state.isOpened ? this.menuListElem && this.menuListElem.scrollHeight : 0;
+        const menuListHeight = this.state.isOpen ? this.menuListElem && this.menuListElem.scrollHeight : 0;
         const navbarContainerClasses = classNames(styles.navbarContainer, {
-            [styles.navbarContainerScrolled]: this.state.scrolled || this.state.isOpened,
+            [styles.navbarContainerScrolled]: this.state.scrolled || this.state.isOpen,
         });
         const menuIconClass = classNames(styles.menuIconWrapper, {
-            [styles.openedMenuIcon]: this.state.isOpened,
+            [styles.openedMenuIcon]: this.state.isOpen,
         });
         const { messages } = this.props.intl;
 
@@ -83,7 +83,7 @@ class MobileNavbar extends Component {
     }
 
     handleMenuClick() {
-        this.setState(({ isOpened }) => ({ isOpened: !isOpened }));
+        this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
     }
 
     handleMenuListRef(element) {
