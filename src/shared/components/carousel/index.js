@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { PropTypes } from 'prop-types';
 
-import CarouselContent from 'shared/components/carousel/carousel-content';
+import CarouselItem from 'shared/components/carousel/carousel-item';
 import './index.css';
 
 const settings = {
@@ -14,8 +14,8 @@ const settings = {
 };
 
 const Carousel = ({ itemsList }) => {
-    const item = itemsList.map((item, index) => (
-        <CarouselContent key={ `carousel-item-${index}` }
+    const items = itemsList.map((item, index) => (
+        <CarouselItem key={ `carousel-item-${index}` }
             icon={ item.icon }
             desc={ item.description }
             image={ item.image } />
@@ -23,7 +23,7 @@ const Carousel = ({ itemsList }) => {
 
     return (
         <Slider { ...settings }>
-            { item }
+            { items }
         </Slider>
     );
 };

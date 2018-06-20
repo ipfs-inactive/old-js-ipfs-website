@@ -5,7 +5,7 @@ import { PropTypes } from 'prop-types';
 import Button from 'shared/components/button';
 import styles from './index.module.css';
 
-const CarouselContent = ({ icon, desc, image, intl: { messages } }) => (
+const CarouselItem = ({ icon, desc, image, intl: { messages } }) => (
     <div className={ styles.container }>
         <div className={ styles.leftContainer }>
             <div className={ styles.topContainer }>
@@ -20,11 +20,11 @@ const CarouselContent = ({ icon, desc, image, intl: { messages } }) => (
     </div>
 );
 
-CarouselContent.propTypes = {
+CarouselItem.propTypes = {
     icon: PropTypes.element.isRequired,
     desc: PropTypes.string.isRequired,
     image: PropTypes.element.isRequired,
     intl: PropTypes.object.isRequired,
 };
 
-export default injectIntl(CarouselContent);
+export default injectIntl(CarouselItem);
