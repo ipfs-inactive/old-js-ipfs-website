@@ -56,5 +56,11 @@
     "whatPeopleAreBuildingTitle": "What are people building with it",
     "whatPeopleAreBuildingSectionDesc": "Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
     "whatArePeopleBuildingProj1Desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit.",
+    "publicationsAndTalksTitle": "Publications & talks",
+    "publicationsAndTalksSectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "publicationAndTalk1Desc": "Nullam id dolor id nib ultricies vehicula ut id elit.",
+    "publicationAndTalk2Desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus.",
+    "publicationAndTalk3Desc": "Maecenas faucibus mollis iterdum. Curabitur blandit tempus porttitor.",
+    "publicationAndTalk4Desc": "Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
     "service-worker": "Enable Service Worker"
 }

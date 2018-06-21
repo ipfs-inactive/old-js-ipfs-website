@@ -5,7 +5,7 @@
     --vertical-padding-button: 20px;
     --vertical-padding-panel: 50px;
     --vertical-margin-content: 25px;
-    --video-ratio: 56.25%; /* ratio: 720 / 1280 = 0.5625 */
+    --line-height-h6: 35px;
 }
 
 .accordionButton {
@@ -109,12 +109,12 @@
 
             & h6 {
                 margin: var(--vertical-margin-content) 0;
-                line-height: 34.7px;
+                line-height: var(--line-height-h6);
             }
 
             & p {
                 margin-bottom: var(--vertical-margin-content);
-                line-height: 27.7px;
+                line-height: var(--line-height-medium);
             }
 
             & .videoWrapper {

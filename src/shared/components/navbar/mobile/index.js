@@ -16,10 +16,6 @@ class MobileNavbar extends Component {
             isOpen: false,
             scrolled: false,
         };
-
-        this.handleScroll = this.handleScroll.bind(this);
-        this.handleMenuClick = this.handleMenuClick.bind(this);
-        this.handleMenuListRef = this.handleMenuListRef.bind(this);
     }
 
     componentDidMount() {
@@ -68,7 +64,7 @@ class MobileNavbar extends Component {
         );
     }
 
-    handleScroll() {
+    handleScroll = () => {
         const scrollY = window.scrollY;
 
         if (scrollY > 30 && !this.state.scrolled) {
@@ -82,11 +78,11 @@ class MobileNavbar extends Component {
         }
     }
 
-    handleMenuClick() {
+    handleMenuClick = () => {
         this.setState(({ isOpen }) => ({ isOpen: !isOpen }));
     }
 
-    handleMenuListRef(element) {
+    handleMenuListRef = (element) => {
         this.menuListElem = element;
     }
 }

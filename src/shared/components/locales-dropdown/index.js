@@ -17,9 +17,6 @@ class LocalesDropdown extends Component {
 
         this.availableLocales = localesConfig.availableLocales;
         this.currentLocale = props.intl.locale;
-
-        this.handleToggleDropdown = this.handleToggleDropdown.bind(this);
-        this.handleOutsideClick = this.handleOutsideClick.bind(this);
     }
 
     componentDidMount() {
@@ -68,13 +65,13 @@ class LocalesDropdown extends Component {
         );
     }
 
-    handleToggleDropdown() {
+    handleToggleDropdown = () => {
         this.setState({
             isOpen: !this.state.isOpen,
         });
     }
 
-    handleOutsideClick(event) {
+    handleOutsideClick = (event) => {
         const btnClass = `.${styles.dropButton}`;
 
         if (!event.target.matches(btnClass) && this.state.isOpen) {

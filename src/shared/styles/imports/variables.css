@@ -49,4 +49,9 @@
     --accordion-content-width: 79%;
     --transition-default-duration: 600ms;
     --transition-button-duration: 300ms;
+    --video-ratio: 56.25%;
+    --line-height-xsmall: 20px;
+    --line-height-small: 24px;
+    --line-height-medium: 27px;
+    --line-height-large: 48px;
 }

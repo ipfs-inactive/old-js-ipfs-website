@@ -15,8 +15,6 @@ class DesktopNavbar extends Component {
         this.state = {
             scrolled: false,
         };
-
-        this.handleScroll = this.handleScroll.bind(this);
     }
 
     componentDidMount() {
@@ -54,7 +52,7 @@ class DesktopNavbar extends Component {
         );
     }
 
-    handleScroll() {
+    handleScroll = () => {
         const scrollY = window.scrollY;
 
         if (scrollY > 50 && !this.state.scrolled) {

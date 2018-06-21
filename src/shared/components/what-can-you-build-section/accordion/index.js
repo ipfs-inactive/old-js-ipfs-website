@@ -13,8 +13,6 @@ class Accordion extends Component {
         this.state = {
             openedItemIndex: -1,
         };
-
-        this.handleAccordionItemClick = this.handleAccordionItemClick.bind(this);
     }
 
     render() {
@@ -41,7 +39,7 @@ class Accordion extends Component {
         );
     }
 
-    handleAccordionItemClick(accordionItemIndex) {
+    handleAccordionItemClick = (accordionItemIndex) => {
         this.setState(({ openedItemIndex }) => ({
             openedItemIndex: accordionItemIndex === openedItemIndex ? -1 : accordionItemIndex,
         }));
