@@ -1,0 +1,54 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+:root {
+    --player-border-radius: 3px;
+}
+
+.videoItemContainer {
+    width: 32%;
+    display: flex;
+    flex-direction: column;
+
+    & .videoPlaceholder,
+    & .videoDescription {
+        width: 100%;
+    }
+
+    & .videoPlaceholder {
+        position: relative;
+        overflow: hidden;
+        padding-top: var(--video-ratio);
+        border-radius: var(--player-border-radius);
+        transition: opacity var(--transition-default-duration) ease;
+
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        & .reactPlayer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+    }
+
+    & .videoDescription {
+        margin-top: 20px;
+        text-align: left;
+        line-height: var(--line-height-small);
+        letter-spacing: -0.1px;
+    }
+}
+
+@media (--layout-lte-small) {
+    .videoItemContainer {
+        width: 80%;
+
+        & .videoDescription {
+            margin-top: 5px;
+        }
+    }
+}

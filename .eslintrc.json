@@ -9,5 +9,8 @@
         "eslint-config-moxy/addons/es6-modules",
         "eslint-config-moxy/addons/react",
         "eslint-config-moxy/addons/jest"
-    ]
+    ],
+    "rules": {
+        "no-invalid-this": 0
+    }
 }

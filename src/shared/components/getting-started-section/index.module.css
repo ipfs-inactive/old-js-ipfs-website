@@ -40,7 +40,7 @@
         & h1 {
             font-weight: var(--typography-text-weight-bold);
             text-align: center;
-            line-height: 48px;
+            line-height: var(--line-height-large);
         }
 
         & .sectionDescription {
@@ -51,7 +51,7 @@
                 width: 60%;
                 font-size: var(--typography-text-size);
                 font-weight: var(--typography-text-weight);
-                line-height: 27px;
+                line-height: var(--line-height-medium);
             }
         }
 

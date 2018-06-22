@@ -8,12 +8,6 @@ import Button from 'shared/components/button';
 import styles from './index.module.css';
 
 class AccordionItem extends Component {
-    constructor(props) {
-        super(props);
-
-        this.handleButtonClick = this.handleButtonClick.bind(this);
-        this.handlePanelRef = this.handlePanelRef.bind(this);
-    }
     render() {
         const { isOpen, item: { name, image, title, subtitle, desc, buttonInfo, videoLink }, intl: { messages } } = this.props;
         const panelVerticalPadding = this.panelElem && this.panelElem.offsetHeight;
@@ -62,13 +56,13 @@ class AccordionItem extends Component {
         );
     }
 
-    handleButtonClick() {
+    handleButtonClick = () => {
         const { index } = this.props;
 
         this.props.onClick(index);
     }
 
-    handlePanelRef(element) {
+    handlePanelRef = (element) => {
         this.panelElem = element;
     }
 }

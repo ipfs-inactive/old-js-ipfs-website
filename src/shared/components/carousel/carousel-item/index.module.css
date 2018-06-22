@@ -42,7 +42,7 @@
                 margin-top: 15px;
                 font-size: var(--typography-text-size-small);
                 text-align: left;
-                line-height: 24px;
+                line-height: var(--line-height-small);
                 letter-spacing: -0.1px;
             }
         }
