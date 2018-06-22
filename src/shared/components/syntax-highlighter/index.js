@@ -6,9 +6,9 @@ import classNames from 'classnames';
 import 'prismjs/themes/prism-okaidia.css';
 import styles from './index.module.css';
 
-const SyntaxHighlighter = ({ codeStr }) => {
+const SyntaxHighlighter = ({ codeStr, language }) => {
     const htmlCode = Prism.highlight(codeStr, Prism.languages.js, 'js');
-    const preClasses = classNames('language-js', styles.preCustom);
+    const preClasses = classNames(`language-${language}`, styles.preCustom);
 
     return (
         <div className={ styles.gatsbyHighlight } >
@@ -21,6 +21,7 @@ const SyntaxHighlighter = ({ codeStr }) => {
 
 SyntaxHighlighter.propTypes = {
     codeStr: PropTypes.string.isRequired,
+    language: PropTypes.oneOf(['bash', 'html', 'javascript']).isRequired,
 };
 
 export default SyntaxHighlighter;
