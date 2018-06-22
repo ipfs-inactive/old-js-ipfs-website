@@ -1,12 +1,12 @@
 @import "shared/styles/imports/variables.css";
-@import "shared/styles/imports/custom-medias.css";
 
 .container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    background: var(--color-white);
-    color: var(--color-dark-blue);
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-dark-blue);
+    color: var(--color-white);
 
     & .content {
         width: var(--container-width);
@@ -35,17 +35,28 @@
             }
         }
 
-        & .featuresContainer {
-            margin-top: 5%;
+        & .socialLinksContainer {
+            min-width: 100%;
+            margin-top: 35px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-    }
-}
+            flex-direction: column;
 
-@media (--layout-lte-small) {
-    .container .content .sectionDescription p {
-        width: 90%;
+            & > * {
+                width: 100%;
+            }
+
+            & p {
+                margin-bottom: 25px;
+            }
+
+            & .socialLinks {
+                display: flex;
+                justify-content: center;
+
+                & > * {
+                    margin: 0 15px;
+                }
+            }
+        }
     }
 }

@@ -44,5 +44,7 @@
     "publicationAndTalk2Desc": "PT-Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus.",
     "publicationAndTalk3Desc": "PT-Maecenas faucibus mollis iterdum. Curabitur blandit tempus porttitor.",
     "publicationAndTalk4Desc": "PT-Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
+    "communityTitle": "PT-Community",
+    "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
     "service-worker": "Iniciar Service Worker"
 }

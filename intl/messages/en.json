@@ -62,5 +62,7 @@
     "publicationAndTalk2Desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus.",
     "publicationAndTalk3Desc": "Maecenas faucibus mollis iterdum. Curabitur blandit tempus porttitor.",
     "publicationAndTalk4Desc": "Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
+    "communityTitle": "Community",
+    "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
     "service-worker": "Enable Service Worker"
 }
