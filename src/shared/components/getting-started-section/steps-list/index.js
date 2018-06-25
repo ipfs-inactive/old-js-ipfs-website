@@ -12,7 +12,7 @@ const StepsList = ({ intl: { messages } }) => {
             <div className={ styles.command } key={ `step-${index}` }>
                 <p className={ styles.title }>{ messages[step.title] }</p>
                 <p className={ styles.desc }>{ newLineToBreak(messages[step.desc]) }</p>
-                <SyntaxHighlighter codeStr={ step.codeStr } />
+                <SyntaxHighlighter codeStr={ step.codeStr } language={ step.language } />
                 { step.note && <p className={ styles.note } >{ messages[step.note] }</p> }
             </div>
         )
