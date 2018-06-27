@@ -1,5 +1,8 @@
 {
     "buttonLearnMore": "Learn More",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Freenode",
     "bannerHighlightMessage": "The js-ipfs library is in Alpha state.",
     "bannerMessage": "The codebase hasn't been audited by Security specialists and it shouldn't be used to store, share or publish sensitive information.",
     "navMenuItem1": "Tutorials",
@@ -64,5 +67,6 @@
     "publicationAndTalk4Desc": "Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
     "communityTitle": "Community",
     "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
+    "communitySocialTitle": "Join Us!",
     "service-worker": "Enable Service Worker"
 }

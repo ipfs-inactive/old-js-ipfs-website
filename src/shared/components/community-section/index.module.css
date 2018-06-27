@@ -1,4 +1,5 @@
 @import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
 
 .container {
     width: 100%;
@@ -8,9 +9,37 @@
     background: var(--color-dark-blue);
     color: var(--color-white);
 
+    & .backgroundSvg {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+
+        & .hex1,
+        & .hex2 {
+            width: 20%;
+            height: 100%;
+            fill: var(--color-hex-svg-fill);
+        }
+
+        & .hex1 {
+            margin-top: 170px;
+            margin-left: -7%;
+        }
+
+        & .hex2 {
+            margin-top: 50px;
+            margin-right: -1.5%;
+            transform: rotate(180deg);
+        }
+    }
+
     & .content {
         width: var(--container-width);
-        padding: 10% 0;
+        padding-top: 10%;
+        padding-bottom: 70px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -55,6 +84,33 @@
 
                 & > * {
                     margin: 0 15px;
+                }
+            }
+        }
+    }
+
+    & iframe {
+        width: 100%;
+        height: 272px;
+        z-index: 3;
+        margin-bottom: 5%;
+    }
+}
+
+@media (--layout-lte-small) {
+    .container {
+        & .backgroundSvg {
+            display: none;
+        }
+
+        & .content .socialLinksContainer {
+            min-width: unset;
+
+            & .socialLinks {
+                flex-direction: column;
+
+                & > * {
+                    margin-top: 12px;
                 }
             }
         }

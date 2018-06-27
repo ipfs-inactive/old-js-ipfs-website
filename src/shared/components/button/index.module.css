@@ -4,6 +4,7 @@ a.link {
     text-decoration: none;
 
     & .customButton {
+        min-width: 150px;
         padding: 15px 15px;
         display: inline-block;
         border-radius: 2px;

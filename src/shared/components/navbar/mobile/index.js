@@ -55,7 +55,7 @@ class MobileNavbar extends Component {
                     <li><Link className={ styles.menuLink } to="/"> { messages.navMenuItem3.toUpperCase() } </Link> </li>
                     <li className={ styles.githubContributers }>
                         <Link className={ styles.menuLink } to="/"> { messages.navMenuItem4.toUpperCase() } </Link>
-                        <a className="github-button" href="https://github.com/ntkme/github-buttons" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">
+                        <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">
                             Star
                         </a>
                     </li>

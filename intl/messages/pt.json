@@ -1,5 +1,8 @@
 {
     "buttonLearnMore": "Saber Mais",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Freenode",
     "highlightMessage": "A biblioteca js-ipfs ainda está em versão Alfa.",
     "bannerMessage": "O código ainda não foi validado por especialistas em segurança e não deve ser usado para guardar, partilhar ou publicar informação privada.",
     "navMenuItem1": "Tutoriais",
@@ -46,5 +49,6 @@
     "publicationAndTalk4Desc": "PT-Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
     "communityTitle": "PT-Community",
     "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
+    "communitySocialTitle": "PT-Join Us!",
     "service-worker": "Iniciar Service Worker"
 }
