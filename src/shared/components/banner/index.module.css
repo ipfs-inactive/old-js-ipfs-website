@@ -3,6 +3,7 @@
 
 .container {
     width: 100vw;
+    z-index: 3;
     padding: 25px;
     display: flex;
     justify-content: center;

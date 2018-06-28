@@ -9,7 +9,7 @@
     width: 100vw;
     font-size: var(--typography-menu-text-size);
     text-align: center;
-    transition: var(--transition-default-duration) ease;
+    transition: var(--transition-button-duration) ease;
 
     & .navbarMenu {
         position: relative;
@@ -37,7 +37,7 @@
 }
 
 .default {
-    padding: 60px 0 50px 0;
+    padding: 35px 0 35px 0;
 }
 
 .scrolled {

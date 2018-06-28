@@ -1,18 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { PropTypes } from 'prop-types';
 import classNames from 'classnames';
+import LocalesBar from 'shared/components/locales-bar';
 import DesktopNavbar from 'shared/components/navbar/desktop';
 import MobileNavbar from 'shared/components/navbar/mobile';
 // import Banner from 'shared/components/banner';
 import styles from './index.module.css';
 
-const Header = ({ className }) => (
-    <header className={ classNames(styles.header, className) }>
-        {/* <Banner /> */}
-        <DesktopNavbar />
-        <MobileNavbar />
-    </header>
-);
+class Header extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            scrolled: false,
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.handleScroll);
+    }
+
+    render() {
+        const localesBarHeight = this.localesBarElem && this.localesBarElem.clientHeight;
+        const { className } = this.props;
+        const { scrolled } = this.state;
+
+        return (
+            <header className={ classNames(styles.header, className) }>
+                {/* <Banner /> */}
+                <LocalesBar scrolled={ scrolled } ref={ this.handleLocalesBarRef } />
+                <DesktopNavbar scrolled={ scrolled } localesBarHeight={ localesBarHeight } />
+                <MobileNavbar />
+            </header>
+        );
+    }
+
+    handleScroll = () => {
+        const scrollY = window.scrollY;
+
+        if (scrollY > 50 && !this.state.scrolled) {
+            this.setState({
+                scrolled: true,
+            });
+        } else if (scrollY <= 50 && this.state.scrolled) {
+            this.setState({
+                scrolled: false,
+            });
+        }
+    }
+
+    handleLocalesBarRef = (elementRef) => {
+        this.localesBarElem = ReactDOM.findDOMNode(elementRef);
+    }
+}
 
 Header.propTypes = {
     className: PropTypes.string,
