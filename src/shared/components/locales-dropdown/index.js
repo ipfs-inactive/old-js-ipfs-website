@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import localesConfig from '../../../../intl/config.js';
+import { getLocalesAcronym } from 'utils/getLocalesUtils';
 
 import Link from 'shared/components/link';
 import styles from './index.module.css';
@@ -15,7 +15,7 @@ class LocalesDropdown extends Component {
             isOpen: false,
         };
 
-        this.availableLocales = localesConfig.availableLocales;
+        this.availableLocales = getLocalesAcronym();
         this.currentLocale = props.intl.locale;
     }
 
@@ -28,9 +28,6 @@ class LocalesDropdown extends Component {
     }
 
     render() {
-        const dropdownClasses = classNames(styles.dropdown, {
-            [styles.desktopMargin]: !!this.props.desktopMargin,
-        });
         const dropButtonClasses = classNames(styles.dropButton, {
             [styles.openedDropdown]: this.state.isOpen,
         });
@@ -53,7 +50,7 @@ class LocalesDropdown extends Component {
         });
 
         return (
-            <div className={ dropdownClasses }>
+            <div className={ styles.dropdown }>
                 <button className={ dropButtonClasses } onClick={ this.handleToggleDropdown }>
                     { this.currentLocale.toUpperCase() }
                     <span className={ arrowClasses } />
@@ -84,7 +81,6 @@ class LocalesDropdown extends Component {
 
 LocalesDropdown.propTypes = {
     intl: PropTypes.object.isRequired,
-    desktopMargin: PropTypes.bool,
 };
 
 export default injectIntl(LocalesDropdown);

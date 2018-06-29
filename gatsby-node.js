@@ -10,8 +10,10 @@ const path = require('path');
 const fs = require('fs');
 const template = require('lodash/template');
 const wrap = require('lodash/wrap');
-const { availableLocales, defaultLocale } = require('./intl/config');
+const { defaultLocale } = require('./intl/config');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const { getLocalesAcronym } = require('./src/utils/getLocalesUtils');
+const availableLocalesAcronym = getLocalesAcronym();
 
 module.exports.modifyWebpackConfig = ({ config, program }) => {
     // Allow requires from the src/ folder
@@ -109,7 +111,7 @@ exports.createLayouts = () => {
     // Create a layout for each locale, based on a template
     const layoutTemplate = fs.readFileSync(path.join(__dirname, 'src/layouts/index.js'));
 
-    availableLocales.forEach((locale) => {
+    availableLocalesAcronym.forEach((locale) => {
         const localeLayout = template(layoutTemplate)({ locale })
         .replace(/LayoutQuery/, `LayoutQuery_${locale}`);
 
@@ -123,7 +125,7 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
 
     deletePage(page);
 
-    availableLocales.forEach((locale) => {
+    availableLocalesAcronym.forEach((locale) => {
         createPage({
             ...page,
             layout: `index-${locale}`,

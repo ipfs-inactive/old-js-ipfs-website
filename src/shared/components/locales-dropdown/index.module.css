@@ -1,9 +1,5 @@
 @import "shared/styles/imports/variables.css";
 
-.desktopMargin {
-    margin-left: calc(3% + 90px);
-}
-
 .dropdown {
     position: relative;
 
@@ -65,7 +61,11 @@
         z-index: 1;
         overflow: auto;
         display: none;
+
+        /* height: 0; */
         background-color: var(--color-menu-dark-blue);
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
+        transition: height 1s ease;
 
         & a {
             width: 100%;
@@ -88,5 +88,7 @@
 
     & .show {
         display: block;
+
+        /* height: 100px; */
     }
 }

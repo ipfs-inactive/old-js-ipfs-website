@@ -1,7 +1,7 @@
 module.exports = {
     defaultLocale: 'en',
     availableLocales: [
-        'en',
-        'pt',
+        { acronym: 'en', fullForm: 'English' },
+        { acronym: 'pt', fullForm: 'Português (PT)' },
     ],
 };
