@@ -36,13 +36,16 @@
 :root {
     --typography-display-font: "Montserrat", sans-serif;
     --typography-text-font: "Montserrat", sans-serif;
+    --typography-roboto-text-font: "Roboto", sans-serif;
     --typography-text-size-large: 18px;
     --typography-text-size: 15px;
     --typography-text-size-small: 13px;
     --typography-text-size-xsmall: 12px;
-    --typography-text-weight: 400;
-    --typography-text-weight-bold: 600;
+    --typography-text-size-mobile: 14px;
     --typography-text-weight-light: 300;
+    --typography-text-weight: 400;
+    --typography-text-weight-semibold: 600;
+    --typography-text-weight-bold: 700;
 }
 
 /* ==========================================================================

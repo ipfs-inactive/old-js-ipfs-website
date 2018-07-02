@@ -18,7 +18,7 @@
         text-align: center;
 
         & h1 {
-            font-weight: var(--typography-text-weight-bold);
+            font-weight: var(--typography-text-weight-semibold);
             text-align: center;
             line-height: var(--line-height-large);
         }
@@ -30,7 +30,6 @@
 
             & p {
                 width: 60%;
-                font-size: var(--typography-text-size);
                 font-weight: var(--typography-text-weight);
                 line-height: var(--line-height-medium);
             }

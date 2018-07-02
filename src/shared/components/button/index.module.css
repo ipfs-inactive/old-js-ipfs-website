@@ -8,7 +8,7 @@ a.link {
         padding: 15px;
         display: inline-block;
         border-radius: 2px;
-        font-size: var(--typography-text-size);
+        color: var(--color-dark-blue);
         font-weight: var(--typography-text-weight-bold);
         text-transform: uppercase;
         letter-spacing: 0.8px;

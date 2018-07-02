@@ -27,7 +27,7 @@
         }
 
         & h1 {
-            font-weight: var(--typography-text-weight-bold);
+            font-weight: var(--typography-text-weight-semibold);
             text-align: center;
             line-height: var(--line-height-large);
         }
@@ -48,6 +48,7 @@
             justify-content: center;
             align-items: center;
             color: var(--color-light-blue);
+            font-family: var(--typography-roboto-text-font);
             font-size: var(--typography-text-size-xsmall);
 
             & span {
@@ -77,7 +78,7 @@
                 flex-direction: column;
 
                 & span {
-                    margin-top: 2%;
+                    margin-top: 12px;
                 }
             }
 
