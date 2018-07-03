@@ -14,7 +14,7 @@ import { register, unregister } from 'shared/service-worker/register';
 
 class Home extends Component {
     componentDidMount() {
-        // Force a clean state of the service worker, as user must interact for enabling it
+    // Force a clean state of the service worker, as user must interact for enabling it
         unregister();
     }
 
