@@ -9,11 +9,11 @@ import styles from './index.module.css'
 const StepsList = ({ intl: { messages } }) => {
   const steps = stepsArr.map((step, index) =>
     (
-      <div className={styles.command} key={`step-${index}`}>
-        <p className={styles.title}>{ messages[step.title] }</p>
-        <p className={styles.desc}>{ newLineToBreak(messages[step.desc]) }</p>
-        <SyntaxHighlighter codeStr={step.codeStr} language={step.language} />
-        { step.note && <p className={styles.note} >{ messages[step.note] }</p> }
+      <div className={ styles.command } key={ `step-${index}` }>
+        <p className={ styles.title }>{ messages[step.title] }</p>
+        <p className={ styles.desc }>{ newLineToBreak(messages[step.desc]) }</p>
+        <SyntaxHighlighter codeStr={ step.codeStr } language={ step.language } />
+        { step.note && <p className={ styles.note } >{ messages[step.note] }</p> }
       </div>
     )
   )
@@ -22,7 +22,7 @@ const StepsList = ({ intl: { messages } }) => {
 }
 
 function newLineToBreak (str) {
-  return str.split('\n').map((text, index) => <span key={`text-${index}`}>{ text }<br /></span>)
+  return str.split('\n').map((text, index) => <span key={ `text-${index}` }>{ text }<br /></span>)
 }
 
 StepsList.propTypes = {

@@ -12,6 +12,7 @@
 
     & .content {
         width: var(--container-width);
+        max-width: var(--max-container-width);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,7 +43,11 @@
 }
 
 @media (--layout-lte-small) {
-    .container .content .sectionDescription p {
-        width: 90%;
+    .container .content {
+        width: var(--container-width-mobile);
+
+        & .sectionDescription p {
+            width: 90%;
+        }
     }
 }

@@ -13,6 +13,7 @@
 
     & .content {
         width: var(--container-width);
+        max-width: var(--max-container-width);
         height: 100%;
         padding-top: 10%;
         display: flex;
@@ -28,6 +29,7 @@
 
         & h1 {
             font-weight: var(--typography-text-weight-semibold);
+            text-transform: unset;
             text-align: center;
             line-height: var(--line-height-large);
         }
@@ -41,7 +43,7 @@
 
         & .infoContainer {
             width: 100%;
-            margin-top: 1%;
+            margin-top: 2%;
             padding-bottom: calc(var(--bottom-half-height) * 2);
             display: flex;
             flex-wrap: wrap;
@@ -52,7 +54,7 @@
             font-size: var(--typography-text-size-xsmall);
 
             & span {
-                margin-right: 2%;
+                margin-right: 5%;
             }
         }
 
@@ -68,7 +70,8 @@
         background-image: none;
 
         & .content {
-            padding-top: 15%;
+            width: var(--container-width-mobile);
+            padding-top: 25%;
 
             & p {
                 font-size: var(--typography-text-size);
@@ -84,16 +87,7 @@
 
             & .button {
                 margin-top: 10%;
-
             }
-        }
-    }
-}
-
-@media (--layout-lte-small) {
-    .container {
-        & .content {
-            padding-top: 25%;
         }
     }
 }

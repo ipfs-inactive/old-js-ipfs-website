@@ -54,7 +54,9 @@
 
 :root {
     --bottom-half-height: 22px;
-    --container-width: 89%;
+    --container-width: 80%;
+    --container-width-mobile: 89%;
+    --max-container-width: 1440px;
     --accordion-content-width: 79%;
     --transition-default-duration: 600ms;
     --transition-button-duration: 300ms;
