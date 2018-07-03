@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "author": "Pedro Santos <pedro.santos@moxy.studio>",
   "dependencies": {
+    "aegir": "^14.0.0",
     "classnames": "^2.2.5",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
@@ -34,7 +35,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "lint": "eslint . && stylelint \"**/*.css\"",
+    "lint": "aegir lint && stylelint \"**/*.css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

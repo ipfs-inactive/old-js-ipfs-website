@@ -6,12 +6,14 @@
   "navMenuItem2": "API",
   "navMenuItem3": "Contribute",
   "navMenuItem4": "Open Source",
+
   "heroWelcomeMessage": "The full IPFS protocol in JavaScript™",
   "heroTextDescription": "js-ipfs paves the path for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it runs in a Browser tab, a Service Worker, a Web Extension and also in Node.js, opening the door to a world of possibilities.",
   "heroCurrentVersion": "Current version: 0.29.3",
   "heroLatestUpdate": "Latest update: 11 hours ago",
   "heroDownloadsLastMonth": "Downloads last month: 369,020",
   "heroLearnMore": "Learn More",
+
   "featuresTitle": "Features",
   "featuresSectionDesc": "Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
   "featuresFeat1Title": "Run on Node.js and the Browser",
@@ -24,6 +26,7 @@
   "featuresFeat4Desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor.",
   "featuresFeat5Title": "Use IPLD to traverse any hash linked data structure",
   "featuresFeat5Desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor.",
+
   "gettingStartedTitle": "Getting Started",
   "gettingStartedSectionDesc": "Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
   "gettingStartedStep1Title": "Install",
@@ -37,8 +40,7 @@
   "gettingStartedStep4Title": "Use in the browser",
   "gettingStartedStep4Desc": "Learn how to bundle with browserify and webpack in the examples folder.\n\nYou can also load it using a <script> using the unpkg CDN or the jsDelivr CDN. Inserting one of the following lines will make a Ipfs object available in the global namespace.",
   "gettingStartedStep4Note": "Inserting one of the above lines will make an Ipfs object available in the global namespace.",
-  "footerLeftContent": "Protocol Labs | Except as noted, content licensed CC-BY 3.0",
-  "footerRightContent": "IPFS.JS was started and is sponsored by",
+
   "whatCanYouBuildTitle": "What can you build with js-ipfs",
   "whatCanYouBuildSectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   "whatCanYouBuildItem1Name": "Video Streaming",
@@ -56,12 +58,14 @@
   "whatPeopleAreBuildingTitle": "What are people building with it",
   "whatPeopleAreBuildingSectionDesc": "Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
   "whatArePeopleBuildingProj1Desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit.",
+
   "publicationsAndTalksTitle": "Publications & talks",
   "publicationsAndTalksSectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   "publicationAndTalk1Desc": "Nullam id dolor id nib ultricies vehicula ut id elit.",
   "publicationAndTalk2Desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus.",
   "publicationAndTalk3Desc": "Maecenas faucibus mollis iterdum. Curabitur blandit tempus porttitor.",
   "publicationAndTalk4Desc": "Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
+  
   "communityTitle": "Community",
   "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
   "communitySocialTitle": "Join Us!",

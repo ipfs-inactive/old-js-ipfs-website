@@ -1,3 +1,5 @@
+'use strict'
+
 module.exports = {
   siteMetadata: {
     title: 'JS IPFS'
