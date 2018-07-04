@@ -4,9 +4,10 @@
 .container {
     width: 100%;
     display: flex;
-    justify-content: center;
-    background: var(--color-white);
-    color: var(--color-dark-blue);
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-dark-blue);
+    color: var(--color-white);
 
     & .backgroundSvg {
         position: absolute;
@@ -24,22 +25,21 @@
         }
 
         & .hex1 {
-            margin-top: 30%;
+            margin-top: 170px;
             margin-left: -7%;
-            transform: rotate(180deg);
         }
 
         & .hex2 {
-            margin-top: 2%;
-            margin-right: 2%;
+            margin-top: 50px;
+            margin-right: -1.5%;
             transform: rotate(180deg);
         }
     }
 
     & .content {
         width: var(--container-width);
-        z-index: 2;
-        padding: 10% 0;
+        padding-top: 10%;
+        padding-bottom: 70px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -63,6 +63,37 @@
                 line-height: var(--line-height-medium);
             }
         }
+
+        & .socialLinksContainer {
+            min-width: 100%;
+            margin-top: 35px;
+            display: flex;
+            flex-direction: column;
+
+            & > * {
+                width: 100%;
+            }
+
+            & p {
+                margin-bottom: 25px;
+            }
+
+            & .socialLinks {
+                display: flex;
+                justify-content: center;
+
+                & > * {
+                    margin: 0 15px;
+                }
+            }
+        }
+    }
+
+    & iframe {
+        width: 100%;
+        height: 272px;
+        z-index: 3;
+        margin-bottom: 5%;
     }
 }
 
@@ -72,8 +103,16 @@
             display: none;
         }
 
-        & .content .sectionDescription p {
-            width: 90%;
+        & .content .socialLinksContainer {
+            min-width: unset;
+
+            & .socialLinks {
+                flex-direction: column;
+
+                & > * {
+                    margin-top: 12px;
+                }
+            }
         }
     }
 }

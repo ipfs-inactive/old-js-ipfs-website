@@ -4,11 +4,10 @@ a.link {
     text-decoration: none;
 
     & .customButton {
-        padding: 15px 10px;
+        min-width: 150px;
+        padding: 15px;
         display: inline-block;
-        background-color: var(--color-yellow);
         border-radius: 2px;
-        color: var(--color-dark-blue);
         font-size: var(--typography-text-size);
         font-weight: var(--typography-text-weight-bold);
         text-transform: uppercase;
@@ -16,8 +15,37 @@ a.link {
         transition-duration: var(--transition-button-duration);
 
         &:hover {
-            background-color: var(--color-yellow-hover);
             cursor: pointer;
+        }
+    }
+
+    & .default {
+        background-color: var(--color-yellow);
+        color: var(--color-dark-blue);
+
+        &:hover {
+            background-color: var(--color-yellow-hover);
+        }
+    }
+
+    & .twitter,
+    & .github {
+        color: var(--color-white);
+    }
+
+    & .twitter {
+        background-color: var(--color-twitter);
+
+        &:hover {
+            background-color: var(--color-twitter-hover);
+        }
+    }
+
+    & .github {
+        background-color: var(--color-github);
+
+        &:hover {
+            background-color: var(--color-github-hover);
         }
     }
 }
