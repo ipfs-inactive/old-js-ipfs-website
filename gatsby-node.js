@@ -1,4 +1,3 @@
-'use strict'
 /* eslint-disable prefer-import/prefer-import-over-require */
 
 /**

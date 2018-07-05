@@ -3,7 +3,7 @@ import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
 import { injectIntl } from 'react-intl'
 
-import ProtocolIcon from '-!svg-react-loader!shared/media/images/pl-logo.svg'
+import ProtocolIcon from 'shared/media/images/pl-logo.svg'
 import styles from './index.module.css'
 
 const Footer = ({ className, intl: { messages } }) => (

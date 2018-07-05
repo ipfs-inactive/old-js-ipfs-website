@@ -1,5 +1,9 @@
 {
   "buttonLearnMore": "Learn More",
+  "buttonGithub": "Github",
+  "buttonTwitter": "Twitter",
+  "buttonIrcFreenode": "IRC Freenode",
+
   "bannerHighlightMessage": "The js-ipfs library is in Alpha state.",
   "bannerMessage": "The codebase hasn't been audited by Security specialists and it shouldn't be used to store, share or publish sensitive information.",
   "navMenuItem1": "Tutorials",
@@ -65,9 +69,13 @@
   "publicationAndTalk2Desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus.",
   "publicationAndTalk3Desc": "Maecenas faucibus mollis iterdum. Curabitur blandit tempus porttitor.",
   "publicationAndTalk4Desc": "Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
-  
+
   "communityTitle": "Community",
   "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
   "communitySocialTitle": "Join Us!",
+
+  "footerLeftContent": "Protocol Labs | Except as noted, content licensed CC-BY 3.0",
+  "footerRightContent": "IPFS.JS was started and is sponsored by",
+
   "service-worker": "Enable Service Worker"
 }

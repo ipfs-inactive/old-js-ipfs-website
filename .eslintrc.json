@@ -1,16 +1,42 @@
 {
-    "root": true,
     "parser": "babel-eslint",
+    "plugins": ["import", "react"],
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true,
+             "experimentalObjectRestSpread": true
+        }
+    },
     "extends": [
-        "eslint-config-moxy/es8",
-        "eslint-config-moxy/addons/browser",
-        "eslint-config-moxy/addons/node",
-        "eslint-config-moxy/addons/object-spread",
-        "eslint-config-moxy/addons/es6-modules",
-        "eslint-config-moxy/addons/react",
-        "eslint-config-moxy/addons/jest"
+        "eslint-config-aegir"
     ],
     "rules": {
-        "no-invalid-this": 0
+        "import/first": "error",
+        "import/no-amd": "error",
+        "import/no-webpack-loader-syntax": "error",
+
+        "react/forbid-foreign-prop-types": ["warn", { "allowInPropTypes": true }],
+        "react/jsx-no-comment-textnodes": "warn",
+        "react/jsx-no-duplicate-props": ["warn", { "ignoreCase": true }],
+        "react/jsx-no-target-blank": "warn",
+        "react/jsx-no-undef": "error",
+        "react/jsx-pascal-case": [
+          "warn",
+          {
+            "allowAllCaps": true,
+            "ignore": []
+          }
+        ],
+        "react/jsx-uses-react": "warn",
+        "react/jsx-uses-vars": "warn",
+        "react/no-danger-with-children": "warn",
+        "react/no-deprecated": "warn",
+        "react/no-direct-mutation-state": "warn",
+        "react/no-is-mounted": "warn",
+        "react/react-in-jsx-scope": "error",
+        "react/require-render-return": "error",
+        "react/style-prop-object": "warn"
     }
 }
