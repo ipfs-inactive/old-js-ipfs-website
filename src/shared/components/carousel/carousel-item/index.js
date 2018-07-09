@@ -23,7 +23,7 @@ const CarouselItem = ({ icon, desc, image, intl: { messages } }) => (
 CarouselItem.propTypes = {
   icon: PropTypes.element.isRequired,
   desc: PropTypes.string.isRequired,
-  image: PropTypes.element.isRequired,
+  image: PropTypes.string.isRequired,
   intl: PropTypes.object.isRequired
 }
 
