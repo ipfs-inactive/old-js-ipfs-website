@@ -67,13 +67,11 @@ class Hero extends Component {
     )
   }
 
-  renderPkgInfo = (info, isDataLoaded) => (
-    <div>
-      <span>{ isDataLoaded ? info.currentVersionStr : '' }</span>
-      <span>{ isDataLoaded ? info.latestUpdateDateStr : '' }</span>
-      <span>{ isDataLoaded ? info.downloadsStr : '' }</span>
-    </div>
-  )
+  renderPkgInfo = (info, isDataLoaded) => {
+    const pkgInfoArr = Object.values(info)
+
+    return <div>{ pkgInfoArr.map((infoElement) => <span>{ isDataLoaded ? infoElement : '' }</span>) }</div>
+  }
 
   renderErrorMessage = (errorMessage) => (
     <div>
