@@ -15,14 +15,14 @@ const settings = {
 
 const Carousel = ({ itemsList }) => {
   const items = itemsList.map((item, index) => (
-    <CarouselItem key={`carousel-item-${index}`}
-      icon={item.icon}
-      desc={item.description}
-      image={item.image} />
+    <CarouselItem key={ `carousel-item-${index}` }
+      icon={ item.icon }
+      desc={ item.description }
+      image={ item.image } />
   ))
 
   return (
-    <Slider {...settings}>
+    <Slider { ...settings }>
       { items }
     </Slider>
   )

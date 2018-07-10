@@ -5,6 +5,8 @@ import PropTypes from 'prop-types'
 import RemainingVideo from 'shared/components/publications-and-talks-section/videos-list/remaining-video'
 import styles from './index.module.css'
 
+const defaultScrollOptions = { offset: 0, align: 'center', duration: 600 }
+
 class VideosList extends Component {
   constructor (props) {
     super(props)
@@ -13,6 +15,10 @@ class VideosList extends Component {
     const activeIndex = list.findIndex(this.findActiveVideo)
 
     this.state = { activeIndex }
+  }
+
+  componentDidMount () {
+    this.scrollToComponent = require('react-scroll-to-component')
   }
 
   render () {
@@ -32,7 +38,7 @@ class VideosList extends Component {
       const activeVideo = list[activeIndex]
 
       return (
-        <div className={ styles.selectedVideo }>
+        <div className={ styles.selectedVideo } ref={ this.handleAtiveVideoRef }>
           <ReactPlayer
             className={ styles.reactPlayer }
             url={ activeVideo.link }
@@ -56,6 +62,11 @@ class VideosList extends Component {
 
     handleRemainingVideoClick = (activeIndex) => {
       this.setState({ activeIndex })
+      this.scrollToComponent(this.activeVideoRef, defaultScrollOptions)
+    }
+
+    handleAtiveVideoRef = (element) => {
+      this.activeVideoRef = element
     }
 }
 

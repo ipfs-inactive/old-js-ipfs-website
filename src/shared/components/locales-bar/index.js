@@ -15,11 +15,11 @@ const LocalesBar = ({ scrolled, intl: { locale } }) => {
     [styles.hideLocalesBar]: scrolled
   })
   const renderLocales = localesFullForm.map((locale, index) => (
-    <Link key={`localeF-${index}`} className={index === currentLocaleIndex && styles.active} to='/' >{ locale }</Link>
+    <Link key={ `localeF-${index}` } className={ index === currentLocaleIndex && styles.active } to="/" >{ locale }</Link>
   ))
 
   return (
-    <div className={localesBarClassName}>
+    <div className={ localesBarClassName }>
       { renderLocales }
     </div>
   )

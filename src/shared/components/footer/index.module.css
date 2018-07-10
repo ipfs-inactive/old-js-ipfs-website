@@ -11,6 +11,7 @@
 
     & .container {
         width: var(--container-width);
+        max-width: var(--max-container-width);
         padding: 25px 0;
         display: flex;
         justify-content: space-between;
@@ -37,6 +38,7 @@
 
 @media (--layout-lte-small) {
     .footer .container {
+        width: var(--container-width-mobile);
         padding: 35px 0;
         flex-direction: column;
         text-align: center;

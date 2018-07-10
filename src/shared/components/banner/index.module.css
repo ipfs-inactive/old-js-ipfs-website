@@ -1,6 +1,10 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
+.hidden {
+    display: none;
+}
+
 .container {
     width: 100vw;
     z-index: 3;
@@ -10,24 +14,24 @@
     background: var(--color-yellow);
     color: var(--color-dark-blue);
     font-family: var(--typography-text-font);
-    font-size: var(--typography-text-size);
+    font-size: var(--typography-text-size-small);
     text-align: justify;
 
     & .iconContainer {
         flex: 0 0 26px;
 
-        & img {
+        & svg {
             width: 100%;
         }
     }
 
-    & .text {
-        padding: 0 13px 0 11px;
+    & .textContainer {
+        padding: 0 13px;
         display: flex;
         align-items: center;
 
-        & > *:not(:last-child) {
-            margin-right: 10px;
+        & .test strong {
+            margin-right: 5px;
         }
     }
 
@@ -36,8 +40,14 @@
         flex: 0 0 16px;
         align-items: center;
 
-        & img {
+        & svg {
             width: 100%;
+            transition: opacity var(--transition-button-duration) ease;
+
+            &:hover {
+                opacity: 0.4;
+                cursor: pointer;
+            }
         }
     }
 }
@@ -49,11 +59,5 @@
         & .closeButtonContainer {
             align-items: flex-start;
         }
-    }
-}
-
-@media (--layout-lte-xsmall) {
-    .container {
-        font-size: var(--typography-text-size-xsmall);
     }
 }

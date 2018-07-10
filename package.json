@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "author": "Pedro Santos <pedro.santos@moxy.studio>",
   "dependencies": {
+    "axios": "~0.18.0",
     "classnames": "^2.2.5",
+    "cross-fetch": "^2.2.2",
+    "date-fns": "^1.29.0",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-react-helmet": "^2.0.10",
@@ -18,6 +21,7 @@
     "react-intl": "^2.4.0",
     "react-onclickoutside": "^6.7.1",
     "react-player": "^1.6.4",
+    "react-scroll-to-component": "^1.0.2",
     "react-slick": "~0.23.1",
     "recompose": "~0.27.1",
     "service-worker-gateway": "~0.1.2",

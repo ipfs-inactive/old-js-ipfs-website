@@ -16,17 +16,17 @@ const DesktopNavbar = ({ scrolled, localesBarHeight, intl: { messages } }) => {
   const currentTranslateYValue = scrolled ? localesBarHeight : 0
 
   return (
-    <div className={navbarClasses} style={{ transform: `translateY(-${currentTranslateYValue}px)` }}>
-      <div className={styles.navbarMenu}>
+    <div className={ navbarClasses } style={ { transform: `translateY(-${currentTranslateYValue}px)` } }>
+      <div className={ styles.navbarMenu }>
         <Helmet>
-          <script async defer src='https://buttons.github.io/buttons.js' />
+          <script async defer src="https://buttons.github.io/buttons.js" />
         </Helmet>
-        <Link to='/'> { messages.navMenuItem1.toUpperCase() } </Link>
-        <Link to='/'> { messages.navMenuItem2.toUpperCase() } </Link>
-        <Link to='/'> { messages.navMenuItem3.toUpperCase() } </Link>
-        <Link to='/'> { messages.navMenuItem4.toUpperCase() } </Link>
-        <a className='github-button' href='https://github.com/ntkme/github-buttons' data-show-count='true' aria-label='Star ntkme/github-buttons on GitHub'>
-                        Star
+        <Link to="/"> { messages.navMenuItem1.toUpperCase() } </Link>
+        <Link to="/"> { messages.navMenuItem2.toUpperCase() } </Link>
+        <Link to="/"> { messages.navMenuItem3.toUpperCase() } </Link>
+        <Link to="/"> { messages.navMenuItem4.toUpperCase() } </Link>
+        <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ipfs/js-ipfs on GitHub">
+            Star
         </a>
       </div>
     </div>

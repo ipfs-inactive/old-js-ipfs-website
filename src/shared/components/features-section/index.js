@@ -8,20 +8,20 @@ import styles from './index.module.css'
 
 const Features = ({ intl: { messages } }) => {
   const feats = featsArr.map((feat, index) =>
-    (<FeatureItem key={`feat-${index}`}
-      title={messages[feat.title]}
-      description={messages[feat.description]}
-      icon={feat.icon} />)
+    (<FeatureItem key={ `feat-${index}` }
+      title={ messages[feat.title] }
+      description={ messages[feat.description] }
+      icon={ feat.icon } />)
   )
 
   return (
-    <div className={styles.container}>
-      <div className={styles.content} >
-        <FormattedMessage tagName='h1' id='featuresTitle' />
-        <span className={styles.sectionDescription}>
-          <FormattedMessage tagName='p' id='featuresSectionDesc' />
+    <div className={ styles.container }>
+      <div className={ styles.content } >
+        <FormattedMessage tagName="h1" id="featuresTitle" />
+        <span className={ styles.sectionDescription }>
+          <FormattedMessage tagName="p" id="featuresSectionDesc" />
         </span>
-        <div className={styles.featuresContainer}>
+        <div className={ styles.featuresContainer }>
           { feats }
         </div>
       </div>

@@ -12,13 +12,14 @@
 
     & .content {
         width: var(--container-width);
+        max-width: var(--max-container-width);
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
 
         & h1 {
-            font-weight: var(--typography-text-weight-bold);
+            font-weight: var(--typography-text-weight-semibold);
             text-align: center;
             line-height: var(--line-height-large);
         }
@@ -30,7 +31,6 @@
 
             & p {
                 width: 60%;
-                font-size: var(--typography-text-size);
                 font-weight: var(--typography-text-weight);
                 line-height: var(--line-height-medium);
             }
@@ -43,7 +43,11 @@
 }
 
 @media (--layout-lte-small) {
-    .container .content .sectionDescription p {
-        width: 90%;
+    .container .content {
+        width: var(--container-width-mobile);
+
+        & .sectionDescription p {
+            width: 90%;
+        }
     }
 }

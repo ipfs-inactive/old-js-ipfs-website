@@ -4,12 +4,12 @@ import { PropTypes } from 'prop-types'
 import styles from './index.module.css'
 
 const FeatureItem = ({ icon, title, description }) => (
-  <div className={styles.featureItem}>
-    <div className={styles.image}>
+  <div className={ styles.featureItem }>
+    <div className={ styles.image }>
       { icon }
     </div>
-    <p className={styles.title}>{ title }</p>
-    <p className={styles.description}>{ description }</p>
+    <p className={ styles.title }>{ title }</p>
+    <p className={ styles.description }>{ description }</p>
   </div>
 )
 

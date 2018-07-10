@@ -16,7 +16,6 @@
     outline: none;
     background-color: var(--color-accordion-buttons);
     color: var(--color-white);
-    font-size: 15px;
     text-align: center;
     cursor: pointer;
 }
@@ -90,7 +89,7 @@
                     bottom: 0;
                     max-width: 55%;
                     color: var(--color-light-blue);
-                    font-weight: var(--typography-text-weight-bold);
+                    font-weight: var(--typography-text-weight-semibold);
                     text-align: right;
                 }
 
@@ -134,7 +133,8 @@
 @media (--layout-lte-small) {
     .panel {
         & .panelContent {
-            width: var(--container-width);
+            width: var(--container-width-mobile);
+            max-width: var(--max-container-width);
             flex-direction: column;
 
             & .panelLeftContent,

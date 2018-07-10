@@ -13,9 +13,9 @@
 
   "heroWelcomeMessage": "The full IPFS protocol in JavaScript™",
   "heroTextDescription": "js-ipfs paves the path for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it runs in a Browser tab, a Service Worker, a Web Extension and also in Node.js, opening the door to a world of possibilities.",
-  "heroCurrentVersion": "Current version: 0.29.3",
-  "heroLatestUpdate": "Latest update: 11 hours ago",
-  "heroDownloadsLastMonth": "Downloads last month: 369,020",
+  "heroCurrentVersion": "Current version:",
+  "heroLatestUpdate": "Latest update:",
+  "heroDownloadsLastMonth": "Downloads last month:",
   "heroLearnMore": "Learn More",
 
   "featuresTitle": "Features",

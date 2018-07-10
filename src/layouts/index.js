@@ -13,20 +13,20 @@ import styles from './index.module.css'
 addLocaleData(localeData)
 
 const Layout = ({ children }) => (
-  <IntlProvider locale='<%= locale %>' messages={messages}>
-    <div className={styles.app}>
+  <IntlProvider locale="<%= locale %>" messages={ messages }>
+    <div className={ styles.app }>
       <Helmet
-        title='JS IPFS'
-        meta={[
+        title="JS IPFS"
+        meta={ [
           { name: 'description', content: 'JS IPFS website' },
           { name: 'keywords', content: 'gatsby, ipfs' }
-        ]} />
+        ] } />
 
-      <Header className={styles.header} />
-      <main className={styles.children}>
+      <Header className={ styles.header } />
+      <main className={ styles.children }>
         { children() }
       </main>
-      <Footer className={styles.footer} />
+      <Footer className={ styles.footer } />
     </div>
   </IntlProvider>
 )

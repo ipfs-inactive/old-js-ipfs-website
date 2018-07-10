@@ -36,6 +36,7 @@
 
     & .content {
         width: var(--container-width);
+        max-width: var(--max-container-width);
         z-index: 2;
         padding: 10% 0;
         display: flex;
@@ -44,7 +45,7 @@
         text-align: center;
 
         & h1 {
-            font-weight: var(--typography-text-weight-bold);
+            font-weight: var(--typography-text-weight-semibold);
             text-align: center;
             line-height: var(--line-height-large);
         }
@@ -56,7 +57,6 @@
 
             & p {
                 width: 60%;
-                font-size: var(--typography-text-size);
                 font-weight: var(--typography-text-weight);
                 line-height: var(--line-height-medium);
             }
@@ -70,8 +70,12 @@
             display: none;
         }
 
-        & .content .sectionDescription p {
-            width: 90%;
+        & .content {
+            width: var(--container-width-mobile);
+
+            & .sectionDescription p {
+                width: 90%;
+            }
         }
     }
 

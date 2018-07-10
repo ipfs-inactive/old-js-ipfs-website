@@ -1,6 +1,11 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
+@keyframes orbit {
+    from { transform: rotateZ(0deg); }
+    to { transform: rotateZ(360deg); }
+}
+
 .container {
     position: relative;
     width: 100%;
@@ -8,12 +13,54 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--color-dark-blue) url("../../media/backgrounds/stars.png") no-repeat center center;
+    background: var(--color-dark-blue);
     color: var(--color-white);
+
+    & .orbitContainer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .orbits {
+            width: 80%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+
+            & svg {
+                width: 100%;
+                height: auto;
+
+                & g {
+                    &:global(#orbits_svg___x3C_inside_x3E__1_) {
+                        transform-origin: center;
+                        animation: orbit 120s infinite linear;
+                    }
+
+                    &:global(#orbits_svg___x3C_middle_x3E__1_) {
+                        transform-origin: center;
+                        animation: orbit 200s infinite linear;
+                    }
+
+                    &:global(#orbits_svg___x3C_outside_x3E__1_) {
+                        transform-origin: center;
+                        animation: orbit 300s infinite linear;
+                    }
+                }
+            }
+        }
+    }
 
     & .content {
         width: var(--container-width);
+        max-width: var(--max-container-width);
         height: 100%;
+        z-index: 2;
         padding-top: 10%;
         display: flex;
         flex-direction: column;
@@ -21,13 +68,14 @@
         align-items: center;
 
         & img {
-            width: 310px;
+            width: 29%;
             height: auto;
             margin-bottom: 5%;
         }
 
         & h1 {
-            font-weight: var(--typography-text-weight-bold);
+            font-weight: var(--typography-text-weight-semibold);
+            text-transform: unset;
             text-align: center;
             line-height: var(--line-height-large);
         }
@@ -41,17 +89,35 @@
 
         & .infoContainer {
             width: 100%;
-            margin-top: 1%;
+            margin-top: 2%;
             padding-bottom: calc(var(--bottom-half-height) * 2);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
+            transform: scale(1);
+            opacity: 1;
             color: var(--color-light-blue);
-            font-size: var(--typography-text-size-xsmall);
+            font-family: var(--typography-roboto-text-font);
+            font-size: var(--typography-text-size-mobile);
+            transition: opacity var(--transition-long-duration) ease, transform var(--transition-long-duration) ease;
 
-            & span {
-                margin-right: 2%;
+            &.error {
+                color: var(--color-error);
+            }
+
+            &.hidden {
+                transform: scale(0.9);
+                opacity: 0;
+                transition: all 0ms;
+            }
+
+            & div {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                & span {
+                    margin-right: 4%;
+                }
             }
         }
 
@@ -64,35 +130,42 @@
 
 @media (--layout-lte-small) {
     .container {
-        background-image: none;
+        & .orbitContainer {
+            display: none;
+        }
 
         & .content {
-            padding-top: 15%;
+            width: var(--container-width-mobile);
+            padding-top: 25%;
+
+            & img {
+                width: 300px;
+            }
 
             & p {
                 font-size: var(--typography-text-size);
             }
 
-            & .infoContainer {
+            & .infoContainer div {
                 flex-direction: column;
 
                 & span {
-                    margin-top: 2%;
+                    margin-top: 12px;
                 }
             }
 
             & .button {
                 margin-top: 10%;
-
             }
         }
     }
 }
 
-@media (--layout-lte-small) {
+@media (--layout-gte-xxlarge) {
     .container {
-        & .content {
-            padding-top: 25%;
+        & .orbitContainer .orbits {
+            width: 60%;
+            height: 60%;
         }
     }
 }

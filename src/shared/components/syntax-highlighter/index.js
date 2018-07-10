@@ -11,9 +11,9 @@ const SyntaxHighlighter = ({ codeStr, language }) => {
   const preClasses = classNames(`language-${language}`, styles.preCustom)
 
   return (
-    <div className={styles.gatsbyHighlight} >
-      <pre className={preClasses}>
-        <code dangerouslySetInnerHTML={{ __html: htmlCode }} />
+    <div className={ styles.gatsbyHighlight } >
+      <pre className={ preClasses }>
+        <code dangerouslySetInnerHTML={ { __html: htmlCode } } />
       </pre>
     </div>
   )

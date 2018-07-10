@@ -1,8 +1,11 @@
 @import "./imports/variables.css";
+@import "./imports/custom-medias.css";
 
 /* ==========================================================================
    Fonts
    ========================================================================== */
+
+/* ========== Montserrat ========== */
 
 @font-face {
     font-family: "Montserrat";
@@ -11,6 +14,15 @@
     src:
         url("../media/fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
         url("../media/fonts/montserrat/Montserrat-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url("../media/fonts/montserrat/Montserrat-Bold.woff2") format("woff2"),
+        url("../media/fonts/montserrat/Montserrat-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -29,6 +41,17 @@
     src:
         url("../media/fonts/montserrat/Montserrat-Light.woff2") format("woff2"),
         url("../media/fonts/montserrat/Montserrat-Light.woff") format("woff");
+}
+
+/* ========== Roboto ========== */
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url("../media/fonts/roboto/Roboto-Light.woff2") format("woff2"),
+        url("../media/fonts/roboto/Roboto-Light.woff") format("woff");
 }
 
 /* ==========================================================================
@@ -73,7 +96,7 @@ h5,
 h6 {
     margin-top: 0;
     font-family: var(--typography-display-font);
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     line-height: 1.1;
 }
@@ -108,4 +131,14 @@ h6 {
 
 p {
     margin-top: 0;
+}
+
+@media (--layout-lte-small) {
+    body {
+        font-size: var(--typography-text-size-mobile);
+    }
+
+    h1 {
+        font-size: 36px;
+    }
 }

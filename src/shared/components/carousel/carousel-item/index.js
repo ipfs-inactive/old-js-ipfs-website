@@ -6,24 +6,24 @@ import Button from 'shared/components/button'
 import styles from './index.module.css'
 
 const CarouselItem = ({ icon, desc, image, intl: { messages } }) => (
-  <div className={styles.container}>
-    <div className={styles.leftContainer}>
-      <div className={styles.topContainer}>
-        <div className={styles.logo}>{ icon }</div>
-        <div className={styles.desc}>{ messages[desc] }</div>
+  <div className={ styles.container }>
+    <div className={ styles.leftContainer }>
+      <div className={ styles.topContainer }>
+        <div className={ styles.logo }>{ icon }</div>
+        <div className={ styles.desc }>{ messages[desc] }</div>
       </div>
-      <div className={styles.bottomContainer}>
-        <Button translationId='buttonLearnMore' path='test' />
+      <div className={ styles.bottomContainer }>
+        <Button translationId="buttonLearnMore" path="test" />
       </div>
     </div>
-    <div className={styles.rightContainer}><img src={image} /></div>
+    <div className={ styles.rightContainer }><img src={ image } /></div>
   </div>
 )
 
 CarouselItem.propTypes = {
   icon: PropTypes.element.isRequired,
   desc: PropTypes.string.isRequired,
-  image: PropTypes.element.isRequired,
+  image: PropTypes.string.isRequired,
   intl: PropTypes.object.isRequired
 }
 
