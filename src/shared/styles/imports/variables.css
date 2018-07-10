@@ -27,6 +27,7 @@
     --color-twitter-hover: #3c5ae8;
     --color-github: #102b6e;
     --color-github-hover: #1130bc;
+    --color-error: #c00;
 }
 
 /* ==========================================================================
@@ -60,6 +61,7 @@
     --accordion-content-width: 79%;
     --transition-default-duration: 600ms;
     --transition-button-duration: 300ms;
+    --transition-long-duration: 1500ms;
     --video-ratio: 56.25%;
     --line-height-xsmall: 20px;
     --line-height-small: 24px;

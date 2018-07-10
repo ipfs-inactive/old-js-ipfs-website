@@ -92,15 +92,15 @@
             margin-top: 2%;
             padding-bottom: calc(var(--bottom-half-height) * 2);
             transform: scale(1);
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
             opacity: 1;
             color: var(--color-light-blue);
             font-family: var(--typography-roboto-text-font);
-            font-size: var(--typography-text-size-small);
-            transition: all 1500ms ease;
+            font-size: var(--typography-text-size-mobile);
+            transition: opacity var(--transition-long-duration) ease, transform var(--transition-long-duration) ease;
+
+            &.error {
+                color: var(--color-error);
+            }
 
             &.hidden {
                 transform: scale(0.9);
@@ -108,8 +108,16 @@
                 transition: all 0ms;
             }
 
-            & span {
-                margin-right: 4%;
+            & div {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+
+                & span {
+                    margin-right: 4%;
+                }
             }
         }
 
@@ -138,7 +146,7 @@
                 font-size: var(--typography-text-size);
             }
 
-            & .infoContainer {
+            & .infoContainer div {
                 flex-direction: column;
 
                 & span {

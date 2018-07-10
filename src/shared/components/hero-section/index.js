@@ -16,8 +16,8 @@ class Hero extends Component {
     super()
 
     this.state = {
-      data: undefined,
-      error: undefined
+      info: undefined,
+      errorMessage: undefined
     }
   }
 
@@ -39,25 +39,13 @@ class Hero extends Component {
   }
 
   render () {
-    const { data } = this.state
-    const isDataLoaded = Boolean(data)
-
-    const infoContainerClasses = classNames(styles.infoContainer, { [styles.hidden]: !isDataLoaded })
-    const { messages } = this.props.intl
-
-    const currentVersion = isDataLoaded ? data.metadata.version : 'error'
-    const currentVersionStr = `${messages.heroCurrentVersion} ${currentVersion}`
-
-    const dateFnsLocale = this.getDateFnsCurrentLocale(locales)
-    const isDateFnsLocaleFound = Boolean(dateFnsLocale)
-    const dateFnsLocaleObject = isDateFnsLocaleFound ? { locale: dateFnsLocale } : {}
-    const latestUpdateDate = isDataLoaded ? new Date(data.metadata.date) : new Date()
-    const latestUpdateWords = distanceInWordsToNow(latestUpdateDate, dateFnsLocaleObject)
-    const latestUpdateDateStr = isDataLoaded ? `${messages.heroLatestUpdate} ${latestUpdateWords}` : 'error'
-
-    const downloads = isDataLoaded ? this.calculateDownloads(data.npm.downloads, { lastMonth: true }) : 0
-    const formattedDownloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    const downloadsStr = `${messages.heroDownloadsLastMonth} ${formattedDownloads}`
+    const { info, errorMessage } = this.state
+    const isDataLoaded = Boolean(info)
+    const existsError = Boolean(errorMessage)
+    const infoContainerClasses = classNames(styles.infoContainer, {
+      [styles.hidden]: !isDataLoaded && !existsError,
+      [styles.error]: !isDataLoaded && existsError
+    })
 
     return (
       <div className={ styles.container }>
@@ -69,9 +57,7 @@ class Hero extends Component {
           <FormattedMessage tagName="h1" id="heroWelcomeMessage" />
           <FormattedMessage tagName="p" id="heroTextDescription" />
           <div className={ infoContainerClasses }>
-            <span>{ currentVersionStr }</span>
-            <span>{ latestUpdateDateStr }</span>
-            <span>{ downloadsStr }</span>
+            { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
           </div>
           <div className={ styles.buttonContent }>
             <Button translationId="buttonLearnMore" path="test" />
@@ -81,12 +67,56 @@ class Hero extends Component {
     )
   }
 
+  renderPkgInfo = (info, isDataLoaded) => (
+    <div>
+      <span>{ isDataLoaded ? info.currentVersionStr : '' }</span>
+      <span>{ isDataLoaded ? info.latestUpdateDateStr : '' }</span>
+      <span>{ isDataLoaded ? info.downloadsStr : '' }</span>
+    </div>
+  )
+
+  renderErrorMessage = (errorMessage) => (
+    <div>
+      <span>{ errorMessage }</span>
+    </div>
+  )
+
   handleAxiosResponse = (data) => {
-    this.setState({ data })
+    const { messages } = this.props.intl
+
+    const currentVersion = data.metadata.version
+    const currentVersionStr = `${messages.heroCurrentVersion} ${currentVersion}`
+
+    const dateFnsLocale = this.getDateFnsCurrentLocale(locales)
+    const isDateFnsLocaleFound = Boolean(dateFnsLocale)
+    const dateFnsLocaleObject = isDateFnsLocaleFound ? { locale: dateFnsLocale } : {}
+    const latestUpdateDate = new Date(data.metadata.date)
+    const latestUpdateWords = distanceInWordsToNow(latestUpdateDate, dateFnsLocaleObject)
+    const latestUpdateDateStr = `${messages.heroLatestUpdate} ${latestUpdateWords}`
+
+    const downloads = this.calculateDownloads(data.npm.downloads, { lastMonth: true })
+    const formattedDownloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    const downloadsStr = `${messages.heroDownloadsLastMonth} ${formattedDownloads}`
+
+    const info = {
+      currentVersionStr,
+      latestUpdateDateStr,
+      downloadsStr
+    }
+
+    this.setState({ info })
   }
 
   handleAxiosError = (error) => {
-    this.setState({ error })
+    let errorMessage = 'Something went wrong while fetching package data: '
+    if (error.response) {
+      errorMessage += `${error.response.status} status code.`
+    } else if (error.request) {
+      errorMessage += 'request was made but no response was received.'
+    } else {
+      errorMessage += error.message
+    }
+    this.setState({ errorMessage })
   }
 
   calculateDownloads = (downloadsArr, options = { lastMonth: false }) => {
