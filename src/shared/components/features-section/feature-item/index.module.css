@@ -13,6 +13,10 @@
         margin-right: unset;
     }
 
+    &:nth-child(n+5) {
+        margin-top: 50px;
+    }
+
     & .image {
         width: 70%;
         margin-bottom: 15px;

@@ -6,6 +6,8 @@ import itemsArr from 'shared/data/what-can-you-build'
 import AccordionItem from 'shared/components/what-can-you-build-section/accordion/accordion-item'
 import styles from './index.module.css'
 
+const defaultScrollOptions = { offset: -150, align: 'top', duration: 600 }
+
 class Accordion extends Component {
   constructor () {
     super()
@@ -13,6 +15,10 @@ class Accordion extends Component {
     this.state = {
       openedItemIndex: -1
     }
+  }
+
+  componentDidMount () {
+    this.scrollToComponent = require('react-scroll-to-component')
   }
 
   render () {
@@ -33,7 +39,7 @@ class Accordion extends Component {
     })
 
     return (
-      <div className={ accordionClasses } >
+      <div className={ accordionClasses } ref={ this.handleAccordionItemRef }>
         { items }
       </div>
     )
@@ -43,6 +49,12 @@ class Accordion extends Component {
       this.setState(({ openedItemIndex }) => ({
         openedItemIndex: accordionItemIndex === openedItemIndex ? -1 : accordionItemIndex
       }))
+
+      this.scrollToComponent(this.accordionItemRef, defaultScrollOptions)
+    }
+
+    handleAccordionItemRef = (element) => {
+      this.accordionItemRef = element
     }
 }
 
