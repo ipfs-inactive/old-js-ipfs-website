@@ -6,12 +6,11 @@
 }
 
 .videoItemContainer {
-    width: 32%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    padding: 0 5px;
 
     & .videoPlaceholder,
-    & .videoDescription {
+    & .videoTitle {
         width: 100%;
     }
 
@@ -35,7 +34,7 @@
         }
     }
 
-    & .videoDescription {
+    & .videoTitle {
         margin-top: 20px;
         text-align: left;
         line-height: var(--line-height-small);
@@ -45,9 +44,7 @@
 
 @media (--layout-lte-small) {
     .videoItemContainer {
-        width: 80%;
-
-        & .videoDescription {
+        & .videoTitle {
             margin-top: 5px;
         }
     }

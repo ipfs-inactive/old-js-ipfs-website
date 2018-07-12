@@ -1,20 +1,20 @@
 const publicationsAndTalks = [
   {
     link: 'https://www.youtube.com/watch?v=2MpUj-Aua48',
-    description: 'publicationAndTalk1Desc',
-    active: true
+    active: true,
+    title: 'publicationAndTalk1Title'
   },
   {
     link: 'https://www.youtube.com/watch?v=HUVmypx9HGI',
-    description: 'publicationAndTalk2Desc'
+    title: 'publicationAndTalk2Title'
   },
   {
     link: 'https://www.youtube.com/watch?v=BA2rHlbB5i0',
-    description: 'publicationAndTalk3Desc'
+    title: 'publicationAndTalk3Title'
   },
   {
     link: 'https://www.youtube.com/watch?v=6kqgsGXpykM',
-    description: 'publicationAndTalk4Desc'
+    title: 'publicationAndTalk4Title'
   }
 ]
 

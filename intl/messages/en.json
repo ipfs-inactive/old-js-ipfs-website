@@ -65,10 +65,10 @@
 
   "publicationsAndTalksTitle": "Publications & talks",
   "publicationsAndTalksSectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "publicationAndTalk1Desc": "Nullam id dolor id nib ultricies vehicula ut id elit.",
-  "publicationAndTalk2Desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus. Donec id elit non mi porta gravida eget metus.",
-  "publicationAndTalk3Desc": "Maecenas faucibus mollis iterdum. Curabitur blandit tempus porttitor.",
-  "publicationAndTalk4Desc": "Nullam id dolor id elit non mi porta mollis ornare vel eu leo.",
+  "publicationAndTalk1Title": "Title Talk 1",
+  "publicationAndTalk2Title": "Title Talk 2",
+  "publicationAndTalk3Title": "Title Talk 3",
+  "publicationAndTalk4Title": "Title Talk 4",
 
   "communityTitle": "Community",
   "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",

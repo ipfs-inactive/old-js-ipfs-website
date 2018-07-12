@@ -5,36 +5,36 @@ import PropTypes from 'prop-types'
 
 import styles from './index.module.css'
 
-class RemainingVideo extends Component {
+class CarouselVideosItem extends Component {
   render () {
-    const { video, intl: { messages } } = this.props
+    const { link, title, intl: { messages } } = this.props
 
     return (
       <div className={ styles.videoItemContainer } onClick={ this.handleRemainingVideoClick }>
         <div className={ styles.videoPlaceholder }>
           <ReactPlayer
             className={ styles.reactPlayer }
-            url={ video.link }
+            url={ link }
             width="100%"
             height="100%" />
         </div>
-        <p className={ styles.videoDescription }>{ messages[video.description] }</p>
+        <p className={ styles.videoTitle }>{ messages[title] }</p>
       </div>
     )
   }
 
-    handleRemainingVideoClick = () => {
-      const { index } = this.props
+  handleRemainingVideoClick = () => {
+    const { index } = this.props
 
-      return this.props.onClick(index)
-    }
+    return this.props.onClick(index)
+  }
 }
 
-RemainingVideo.propTypes = {
-  video: PropTypes.object.isRequired,
-  index: PropTypes.number.isRequired,
+CarouselVideosItem.propTypes = {
+  link: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
   intl: PropTypes.object.isRequired
 }
 
-export default injectIntl(RemainingVideo)
+export default injectIntl(CarouselVideosItem)
