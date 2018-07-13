@@ -139,7 +139,8 @@
             padding-top: 25%;
 
             & img {
-                width: 300px;
+                width: 75%;
+                max-width: 300px;
             }
 
             & p {
