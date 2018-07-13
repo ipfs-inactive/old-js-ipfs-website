@@ -36,7 +36,7 @@
                 width: 100%;
                 height: auto;
 
-                & g {
+                /* & g {
                     &:global(#orbits_svg___x3C_inside_x3E__1_) {
                         transform-origin: center;
                         animation: orbit 120s infinite linear;
@@ -51,7 +51,7 @@
                         transform-origin: center;
                         animation: orbit 300s infinite linear;
                     }
-                }
+                } */
             }
         }
     }

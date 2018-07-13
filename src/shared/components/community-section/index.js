@@ -2,7 +2,7 @@ import React from 'react'
 import { FormattedMessage } from 'react-intl'
 
 import HexSvg from 'shared/media/backgrounds/hexagons.svg'
-import data from 'shared/data/community'
+// import data from 'shared/data/community'
 import Button from 'shared/components/button'
 import styles from './index.module.css'
 
@@ -26,7 +26,7 @@ const Community = () => (
         </div>
       </div>
     </div>
-    <iframe frameBorder="0" src={ data.contributorsLink } />
+    {/* <iframe frameBorder="0" src={ data.contributorsLink } /> */}
   </div>
 )
 

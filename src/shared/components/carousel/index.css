@@ -1,5 +1,22 @@
 /* We are not using cssmodules here because we need to override slick-carousel default styles */
 
+.noPadding {
+    padding: unset !important;
+}
+
+.noPadding .slick-next,
+.noPadding .slick-prev {
+    top: 35%;
+}
+
+.noPadding .slick-next {
+    right: -35px;
+}
+
+.noPadding .slick-prev {
+    left: -35px;
+}
+
 .slick-slider {
     box-sizing: border-box;
     position: relative;
@@ -289,5 +306,18 @@
     .slick-prev::after,
     .slick-next::after {
         box-shadow: inset 0 0 0 32px, 8px 8px;
+    }
+
+    .noPadding .slick-next,
+    .noPadding .slick-prev {
+        top: 40%;
+    }
+
+    .noPadding .slick-next {
+        right: -25px;
+    }
+
+    .noPadding .slick-prev {
+        left: -25px;
     }
 }
