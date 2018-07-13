@@ -24,9 +24,9 @@ class CarouselVideosItem extends Component {
   }
 
   handleRemainingVideoClick = () => {
-    const { index } = this.props
+    const { index, onClick } = this.props
 
-    return this.props.onClick(index)
+    return onClick(index)
   }
 }
 

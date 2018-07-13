@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
 
-import CarouselItem from 'shared/components/carousel/carousel-item'
+import CarouselProjectsItem from 'shared/components/carousel/carousel-projects-item'
 import CarouselVideosItem from 'shared/components/carousel/carousel-videos-item'
 import './index.css'
 
@@ -41,14 +41,14 @@ class Carousel extends Component {
       numberOfSlidesToShow = 1
     }
 
-    if (modifier === 'default') {
+    if (modifier === 'projects') {
       items = itemsList.map((item, index) => (
-        <CarouselItem key={ `carousel-item-${index}` }
+        <CarouselProjectsItem key={ `carousel-item-${index}` }
           icon={ item.icon }
           desc={ item.description }
           image={ item.image } />
       ))
-    } else if (modifier === 'talks') {
+    } else if (modifier === 'videos') {
       items = itemsList.map((item, index) => (
         index !== activeIndex &&
           <CarouselVideosItem key={ `carousel-videos-item-${index}` }
@@ -60,7 +60,7 @@ class Carousel extends Component {
       ))
     }
 
-    const shouldRemovePadding = modifier === 'talks'
+    const shouldRemovePadding = modifier === 'videos'
     const slideClassName = classNames({ noPadding: shouldRemovePadding })
 
     return (
@@ -81,13 +81,13 @@ class Carousel extends Component {
 }
 
 Carousel.defaultProps = {
-  modifier: 'default',
+  modifier: 'projects',
   size: 1
 }
 
 Carousel.propTypes = {
   itemsList: PropTypes.array.isRequired,
-  modifier: PropTypes.oneOf(['talks', 'default']),
+  modifier: PropTypes.oneOf(['videos', 'projects']),
   size: PropTypes.number,
   activeIndex: PropTypes.number
 }

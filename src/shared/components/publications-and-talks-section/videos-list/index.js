@@ -51,7 +51,11 @@ class VideosList extends Component {
     renderVideosCarousel = () => {
       const { list } = this.props
       const { activeIndex } = this.state
-      return <Carousel itemsList={ list } modifier="talks" size={ 3 } onVideoClick={ this.handleRemainingVideoClick } activeIndex={ activeIndex }/>
+      return <Carousel itemsList={ list }
+        modifier="videos"
+        size={ 3 }
+        onVideoClick={ this.handleRemainingVideoClick }
+        activeIndex={ activeIndex } />
     }
 
     findActiveVideo = (video) => Boolean(video.active)
