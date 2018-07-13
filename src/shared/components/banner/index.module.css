@@ -25,12 +25,12 @@
         }
     }
 
-    & .textContainer {
+    & .wrapContainer {
         padding: 0 13px;
         display: flex;
         align-items: center;
 
-        & .test strong {
+        & .textContainer strong {
             margin-right: 5px;
         }
     }

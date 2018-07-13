@@ -22,8 +22,8 @@ class Banner extends Component {
         <div className={ styles.iconContainer }>
           <AlphaSvg />
         </div>
-        <div className={ styles.textContainer }>
-          <div className={ styles.test } >
+        <div className={ styles.wrapContainer }>
+          <div className={ styles.textContainer } >
             <FormattedMessage tagName="strong" id="bannerHighlightMessage" />
             <FormattedMessage id="bannerMessage" />
           </div>
