@@ -21,7 +21,7 @@ const GettingStarted = () =>
         <div className={ styles.panel } >
           <StepsList />
         </div>
-        <Button translationId="buttonLearnMore" path="test" />
+        <Button translationId="buttonLearnMore" path="/test" />
       </div>
     </div>
   )

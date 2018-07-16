@@ -13,7 +13,7 @@ const CarouselProjectsItem = ({ icon, desc, image, intl: { messages } }) => (
         <div className={ styles.desc }>{ messages[desc] }</div>
       </div>
       <div className={ styles.bottomContainer }>
-        <Button translationId="buttonLearnMore" path="test" />
+        <Button translationId="buttonLearnMore" path="/test" />
       </div>
     </div>
     <div className={ styles.rightContainer }><img src={ image } /></div>

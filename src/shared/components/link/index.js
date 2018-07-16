@@ -4,12 +4,12 @@ import GatsbyLink from 'gatsby-link'
 
 class Link extends Component {
   render () {
-    const { to, ...rest } = this.props
+    const { to, changeLocale, ...rest } = this.props
     const { intl } = this.context
 
     const localelizedTo = intl.defaultLocale !== intl.locale ? `/${intl.locale}${to}` : to
 
-    return <GatsbyLink { ...rest } to={ localelizedTo } />
+    return <GatsbyLink { ...rest } to={ changeLocale ? to : localelizedTo } />
   }
 
     static propTypes = {

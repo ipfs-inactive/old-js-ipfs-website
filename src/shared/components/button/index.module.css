@@ -2,6 +2,7 @@
 
 a.link {
     text-decoration: none;
+    text-align: center;
 
     & .customButton {
         min-width: 150px;
