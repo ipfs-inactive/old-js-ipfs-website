@@ -2,21 +2,30 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
-import { getLocalesFullForm, getIndexByAcronym } from 'utils/getLocalesUtils'
+import { getDefaultLocale, getLocales, getIndexByAcronym } from 'utils/getLocalesUtils'
 
 import Link from 'shared/components/link'
 import styles from './index.module.css'
 
 const LocalesBar = ({ scrolled, intl: { locale } }) => {
-  const localesFullForm = getLocalesFullForm()
+  const locales = getLocales()
   const currentLocaleIndex = getIndexByAcronym(locale)
   const localesBarClassName = classNames(styles.localesBar, {
     [styles.defaultLocalesBar]: !scrolled,
     [styles.hideLocalesBar]: scrolled
   })
-  const renderLocales = localesFullForm.map((locale, index) => (
-    <Link key={ `localeF-${index}` } className={ index === currentLocaleIndex && styles.active } to="/" >{ locale }</Link>
-  ))
+  const defaultLocale = getDefaultLocale()
+  const renderLocales = locales.map((locale, index) => {
+    const to = defaultLocale === locale.acronym ? '/' : `/${locale.acronym}`
+    return (
+      <Link key={ `localeF-${index}` }
+        changeLocale
+        className={ index === currentLocaleIndex && styles.active }
+        to={ to } >
+        { locale.fullForm }
+      </Link>
+    )
+  })
 
   return (
     <div className={ localesBarClassName }>

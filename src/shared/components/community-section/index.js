@@ -20,9 +20,9 @@ const Community = () => (
       <div className={ styles.socialLinksContainer }>
         <FormattedMessage tagName="p" id="communitySocialTitle" />
         <div className={ styles.socialLinks }>
-          <Button translationId="buttonIrcFreenode" path="test" />
-          <Button translationId="buttonGithub" path="test" modifier="github" />
-          <Button translationId="buttonTwitter" path="test" modifier="twitter" />
+          <Button translationId="buttonIrcFreenode" path="/test" />
+          <Button translationId="buttonGithub" path="/test" modifier="github" />
+          <Button translationId="buttonTwitter" path="/test" modifier="twitter" />
         </div>
       </div>
     </div>

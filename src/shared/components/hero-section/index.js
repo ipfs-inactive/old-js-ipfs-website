@@ -60,7 +60,7 @@ class Hero extends Component {
             { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
           </div>
           <div className={ styles.buttonContent }>
-            <Button translationId="buttonLearnMore" path="test" />
+            <Button translationId="buttonLearnMore" path="/test" />
           </div>
         </div>
       </div>
