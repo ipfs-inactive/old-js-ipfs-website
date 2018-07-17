@@ -6,8 +6,8 @@ import FeatureItem from 'shared/components/features-section/feature-item'
 import featsArr from 'shared/data/features'
 import styles from './index.module.css'
 
-const Features = ({ intl: { messages: { features } } }) => {
-  const translationFeats = features.list
+const Features = ({ intl: { messages } }) => {
+  const translationFeats = messages.features.list
   const feats = featsArr.map((feat, index) => {
     const translationFeat = translationFeats[feat.translationListIndex]
     return (
@@ -21,9 +21,9 @@ const Features = ({ intl: { messages: { features } } }) => {
   return (
     <div className={ styles.container }>
       <div className={ styles.content } >
-        <h1>{ features.sectionTitle }</h1>
+        <h1>{ messages.features.sectionTitle }</h1>
         <span className={ styles.sectionDescription }>
-          <p>{ features.sectionDesc }</p>
+          <p>{ messages.features.sectionDesc }</p>
         </span>
         <div className={ styles.featuresContainer }>
           { feats }

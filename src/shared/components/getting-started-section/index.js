@@ -7,7 +7,7 @@ import StepsList from 'shared/components/getting-started-section/steps-list'
 import Button from 'shared/components/button'
 import styles from './index.module.css'
 
-const GettingStarted = ({ intl: { messages: { gettingStarted } } }) =>
+const GettingStarted = ({ intl: { messages } }) =>
   (
     <div className={ styles.container }>
       <div className={ styles.backgroundSvg }>
@@ -15,9 +15,9 @@ const GettingStarted = ({ intl: { messages: { gettingStarted } } }) =>
         <div className={ styles.hex2 }><HexSvg /></div>
       </div>
       <div className={ styles.content }>
-        <h1>{ gettingStarted.sectionTitle }</h1>
+        <h1>{ messages.gettingStarted.sectionTitle }</h1>
         <span className={ styles.sectionDescription }>
-          <p>{ gettingStarted.sectionDesc }</p>
+          <p>{ messages.gettingStarted.sectionDesc }</p>
         </span>
         <div className={ styles.panel } >
           <StepsList />

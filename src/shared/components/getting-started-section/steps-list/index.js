@@ -6,8 +6,8 @@ import stepsArr from 'shared/data/getting-started'
 import SyntaxHighlighter from 'shared/components/syntax-highlighter'
 import styles from './index.module.css'
 
-const StepsList = ({ intl: { messages: { gettingStarted } } }) => {
-  const translationSteps = gettingStarted.list
+const StepsList = ({ intl: { messages } }) => {
+  const translationSteps = messages.gettingStarted.list
   const steps = stepsArr.map((step, index) => {
     const translationStep = translationSteps[step.translationListIndex]
     return (

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { getLocalesAcronym } from 'utils/getLocalesUtils'
+import { getDefaultLocale, getLocalesAcronym } from 'utils/getLocalesUtils'
 
 import Link from 'shared/components/link'
 import styles from './index.module.css'
@@ -38,6 +38,7 @@ class LocalesDropdown extends Component {
     const dropdownContentClasses = classNames(styles.dropdownContent, {
       [styles.show]: this.state.isOpen
     })
+    const defaultLocale = getDefaultLocale()
 
     const availableLocalesOptions = this.availableLocales.map((locale, index) => {
       const isSameLocale = locale === this.currentLocale
@@ -46,7 +47,7 @@ class LocalesDropdown extends Component {
         return null
       }
 
-      const to = `/${locale}`
+      const to = defaultLocale === locale ? '/' : `/${locale}`
 
       return (
         <Link key={ index }

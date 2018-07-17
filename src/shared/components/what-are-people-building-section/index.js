@@ -7,18 +7,18 @@ import HexSvg from 'shared/media/backgrounds/hexagons.svg'
 import projectsArr from 'shared/data/what-are-people-building'
 import styles from './index.module.css'
 
-const WhatArePeopleBuilding = ({ intl: { messages: { whatArePeopleBuilding } } }) => (
+const WhatArePeopleBuilding = ({ intl: { messages } }) => (
   <div className={ styles.container }>
     <div className={ styles.backgroundSvg }>
       <div className={ styles.hex1 }><HexSvg /></div>
       <div className={ styles.hex2 }><HexSvg /></div>
     </div>
     <div className={ styles.content }>
-      <h1>{ whatArePeopleBuilding.sectionTitle }</h1>
+      <h1>{ messages.whatArePeopleBuilding.sectionTitle }</h1>
       <span className={ styles.sectionDescription }>
-        <p>{ whatArePeopleBuilding.sectionDesc }</p>
+        <p>{ messages.whatArePeopleBuilding.sectionDesc }</p>
       </span>
-      <Carousel itemsList={ projectsArr } translationsList={ whatArePeopleBuilding.list } />
+      <Carousel itemsList={ projectsArr } translationsList={ messages.whatArePeopleBuilding.list } />
     </div>
   </div>
 )

@@ -26,9 +26,16 @@ class Carousel extends Component {
 
   componentDidMount () {
     window.addEventListener('resize', this.updateWindowDimensions)
-    this.setState({
-      isMobile: window.innerWidth <= 768
-    })
+
+    this.timeout = setTimeout(() => {
+      this.setState({
+        isMobile: window.innerWidth <= 768
+      })
+    }, 15)
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.timeout)
   }
 
   render () {

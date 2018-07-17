@@ -34,7 +34,7 @@ class MobileNavbar extends Component {
     const menuIconClass = classNames(styles.menuIconWrapper, {
       [styles.openedMenuIcon]: this.state.isOpen
     })
-    const { messages: { navbar } } = this.props.intl
+    const { messages } = this.props.intl
 
     return (
       <div className={ styles.container }>
@@ -50,11 +50,11 @@ class MobileNavbar extends Component {
           <Helmet>
             <script async defer src="https://buttons.github.io/buttons.js" />
           </Helmet>
-          <li><Link className={ styles.menuLink } to="/"> { navbar.item1 } </Link> </li>
-          <li><Link className={ styles.menuLink } to="/"> { navbar.item2 } </Link> </li>
-          <li><Link className={ styles.menuLink } to="/"> { navbar.item3 } </Link> </li>
+          <li><Link className={ styles.menuLink } to="/"> { messages.navbar.item1 } </Link> </li>
+          <li><Link className={ styles.menuLink } to="/"> { messages.navbar.item2 } </Link> </li>
+          <li><Link className={ styles.menuLink } to="/"> { messages.navbar.item3 } </Link> </li>
           <li className={ styles.githubContributers }>
-            <Link className={ styles.menuLink } to="/"> { navbar.item4 } </Link>
+            <Link className={ styles.menuLink } to="/"> { messages.navbar.item4 } </Link>
             <a className="github-button"
               href="https://github.com/ipfs/js-ipfs"
               data-show-count="true"

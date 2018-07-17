@@ -17,7 +17,7 @@ class Banner extends Component {
 
   render () {
     const { isOpen } = this.state
-    const { intl: { messages: { banner } } } = this.props
+    const { intl: { messages } } = this.props
 
     return (
       <div className={ isOpen ? styles.container : styles.hidden }>
@@ -26,8 +26,8 @@ class Banner extends Component {
         </div>
         <div className={ styles.wrapContainer }>
           <div className={ styles.textContainer } >
-            <strong>{ banner.highlightMessage }</strong>
-            <span>{ banner.message }</span>
+            <strong>{ messages.banner.highlightMessage }</strong>
+            <span>{ messages.banner.message }</span>
           </div>
         </div>
         <div className={ styles.closeButtonContainer } onClick={ this.handleCloseButtonClick }>

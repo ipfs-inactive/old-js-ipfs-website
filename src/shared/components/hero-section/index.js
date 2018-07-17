@@ -20,8 +20,8 @@ class Hero extends Component {
       errorMessage: undefined
     }
 
-    const { messages: { hero } } = this.props.intl
-    this.messages = hero
+    const { messages } = this.props.intl
+    this.messages = messages
   }
 
   componentDidMount () {
@@ -49,7 +49,7 @@ class Hero extends Component {
       [styles.hidden]: !isDataLoaded && !existsError,
       [styles.error]: !isDataLoaded && existsError
     })
-    const hero = this.messages
+    const messages = this.messages
 
     return (
       <div className={ styles.container }>
@@ -58,8 +58,8 @@ class Hero extends Component {
         </div>
         <div className={ styles.content }>
           <img src={ cubePng } />
-          <h1>{ hero.welcomeMessage }</h1>
-          <p>{ hero.textDescription }</p>
+          <h1>{ messages.hero.welcomeMessage }</h1>
+          <p>{ messages.hero.textDescription }</p>
           <div className={ infoContainerClasses }>
             { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
           </div>
@@ -84,21 +84,21 @@ class Hero extends Component {
   )
 
   handleAxiosResponse = (data) => {
-    const hero = this.messages
+    const messages = this.messages
 
     const currentVersion = data.metadata.version
-    const currentVersionStr = `${hero.currentVersion} ${currentVersion}`
+    const currentVersionStr = `${messages.hero.currentVersion} ${currentVersion}`
 
     const dateFnsLocale = this.getDateFnsCurrentLocale(locales)
     const isDateFnsLocaleFound = Boolean(dateFnsLocale)
     const dateFnsLocaleObject = isDateFnsLocaleFound ? { locale: dateFnsLocale } : {}
     const latestUpdateDate = new Date(data.metadata.date)
     const latestUpdateWords = distanceInWordsToNow(latestUpdateDate, dateFnsLocaleObject)
-    const latestUpdateDateStr = `${hero.latestUpdate} ${latestUpdateWords}`
+    const latestUpdateDateStr = `${messages.hero.latestUpdate} ${latestUpdateWords}`
 
     const downloads = this.calculateDownloads(data.npm.downloads, { lastMonth: true })
     const formattedDownloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    const downloadsStr = `${hero.downloadsLastMonth} ${formattedDownloads}`
+    const downloadsStr = `${messages.hero.downloadsLastMonth} ${formattedDownloads}`
 
     const info = {
       currentVersionStr,

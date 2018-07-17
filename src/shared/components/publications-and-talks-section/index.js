@@ -7,18 +7,18 @@ import videosArr from 'shared/data/publications-and-talks'
 import VideosList from 'shared/components/publications-and-talks-section/videos-list'
 import styles from './index.module.css'
 
-const PublicationsAndTalks = ({ intl: { messages: { publicationsAndTalks } } }) => (
+const PublicationsAndTalks = ({ intl: { messages } }) => (
   <div className={ styles.container }>
     <div className={ styles.backgroundSvg }>
       <div className={ styles.hex1 }><HexSvg /></div>
       <div className={ styles.hex2 }><HexSvg /></div>
     </div>
     <div className={ styles.content } >
-      <h1>{ publicationsAndTalks.sectionTitle }</h1>
+      <h1>{ messages.publicationsAndTalks.sectionTitle }</h1>
       <span className={ styles.sectionDescription }>
-        <p>{ publicationsAndTalks.sectionDesc }</p>
+        <p>{ messages.publicationsAndTalks.sectionDesc }</p>
       </span>
-      <VideosList list={ videosArr } translationsList={ publicationsAndTalks.list }/>
+      <VideosList list={ videosArr } translationsList={ messages.publicationsAndTalks.list }/>
     </div>
   </div>
 )

@@ -7,19 +7,19 @@ import HexSvg from 'shared/media/backgrounds/hexagons.svg'
 import Button from 'shared/components/button'
 import styles from './index.module.css'
 
-const Community = ({ intl: { messages: { community } } }) => (
+const Community = ({ intl: { messages } }) => (
   <div className={ styles.container }>
     <div className={ styles.backgroundSvg }>
       <div className={ styles.hex1 }><HexSvg /></div>
       <div className={ styles.hex2 }><HexSvg /></div>
     </div>
     <div className={ styles.content }>
-      <h1>{ community.sectionTitle }</h1>
+      <h1>{ messages.community.sectionTitle }</h1>
       <span className={ styles.sectionDescription }>
-        <p>{ community.sectionDesc }</p>
+        <p>{ messages.community.sectionDesc }</p>
       </span>
       <div className={ styles.socialLinksContainer }>
-        <p>{ community.socialNetworksText }</p>
+        <p>{ messages.community.socialNetworksText }</p>
         <div className={ styles.socialLinks }>
           <Button translationId="buttonIrcFreenode" path="/test" />
           <Button translationId="buttonGithub" path="/test" modifier="github" />
