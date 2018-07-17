@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormattedMessage, injectIntl } from 'react-intl'
+import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import FeatureItem from 'shared/components/features-section/feature-item'
 
@@ -7,19 +7,23 @@ import featsArr from 'shared/data/features'
 import styles from './index.module.css'
 
 const Features = ({ intl: { messages } }) => {
-  const feats = featsArr.map((feat, index) =>
-    (<FeatureItem key={ `feat-${index}` }
-      title={ messages[feat.title] }
-      description={ messages[feat.description] }
-      icon={ feat.icon } />)
-  )
+  const translationFeats = messages.features.list
+  const feats = featsArr.map((feat, index) => {
+    const translationFeat = translationFeats[feat.translationListIndex]
+    return (
+      <FeatureItem key={ `feat-${index}` }
+        title={ translationFeat.title }
+        description={ translationFeat.desc }
+        icon={ feat.icon } />
+    )
+  })
 
   return (
     <div className={ styles.container }>
       <div className={ styles.content } >
-        <FormattedMessage tagName="h1" id="featuresTitle" />
+        <h1>{ messages.features.sectionTitle }</h1>
         <span className={ styles.sectionDescription }>
-          <FormattedMessage tagName="p" id="featuresSectionDesc" />
+          <p>{ messages.features.sectionDesc }</p>
         </span>
         <div className={ styles.featuresContainer }>
           { feats }

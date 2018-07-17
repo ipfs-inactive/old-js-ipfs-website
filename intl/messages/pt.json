@@ -1,29 +1,115 @@
 {
+  "buttons": {
     "buttonLearnMore": "Saber Mais",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode",
+    "buttonIrcFreenode": "IRC Freenode"
+  },
+
+  "banner": {
     "highlightMessage": "A biblioteca js-ipfs ainda está em versão Alfa.",
-    "bannerMessage": "O código ainda não foi validado por especialistas em segurança e não deve ser usado para guardar, partilhar ou publicar informação privada.",
-    "navMenuItem1": "Tutoriais",
-    "navMenuItem2": "Api",
-    "navMenuItem3": "Contribuições",
-    "navMenuItem4": "Open Source",
-    "heroWelcomeMessage": "Mensagem de Boas vindas",
-    "heroTextDescription": "Nullam quis risus eget urna mollis ornare vel eu leo. s eget urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "gettingStartedStep1Title": "Install",
-    "gettingStartedStep1Desc": "This project is available through npm. To install run:",
-    "gettingStartedStep1Note": "Requires npm@3 and node@6 or above, tested on OSX & Linux, expected to work on Windows.",
-    "gettingStartedStep2Title": "Use in Node.js",
-    "gettingStartedStep2Desc": "To include this project programmatically:",
-    "gettingStartedStep3Title": "Through command line tool",
-    "gettingStartedStep3Desc": "In order to use js-ipfs as a CLI, you must install it with the global flag. Run the following (even if you have ipfs installed locally):",
-    "gettingStartedStep3Note": "The CLI is available by using the command jsipfs in your terminal. This is aliased, instead of using ipfs, to make sure it does not conflict with the Go implementation.",
-    "gettingStartedStep4Title": "Use in the browser",
-    "gettingStartedStep4Desc": "Learn how to bundle with browserify and webpack in the examples folder.\n\nYou can also load it using a <script> using the unpkg CDN or the jsDelivr CDN. Inserting one of the following lines will make a Ipfs object available in the global namespace.",
-    "gettingStartedStep4Note": "Inserting one of the above lines will make an Ipfs object available in the global namespace.",
-    "footerLeftContent": "Protocol Labs | Lorem ipsum",
-    "footerRightContent": "IPFS.JS Lorem ipsum",
+    "message": "O código ainda não foi validado por especialistas em segurança e não deve ser usado para guardar, partilhar ou publicar informação privada."
+  },
+
+  "navbar": {
+    "item1": "Tutoriais",
+    "item2": "Api",
+    "item3": "Contribuições",
+    "item4": "Open Source"
+  },
+
+  "hero": {
+    "welcomeMessage": "Mensagem de Boas vindas™",
+    "textDescription": "PT-js-ipfs paves the path for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it runs in a Browser tab, a Service Worker, a Web Extension and also in Node.js, opening the door to a world of possibilities.",
+    "currentVersion": "Versão atual:",
+    "latestUpdate": "Último update:",
+    "downloadsLastMonth": "Downloads último mês:"
+  },
+
+  "features": {
+    "sectionTitle": "PT-Features",
+    "sectionDesc": "PT-Packed with all the things you know and love about IPFS, it also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications",
+    "list": [
+      {
+        "title": "PT-Run on Node.js and the Browser",
+        "desc": "PT-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "PT-Implements the full IPFS Stack",
+        "desc": "PT-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "PT-Use PubSub to communicate realtime with the other peers",
+        "desc": "PT-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "PT-Add and retrieve Files from the Network",
+        "desc": "PT-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "PT-Use IPLD to traverse any hash linked data structure",
+        "desc": "PT-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "PT-Getting Started",
+    "sectionDesc": "PT-Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
+    "list": [
+      {
+        "title": "PT-Install",
+        "desc": "PT-This project is available through npm. To install run:",
+        "note": "PT-Requires npm@3 and node@6 or above, tested on OSX & Linux, expected to work on Windows."
+      },
+      {
+        "title": "PT-Use in Node.js",
+        "desc": "PT-To include this project programmatically:"
+      },
+      {
+        "title": "PT-Through command line tool",
+        "desc": "PT-In order to use js-ipfs as a CLI, you must install it with the global flag. Run the following (even if you have ipfs installed locally):",
+        "note": "PT-The CLI is available by using the command jsipfs in your terminal. This is aliased, instead of using ipfs, to make sure it does not conflict with the Go implementation."
+      },
+      {
+        "title": "PT-Use in the browser",
+        "desc": "PT-Learn how to bundle with browserify and webpack in the examples folder.\n\nYou can also load it using a <script> using the unpkg CDN or the jsDelivr CDN. Inserting one of the following lines will make a Ipfs object available in the global namespace.",
+        "note": "PT-Inserting one of the above lines will make an Ipfs object available in the global namespace."
+      }
+    ]
+  },
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "PT-What are people building with it?",
+    "sectionDesc": "PT-Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
+    "list": [
+      { "desc": "PT-Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit." },
+      { "desc": "PT-Mamaecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit." }
+    ]
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "PT-Publications & talks",
+    "sectionDesc": "PT-Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "list": [
+      { "title": "PT-Title Talk 1" },
+      { "title": "PT-Title Talk 2" },
+      { "title": "PT-Title Talk 3" },
+      { "title": "PT-Title Talk 4" }
+    ]
+  },
+
+  "community": {
+    "sectionTitle": "PT-Community",
+    "sectionDesc": "PT-Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
+    "socialNetworksText": "PT-Join Us!"
+  },
+
+  "footer": {
+    "leftContent": "PT-Protocol Labs | Except as noted, content licensed CC-BY 3.0",
+    "rightContent": "PT-IPFS.JS was started and is sponsored by"
+  },
+
     "whatCanYouBuildTitle": "Lorem ipsum",
     "whatCanYouBuildSectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "whatCanYouBuildItem1Name": "PT-Video Streaming",
@@ -38,17 +124,6 @@
     "whatCanYouBuildItem3Title": "PT-Mornon mi porta gravida",
     "whatCanYouBuildItem3Subtitle": "PT-Maecenas faucibus mollis interd ide linon mi porta gravida eget metus.",
     "whatCanYouBuildItem3Desc": "PT-Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel sce i sque nisl constur et. Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel scei sque nisl consectetur et.",
-    "whatPeopleAreBuildingTitle": "Lorem ipsum",
-    "whatPeopleAreBuildingSectionDesc": "PT-Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
-    "whatArePeopleBuildingProj1Desc": "PT-Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit.",
-    "publicationsAndTalksTitle": "PT-Publications & talks",
-    "publicationsAndTalksSectionDesc": "PT-Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "publicationAndTalk1Title": "PT-Title Talk 1",
-    "publicationAndTalk2Title": "PT-Title Talk 2",
-    "publicationAndTalk3Title": "PT-Title Talk 3",
-    "publicationAndTalk4Title": "PT-Title Talk 4",
-    "communityTitle": "PT-Community",
-    "communityDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
-    "communitySocialTitle": "PT-Join Us!",
+    
     "service-worker": "Iniciar Service Worker"
 }

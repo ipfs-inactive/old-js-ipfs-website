@@ -9,28 +9,23 @@ import Feat5Svg from 'shared/media/images/feat5.svg'
 const feats = [
   {
     icon: <Feat1Svg />,
-    title: 'featuresFeat1Title',
-    description: 'featuresFeat1Desc'
+    translationListIndex: 0
   },
   {
     icon: <Feat2Svg />,
-    title: 'featuresFeat2Title',
-    description: 'featuresFeat2Desc'
+    translationListIndex: 1
   },
   {
     icon: <Feat3Svg />,
-    title: 'featuresFeat3Title',
-    description: 'featuresFeat3Desc'
+    translationListIndex: 2
   },
   {
     icon: <Feat4Svg />,
-    title: 'featuresFeat4Title',
-    description: 'featuresFeat4Desc'
+    translationListIndex: 3
   },
   {
     icon: <Feat5Svg />,
-    title: 'featuresFeat5Title',
-    description: 'featuresFeat5Desc'
+    translationListIndex: 4
   }
 ]
 

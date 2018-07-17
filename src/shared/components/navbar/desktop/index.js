@@ -21,10 +21,10 @@ const DesktopNavbar = ({ scrolled, localesBarHeight, intl: { messages } }) => {
         <Helmet>
           <script async defer src="https://buttons.github.io/buttons.js" />
         </Helmet>
-        <Link to="/"> { messages.navMenuItem1.toUpperCase() } </Link>
-        <Link to="/"> { messages.navMenuItem2.toUpperCase() } </Link>
-        <Link to="/"> { messages.navMenuItem3.toUpperCase() } </Link>
-        <Link to="/"> { messages.navMenuItem4.toUpperCase() } </Link>
+        <Link to="/"> { messages.navbar.item1 } </Link>
+        <Link to="/"> { messages.navbar.item2 } </Link>
+        <Link to="/"> { messages.navbar.item3 } </Link>
+        <Link to="/"> { messages.navbar.item4 } </Link>
         <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ipfs/js-ipfs on GitHub">
             Star
         </a>

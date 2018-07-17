@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { injectIntl } from 'react-intl'
 import ReactPlayer from 'react-player'
 import PropTypes from 'prop-types'
 
@@ -7,7 +6,7 @@ import styles from './index.module.css'
 
 class CarouselVideosItem extends Component {
   render () {
-    const { link, title, intl: { messages } } = this.props
+    const { link, title } = this.props
 
     return (
       <div className={ styles.videoItemContainer } onClick={ this.handleRemainingVideoClick }>
@@ -18,7 +17,7 @@ class CarouselVideosItem extends Component {
             width="100%"
             height="100%" />
         </div>
-        <p className={ styles.videoTitle }>{ messages[title] }</p>
+        <p className={ styles.videoTitle }>{ title }</p>
       </div>
     )
   }
@@ -33,8 +32,7 @@ class CarouselVideosItem extends Component {
 CarouselVideosItem.propTypes = {
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
-  intl: PropTypes.object.isRequired
+  onClick: PropTypes.func.isRequired
 }
 
-export default injectIntl(CarouselVideosItem)
+export default CarouselVideosItem

@@ -9,7 +9,7 @@ import styles from './index.module.css'
 const Button = ({ translationId, path, className, intl: { messages }, modifier }) => (
   <Link to={ path } className={ styles.link } >
     <div className={ classNames(styles.customButton, className, styles[modifier]) }>
-      { messages[translationId] }
+      { messages.buttons[translationId] }
     </div>
   </Link>
 )

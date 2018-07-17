@@ -5,13 +5,13 @@ import ParatiiPrintScreen from 'shared/media/images/paratii-ps.png'
 
 const projects = [
   {
+    translationListIndex: 0,
     icon: <ParatiiSvg />,
-    description: 'whatArePeopleBuildingProj1Desc',
     image: ParatiiPrintScreen
   },
   {
+    translationListIndex: 1,
     icon: <ParatiiSvg />,
-    description: 'whatArePeopleBuildingProj1Desc',
     image: ParatiiPrintScreen
   }
 ]

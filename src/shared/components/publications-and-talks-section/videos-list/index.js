@@ -49,9 +49,10 @@ class VideosList extends Component {
     }
 
     renderVideosCarousel = () => {
-      const { list } = this.props
+      const { list, translationsList } = this.props
       const { activeIndex } = this.state
       return <Carousel itemsList={ list }
+        translationsList={ translationsList }
         modifier="videos"
         size={ 3 }
         onVideoClick={ this.handleRemainingVideoClick }
@@ -71,7 +72,8 @@ class VideosList extends Component {
 }
 
 VideosList.propTypes = {
-  list: PropTypes.array.isRequired
+  list: PropTypes.array.isRequired,
+  translationsList: PropTypes.array.isRequired
 }
 
 export default VideosList

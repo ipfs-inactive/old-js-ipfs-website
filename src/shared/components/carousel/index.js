@@ -26,14 +26,21 @@ class Carousel extends Component {
 
   componentDidMount () {
     window.addEventListener('resize', this.updateWindowDimensions)
-    this.setState({
-      isMobile: window.innerWidth <= 768
-    })
+
+    this.timeout = setTimeout(() => {
+      this.setState({
+        isMobile: window.innerWidth <= 768
+      })
+    }, 15)
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.timeout)
   }
 
   render () {
     let items
-    const { itemsList, modifier, size, onVideoClick, activeIndex } = this.props
+    const { itemsList, modifier, size, onVideoClick, activeIndex, translationsList } = this.props
     const { isMobile } = this.state
 
     let numberOfSlidesToShow = size
@@ -42,22 +49,28 @@ class Carousel extends Component {
     }
 
     if (modifier === 'projects') {
-      items = itemsList.map((item, index) => (
-        <CarouselProjectsItem key={ `carousel-item-${index}` }
-          icon={ item.icon }
-          desc={ item.description }
-          image={ item.image } />
-      ))
+      items = itemsList.map((item, index) => {
+        const translationIndex = item.translationListIndex
+        return (
+          <CarouselProjectsItem key={ `carousel-item-${index}` }
+            icon={ item.icon }
+            desc={ translationsList[translationIndex].desc }
+            image={ item.image } />
+        )
+      })
     } else if (modifier === 'videos') {
-      items = itemsList.map((item, index) => (
-        index !== activeIndex &&
-          <CarouselVideosItem key={ `carousel-videos-item-${index}` }
-            link={ item.link }
-            title={ item.title }
-            index={ index }
-            onClick={ onVideoClick }
-          />
-      ))
+      items = itemsList.map((item, index) => {
+        const translationIndex = item.translationListIndex
+        return (
+          index !== activeIndex &&
+            <CarouselVideosItem key={ `carousel-videos-item-${index}` }
+              link={ item.link }
+              title={ translationsList[translationIndex].title }
+              index={ index }
+              onClick={ onVideoClick }
+            />
+        )
+      })
     }
 
     const shouldRemovePadding = modifier === 'videos'
@@ -89,7 +102,8 @@ Carousel.propTypes = {
   itemsList: PropTypes.array.isRequired,
   modifier: PropTypes.oneOf(['videos', 'projects']),
   size: PropTypes.number,
-  activeIndex: PropTypes.number
+  activeIndex: PropTypes.number,
+  translationsList: PropTypes.array.isRequired
 }
 
 export default Carousel
