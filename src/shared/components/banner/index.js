@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { FormattedMessage } from 'react-intl'
+import { injectIntl } from 'react-intl'
+import { PropTypes } from 'prop-types'
 
 import CloseSvg from 'shared/media/icons/close-button.svg'
 import AlphaSvg from 'shared/media/icons/alpha-sign.svg'
@@ -16,6 +17,7 @@ class Banner extends Component {
 
   render () {
     const { isOpen } = this.state
+    const { intl: { messages: { banner } } } = this.props
 
     return (
       <div className={ isOpen ? styles.container : styles.hidden }>
@@ -24,8 +26,8 @@ class Banner extends Component {
         </div>
         <div className={ styles.wrapContainer }>
           <div className={ styles.textContainer } >
-            <FormattedMessage tagName="strong" id="bannerHighlightMessage" />
-            <FormattedMessage id="bannerMessage" />
+            <strong>{ banner.highlightMessage }</strong>
+            <span>{ banner.message }</span>
           </div>
         </div>
         <div className={ styles.closeButtonContainer } onClick={ this.handleCloseButtonClick }>
@@ -42,4 +44,8 @@ class Banner extends Component {
     };
 }
 
-export default Banner
+Banner.propTypes = {
+  intl: PropTypes.object.isRequired
+}
+
+export default injectIntl(Banner)

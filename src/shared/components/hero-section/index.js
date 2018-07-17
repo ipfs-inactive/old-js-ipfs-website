@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FormattedMessage, injectIntl } from 'react-intl'
+import { injectIntl } from 'react-intl'
 import { PropTypes } from 'prop-types'
 import axios from 'axios'
 import classNames from 'classnames'
@@ -12,13 +12,16 @@ import cubePng from 'shared/media/images/cube.png'
 import styles from './index.module.css'
 
 class Hero extends Component {
-  constructor () {
-    super()
+  constructor (props) {
+    super(props)
 
     this.state = {
       info: undefined,
       errorMessage: undefined
     }
+
+    const { messages: { hero } } = this.props.intl
+    this.messages = hero
   }
 
   componentDidMount () {
@@ -46,6 +49,7 @@ class Hero extends Component {
       [styles.hidden]: !isDataLoaded && !existsError,
       [styles.error]: !isDataLoaded && existsError
     })
+    const hero = this.messages
 
     return (
       <div className={ styles.container }>
@@ -54,8 +58,8 @@ class Hero extends Component {
         </div>
         <div className={ styles.content }>
           <img src={ cubePng } />
-          <FormattedMessage tagName="h1" id="heroWelcomeMessage" />
-          <FormattedMessage tagName="p" id="heroTextDescription" />
+          <h1>{ hero.welcomeMessage }</h1>
+          <p>{ hero.textDescription }</p>
           <div className={ infoContainerClasses }>
             { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
           </div>
@@ -80,21 +84,21 @@ class Hero extends Component {
   )
 
   handleAxiosResponse = (data) => {
-    const { messages } = this.props.intl
+    const hero = this.messages
 
     const currentVersion = data.metadata.version
-    const currentVersionStr = `${messages.heroCurrentVersion} ${currentVersion}`
+    const currentVersionStr = `${hero.currentVersion} ${currentVersion}`
 
     const dateFnsLocale = this.getDateFnsCurrentLocale(locales)
     const isDateFnsLocaleFound = Boolean(dateFnsLocale)
     const dateFnsLocaleObject = isDateFnsLocaleFound ? { locale: dateFnsLocale } : {}
     const latestUpdateDate = new Date(data.metadata.date)
     const latestUpdateWords = distanceInWordsToNow(latestUpdateDate, dateFnsLocaleObject)
-    const latestUpdateDateStr = `${messages.heroLatestUpdate} ${latestUpdateWords}`
+    const latestUpdateDateStr = `${hero.latestUpdate} ${latestUpdateWords}`
 
     const downloads = this.calculateDownloads(data.npm.downloads, { lastMonth: true })
     const formattedDownloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    const downloadsStr = `${messages.heroDownloadsLastMonth} ${formattedDownloads}`
+    const downloadsStr = `${hero.downloadsLastMonth} ${formattedDownloads}`
 
     const info = {
       currentVersionStr,

@@ -34,7 +34,7 @@ class MobileNavbar extends Component {
     const menuIconClass = classNames(styles.menuIconWrapper, {
       [styles.openedMenuIcon]: this.state.isOpen
     })
-    const { messages } = this.props.intl
+    const { messages: { navbar } } = this.props.intl
 
     return (
       <div className={ styles.container }>
@@ -50,13 +50,16 @@ class MobileNavbar extends Component {
           <Helmet>
             <script async defer src="https://buttons.github.io/buttons.js" />
           </Helmet>
-          <li><Link className={ styles.menuLink } to="/"> { messages.navMenuItem1.toUpperCase() } </Link> </li>
-          <li><Link className={ styles.menuLink } to="/"> { messages.navMenuItem2.toUpperCase() } </Link> </li>
-          <li><Link className={ styles.menuLink } to="/"> { messages.navMenuItem3.toUpperCase() } </Link> </li>
+          <li><Link className={ styles.menuLink } to="/"> { navbar.item1 } </Link> </li>
+          <li><Link className={ styles.menuLink } to="/"> { navbar.item2 } </Link> </li>
+          <li><Link className={ styles.menuLink } to="/"> { navbar.item3 } </Link> </li>
           <li className={ styles.githubContributers }>
-            <Link className={ styles.menuLink } to="/"> { messages.navMenuItem4.toUpperCase() } </Link>
-            <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ipfs/js-ipfs on GitHub">
-                            Star
+            <Link className={ styles.menuLink } to="/"> { navbar.item4 } </Link>
+            <a className="github-button"
+              href="https://github.com/ipfs/js-ipfs"
+              data-show-count="true"
+              aria-label="Star ipfs/js-ipfs on GitHub">
+                Star
             </a>
           </li>
         </ul>

@@ -6,10 +6,10 @@ import Link from 'shared/components/link'
 
 import styles from './index.module.css'
 
-const Button = ({ translationId, path, className, intl: { messages }, modifier }) => (
+const Button = ({ translationId, path, className, intl: { messages: { buttons } }, modifier }) => (
   <Link to={ path } className={ styles.link } >
     <div className={ classNames(styles.customButton, className, styles[modifier]) }>
-      { messages[translationId] }
+      { buttons[translationId] }
     </div>
   </Link>
 )

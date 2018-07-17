@@ -91,10 +91,6 @@
         clear: both;
         transition: max-height var(--transition-duration-half) ease;
     }
-
-    /* & .menuListOpened {
-        max-height: 100px;
-    } */
 }
 
 @media (--layout-gte-medium) {
