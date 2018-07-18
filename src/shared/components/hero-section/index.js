@@ -6,7 +6,9 @@ import classNames from 'classnames'
 import { distanceInWordsToNow } from 'date-fns'
 import locales from 'utils/dateFnsLocales'
 
-import OrbitsSvg from 'shared/media/backgrounds/orbits.svg'
+import OutsideRingSvg from 'shared/media/backgrounds/outsidering.svg'
+import MiddleRingSvg from 'shared/media/backgrounds/middlering.svg'
+import InsideRingSvg from 'shared/media/backgrounds/insidering.svg'
 import Button from 'shared/components/button'
 import cubePng from 'shared/media/images/cube.png'
 import styles from './index.module.css'
@@ -54,7 +56,17 @@ class Hero extends Component {
     return (
       <div className={ styles.container }>
         <div className={ styles.orbitContainer } >
-          <div className={ styles.orbits }> <OrbitsSvg /> </div>
+          <div className={ styles.orbits }>
+            <div className={ styles.outsideRing }>
+              <OutsideRingSvg />
+            </div>
+            <div className={ styles.middleRing }>
+              <MiddleRingSvg />
+            </div>
+            <div className={ styles.insideRing }>
+              <InsideRingSvg />
+            </div>
+          </div>
         </div>
         <div className={ styles.content }>
           <img src={ cubePng } />

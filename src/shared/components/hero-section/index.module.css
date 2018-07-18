@@ -27,32 +27,40 @@
         align-items: center;
 
         & .orbits {
+            position: relative;
             width: 80%;
             height: 80%;
             display: flex;
+            justify-content: center;
             align-items: center;
 
-            & svg {
+            & .outsideRing,
+            & .middleRing,
+            & .insideRing {
+                position: absolute;
                 width: 100%;
-                height: auto;
+                height: 100%;
+                display: flex;
+                align-items: center;
 
-                /* & g {
-                    &:global(#orbits_svg___x3C_inside_x3E__1_) {
-                        transform-origin: center;
-                        animation: orbit 120s infinite linear;
-                    }
-
-                    &:global(#orbits_svg___x3C_middle_x3E__1_) {
-                        transform-origin: center;
-                        animation: orbit 200s infinite linear;
-                    }
-
-                    &:global(#orbits_svg___x3C_outside_x3E__1_) {
-                        transform-origin: center;
-                        animation: orbit 300s infinite linear;
-                    }
-                } */
+                & svg {
+                    width: 100%;
+                    height: auto;
+                }
             }
+
+            & .outsideRing {
+                animation: orbit 300s infinite linear;
+            }
+
+            & .middleRing {
+                animation: orbit 200s infinite linear;
+            }
+
+            & .insideRing {
+                animation: orbit 120s infinite linear;
+            }
+
         }
     }
 
