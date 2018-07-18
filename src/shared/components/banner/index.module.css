@@ -1,10 +1,6 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
-.hidden {
-    display: none;
-}
-
 .container {
     width: 100vw;
     z-index: 3;
@@ -35,29 +31,10 @@
         }
     }
 
-    & .closeButtonContainer {
-        display: flex;
-        flex: 0 0 16px;
-        align-items: center;
-
-        & svg {
-            width: 100%;
-            transition: opacity var(--transition-button-duration) ease;
-
-            &:hover {
-                opacity: 0.4;
-                cursor: pointer;
-            }
-        }
-    }
 }
 
 @media (--layout-lte-small) {
     .container {
         font-size: var(--typography-text-size-xsmall);
-
-        & .closeButtonContainer {
-            align-items: flex-start;
-        }
     }
 }
