@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
+
 import LocalesBar from 'shared/components/locales-bar'
 import DesktopNavbar from 'shared/components/navbar/desktop'
 import MobileNavbar from 'shared/components/navbar/mobile'
-import Banner from 'shared/components/banner'
 import styles from './index.module.css'
 
 class Header extends Component {
@@ -32,7 +32,6 @@ class Header extends Component {
 
     return (
       <header className={ classNames(styles.header, className) }>
-        <Banner />
         <LocalesBar scrolled={ scrolled } ref={ this.handleLocalesBarRef } />
         <DesktopNavbar scrolled={ scrolled } localesBarHeight={ localesBarHeight } />
         <MobileNavbar />
