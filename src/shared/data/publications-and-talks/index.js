@@ -1,6 +1,6 @@
 const publicationsAndTalks = [
   {
-    link: 'https://www.youtube.com/watch?v=2MpUj-Aua48',
+    link: 'https://www.youtube.com/watch?v=WK4PIGr3RB8',
     active: true,
     translationListIndex: 0
   },
