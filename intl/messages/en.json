@@ -141,8 +141,5 @@
   "footer": {
     "rightContent": "js-ipfs was started and is sponsored by",
     "leftContent": "Protocol Labs | Except as noted, content licensed CC-BY 3.0"
-  },
-
-
-
+  }
 }
