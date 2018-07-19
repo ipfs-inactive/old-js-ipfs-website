@@ -21,7 +21,7 @@
         width: 70%;
         margin-bottom: 15px;
 
-        & svg g {
+        /* & svg g {
             &:hover {
                 cursor: pointer;
 
@@ -33,7 +33,7 @@
             & path {
                 transition: var(--transition-default-duration) ease;
             }
-        }
+        } */
     }
 
     & .title {

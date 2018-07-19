@@ -49,6 +49,14 @@
       {
         "title": "BR-Use IPLD to traverse any hash linked data structure",
         "desc": "BR-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "BR-Libp2p title",
+        "desc": "BR-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "BR-Daemon title",
+        "desc": "BR-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
       }
     ]
   },
@@ -124,6 +132,6 @@
     "whatCanYouBuildItem3Title": "BR-Mornon mi porta gravida",
     "whatCanYouBuildItem3Subtitle": "BR-Maecenas faucibus mollis interd ide linon mi porta gravida eget metus.",
     "whatCanYouBuildItem3Desc": "BR-Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel sce i sque nisl constur et. Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel scei sque nisl consectetur et.",
-    
+
     "service-worker": "Iniciar Service Worker"
 }
