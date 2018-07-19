@@ -6,49 +6,61 @@
     "buttonIrcFreenode": "IRC Freenode"
   },
 
-  "banner": {
-    "highlightMessage": "The js-ipfs library is in Alpha state.",
-    "message": "The codebase hasn't been audited by Security specialists and it shouldn't be used to store, share or publish sensitive information."
-  },
-
   "navbar": {
-    "item1": "Tutorials",
-    "item2": "API",
-    "item3": "Contribute",
+    "item1": "Get Started",
+    "item2": "Tutorials",
+    "item3": "API",
     "item4": "Open Source"
   },
 
   "hero": {
-    "welcomeMessage": "The full IPFS protocol in JavaScript™",
+    "welcomeMessage": "A full P2P protocol written entirely in JavaScript",
     "textDescription": "js-ipfs paves the path for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it runs in a Browser tab, a Service Worker, a Web Extension and also in Node.js, opening the door to a world of possibilities.",
     "currentVersion": "Current version:",
     "latestUpdate": "Latest update:",
     "downloadsLastMonth": "Downloads last month:"
   },
 
+  "banner": {
+    "highlightMessage": "The js-ipfs library is in Alpha state.",
+    "message": "The codebase hasn't been audited by Security specialists and it shouldn't be used to store, share or publish sensitive information."
+  },
+
   "features": {
     "sectionTitle": "Features",
-    "sectionDesc": "Packed with all the things you know and love about IPFS, it also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications",
+    "sectionDesc": "Packed with all the things you know and love about IPFS. This implementationt also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications",
     "list": [
       {
         "title": "Run on Node.js and the Browser",
-        "desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+        "desc": "js-ipfs works out of the box on Node.js, Electron and any modern browser. It is also customizable by design so that you can use it on your favorite runtime."
       },
       {
         "title": "Implements the full IPFS Stack",
-        "desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+        "desc": "Not detail was left behind. js-ipfs is not a light client, it is the full implementation of the IPFS protocol."
       },
       {
         "title": "Use PubSub to communicate realtime with the other peers",
         "desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
       },
       {
-        "title": "Add and retrieve Files from the Network",
+        "title": "Add and retrieve files from anywhere in the IPFS Network",
         "desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
       },
       {
-        "title": "Use IPLD to traverse any hash linked data structure",
-        "desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+        "title": "Use the DAG API to traverse over any hash linked data structure",
+        "desc": "IPFS uses [IPLD](https://ipld.io/), the InterPlanetary Linked-Data, a model that enables you interact with data from multiple sources, such as git, blockchains and more."
+      },
+      {
+        "title": "libp2p is built in",
+        "desc": "libp2p is the Modular Networking Stack that was born for IPFS and now you can use it through IPFS for your application directly as well."
+      },
+      {
+        "title": "You can run it as a daemon, also",
+        "desc": "js-ipfs also comes with the option to run it as a daemon so that you can interact with it using the HTTP API that you are familiar from go-ipfs."
+      },
+      {
+        "title": "It can handle naming",
+        "desc": "It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) so that you distribute updates in a authenticated and certified way."
       }
     ]
   },
@@ -79,18 +91,39 @@
     ]
   },
 
+  "service-worker": "Enable Service Worker",
+
+  "whatCanYouBuildTitle": "What you can build with js-ipfs",
+  "whatCanYouBuildSectionDesc": "",
+  "whatCanYouBuildItem1Name": "",
+  "whatCanYouBuildItem1Title": "",
+  "whatCanYouBuildItem1Subtitle": "",
+  "whatCanYouBuildItem1Desc": "",
+  "whatCanYouBuildItem2Name": "",
+  "whatCanYouBuildItem2Title": "",
+  "whatCanYouBuildItem2Subtitle": "",
+  "whatCanYouBuildItem2Desc": "",
+  "whatCanYouBuildItem3Name": "",
+  "whatCanYouBuildItem3Title": "",
+  "whatCanYouBuildItem3Subtitle": "",
+  "whatCanYouBuildItem3Desc": "",
+
   "whatArePeopleBuilding": {
-    "sectionTitle": "What are people building with it?",
+    "sectionTitle": "What people are building with it",
     "sectionDesc": "Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
     "list": [
-      { "desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit." },
-      { "desc": "Mamaecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit." }
+      {
+        "desc": "Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit."
+      },
+      {
+        "desc": "Mamaecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit."
+      }
     ]
   },
 
   "publicationsAndTalks": {
     "sectionTitle": "Publications & talks",
-    "sectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "sectionDesc": "",
     "list": [
       { "title": "Title Talk 1" },
       { "title": "Title Talk 2" },
@@ -101,30 +134,15 @@
 
   "community": {
     "sectionTitle": "Community",
-    "sectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus.",
-    "socialNetworksText": "Join Us!"
+    "sectionDesc": "js-ipfs is an MIT Licensed, Open Source project from the IPFS community. There are many ways you can contribute by getting involved: you can help write the specification, code implementations and tools using libp2p, craft examples and tutorials, and join our regular product calls to discuss libp2p with us.",
+    "socialNetworksText": "Come hang out!"
   },
 
   "footer": {
-    "leftContent": "Protocol Labs | Except as noted, content licensed CC-BY 3.0",
-    "rightContent": "IPFS.JS was started and is sponsored by"
+    "rightContent": "js-ipfs was started and is sponsored by",
+    "leftContent": "Protocol Labs | Except as noted, content licensed CC-BY 3.0"
   },
 
 
-  "whatCanYouBuildTitle": "What can you build with js-ipfs",
-  "whatCanYouBuildSectionDesc": "Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "whatCanYouBuildItem1Name": "Video Streaming",
-  "whatCanYouBuildItem1Title": "Mornon mi porta gravida",
-  "whatCanYouBuildItem1Subtitle": "Maecenas faucibus mollis interd ide linon mi porta gravida eget metus.",
-  "whatCanYouBuildItem1Desc": "Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel sce i sque nisl constur et. Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel scei sque nisl consectetur et.",
-  "whatCanYouBuildItem2Name": "Real Time Applications",
-  "whatCanYouBuildItem2Title": "Mornon mi porta gravida",
-  "whatCanYouBuildItem2Subtitle": "Maecenas faucibus mollis interd ide linon mi porta gravida eget metus.",
-  "whatCanYouBuildItem2Desc": "Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel sce i sque nisl constur et. Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel scei sque nisl consectetur et.",
-  "whatCanYouBuildItem3Name": "Explore Blockchain Data",
-  "whatCanYouBuildItem3Title": "Mornon mi porta gravida",
-  "whatCanYouBuildItem3Subtitle": "Maecenas faucibus mollis interd ide linon mi porta gravida eget metus.",
-  "whatCanYouBuildItem3Desc": "Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel sce i sque nisl constur et. Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel scei sque nisl consectetur et.",
 
-  "service-worker": "Enable Service Worker"
 }
