@@ -55,6 +55,7 @@ class Carousel extends Component {
           <CarouselProjectsItem key={ `carousel-item-${index}` }
             icon={ item.icon }
             desc={ translationsList[translationIndex].desc }
+            link={ item.link }
             image={ item.image } />
         )
       })
