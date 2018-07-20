@@ -1,31 +1,46 @@
 import React from 'react'
 
-import Feat1Svg from 'shared/media/images/feat1.svg'
-import Feat2Svg from 'shared/media/images/feat2.svg'
-import Feat3Svg from 'shared/media/images/feat3.svg'
-import Feat4Svg from 'shared/media/images/feat4.svg'
-import Feat5Svg from 'shared/media/images/feat5.svg'
+import BrowserFeatSvg from 'shared/media/images/browser.svg'
+import IpfsFeatSvg from 'shared/media/images/ipfs.svg'
+import PeersFeatSvg from 'shared/media/images/peers.svg'
+import WebFeatSvg from 'shared/media/images/web.svg'
+import IpldFeatSvg from 'shared/media/images/ipld.svg'
+import Libp2pFeatSvg from 'shared/media/images/libp2p.svg'
+import DaemonFeatSvg from 'shared/media/images/window.svg'
+import SignatureFeatSvg from 'shared/media/images/signature.svg'
 
 const feats = [
   {
-    icon: <Feat1Svg />,
+    icon: <BrowserFeatSvg />,
     translationListIndex: 0
   },
   {
-    icon: <Feat2Svg />,
+    icon: <IpfsFeatSvg />,
     translationListIndex: 1
   },
   {
-    icon: <Feat3Svg />,
+    icon: <PeersFeatSvg />,
     translationListIndex: 2
   },
   {
-    icon: <Feat4Svg />,
+    icon: <WebFeatSvg />,
     translationListIndex: 3
   },
   {
-    icon: <Feat5Svg />,
+    icon: <IpldFeatSvg />,
     translationListIndex: 4
+  },
+  {
+    icon: <Libp2pFeatSvg />,
+    translationListIndex: 5
+  },
+  {
+    icon: <DaemonFeatSvg />,
+    translationListIndex: 6
+  },
+  {
+    icon: <SignatureFeatSvg />,
+    translationListIndex: 7
   }
 ]
 
