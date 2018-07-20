@@ -21,6 +21,7 @@
     "react-helmet": "^5.2.0",
     "react-intersection-observer": "^6.1.0",
     "react-intl": "^2.4.0",
+    "react-markdown": "^3.3.4",
     "react-onclickoutside": "^6.7.1",
     "react-player": "^1.6.4",
     "react-scroll-to-component": "^1.0.2",
