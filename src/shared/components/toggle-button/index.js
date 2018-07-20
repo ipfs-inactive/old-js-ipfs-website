@@ -5,17 +5,8 @@ import PropTypes from 'prop-types'
 import styles from './index.module.css'
 
 class ToggleButton extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      isActive: props.initialState || false
-    }
-  }
-
   render () {
-    const { isActive } = this.state
-    const { type } = this.props
+    const { isActive, type } = this.props
     const sliderClasses = classnames(styles.slider, {
       [styles.round]: type === 'round',
       [styles.active]: isActive
@@ -29,7 +20,7 @@ class ToggleButton extends Component {
   }
 
   handleToggleButton = () => {
-    this.setState(({ isActive }) => ({ isActive: !isActive }))
+    this.props.onClick()
   }
 }
 
@@ -38,7 +29,8 @@ ToggleButton.defaultProps = {
 }
 
 ToggleButton.propTypes = {
-  initialState: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+  isActive: PropTypes.bool.isRequired,
   type: PropTypes.oneOf(['round', 'rect'])
 }
 
