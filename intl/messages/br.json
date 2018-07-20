@@ -57,6 +57,10 @@
       {
         "title": "BR-Daemon title",
         "desc": "BR-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "BR-It can handle naming",
+        "desc": "BR-It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) so that you distribute updates in a authenticated and certified way."
       }
     ]
   },

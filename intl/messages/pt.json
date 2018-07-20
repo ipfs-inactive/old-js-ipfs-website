@@ -57,6 +57,10 @@
       {
         "title": "PT-Daemon title",
         "desc": "PT-Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+      },
+      {
+        "title": "PT-It can handle naming",
+        "desc": "PT-It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) so that you distribute updates in a authenticated and certified way."
       }
     ]
   },

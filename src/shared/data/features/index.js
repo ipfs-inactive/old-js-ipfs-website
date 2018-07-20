@@ -7,6 +7,7 @@ import WebFeatSvg from 'shared/media/images/web.svg'
 import IpldFeatSvg from 'shared/media/images/ipld.svg'
 import Libp2pFeatSvg from 'shared/media/images/libp2p.svg'
 import DaemonFeatSvg from 'shared/media/images/window.svg'
+import SignatureFeatSvg from 'shared/media/images/signature.svg'
 
 const feats = [
   {
@@ -38,7 +39,7 @@ const feats = [
     translationListIndex: 6
   },
   {
-    icon: <DaemonFeatSvg />,
+    icon: <SignatureFeatSvg />,
     translationListIndex: 7
   }
 ]
