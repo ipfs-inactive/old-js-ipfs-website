@@ -24,6 +24,15 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
     target: 'web'
   })
 
+  // Fix Gatsby setting `resolve.modulesDirectories` to `path.resolve(__dirname, "node_modules")`
+  // which causes module resolution errors when the npm tree is deduped
+  // See https://github.com/webpack/webpack/issues/6538#issuecomment-367324775
+  config.merge((current) => {
+    current.resolve.modulesDirectories = ['node_modules']
+
+    return current
+  })
+
   // Add prefix to all svg class or id selectors to avoid styles override
   // config.merge((current) => {
   //     config.loader('svg-react-loader', (current) => {
