@@ -7,12 +7,14 @@ const projects = [
   {
     translationListIndex: 0,
     icon: <ParatiiSvg />,
-    image: ParatiiPrintScreen
+    image: ParatiiPrintScreen,
+    link: 'https://paratii.video/'
   },
   {
     translationListIndex: 1,
     icon: <ParatiiSvg />,
-    image: ParatiiPrintScreen
+    image: ParatiiPrintScreen,
+    link: 'https://paratii.video/'
   }
 ]
 
