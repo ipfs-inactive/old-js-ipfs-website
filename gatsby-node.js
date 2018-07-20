@@ -19,6 +19,9 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
   // Allow requires from the src/ folder
   config.merge({
     resolve: {
+      alias: {
+        'big.js': path.join(__dirname, 'node_modules/ipfs/node_modules/big.js/')
+      },
       root: path.join(__dirname, 'src')
     },
     target: 'web'
