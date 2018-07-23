@@ -1,8 +1,32 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
 .header {
-    position: fixed;
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: var(--navbar-desktop-height);
     z-index: 1000;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    & .target {
+        position: absolute;
+        top: -1px;
+        width: 100%;
+    }
+}
+
+@media (--layout-lte-small) {
+    .header {
+        position: fixed;
+        top: 0;
+        bottom: unset;
+        height: unset;
+
+        & .target {
+            display: none;
+        }
+    }
 }

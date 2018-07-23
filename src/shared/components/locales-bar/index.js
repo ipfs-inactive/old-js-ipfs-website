@@ -7,13 +7,10 @@ import { getDefaultLocale, getLocales, getIndexByAcronym } from 'utils/getLocale
 import Link from 'shared/components/link'
 import styles from './index.module.css'
 
-const LocalesBar = ({ scrolled, intl: { locale } }) => {
+const LocalesBar = ({ intl: { locale }, className }) => {
   const locales = getLocales()
   const currentLocaleIndex = getIndexByAcronym(locale)
-  const localesBarClassName = classNames(styles.localesBar, {
-    [styles.defaultLocalesBar]: !scrolled,
-    [styles.hideLocalesBar]: scrolled
-  })
+  const localesBarClassName = classNames(styles.localesBar, className)
   const defaultLocale = getDefaultLocale()
   const renderLocales = locales.map((locale, index) => {
     const to = defaultLocale === locale.acronym ? '/' : `/${locale.acronym}`
@@ -35,8 +32,8 @@ const LocalesBar = ({ scrolled, intl: { locale } }) => {
 }
 
 LocalesBar.propTypes = {
-  scrolled: PropTypes.bool.isRequired,
-  intl: PropTypes.object.isRequired
+  intl: PropTypes.object.isRequired,
+  className: PropTypes.string
 }
 
 export default injectIntl(LocalesBar)

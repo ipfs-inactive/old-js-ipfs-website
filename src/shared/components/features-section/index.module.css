@@ -2,7 +2,9 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .container {
+    position: relative;
     width: 100%;
+    z-index: 3;
     display: flex;
     justify-content: center;
     background: var(--color-white);

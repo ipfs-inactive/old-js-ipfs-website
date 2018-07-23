@@ -19,7 +19,7 @@ const Features = ({ intl: { messages } }) => {
   })
 
   return (
-    <div className={ styles.container }>
+    <div className={ styles.container } >
       <div className={ styles.content } >
         <h1>{ messages.features.sectionTitle }</h1>
         <span className={ styles.sectionDescription }>

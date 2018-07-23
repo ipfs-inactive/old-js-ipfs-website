@@ -6,12 +6,15 @@ import classNames from 'classnames'
 import { distanceInWordsToNow } from 'date-fns'
 import locales from 'utils/dateFnsLocales'
 
+import LocalesBar from 'shared/components/locales-bar'
 import OutsideRingSvg from 'shared/media/backgrounds/outsidering.svg'
 import MiddleRingSvg from 'shared/media/backgrounds/middlering.svg'
 import InsideRingSvg from 'shared/media/backgrounds/insidering.svg'
-import Button from 'shared/components/button'
+import ArrowUp from 'shared/media/icons/arrow-up.svg'
 import cubePng from 'shared/media/images/cube.png'
 import styles from './index.module.css'
+
+const defaultScrollOptions = { offset: 0, align: 'top', duration: 800 }
 
 class Hero extends Component {
   constructor (props) {
@@ -27,6 +30,7 @@ class Hero extends Component {
   }
 
   componentDidMount () {
+    this.scrollToComponent = require('react-scroll-to-component')
     const self = this
     this._ismounted = true
 
@@ -54,29 +58,32 @@ class Hero extends Component {
     const messages = this.messages
 
     return (
-      <div className={ styles.container }>
-        <div className={ styles.orbitContainer } >
-          <div className={ styles.orbits }>
-            <div className={ styles.outsideRing }>
-              <OutsideRingSvg />
-            </div>
-            <div className={ styles.middleRing }>
-              <MiddleRingSvg />
-            </div>
-            <div className={ styles.insideRing }>
-              <InsideRingSvg />
+      <div className={ styles.wrapperContainer }>
+        <div className={ styles.container }>
+          <LocalesBar className={ styles.localesBar } />
+          <div className={ styles.orbitContainer } >
+            <div className={ styles.orbits }>
+              <div className={ styles.outsideRing }>
+                <OutsideRingSvg />
+              </div>
+              <div className={ styles.middleRing }>
+                <MiddleRingSvg />
+              </div>
+              <div className={ styles.insideRing }>
+                <InsideRingSvg />
+              </div>
             </div>
           </div>
-        </div>
-        <div className={ styles.content }>
-          <img src={ cubePng } />
-          <h1>{ messages.hero.welcomeMessage }</h1>
-          <p>{ messages.hero.textDescription }</p>
-          <div className={ infoContainerClasses }>
-            { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
-          </div>
-          <div className={ styles.buttonContent }>
-            <Button translationId="buttonLearnMore" path="/test" />
+          <div className={ styles.content }>
+            <img src={ cubePng } />
+            <h1>{ messages.hero.welcomeMessage }</h1>
+            <p>{ messages.hero.textDescription }</p>
+            <div className={ infoContainerClasses }>
+              { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
+            </div>
+            <div className={ styles.arrowUp } onClick={ this.handleArrowClick }>
+              <ArrowUp />
+            </div>
           </div>
         </div>
       </div>
@@ -133,6 +140,12 @@ class Hero extends Component {
     this.setState({ errorMessage })
   }
 
+  handleArrowClick = () => {
+    const { featsRef } = this.props
+    if (!featsRef) return
+    this.scrollToComponent(featsRef, defaultScrollOptions)
+  }
+
   calculateDownloads = (downloadsArr, options = { lastMonth: false }) => {
     const { lastMonth } = options
     const arrLength = downloadsArr.length
@@ -174,7 +187,8 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-  intl: PropTypes.object.isRequired
+  intl: PropTypes.object.isRequired,
+  featsRef: PropTypes.object
 }
 
 export default injectIntl(Hero)

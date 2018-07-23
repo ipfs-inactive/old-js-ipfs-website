@@ -2,12 +2,10 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .localesBar {
-    z-index: 1;
     padding: 20px 0 25px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: var(--color-black-russian);
     font-size: var(--typography-text-size-small);
     transition: all var(--transition-button-duration) ease;
 
@@ -24,17 +22,13 @@
         }
 
         &:hover {
-            color: var(--color-yellow);
+            color: var(--color-white);
         }
 
         &.active {
-            color: var(--color-white);
+            color: var(--color-yellow);
         }
     }
-}
-
-.hideLocalesBar {
-    transform: translateY(-100%);
 }
 
 @media (--layout-lte-small) {
