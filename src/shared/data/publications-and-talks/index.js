@@ -2,19 +2,27 @@ const publicationsAndTalks = [
   {
     link: 'https://www.youtube.com/watch?v=WK4PIGr3RB8',
     active: true,
-    title: 'Talk Title 1'
+    title: 'Progress Report on the Decentralized Web, David Dias'
   },
   {
-    link: 'https://www.youtube.com/watch?v=HUVmypx9HGI',
-    title: 'Talk Title 2'
+    link: 'https://www.youtube.com/watch?v=2cmbm6iABsI',
+    title: 'IPFS on the Brave Browser, Alan Shaw'
   },
   {
-    link: 'https://www.youtube.com/watch?v=BA2rHlbB5i0',
-    title: 'Talk Title 3'
+    link: 'https://www.youtube.com/watch?v=4VB66hJSvqM',
+    title: 'CRDTs as the foundation for Distributed Web Apps, Pedro Teixeira'
   },
   {
-    link: 'https://www.youtube.com/watch?v=6kqgsGXpykM',
-    title: 'Talk Title 4'
+    link: 'https://www.youtube.com/watch?v=ZnfqbIVoq-s',
+    title: 'A Regular JS Core Dev Call, join us!'
+  },
+  {
+    link: 'https://www.youtube.com/watch?v=-kdx8rJd8rQ',
+    title: 'Tutorial: How to build an Collaborative Editing Application with IPFS using CRDT'
+  },
+  {
+    link: 'https://www.youtube.com/watch?v=Nv_Teb--1zg',
+    title: 'Tutorial: How to build an application with IPFS PubSub Room'
   }
 ]
 
