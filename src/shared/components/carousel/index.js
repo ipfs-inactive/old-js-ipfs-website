@@ -61,12 +61,11 @@ class Carousel extends Component {
       })
     } else if (modifier === 'videos') {
       items = itemsList.map((item, index) => {
-        const translationIndex = item.translationListIndex
         return (
           index !== activeIndex &&
             <CarouselVideosItem key={ `carousel-videos-item-${index}` }
               link={ item.link }
-              title={ translationsList[translationIndex].title }
+              title={ item.title }
               index={ index }
               onClick={ onVideoClick }
             />
@@ -104,7 +103,7 @@ Carousel.propTypes = {
   modifier: PropTypes.oneOf(['videos', 'projects']),
   size: PropTypes.number,
   activeIndex: PropTypes.number,
-  translationsList: PropTypes.array.isRequired
+  translationsList: PropTypes.array
 }
 
 export default Carousel

@@ -123,13 +123,7 @@
 
   "publicationsAndTalks": {
     "sectionTitle": "Publications & talks",
-    "sectionDesc": "",
-    "list": [
-      { "title": "Title Talk 1" },
-      { "title": "Title Talk 2" },
-      { "title": "Title Talk 3" },
-      { "title": "Title Talk 4" }
-    ]
+    "sectionDesc": ""
   },
 
   "community": {
