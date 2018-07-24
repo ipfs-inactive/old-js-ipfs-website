@@ -91,6 +91,11 @@
     ]
   },
 
+  "serviceWorker": {
+    "sectionTitle": "BR-Service Worker",
+    "sectionDesc": "BR-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut."
+  },
+
   "whatArePeopleBuilding": {
     "sectionTitle": "BR-What are people building with it?",
     "sectionDesc": "BR-Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",

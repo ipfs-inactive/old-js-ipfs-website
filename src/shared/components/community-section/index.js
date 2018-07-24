@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 
 import HexSvg from 'shared/media/backgrounds/hexagons.svg'
-// import data from 'shared/data/community'
+import data from 'shared/data/community'
 import Button from 'shared/components/button'
 import styles from './index.module.css'
 
@@ -26,7 +26,7 @@ const Community = ({ intl: { messages } }) => (
         </div>
       </div>
     </div>
-    {/* <iframe frameBorder="0" src={ data.contributorsLink } /> */}
+    <iframe frameBorder="0" src={ data.contributorsLink } />
   </div>
 )
 
