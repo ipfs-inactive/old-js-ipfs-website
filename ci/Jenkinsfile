@@ -1,4 +1,9 @@
 website([
   website: 'js.ipfs.io',
-  record: '_dnslink.dev'
+  build_directory: 'public/',
+  disable_publish: false,
+  record: [
+    'production': '_dnslink',
+    'master': '_dnslink.dev',
+  ]
 ])
