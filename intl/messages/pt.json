@@ -102,13 +102,7 @@
 
   "publicationsAndTalks": {
     "sectionTitle": "PT-Publications & talks",
-    "sectionDesc": "PT-Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "list": [
-      { "title": "PT-Title Talk 1" },
-      { "title": "PT-Title Talk 2" },
-      { "title": "PT-Title Talk 3" },
-      { "title": "PT-Title Talk 4" }
-    ]
+    "sectionDesc": "PT-Nullam quis risus eget  urna mollis ornare vel eu leo. Maecenas sed diam eget risus varius magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   },
 
   "community": {

@@ -18,7 +18,7 @@ const PublicationsAndTalks = ({ intl: { messages } }) => (
       <span className={ styles.sectionDescription }>
         <p>{ messages.publicationsAndTalks.sectionDesc }</p>
       </span>
-      <VideosList list={ videosArr } translationsList={ messages.publicationsAndTalks.list }/>
+      <VideosList list={ videosArr } />
     </div>
   </div>
 )
