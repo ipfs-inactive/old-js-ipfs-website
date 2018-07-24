@@ -1,0 +1,72 @@
+@import "shared/styles/imports/variables.css";
+
+@keyframes fillIn {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes disable {
+    from { opacity: 1; }
+    to { opacity: 0.1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--color-menu-dark-blue);
+    color: var(--color-white);
+
+    & .content {
+        width: var(--container-width);
+        max-width: var(--max-container-width);
+        padding: 10% 0;
+
+        &.active {
+            & svg {
+                & g[id="gateway"] {
+                    & g[id="_white-connection_"],
+                    & g[id="_white-nodes_"],
+                    & g[id="_http-gateway-arrow_"] {
+                        opacity: 0.1;
+                        animation: disable 500ms linear;
+                        stroke-dasharray: 2;
+                    }
+
+                    & g[id="_glow-line-1_"],
+                    & g[id="_glow-line-2_"],
+                    & g[id="_glow-http-gateway_"] {
+                        display: none;
+                    }
+                }
+
+                & g[id="service-worker"] {
+                    opacity: 1;
+
+                    & g[id="_service-worker-icon_"],
+                    & path[id="_service-worker-text_"] {
+                        animation: fadeIn 1s linear;
+                    }
+
+                    & g[id="_yellow-conection_"] {
+                        & path {
+                            animation: fillIn 5s linear forwards;
+                            stroke-dasharray: 1000;
+                            stroke-dashoffset: 1000;
+                        }
+                    }
+                }
+            }
+        }
+
+        & svg {
+            & g[id="service-worker"] {
+                opacity: 0;
+            }
+        }
+    }
+}
