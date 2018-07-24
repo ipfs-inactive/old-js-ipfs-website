@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import classNames from 'classnames'
 
-import ServiceWorkerSvg from 'shared/media/images/service-worker1.svg'
+import ServiceWorkerSvg from 'shared/media/images/service-worker.svg'
 import ToggleButton from 'shared/components/toggle-button'
 import styles from './index.module.css'
 
@@ -17,6 +17,7 @@ class ServiceWorkerSection extends Component {
 
   render () {
     const { isActive } = this.state
+    const { messages } = this.props.intl
     const contentClasses = classNames(styles.content, {
       [styles.active]: isActive
     })
@@ -24,8 +25,12 @@ class ServiceWorkerSection extends Component {
     return (
       <div className={ styles.container }>
         <div className={ contentClasses }>
+          <h1>{ messages.serviceWorker.sectionTitle }</h1>
+          <span className={ styles.sectionDescription }>
+            <p>{ messages.serviceWorker.sectionDesc }</p>
+          </span>
           <ServiceWorkerSvg />
-          <ToggleButton isActive={ isActive } onClick={ this.handleToggleClick }/>
+          <ToggleButton isActive={ isActive } onClick={ this.handleToggleClick } className={ styles.toggle } />
         </div>
       </div>
     )

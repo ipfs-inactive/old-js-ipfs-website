@@ -12,14 +12,14 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: #ccc;
+        border: 1px solid var(--color-white);
         cursor: pointer;
         transition: var(--transition-button-duration);
 
         &::before {
             content: "";
             position: absolute;
-            bottom: 4px;
+            bottom: 3px;
             left: 4px;
             width: 26px;
             height: 26px;
@@ -28,10 +28,9 @@
         }
 
         &.active {
-            background-color: #2196f3;
-
             &::before {
                 transform: translateX(26px);
+                background-color: var(--color-yellow);
             }
         }
 
