@@ -93,10 +93,9 @@
 
   "serviceWorker": {
     "sectionTitle": "Service Worker",
-    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut."
+    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut.",
+    "toggleButtonText": "Enable Service Worker"
   },
-
-  "service-worker": "Enable Service Worker",
 
   "whatCanYouBuildTitle": "What you can build with js-ipfs",
   "whatCanYouBuildSectionDesc": "",

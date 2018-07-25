@@ -6,17 +6,20 @@ import styles from './index.module.css'
 
 class ToggleButton extends Component {
   render () {
-    const { isActive, type, className } = this.props
-    const switchClasses = classnames(styles.switch, className)
+    const { isActive, type, className, title } = this.props
+    const wrapperClasses = classnames(styles.wrapper, className)
     const sliderClasses = classnames(styles.slider, {
       [styles.round]: type === 'round',
       [styles.active]: isActive
     })
 
     return (
-      <label className={ switchClasses } onClick={ this.handleToggleButton }>
-        <span className={ sliderClasses } />
-      </label>
+      <div className={ wrapperClasses }>
+        <label className={ styles.switch } onClick={ this.handleToggleButton }>
+          <span className={ sliderClasses } />
+        </label>
+        <span className={ styles.title }>{ title }</span>
+      </div>
     )
   }
 
@@ -32,6 +35,7 @@ ToggleButton.defaultProps = {
 ToggleButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool.isRequired,
+  title: PropTypes.string,
   type: PropTypes.oneOf(['round', 'rect']),
   className: PropTypes.string
 }
