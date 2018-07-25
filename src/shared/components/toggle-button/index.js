@@ -12,13 +12,16 @@ class ToggleButton extends Component {
       [styles.round]: type === 'round',
       [styles.active]: isActive
     })
+    const titleClasses = classnames(styles.title, {
+      [styles.active]: isActive
+    })
 
     return (
       <div className={ wrapperClasses }>
         <label className={ styles.switch } onClick={ this.handleToggleButton }>
           <span className={ sliderClasses } />
         </label>
-        <span className={ styles.title }>{ title }</span>
+        <span className={ titleClasses }>{ title }</span>
       </div>
     )
   }

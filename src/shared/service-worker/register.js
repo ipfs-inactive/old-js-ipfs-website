@@ -2,19 +2,17 @@ import runtime from 'serviceworker-webpack-plugin/lib/runtime'
 
 export const register = () => {
   if ('serviceWorker' in navigator) {
-    runtime.register()
-      .then((reg) => {
-        console.info('service worker registered', reg)
-      })
+    return getRegistration().then((registration) => {
+      if (!registration) {
+        return runtime.register()
+      }
+      return Promise.reject() // eslint-disable-line prefer-promise-reject-errors
+    })
   }
 }
 
-export const unregister = () => {
+export const getRegistration = () => {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then((registrations) => {
-      registrations.forEach((registration) => {
-        registration.unregister()
-      })
-    })
+    return navigator.serviceWorker.getRegistration('/')
   }
 }

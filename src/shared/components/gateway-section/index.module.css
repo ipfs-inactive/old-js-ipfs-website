@@ -1,0 +1,79 @@
+@import "shared/styles/imports/variables.css";
+
+@keyframes fillIn {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pulseReverse {
+    0% {
+        opacity: 0.1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-height: 90vh;
+    z-index: 3;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: var(--color-menu-dark-blue);
+    color: var(--color-white);
+
+    & .content {
+        position: relative;
+        width: var(--container-width);
+        max-width: var(--max-container-width);
+
+        /* margin-bottom: -12%; */
+        padding: 7% 0 0 0;
+
+        & .toggle {
+            position: absolute;
+            bottom: 3%;
+        }
+
+        & h1 {
+            font-weight: var(--typography-text-weight-semibold);
+            text-align: center;
+            line-height: var(--line-height-large);
+        }
+
+        & .sectionDescription {
+            width: 100%;
+            margin-bottom: 3%;
+            display: flex;
+            justify-content: center;
+
+            & p {
+                width: 60%;
+                font-weight: var(--typography-text-weight);
+                text-align: center;
+                line-height: var(--line-height-medium);
+            }
+        }
+    }
+}
