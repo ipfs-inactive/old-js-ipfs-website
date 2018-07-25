@@ -5,16 +5,17 @@ import axios from 'axios'
 import classNames from 'classnames'
 import { distanceInWordsToNow } from 'date-fns'
 import locales from 'utils/dateFnsLocales'
+import Observer from 'react-intersection-observer'
 
 import LocalesBar from 'shared/components/locales-bar'
 import OutsideRingSvg from 'shared/media/backgrounds/outsidering.svg'
 import MiddleRingSvg from 'shared/media/backgrounds/middlering.svg'
 import InsideRingSvg from 'shared/media/backgrounds/insidering.svg'
 import ArrowUp from 'shared/media/icons/arrow-up.svg'
-import cubePng from 'shared/media/images/cube.png'
+import CubeSvg from 'shared/media/images/cube.svg'
 import styles from './index.module.css'
 
-const defaultScrollOptions = { offset: 0, align: 'top', duration: 800 }
+const defaultScrollOptions = { offset: -66, align: 'top', duration: 800 }
 
 class Hero extends Component {
   constructor (props) {
@@ -22,7 +23,8 @@ class Hero extends Component {
 
     this.state = {
       info: undefined,
-      errorMessage: undefined
+      errorMessage: undefined,
+      inView: true
     }
 
     const { messages } = this.props.intl
@@ -48,45 +50,48 @@ class Hero extends Component {
   }
 
   render () {
-    const { info, errorMessage } = this.state
+    const { info, errorMessage, inView } = this.state
     const isDataLoaded = Boolean(info)
     const existsError = Boolean(errorMessage)
     const infoContainerClasses = classNames(styles.infoContainer, {
       [styles.hidden]: !isDataLoaded && !existsError,
       [styles.error]: !isDataLoaded && existsError
     })
+    const observerClass = classNames({ [styles.animationOff]: !inView })
     const messages = this.messages
 
     return (
-      <div className={ styles.wrapperContainer }>
-        <div className={ styles.container }>
-          <LocalesBar className={ styles.localesBar } />
-          <div className={ styles.orbitContainer } >
-            <div className={ styles.orbits }>
-              <div className={ styles.outsideRing }>
-                <OutsideRingSvg />
-              </div>
-              <div className={ styles.middleRing }>
-                <MiddleRingSvg />
-              </div>
-              <div className={ styles.insideRing }>
-                <InsideRingSvg />
+      <Observer onChange={ this.handleObserverView } className={ observerClass }>
+        <div className={ styles.wrapperContainer }>
+          <div className={ styles.container }>
+            <LocalesBar className={ styles.localesBar } />
+            <div className={ styles.orbitContainer } >
+              <div className={ styles.orbits }>
+                <div className={ styles.outsideRing }>
+                  <OutsideRingSvg />
+                </div>
+                <div className={ styles.middleRing }>
+                  <MiddleRingSvg />
+                </div>
+                <div className={ styles.insideRing }>
+                  <InsideRingSvg />
+                </div>
               </div>
             </div>
-          </div>
-          <div className={ styles.content }>
-            <img src={ cubePng } />
-            <h1>{ messages.hero.welcomeMessage }</h1>
-            <p>{ messages.hero.textDescription }</p>
-            <div className={ infoContainerClasses }>
-              { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
-            </div>
-            <div className={ styles.arrowUp } onClick={ this.handleArrowClick }>
-              <ArrowUp />
+            <div className={ styles.content }>
+              <CubeSvg />
+              <h1>{ messages.hero.welcomeMessage }</h1>
+              <p>{ messages.hero.textDescription }</p>
+              <div className={ infoContainerClasses }>
+                { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
+              </div>
+              <div className={ styles.arrowUp } onClick={ this.handleArrowClick }>
+                <ArrowUp />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Observer>
     )
   }
 
@@ -101,6 +106,8 @@ class Hero extends Component {
       <span>{ errorMessage }</span>
     </div>
   )
+
+  handleObserverView = (inView) => this.setState({ inView })
 
   handleAxiosResponse = (data) => {
     const messages = this.messages
@@ -142,8 +149,7 @@ class Hero extends Component {
 
   handleArrowClick = () => {
     const { featsRef } = this.props
-    if (!featsRef) return
-    this.scrollToComponent(featsRef, defaultScrollOptions)
+    featsRef && this.scrollToComponent(featsRef, defaultScrollOptions)
   }
 
   calculateDownloads = (downloadsArr, options = { lastMonth: false }) => {

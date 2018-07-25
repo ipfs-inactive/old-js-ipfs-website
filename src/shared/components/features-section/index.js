@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import FeatureItem from 'shared/components/features-section/feature-item'
 
 import featsArr from 'shared/data/features'
+import Banner from 'shared/components/banner'
 import styles from './index.module.css'
 
 const Features = ({ intl: { messages } }) => {
@@ -20,6 +21,7 @@ const Features = ({ intl: { messages } }) => {
 
   return (
     <div className={ styles.container } >
+      <Banner className={ styles.banner } />
       <div className={ styles.content } >
         <h1>{ messages.features.sectionTitle }</h1>
         <span className={ styles.sectionDescription }>
