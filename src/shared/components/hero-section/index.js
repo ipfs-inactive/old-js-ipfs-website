@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import { distanceInWordsToNow } from 'date-fns'
 import locales from 'utils/dateFnsLocales'
 import Observer from 'react-intersection-observer'
+import ReactMarkdown from 'react-markdown'
 
 import LocalesBar from 'shared/components/locales-bar'
 import OutsideRingSvg from 'shared/media/backgrounds/outsidering.svg'
@@ -81,7 +82,7 @@ class Hero extends Component {
             <div className={ styles.content }>
               <CubeSvg />
               <h1>{ messages.hero.welcomeMessage }</h1>
-              <p>{ messages.hero.textDescription }</p>
+              <ReactMarkdown source={ messages.hero.textDescription } />
               <div className={ infoContainerClasses }>
                 { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
               </div>

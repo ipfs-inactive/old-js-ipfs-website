@@ -1,6 +1,7 @@
 import React from 'react'
 import { injectIntl } from 'react-intl'
 import { PropTypes } from 'prop-types'
+import ReactMarkdown from 'react-markdown'
 
 import HexSvg from 'shared/media/backgrounds/hexagons.svg'
 // import data from 'shared/data/community'
@@ -15,9 +16,7 @@ const Community = ({ intl: { messages } }) => (
     </div>
     <div className={ styles.content }>
       <h1>{ messages.community.sectionTitle }</h1>
-      <span className={ styles.sectionDescription }>
-        <p>{ messages.community.sectionDesc }</p>
-      </span>
+      <ReactMarkdown className={ styles.sectionDescription } source={ messages.community.sectionDesc } />
       <div className={ styles.socialLinksContainer }>
         <p>{ messages.community.socialNetworksText }</p>
         <div className={ styles.socialLinks }>

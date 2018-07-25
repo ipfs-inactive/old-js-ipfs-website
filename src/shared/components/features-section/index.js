@@ -2,6 +2,7 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import FeatureItem from 'shared/components/features-section/feature-item'
+import ReactMarkdown from 'react-markdown'
 
 import featsArr from 'shared/data/features'
 import Banner from 'shared/components/banner'
@@ -24,9 +25,7 @@ const Features = ({ intl: { messages } }) => {
       <Banner className={ styles.banner } />
       <div className={ styles.content } >
         <h1>{ messages.features.sectionTitle }</h1>
-        <span className={ styles.sectionDescription }>
-          <p>{ messages.features.sectionDesc }</p>
-        </span>
+        <ReactMarkdown className={ styles.sectionDescription } source={ messages.features.sectionDesc } />
         <div className={ styles.featuresContainer }>
           { feats }
         </div>
