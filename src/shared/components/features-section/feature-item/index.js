@@ -9,7 +9,7 @@ const FeatureItem = ({ icon, title, description }) => (
     <div className={ styles.image }>
       { icon }
     </div>
-    <p className={ styles.title }>{ title }</p>
+    <ReactMarkdown className={ styles.title } source={ title } />
     <ReactMarkdown className={ styles.description } source={ description } />
   </div>
 )

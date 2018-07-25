@@ -1,6 +1,7 @@
 import React from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
 
 import stepsArr from 'shared/data/getting-started'
 import SyntaxHighlighter from 'shared/components/syntax-highlighter'
@@ -12,10 +13,10 @@ const StepsList = ({ intl: { messages } }) => {
     const translationStep = translationSteps[step.translationListIndex]
     return (
       <div className={ styles.command } key={ `step-${index}` }>
-        <p className={ styles.title }>{ translationStep.title }</p>
-        <p className={ styles.desc }>{ newLineToBreak(translationStep.desc) }</p>
+        <ReactMarkdown className={ styles.title } source={ translationStep.title } />
+        <div className={ styles.desc }>{ newLineToBreak(translationStep.desc) }</div>
         <SyntaxHighlighter codeStr={ step.codeStr } language={ step.language } />
-        { translationStep.note && <p className={ styles.note } >{ translationStep.note }</p> }
+        { translationStep.note && <ReactMarkdown className={ styles.note } source={ translationStep.note } /> }
       </div>
     )
   })
@@ -24,7 +25,7 @@ const StepsList = ({ intl: { messages } }) => {
 }
 
 function newLineToBreak (str) {
-  return str.split('\n').map((text, index) => <span key={ `text-${index}` }>{ text }<br /></span>)
+  return str.split('\n').map((text, index) => <ReactMarkdown key={ `text-${index}` } source={ text } />)
 }
 
 StepsList.propTypes = {

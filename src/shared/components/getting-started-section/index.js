@@ -1,6 +1,7 @@
 import React from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
 
 import HexSvg from 'shared/media/backgrounds/hexagons.svg'
 import StepsList from 'shared/components/getting-started-section/steps-list'
@@ -16,9 +17,7 @@ const GettingStarted = ({ intl: { messages } }) =>
       </div>
       <div className={ styles.content }>
         <h1>{ messages.gettingStarted.sectionTitle }</h1>
-        <span className={ styles.sectionDescription }>
-          <p>{ messages.gettingStarted.sectionDesc }</p>
-        </span>
+        <ReactMarkdown className={ styles.sectionDescription } source={ messages.gettingStarted.sectionDesc } />
         <div className={ styles.panel } >
           <StepsList />
         </div>

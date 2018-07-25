@@ -2,6 +2,7 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 import Carousel from 'shared/components/carousel'
 import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
 
 import HexSvg from 'shared/media/backgrounds/hexagons.svg'
 import projectsArr from 'shared/data/what-are-people-building'
@@ -15,9 +16,7 @@ const WhatArePeopleBuilding = ({ intl: { messages } }) => (
     </div>
     <div className={ styles.content }>
       <h1>{ messages.whatArePeopleBuilding.sectionTitle }</h1>
-      <span className={ styles.sectionDescription }>
-        <p>{ messages.whatArePeopleBuilding.sectionDesc }</p>
-      </span>
+      <ReactMarkdown className={ styles.sectionDescription } source={ messages.whatArePeopleBuilding.sectionDesc } />
       <Carousel itemsList={ projectsArr } translationsList={ messages.whatArePeopleBuilding.list } />
     </div>
   </div>

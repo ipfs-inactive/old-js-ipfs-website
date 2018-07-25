@@ -1,6 +1,7 @@
 import React from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
+import ReactMarkdown from 'react-markdown'
 
 import HexSvg from 'shared/media/backgrounds/hexagons.svg'
 import videosArr from 'shared/data/publications-and-talks'
@@ -15,9 +16,7 @@ const PublicationsAndTalks = ({ intl: { messages } }) => (
     </div>
     <div className={ styles.content } >
       <h1>{ messages.publicationsAndTalks.sectionTitle }</h1>
-      <span className={ styles.sectionDescription }>
-        <p>{ messages.publicationsAndTalks.sectionDesc }</p>
-      </span>
+      <ReactMarkdown className={ styles.sectionDescription } source={ messages.publicationsAndTalks.sectionDesc } />
       <VideosList list={ videosArr } />
     </div>
   </div>
