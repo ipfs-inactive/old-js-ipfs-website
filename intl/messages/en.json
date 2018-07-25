@@ -55,7 +55,7 @@
         "desc": "libp2p is the Modular Networking Stack that was born for IPFS and now you can use it through IPFS for your application directly as well."
       },
       {
-        "title": "You can run it as a daemon, also",
+        "title": "Run it as a daemon",
         "desc": "js-ipfs also comes with the option to run it as a daemon so that you can interact with it using the HTTP API that you are familiar from go-ipfs."
       },
       {
