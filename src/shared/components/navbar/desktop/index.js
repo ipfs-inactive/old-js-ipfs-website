@@ -7,16 +7,14 @@ import PropTypes from 'prop-types'
 import Link from 'shared/components/link'
 import styles from './index.module.css'
 
-const DesktopNavbar = ({ scrolled, localesBarHeight, intl: { messages } }) => {
+const DesktopNavbar = ({ isSticky, localesBarHeight, intl: { messages } }) => {
   const navbarClasses = classNames(styles.container,
     {
-      [styles.default]: !scrolled,
-      [styles.scrolled]: scrolled
+      [styles.sticky]: isSticky
     })
-  const currentTranslateYValue = scrolled ? localesBarHeight : 0
 
   return (
-    <div className={ navbarClasses } style={ { transform: `translateY(-${currentTranslateYValue}px)` } }>
+    <div className={ navbarClasses } >
       <div className={ styles.navbarMenu }>
         <Helmet>
           <script async defer src="https://buttons.github.io/buttons.js" />
@@ -34,7 +32,7 @@ const DesktopNavbar = ({ scrolled, localesBarHeight, intl: { messages } }) => {
 }
 
 DesktopNavbar.propTypes = {
-  scrolled: PropTypes.bool.isRequired,
+  isSticky: PropTypes.bool.isRequired,
   intl: PropTypes.object.isRequired,
   localesBarHeight: PropTypes.number
 }

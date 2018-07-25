@@ -6,13 +6,18 @@
 }
 
 .container {
+    position: absolute;
+    top: 0;
     width: 100%;
+    height: var(--navbar-desktop-height);
+    padding: 20px 0;
+    background: var(--color-menu-dark-blue);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
     font-size: var(--typography-menu-text-size);
     text-align: center;
     transition: var(--transition-button-duration) ease;
 
     & .navbarMenu {
-        /* position: relative; */
         display: flex;
         justify-content: center;
 
@@ -40,14 +45,9 @@
     }
 }
 
-.default {
-    padding: 35px 0;
-}
-
-.scrolled {
-    padding: 25px 0;
-    background: var(--color-menu-dark-blue);
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
+.sticky {
+    position: fixed;
+    top: 0;
 }
 
 /* Do not display container when screen is less or equal to 768px */

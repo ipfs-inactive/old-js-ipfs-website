@@ -21,7 +21,6 @@
     --color-accordion-buttons: #17264d;
     --color-hex-svg-fill: #c6c9e2;
     --color-text-footer: #aab2b9;
-    --color-black-russian: rgba(9, 12, 18, 0.5);
     --color-blue-dark-shade: #757b8f;
     --color-twitter: #3b559a;
     --color-twitter-hover: #3c5ae8;
@@ -67,4 +66,5 @@
     --line-height-small: 24px;
     --line-height-medium: 27px;
     --line-height-large: 48px;
+    --navbar-desktop-height: 66px;
 }

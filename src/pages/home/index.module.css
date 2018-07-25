@@ -3,4 +3,9 @@
 
 .container {
     width: 100%;
+
+    & .serviceWorker {
+        position: relative;
+        z-index: 3;
+    }
 }

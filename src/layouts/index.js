@@ -1,6 +1,6 @@
 import 'shared/styles/index.css'
 
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { addLocaleData, IntlProvider } from 'react-intl'
@@ -12,24 +12,33 @@ import styles from './index.module.css'
 
 addLocaleData(localeData)
 
-const Layout = ({ children }) => (
-  <IntlProvider locale="<%= locale %>" messages={ messages }>
-    <div className={ styles.app }>
-      <Helmet
-        title="JS IPFS"
-        meta={ [
-          { name: 'description', content: 'JS IPFS website' },
-          { name: 'keywords', content: 'gatsby, ipfs' }
-        ] } />
+class Layout extends Component {
+  componentDidMount () {
+    require('intersection-observer')
+  }
 
-      <Header className={ styles.header } />
-      <main className={ styles.children }>
-        { children() }
-      </main>
-      <Footer className={ styles.footer } />
-    </div>
-  </IntlProvider>
-)
+  render () {
+    const { children } = this.props
+    return (
+      <IntlProvider locale="<%= locale %>" messages={ messages }>
+        <div className={ styles.app }>
+          <Helmet
+            title="JS IPFS"
+            meta={ [
+              { name: 'description', content: 'JS IPFS website' },
+              { name: 'keywords', content: 'gatsby, ipfs' }
+            ] } />
+
+          <Header className={ styles.header } />
+          <main className={ styles.children }>
+            { children() }
+          </main>
+          <Footer className={ styles.footer } />
+        </div>
+      </IntlProvider>
+    )
+  }
+}
 
 Layout.propTypes = {
   children: PropTypes.func
