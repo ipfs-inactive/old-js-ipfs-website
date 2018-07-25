@@ -32,7 +32,7 @@
 
             &.active {
                 &::before {
-                    transform: translateX(26px);
+                    transform: translateX(24px);
                     background-color: var(--color-yellow);
                 }
             }
@@ -51,7 +51,12 @@
         position: absolute;
         top: 0;
         margin-left: 15px;
-        color: var(--color-yellow);
+        color: var(--color-white);
         line-height: 34px;
+        transition: color var(--transition-button-duration);
+
+        &.active {
+            color: var(--color-yellow);
+        }
     }
 }
