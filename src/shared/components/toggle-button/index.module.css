@@ -1,45 +1,57 @@
 @import "shared/styles/imports/variables.css";
 
-.switch {
-    position: relative;
-    width: 60px;
-    height: 34px;
-    display: inline-block;
+.wrapper {
+    width: 100%;
 
-    & .slider {
+    & .switch {
+        position: relative;
+        width: 60px;
+        height: 34px;
+        display: inline-block;
+
+        & .slider {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: 1px solid var(--color-white);
+            cursor: pointer;
+            transition: var(--transition-button-duration);
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 3px;
+                left: 4px;
+                width: 26px;
+                height: 26px;
+                background-color: var(--color-white);
+                transition: var(--transition-button-duration);
+            }
+
+            &.active {
+                &::before {
+                    transform: translateX(26px);
+                    background-color: var(--color-yellow);
+                }
+            }
+
+            &.round {
+                border-radius: 34px;
+
+                &::before {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    & .title {
         position: absolute;
         top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        border: 1px solid var(--color-white);
-        cursor: pointer;
-        transition: var(--transition-button-duration);
-
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 3px;
-            left: 4px;
-            width: 26px;
-            height: 26px;
-            background-color: var(--color-white);
-            transition: var(--transition-button-duration);
-        }
-
-        &.active {
-            &::before {
-                transform: translateX(26px);
-                background-color: var(--color-yellow);
-            }
-        }
-
-        &.round {
-            border-radius: 34px;
-
-            &::before {
-                border-radius: 50%;
-            }
-        }
+        margin-left: 15px;
+        color: var(--color-yellow);
+        line-height: 34px;
     }
 }

@@ -93,7 +93,8 @@
 
   "serviceWorker": {
     "sectionTitle": "PT-Service Worker",
-    "sectionDesc": "PT-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut."
+    "sectionDesc": "PT-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut.",
+    "toggleButtonText": "Iniciar Service Worker"
   },
 
   "whatArePeopleBuilding": {
@@ -134,7 +135,5 @@
     "whatCanYouBuildItem3Name": "PT-Real Time Applications",
     "whatCanYouBuildItem3Title": "PT-Mornon mi porta gravida",
     "whatCanYouBuildItem3Subtitle": "PT-Maecenas faucibus mollis interd ide linon mi porta gravida eget metus.",
-    "whatCanYouBuildItem3Desc": "PT-Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel sce i sque nisl constur et. Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel scei sque nisl consectetur et.",
-
-    "service-worker": "Iniciar Service Worker"
+    "whatCanYouBuildItem3Desc": "PT-Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel sce i sque nisl constur et. Nullam id dolor id nib ultricies vehicula ut id elit. Commodo cursus magna, vel scei sque nisl consectetur et."
 }

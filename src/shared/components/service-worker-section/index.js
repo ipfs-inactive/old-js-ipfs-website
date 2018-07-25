@@ -30,7 +30,10 @@ class ServiceWorkerSection extends Component {
             <p>{ messages.serviceWorker.sectionDesc }</p>
           </span>
           <ServiceWorkerSvg />
-          <ToggleButton isActive={ isActive } onClick={ this.handleToggleClick } className={ styles.toggle } />
+          <ToggleButton isActive={ isActive }
+            onClick={ this.handleToggleClick }
+            className={ styles.toggle }
+            title={ messages.serviceWorker.toggleButtonText }/>
         </div>
       </div>
     )
