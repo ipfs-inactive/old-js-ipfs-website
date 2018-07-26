@@ -27,6 +27,7 @@
 
             & .logo {
                 width: 70%;
+                margin-bottom: 15px;
 
                 & svg {
                     width: 100%;
@@ -39,7 +40,6 @@
             }
 
             & .desc {
-                margin-top: 15px;
                 font-size: var(--typography-text-size-small);
                 text-align: left;
                 line-height: var(--line-height-small);
