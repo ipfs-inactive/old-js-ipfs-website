@@ -101,8 +101,12 @@
     "sectionTitle": "BR-What are people building with it?",
     "sectionDesc": "BR-Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
     "list": [
-      { "desc": "BR-Maecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit." },
-      { "desc": "BR-Mamaecenas faucibus mollis interd. Donec id elit non mi porta gravida eget metus. Nullam id dolor id nib ultricies vehicula ut id elit." }
+      { "desc": "BR-Browser extension that simplifies access to IPFS resources." },
+      { "desc": "BR-The Decentralized WeTransfer. Filenation is the simplest way to send your files around the world using IPFS, it lets you send files as a link to an email using IPFS." },
+      { "desc": "BR-PeerPad is a collaborative real-time editor that works on the decentralised web, built on top of IPFS and Y.js. It uses no second or third-party: all participating nodes talk directly to each other without a central service." },
+      { "desc": "BR-TODO." },
+      { "desc": "BR-Watch project updates, demos and other talks by the IPFS Community on the JavaScript project of IPFS. We will be adding dozens of more talks here soon from the IPFS Dev Meetings as soon as they are published." },
+      { "desc": "BR-Paratii builds open source technology for video streaming and curation, with js-ipfs and Ethereum contracts. The Portal is a web app with curated crypto-related videos that runs on IPFS." }
     ]
   },
 
