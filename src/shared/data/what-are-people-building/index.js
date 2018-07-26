@@ -14,36 +14,36 @@ import ParatiiPrintScreen from 'shared/media/images/what-are-people-building/par
 const projects = [
   {
     translationListIndex: 0,
+    icon: <ParatiiSvg />,
+    image: ParatiiPrintScreen,
+    link: 'https://paratii.video'
+  },
+  {
+    translationListIndex: 1,
+    image: FilenationPrintScreen,
+    link: 'https://filenation.io'
+  },    
+  {
+    translationListIndex: 2,
+    image: DwebArchivePrintScreen,
+    link: 'https://github.com/internetarchive/dweb-archive'
+  },    
+  {
+    translationListIndex: 3,
+    icon: <PeerpadSvg />,
+    image: PeerpadPrintScreen,
+    link: 'https://peerpad.net/'
+  },    
+  {
+    translationListIndex: 4,
     // icon: <CompanionSvg />,
     image: CompanionPrintScreen,
     link: 'https://github.com/ipfs-shipyard/ipfs-companion'
   },
   {
-    translationListIndex: 1,
-    image: FilenationPrintScreen,
-    link: 'https://github.com/FileNation/FileNation'
-  },
-  {
-    translationListIndex: 2,
-    icon: <PeerpadSvg />,
-    image: PeerpadPrintScreen,
-    link: 'https://github.com/ipfs-shipyard/peer-pad'
-  },
-  {
-    translationListIndex: 3,
-    image: DwebArchivePrintScreen,
-    link: 'https://github.com/internetarchive/dweb-archive'
-  },
-  {
-    translationListIndex: 4,
-    image: OrbitPrintScreen,
-    link: 'https://github.com/orbitdb/orbit'
-  },
-  {
     translationListIndex: 5,
-    icon: <ParatiiSvg />,
-    image: ParatiiPrintScreen,
-    link: 'https://github.com/Paratii-Video/paratii-portal'
+    image: OrbitPrintScreen,
+    link: 'https://orbit.chat'
   }
 ]
 
