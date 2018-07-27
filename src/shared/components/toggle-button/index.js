@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { injectIntl } from 'react-intl'
+import ReactTooltip from 'react-tooltip'
 import classnames from 'classnames'
 import PropTypes from 'prop-types'
 
@@ -6,8 +8,11 @@ import styles from './index.module.css'
 
 class ToggleButton extends Component {
   render () {
-    const { isActive, type, className, title } = this.props
-    const wrapperClasses = classnames(styles.wrapper, className)
+    const { isActive, incompatible, type, className } = this.props
+    const { messages } = this.props.intl
+    const wrapperClasses = classnames(styles.wrapper, className, {
+      [styles.incompatible]: incompatible
+    })
     const sliderClasses = classnames(styles.slider, {
       [styles.round]: type === 'round',
       [styles.active]: isActive
@@ -17,11 +22,18 @@ class ToggleButton extends Component {
     })
 
     return (
-      <div className={ wrapperClasses }>
+      <div data-tip data-for='incompatible-sw' className={ wrapperClasses }>
         <label className={ styles.switch } onClick={ this.handleToggleButton }>
           <span className={ sliderClasses } />
         </label>
-        <span className={ titleClasses }>{ title }</span>
+        <span className={titleClasses}>{ messages.serviceWorker.toggleButtonText }</span>
+        {
+          incompatible && (
+            <ReactTooltip id='incompatible-sw' className={styles.tooltip}>
+              { messages.serviceWorker.incompatibleMessageText }
+            </ReactTooltip>
+          )
+        }
       </div>
     )
   }
@@ -38,9 +50,9 @@ ToggleButton.defaultProps = {
 ToggleButton.propTypes = {
   onClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool.isRequired,
-  title: PropTypes.string,
   type: PropTypes.oneOf(['round', 'rect']),
-  className: PropTypes.string
+  className: PropTypes.string,
+  incompatible: PropTypes.bool
 }
 
-export default ToggleButton
+export default injectIntl(ToggleButton)
