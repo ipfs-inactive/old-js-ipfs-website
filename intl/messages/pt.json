@@ -94,6 +94,10 @@
   "serviceWorker": {
     "sectionTitle": "Service Worker",
     "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut.",
+    "message": {
+      "title": "PT-Congratz! Now your browser is an IPFS Gateway.",
+      "text": "PT-Try loading content through it without touching a server or using HTTP. Examples: \n - ipfs.io - /ipfs/<hash> \n - js.ipfs.io - /ipfs/<hash> \n - awesome.ipfs.io - /ipfs/<hash> \n - peerpad.net - /ipfs/<hash> \n - Your own hash!"
+    },
     "toggleButtonText": "Enable Service Worker"
   },
 

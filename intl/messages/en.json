@@ -94,6 +94,10 @@
   "serviceWorker": {
     "sectionTitle": "Service Worker Gateway",
     "sectionDesc": "Turn this page into a full IPFS Gateway without touching any servers or using HTTP to fetch content from the IPFS Network! Yes, you read it right, the Service Worker Gateway with js-ipfs can connect directly to the IPFS Network.",
+    "message": {
+      "title": "Congratz! Now your browser is an IPFS Gateway.",
+      "text": "Try loading content through it without touching a server or using HTTP. Examples: \n - ipfs.io - /ipfs/<hash> \n - js.ipfs.io - /ipfs/<hash> \n - awesome.ipfs.io - /ipfs/<hash> \n - peerpad.net - /ipfs/<hash> \n - Your own hash!"
+    },
     "toggleButtonText": "Activate the Service Worker Gateway"
   },
 
