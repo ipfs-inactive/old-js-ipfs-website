@@ -21,12 +21,10 @@ class Layout extends Component {
     return (
       <IntlProvider locale="<%= locale %>" messages={ messages }>
         <div className={ styles.app }>
-          <Helmet
-            title="JS IPFS"
-            meta={ [
-              { name: 'description', content: 'JS IPFS website' },
-              { name: 'keywords', content: 'gatsby, ipfs' }
-            ] } />
+          <Helmet>
+            <title>JS IPFS</title>
+            <meta name="description" content="JS IPFS website" />
+          </Helmet>
 
           <Header className={ styles.header } />
           <main className={ styles.children }>
