@@ -100,7 +100,8 @@
     },
     "toggleButtonText": "Activate the Service Worker Gateway",
     "incompatibleMessageText": "Your browser does not support service workers",
-    "activatingMessageText": "Activating Service Worker..."
+    "activatingMessageText": "Activating Service Worker...",
+    "toastErrorMessage": "An error occurred when enabling the Service Worker."
   },
 
   "whatCanYouBuildTitle": "What you can build with js-ipfs",

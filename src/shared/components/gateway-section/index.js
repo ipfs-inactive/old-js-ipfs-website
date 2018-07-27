@@ -71,6 +71,7 @@ class GatewaySection extends Component {
 
   handleToggleClick = () => {
     const { isActive } = this.state
+    const { messages } = this.props.intl
 
     this.setState({ inProgress: true })
 
@@ -83,7 +84,7 @@ class GatewaySection extends Component {
       register()
         .then(() => this.setState({ isActive: true }))
         .catch(() => {
-          const toastId = toast.error('An error occurred when enabling the Service Worker.')
+          const toastId = toast.error(messages.serviceWorker.toastErrorMessage)
           setTimeout(() => toast.update(toastId, {
             render: 'Please try again.',
             autoClose: 2500

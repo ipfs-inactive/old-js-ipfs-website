@@ -99,7 +99,9 @@
       "text": "PT-Try loading content through it without touching a server or using HTTP. Examples: \n - ipfs.io - /ipfs/<hash> \n - js.ipfs.io - /ipfs/<hash> \n - awesome.ipfs.io - /ipfs/<hash> \n - peerpad.net - /ipfs/<hash> \n - Your own hash!"
     },
     "toggleButtonText": "Enable Service Worker",
-    "incompatibleMessageText": "O seu browser não suporta service workers"
+    "incompatibleMessageText": "O seu browser não suporta service workers",
+    "activatingMessageText": "Ativando o Service Worker...",
+    "toastErrorMessage": "Ocorreu um erro ao ativar o Service Worker."
   },
 
   "whatCanYouBuildTitle": "What you can build with js-ipfs",
