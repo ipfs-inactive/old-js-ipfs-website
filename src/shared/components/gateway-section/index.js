@@ -3,6 +3,7 @@ import { injectIntl } from 'react-intl'
 import classNames from 'classnames'
 import { register, getRegistration } from 'shared/service-worker/register'
 import Observer from 'react-intersection-observer'
+import ReactMarkdown from 'react-markdown'
 
 import GatewaySvgAnimation from 'shared/components/gateway-section/gateway-svg-animation'
 import ToggleButton from 'shared/components/toggle-button'
@@ -39,6 +40,10 @@ class GatewaySection extends Component {
           <span className={ styles.sectionDescription }>
             <p>{ messages.serviceWorker.sectionDesc }</p>
           </span>
+          <div className={ styles.message }>
+            <h6 className={ styles.title }>{ messages.serviceWorker.message.title }</h6>
+            <ReactMarkdown source={ messages.serviceWorker.message.text } />
+          </div>
           <Observer onChange={ this.handleObserverView } >
             <GatewaySvgAnimation isActive={ isActive } inView={ inView } />
           </Observer>

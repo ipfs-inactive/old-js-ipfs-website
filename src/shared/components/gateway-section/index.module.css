@@ -47,9 +47,30 @@
         position: relative;
         width: var(--container-width);
         max-width: var(--max-container-width);
-
-        /* margin-bottom: -12%; */
         padding: 7% 0 0 0;
+
+        &.active {
+            & .message {
+                opacity: 1;
+                transition-delay: 2300ms;
+            }
+        }
+
+        & .message {
+            position: absolute;
+            right: 0;
+            max-width: 25%;
+            z-index: 10;
+            padding: 15px;
+            opacity: 0;
+            background: white;
+            color: var(--color-menu-dark-blue);
+            transition: opacity var(--transition-default-duration) ease;
+
+            & .title {
+                margin-bottom: 15px;
+            }
+        }
 
         & .toggle {
             position: absolute;
