@@ -23,11 +23,12 @@
 
         & svg {
             & g[id="first_group"] {
-                &:hover {
-                    cursor: pointer;
+                & > path:first-child {
+                    transition: var(--transition-default-duration) ease;
+                }
 
+                &:hover {
                     & > path:first-child {
-                        transition: var(--transition-default-duration) ease-in-out;
                         fill: var(--color-yellow);
                     }
                 }
