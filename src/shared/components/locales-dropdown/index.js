@@ -51,8 +51,8 @@ class LocalesDropdown extends Component {
 
       return (
         <Link key={ index }
-          changeLocale
-          to={ to }>
+          to={ to }
+          prefixLocale={ false }>
           { locale.toUpperCase() }
         </Link>
       )
