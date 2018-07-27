@@ -1,4 +1,5 @@
-import 'intersection-observer'
+/* eslint-disable import/first */
+typeof window !== 'undefined' && require('intersection-observer')
 
 import 'shared/styles/index.css'
 
