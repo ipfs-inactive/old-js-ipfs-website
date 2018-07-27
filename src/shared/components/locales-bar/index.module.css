@@ -7,7 +7,7 @@
     flex-wrap: wrap;
     justify-content: center;
     font-size: var(--typography-text-size-small);
-    transition: all var(--transition-button-duration) ease;
+    transition: all var(--transition-default-duration) ease;
 
     & a {
         margin-top: 5px;

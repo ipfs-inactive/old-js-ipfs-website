@@ -11,6 +11,10 @@
     100% { transform: translateY(-10px); }
 }
 
+:root {
+    --info-transition-duration: 1500ms;
+}
+
 .animationOff .wrapperContainer .container {
     & .orbitContainer .orbits {
         & .outsideRing {
@@ -140,7 +144,7 @@
             color: var(--color-light-blue);
             font-family: var(--typography-roboto-text-font);
             font-size: var(--typography-text-size-mobile);
-            transition: opacity var(--transition-long-duration) ease, transform var(--transition-long-duration) ease;
+            transition: opacity var(--info-transition-duration) ease, transform var(--info-transition-duration) ease;
 
             &.error {
                 color: var(--color-error);
@@ -175,7 +179,7 @@
                 height: auto;
 
                 & path {
-                    transition: fill var(--transition-button-duration) ease;
+                    transition: fill var(--transition-default-duration) ease;
                 }
             }
 

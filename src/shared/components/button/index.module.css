@@ -13,7 +13,7 @@ a.link {
         font-weight: var(--typography-text-weight-bold);
         text-transform: uppercase;
         letter-spacing: 0.8px;
-        transition-duration: var(--transition-button-duration);
+        transition-duration: var(--transition-default-duration);
 
         &:hover {
             cursor: pointer;

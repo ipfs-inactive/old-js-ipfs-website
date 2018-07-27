@@ -58,9 +58,7 @@
     --container-width-mobile: 89%;
     --max-container-width: 1440px;
     --accordion-content-width: 79%;
-    --transition-default-duration: 600ms;
-    --transition-button-duration: 300ms;
-    --transition-long-duration: 1500ms;
+    --transition-default-duration: 300ms;
     --video-ratio: 56.25%;
     --line-height-xsmall: 20px;
     --line-height-small: 24px;
