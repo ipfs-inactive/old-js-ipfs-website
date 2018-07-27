@@ -93,7 +93,7 @@
 
   "serviceWorker": {
     "sectionTitle": "Service Worker Gateway",
-    "sectionDesc": "TODO(David)",
+    "sectionDesc": "Turn this page into a full IPFS Gateway without touching any servers or using HTTP to fetch content from the IPFS Network! Yes, you read it right, the Service Worker Gateway with js-ipfs can connect directly to the IPFS Network.",
     "toggleButtonText": "Activate the Service Worker Gateway"
   },
 
