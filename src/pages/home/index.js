@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react'
 
 import Hero from 'shared/components/hero-section'
 import Features from 'shared/components/features-section'
@@ -11,30 +10,17 @@ import PublicationsAndTalks from 'shared/components/publications-and-talks-secti
 import Community from 'shared/components/community-section'
 import styles from './index.module.css'
 
-class Home extends Component {
-  state = {
-    featsSectionRef: undefined
-  }
-
-  render () {
-    const { featsSectionRef } = this.state
-    return (
-      <div className={ styles.container }>
-        <Hero featsRef={ featsSectionRef } />
-        <Features ref={ this.handleFeaturesRef } />
-        <GettingStarted />
-        <Gateway />
-        {/* <WhatCanYouBuild /> */}
-        <WhatArePeopleBuilding />
-        <PublicationsAndTalks />
-        <Community />
-      </div>
-    )
-  }
-
-  handleFeaturesRef = (ref) => {
-    this.setState({ featsSectionRef: ReactDOM.findDOMNode(ref) })
-  }
-}
+const Home = () => (
+  <div className={ styles.container }>
+    <Hero />
+    <Features />
+    <GettingStarted />
+    <Gateway />
+    {/* <WhatCanYouBuild /> */}
+    <WhatArePeopleBuilding />
+    <PublicationsAndTalks />
+    <Community />
+  </div>
+)
 
 export default Home

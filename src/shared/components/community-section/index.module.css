@@ -68,7 +68,9 @@
         }
 
         & .socialLinksContainer {
+            position: relative;
             min-width: 100%;
+            z-index: 5;
             margin-top: 35px;
             display: flex;
             flex-direction: column;

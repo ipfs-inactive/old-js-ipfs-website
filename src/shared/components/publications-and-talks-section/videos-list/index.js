@@ -43,7 +43,8 @@ class VideosList extends Component {
             className={ styles.reactPlayer }
             url={ activeVideo.link }
             width="100%"
-            height="100%" />
+            height="100%"
+            controls />
         </div>
       )
     }

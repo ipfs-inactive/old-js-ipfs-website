@@ -18,7 +18,12 @@
     "textDescription": "js-ipfs paves the way for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser, a Service Worker, a Web Extension and Node.js**, opening the door to a world of possibilities.",
     "currentVersion": "Current version:",
     "latestUpdate": "Latest update:",
-    "downloadsLastMonth": "Downloads last month:"
+    "downloadsLastMonth": "Downloads last month:",
+    "errorMessage": {
+      "template": "Something went wrong while fetching package data: ",
+      "part1": "status code.",
+      "part2": "request was made but no response was received."
+    }
   },
 
   "banner": {

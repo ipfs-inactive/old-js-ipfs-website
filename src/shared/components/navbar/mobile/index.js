@@ -46,11 +46,11 @@ class MobileNavbar extends Component {
           <Helmet>
             <script async defer src="https://buttons.github.io/buttons.js" />
           </Helmet>
-          <li><Link className={ styles.menuLink } to="/"> { messages.navbar.item1 } </Link> </li>
-          <li><Link className={ styles.menuLink } to="/"> { messages.navbar.item2 } </Link> </li>
-          <li><Link className={ styles.menuLink } to="/"> { messages.navbar.item3 } </Link> </li>
+          <li><div className={ styles.menuLink } onClick={ this.handleGettingStartedClick }> { messages.navbar.item1 } </div> </li>
+          <li><Link className={ styles.menuLink } href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials"> { messages.navbar.item2 } </Link> </li>
+          <li><Link className={ styles.menuLink } href="https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC"> { messages.navbar.item3 } </Link> </li>
           <li className={ styles.githubContributers }>
-            <Link className={ styles.menuLink } to="/"> { messages.navbar.item4 } </Link>
+            <Link className={ styles.menuLink } href="https://github.com/ipfs/js-ipfs"> { messages.navbar.item4 } </Link>
             <a className="github-button"
               href="https://github.com/ipfs/js-ipfs"
               data-show-count="true"
@@ -84,10 +84,15 @@ class MobileNavbar extends Component {
     handleMenuListRef = (element) => {
       this.menuListElem = element
     }
+
+    handleGettingStartedClick = () => {
+      this.props.scrollToGettingStarted()
+    }
 }
 
 MobileNavbar.propTypes = {
-  intl: PropTypes.object.isRequired
+  intl: PropTypes.object.isRequired,
+  scrollToGettingStarted: PropTypes.func
 }
 
 export default injectIntl(MobileNavbar)

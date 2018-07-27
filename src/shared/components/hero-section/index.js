@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
+import { toast } from 'react-toastify'
 import { PropTypes } from 'prop-types'
 import axios from 'axios'
 import classNames from 'classnames'
@@ -12,16 +13,12 @@ import LocalesBar from 'shared/components/locales-bar'
 import OutsideRingSvg from 'shared/media/backgrounds/outsidering.svg'
 import MiddleRingSvg from 'shared/media/backgrounds/middlering.svg'
 import InsideRingSvg from 'shared/media/backgrounds/insidering.svg'
-import ArrowUp from 'shared/media/icons/arrow-up.svg'
 import CubeSvg from 'shared/media/images/cube.svg'
 import styles from './index.module.css'
-
-const defaultScrollOptions = { offset: -66, align: 'top', duration: 800 }
 
 class Hero extends Component {
   state = {
     info: undefined,
-    errorMessage: undefined,
     inView: true
   }
 
@@ -33,9 +30,7 @@ class Hero extends Component {
   }
 
   componentDidMount () {
-    this.scrollToComponent = require('react-scroll-to-component')
     const self = this
-    this._ismounted = true
 
     axios.get('https://api.npms.io/v2/package/ipfs')
       .then(function ({ data: { collected } }) {
@@ -46,17 +41,13 @@ class Hero extends Component {
       })
   }
 
-  componentWillUnmount () {
-    this._ismounted = false
-  }
-
   render () {
     const { info, errorMessage, inView } = this.state
     const isDataLoaded = Boolean(info)
-    const existsError = Boolean(errorMessage)
+    const hasError = Boolean(errorMessage)
     const infoContainerClasses = classNames(styles.infoContainer, {
-      [styles.hidden]: !isDataLoaded && !existsError,
-      [styles.error]: !isDataLoaded && existsError
+      [styles.hidden]: !isDataLoaded && !hasError,
+      [styles.error]: !isDataLoaded && hasError
     })
     const wrapperContainerClasses = classNames(styles.wrapperContainer, { [styles.animationOff]: !inView })
     const messages = this.messages
@@ -82,12 +73,9 @@ class Hero extends Component {
             <div className={ styles.content }>
               <CubeSvg />
               <h1>{ messages.hero.welcomeMessage }</h1>
-              <ReactMarkdown source={ messages.hero.textDescription } />
+              <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
               <div className={ infoContainerClasses }>
-                { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
-              </div>
-              <div className={ styles.arrowUp } onClick={ this.handleArrowClick }>
-                <ArrowUp />
+                { (isDataLoaded && !hasError) && this.renderPkgInfo(info, isDataLoaded) }
               </div>
             </div>
           </div>
@@ -101,12 +89,6 @@ class Hero extends Component {
 
     return <div>{ pkgInfoArr.map((infoElement, index) => <span key={ `pkgInfo-${index}` }>{ isDataLoaded ? infoElement : '' }</span>) }</div>
   }
-
-  renderErrorMessage = (errorMessage) => (
-    <div>
-      <span>{ errorMessage }</span>
-    </div>
-  )
 
   handleObserverChange = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 
@@ -137,20 +119,18 @@ class Hero extends Component {
   }
 
   handleAxiosError = (error) => {
-    let errorMessage = 'Something went wrong while fetching package data: '
+    const { messages } = this.props.intl
+
+    let errorMessage = messages.hero.errorMessage.template
     if (error.response) {
-      errorMessage += `${error.response.status} status code.`
+      errorMessage += `${error.response.status} ${messages.hero.errorMessage.part1}`
     } else if (error.request) {
-      errorMessage += 'request was made but no response was received.'
+      errorMessage += messages.hero.errorMessage.part2
     } else {
       errorMessage += error.message
     }
-    this.setState({ errorMessage })
-  }
-
-  handleArrowClick = () => {
-    const { featsRef } = this.props
-    featsRef && this.scrollToComponent(featsRef, defaultScrollOptions)
+    console.error(error)
+    toast.error(errorMessage)
   }
 
   calculateDownloads = (downloadsArr, options = { lastMonth: false }) => {
@@ -194,8 +174,7 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
-  intl: PropTypes.object.isRequired,
-  featsRef: PropTypes.object
+  intl: PropTypes.object.isRequired
 }
 
 export default injectIntl(Hero)
