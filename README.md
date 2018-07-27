@@ -2,8 +2,7 @@
 
 > The js-ipfs Project Website.
 
-![](QmRNFokLYeHZiSkXVCSmTKjbGAKCeP2pVZe5fbdvUWtsPL)
-
+[![](https://ipfs.io/ipfs/QmRNFokLYeHZiSkXVCSmTKjbGAKCeP2pVZe5fbdvUWtsPL)](https://js.ipfs.io)
 
 ## Table of Contents
 
