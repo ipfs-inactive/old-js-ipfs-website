@@ -15,7 +15,7 @@
 
   "hero": {
     "welcomeMessage": "A full P2P protocol written entirely in JavaScript",
-    "textDescription": "js-ipfs paves the path for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it runs in a Browser tab, a Service Worker, a Web Extension and also in Node.js, opening the door to a world of possibilities.",
+    "textDescription": "js-ipfs paves the path for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser tab, a Service Worker, a Web Extension and also in Node.js**, opening the door to a world of possibilities.",
     "currentVersion": "Current version:",
     "latestUpdate": "Latest update:",
     "downloadsLastMonth": "Downloads last month:"
@@ -28,7 +28,7 @@
 
   "features": {
     "sectionTitle": "Features",
-    "sectionDesc": "Packed with all the things you know and love about IPFS. This implementationt also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications",
+    "sectionDesc": "Packed with all the things you know and love about IPFS. This implementationt also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications.",
     "list": [
       {
         "title": "Run on Node.js and the Browser",
@@ -36,15 +36,15 @@
       },
       {
         "title": "Implements the full IPFS Stack",
-        "desc": "Not detail was left behind. js-ipfs is not a light client, it is the full implementation of the IPFS protocol."
+        "desc": "No feature was left behind. js-ipfs is not a light client, it is the full implementation of the IPFS protocol."
       },
       {
         "title": "Use PubSub to communicate realtime with the other peers",
-        "desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+        "desc": "IPFS nodes can create network topologies based on topics of interest to broadcast events in Realtime."
       },
       {
         "title": "Add and retrieve files from anywhere in the IPFS Network",
-        "desc": "Maecenas faucibus mollis iterdum.curabitur blandit tempus porttitor."
+        "desc": "IPFS is designed to use the power of Content Addressing and Process Addressing to find the nodes in the network that have the content you are looking for and retrieve it. In the same way, you can add any piece of data and other nodes will find it too."
       },
       {
         "title": "Use the DAG API to traverse over any hash linked data structure",
@@ -59,7 +59,7 @@
         "desc": "js-ipfs also comes with the option to run it as a daemon so that you can interact with it using the HTTP API that you are familiar from go-ipfs."
       },
       {
-        "title": "It can handle naming",
+        "title": "It can handle naming for mutabilitys",
         "desc": "It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) so that you distribute updates in a authenticated and certified way."
       }
     ]
@@ -67,7 +67,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Getting Started",
-    "sectionDesc": "Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
+    "sectionDesc": "TODO(Hugo+Marco)",
     "list": [
       {
         "title": "Install",
@@ -92,9 +92,9 @@
   },
 
   "serviceWorker": {
-    "sectionTitle": "Service Worker",
-    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut.",
-    "toggleButtonText": "Enable Service Worker"
+    "sectionTitle": "Service Worker Gateway",
+    "sectionDesc": "TODO(David)",
+    "toggleButtonText": "Activate the Service Worker Gateway"
   },
 
   "whatCanYouBuildTitle": "What you can build with js-ipfs",
@@ -114,7 +114,7 @@
 
   "whatArePeopleBuilding": {
     "sectionTitle": "What people are building with it",
-    "sectionDesc": "Maecenas sed eu leo. s eget urna mollis ornare vel eu leo diam eget risus varius blaecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet.",
+    "sectionDesc": "",
     "list": [
       {
         "desc": "Paratii builds open source technology for video streaming and curation, with js-ipfs and Ethereum contracts. The Portal is a web app with curated crypto-related videos that runs on IPFS."
@@ -129,17 +129,17 @@
         "desc": "PeerPad is a collaborative real-time editor that works on the decentralised web, built on top of IPFS and Y.js. It uses no second or third-party: all participating nodes talk directly to each other without a central service."
       },
       {
-        "desc": "Browser extension that simplifies access to IPFS resources."
+        "desc": "Give your Browser super powers with the IPFS Web Extension. IPFS Companion is an extension that can be used in Chrome, Firefox and the Brave Browsers to give you access to the IPFS Network seemlessly. It also packs extra features such as file sharing and APIs for Web Developers."
       },
       {
-        "desc": "Orbit Chat is a serverless, distributed, peer-to-peer chat application built on top of OrbitDB. OrbitDB uses [IPFS](https://ipfs.io/) as its data storage and [IPFS Pubsub](https://github.com/ipfs/go-ipfs/blob/master/core/commands/pubsub.go#L23) to automatically sync databases with peers."
+        "desc": "[Orbit Chat](https://orbit.chat) is a serverless, distributed, peer-to-peer chat application built on top of OrbitDB. OrbitDB uses [IPFS](https://ipfs.io) as its data storage and [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) to automatically sync databases with peers."
       }
     ]
   },
 
   "publicationsAndTalks": {
     "sectionTitle": "Publications & Talks",
-    "sectionDesc": "Watch project updates, demos and other talks by the IPFS Community on the JavaScript project of IPFS. We will be adding dozens of more talks here soon from the IPFS Dev Meetings as soon as they are published."
+    "sectionDesc": "Watch project updates, demos and other talks by the IPFS Community on the JavaScript project of IPFS. We will be adding dozens of more talks soon that got recorded on the IPFS Dev Meetings."
   },
 
   "community": {
