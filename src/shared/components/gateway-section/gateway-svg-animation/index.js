@@ -29,7 +29,7 @@ import BeamsNodes12 from 'shared/media/images/gateway-section/beams-nodes-12.svg
 import styles from './index.module.css'
 
 class GatewaySvgAnimation extends Component {
-  render() {
+  render () {
     const { isActive, inView } = this.props
 
     const containerClasses = classNames(styles.container, {
