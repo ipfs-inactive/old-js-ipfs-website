@@ -22,18 +22,18 @@ const projects = [
     translationListIndex: 1,
     image: FilenationPrintScreen,
     link: 'https://filenation.io'
-  },    
+  },
   {
     translationListIndex: 2,
     image: DwebArchivePrintScreen,
     link: 'https://github.com/internetarchive/dweb-archive'
-  },    
+  },
   {
     translationListIndex: 3,
     icon: <PeerpadSvg />,
     image: PeerpadPrintScreen,
     link: 'https://peerpad.net/'
-  },    
+  },
   {
     translationListIndex: 4,
     // icon: <CompanionSvg />,
