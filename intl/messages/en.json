@@ -99,7 +99,8 @@
       "text": "Try loading content through it without touching a server or using HTTP. Examples: \n - ipfs.io - /ipfs/<hash> \n - js.ipfs.io - /ipfs/<hash> \n - awesome.ipfs.io - /ipfs/<hash> \n - peerpad.net - /ipfs/<hash> \n - Your own hash!"
     },
     "toggleButtonText": "Activate the Service Worker Gateway",
-    "incompatibleMessageText": "Your browser does not support service workers"
+    "incompatibleMessageText": "Your browser does not support service workers",
+    "activatingMessageText": "Activating Service Worker..."
   },
 
   "whatCanYouBuildTitle": "What you can build with js-ipfs",

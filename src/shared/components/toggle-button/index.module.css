@@ -71,6 +71,17 @@
         }
     }
 
+    &.inProgress {
+        & .switch {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        & .title {
+            color: var(--color-yellow);
+        }
+    }
+
     & .tooltip {
         padding: 14px 20px;
     }

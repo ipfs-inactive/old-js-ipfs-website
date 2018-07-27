@@ -8,10 +8,11 @@ import styles from './index.module.css'
 
 class ToggleButton extends Component {
   render () {
-    const { isActive, incompatible, type, className } = this.props
+    const { isActive, incompatible, inProgress, type, className } = this.props
     const { messages } = this.props.intl
     const wrapperClasses = classnames(styles.wrapper, className, {
-      [styles.incompatible]: incompatible
+      [styles.incompatible]: incompatible,
+      [styles.inProgress]: inProgress
     })
     const sliderClasses = classnames(styles.slider, {
       [styles.round]: type === 'round',
@@ -26,7 +27,9 @@ class ToggleButton extends Component {
         <label className={ styles.switch } onClick={ this.handleToggleButton }>
           <span className={ sliderClasses } />
         </label>
-        <span className={titleClasses}>{ messages.serviceWorker.toggleButtonText }</span>
+        <span className={titleClasses}>
+          { inProgress && !isActive ? messages.serviceWorker.activatingMessageText : messages.serviceWorker.toggleButtonText }
+        </span>
         {
           incompatible && (
             <ReactTooltip id='incompatible-sw' className={styles.tooltip}>
@@ -52,7 +55,8 @@ ToggleButton.propTypes = {
   isActive: PropTypes.bool.isRequired,
   type: PropTypes.oneOf(['round', 'rect']),
   className: PropTypes.string,
-  incompatible: PropTypes.bool
+  incompatible: PropTypes.bool,
+  inProgress: PropTypes.bool
 }
 
 export default injectIntl(ToggleButton)
