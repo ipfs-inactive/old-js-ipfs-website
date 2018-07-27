@@ -13,11 +13,12 @@ const LocalesBar = ({ intl: { locale }, className }) => {
   const localesBarClassName = classNames(styles.localesBar, className)
   const defaultLocale = getDefaultLocale()
   const renderLocales = locales.map((locale, index) => {
-    const to = defaultLocale === locale.acronym ? '/' : `/${locale.acronym}`
+    const to = defaultLocale === locale.acronym ? '/' : `/${locale.acronym}/`
+
     return (
-      <Link key={ `localeF-${index}` }
-        changeLocale
-        className={ index === currentLocaleIndex && styles.active }
+      <Link key={ `locale-${index}` }
+        prefixLocale={ false }
+        className={ classNames(index === currentLocaleIndex && styles.active) }
         to={ to } >
         { locale.fullForm }
       </Link>

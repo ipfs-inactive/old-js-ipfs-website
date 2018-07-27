@@ -4,13 +4,10 @@ import GatsbyLink from 'gatsby-link'
 
 class Link extends Component {
   render () {
-    const { to, changeLocale, href, ...rest } = this.props
-    const { intl } = this.context
+    const { to, href, prefixLocale, ...rest } = this.props
 
     if (to) {
-      const localelizedTo = intl.defaultLocale !== intl.locale ? `/${intl.locale}${to}` : to
-
-      return <GatsbyLink { ...rest } to={ changeLocale ? to : localelizedTo } />
+      return <GatsbyLink { ...rest } to={ this.buildTo() } />
     }
 
     return (
@@ -18,15 +15,33 @@ class Link extends Component {
     )
   }
 
-    static propTypes = {
-      to: PropTypes.string,
-      href: PropTypes.string,
-      changeLocale: PropTypes.bool
+  buildTo () {
+    const { to, prefixLocale } = this.props
+    const { intl } = this.context
+
+    let finalTo = ''
+
+    if (prefixLocale && intl.defaultLocale !== intl.locale) {
+      finalTo += `/${intl.locale}`
     }
 
-    static contextTypes = {
-      intl: PropTypes.object.isRequired
-    }
+    // Ensure trailing slash to avoid gateway redirects
+    // The IPFS gateway automatically redirects to <url>/ if there's trailing /
+    finalTo += to.replace(/\/+$/, '')
+    finalTo += '/'
+
+    return finalTo
+  }
+}
+
+Link.propTpes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
+  prefixLocale: PropTypes.bool
+}
+
+Link.contextTypes = {
+  intl: PropTypes.object.isRequired
 }
 
 export default Link
