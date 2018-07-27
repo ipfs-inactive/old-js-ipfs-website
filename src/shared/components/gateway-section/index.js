@@ -58,8 +58,7 @@ class GatewaySection extends Component {
             onClick={ this.handleToggleClick }
             className={ styles.toggle }
             incompatible={ icompatible }
-            inProgress={ inProgress }
-            title={ messages.serviceWorker.toggleButtonText } />
+            inProgress={ inProgress } />
           <ToastContainer
             className={ styles.toastContainer}
             transition={Slide}
