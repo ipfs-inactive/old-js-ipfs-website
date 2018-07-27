@@ -139,6 +139,7 @@
     text-align: left;
     text-indent: -9999px;
     white-space: nowrap;
+    transition: opacity 300ms ease;
 }
 
 .slick-prev:hover,
