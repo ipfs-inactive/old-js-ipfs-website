@@ -15,7 +15,7 @@
 
   "hero": {
     "welcomeMessage": "A full P2P protocol written entirely in JavaScript",
-    "textDescription": "js-ipfs paves the path for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser tab, a Service Worker, a Web Extension and also in Node.js**, opening the door to a world of possibilities.",
+    "textDescription": "js-ipfs paves the way for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser, a Service Worker, a Web Extension and Node.js**, opening the door to a world of possibilities.",
     "currentVersion": "Current version:",
     "latestUpdate": "Latest update:",
     "downloadsLastMonth": "Downloads last month:"
@@ -23,12 +23,12 @@
 
   "banner": {
     "highlightMessage": "The js-ipfs library is in Alpha state.",
-    "message": "The codebase hasn't been audited by Security specialists and it shouldn't be used to store, share or publish sensitive information."
+    "message": "The codebase hasn't been audited by security specialists and it shouldn't be used to store, share or publish sensitive information."
   },
 
   "features": {
     "sectionTitle": "Features",
-    "sectionDesc": "Packed with all the things you know and love about IPFS. This implementationt also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications.",
+    "sectionDesc": "Packed with all the things you know and love about IPFS. This implementation also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications.",
     "list": [
       {
         "title": "Run on Node.js and the Browser",
@@ -39,8 +39,8 @@
         "desc": "No feature was left behind. js-ipfs is not a light client, it is the full implementation of the IPFS protocol."
       },
       {
-        "title": "Use PubSub to communicate realtime with the other peers",
-        "desc": "IPFS nodes can create network topologies based on topics of interest to broadcast events in Realtime."
+        "title": "Use PubSub to communicate in realtime with the other peers",
+        "desc": "IPFS nodes can create network topologies based on topics of interest to broadcast events in realtime."
       },
       {
         "title": "Add and retrieve files from anywhere in the IPFS Network",
@@ -52,15 +52,15 @@
       },
       {
         "title": "libp2p is built in",
-        "desc": "libp2p is the Modular Networking Stack that was born for IPFS and now you can use it through IPFS for your application directly as well."
+        "desc": "libp2p is the Modular Networking Stack that was created for IPFS and now you can use it through IPFS for your application directly as well."
       },
       {
         "title": "Run it as a daemon",
-        "desc": "js-ipfs also comes with the option to run it as a daemon so that you can interact with it using the HTTP API that you are familiar from go-ipfs."
+        "desc": "js-ipfs also comes with the option to run it as a daemon so that you can interact with it using the HTTP API that you are familiar with from go-ipfs."
       },
       {
-        "title": "It can handle naming for mutabilitys",
-        "desc": "It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) so that you distribute updates in a authenticated and certified way."
+        "title": "Create stable addresses for changing data",
+        "desc": "It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) to distribute updates in an authenticated and certified way."
       }
     ]
   },
@@ -86,7 +86,7 @@
       {
         "title": "Use in the browser",
         "desc": "Learn how to bundle with browserify and webpack in the examples folder.\n\nYou can also load it using a <script> using the unpkg CDN or the jsDelivr CDN. Inserting one of the following lines will make a Ipfs object available in the global namespace.",
-        "note": "Inserting one of the above lines will make an Ipfs object available in the global namespace."
+        "note": "Inserting one of the above lines will make an Ipfs constructor available in the global namespace."
       }
     ]
   },
@@ -134,7 +134,7 @@
         "desc": "PeerPad is a collaborative real-time editor that works on the decentralised web, built on top of IPFS and Y.js. It uses no second or third-party: all participating nodes talk directly to each other without a central service."
       },
       {
-        "desc": "Give your Browser super powers with the IPFS Web Extension. IPFS Companion is an extension that can be used in Chrome, Firefox and the Brave Browsers to give you access to the IPFS Network seemlessly. It also packs extra features such as file sharing and APIs for Web Developers."
+        "desc": "Give your Browser super powers with the IPFS Web Extension. IPFS Companion is an extension that can be used in Chrome, Firefox and the Brave Browsers to give you access to the IPFS Network seamlessly. It also packs extra features such as file sharing and APIs for Web Developers."
       },
       {
         "desc": "[Orbit Chat](https://orbit.chat) is a serverless, distributed, peer-to-peer chat application built on top of OrbitDB. OrbitDB uses [IPFS](https://ipfs.io) as its data storage and [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) to automatically sync databases with peers."
@@ -144,12 +144,12 @@
 
   "publicationsAndTalks": {
     "sectionTitle": "Publications & Talks",
-    "sectionDesc": "Watch project updates, demos and other talks by the IPFS Community on the JavaScript project of IPFS. We will be adding dozens of more talks soon that got recorded on the IPFS Dev Meetings."
+    "sectionDesc": "Watch project updates, demos and other talks by the IPFS Community on the JavaScript project of IPFS. We will be adding dozens more talks soon from the IPFS Dev Meetings."
   },
 
   "community": {
     "sectionTitle": "Community",
-    "sectionDesc": "js-ipfs is an MIT Licensed, Open Source project from the IPFS community. There are many ways you can contribute by getting involved: you can help write the specification, code implementations and tools using libp2p, craft examples and tutorials, and join our regular product calls to discuss libp2p with us.",
+    "sectionDesc": "js-ipfs is an MIT Licensed, Open Source project from the IPFS community. There are many ways you can contribute: help write the specification, code implementations and tools using libp2p, craft examples and tutorials, and join our regular product calls to discuss libp2p with us.",
     "socialNetworksText": "Come hang out!"
   },
 
