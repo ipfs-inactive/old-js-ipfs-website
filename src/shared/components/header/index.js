@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
-import Observer from 'react-intersection-observer'
+import Observer from '@researchgate/react-intersection-observer'
 
 import DesktopNavbar from 'shared/components/navbar/desktop'
 import MobileNavbar from 'shared/components/navbar/mobile'
@@ -23,14 +23,18 @@ class Header extends Component {
 
     return (
       <header className={ classNames(styles.header, className) }>
-        <Observer className={ styles.target } onChange={ this.handleObserverView } />
+        <Observer className={ styles.target } onChange={ this.handleObserverView }>
+          <span />
+        </Observer>
         <DesktopNavbar isSticky={ isSticky } localesBarHeight={ localesBarHeight } />
         <MobileNavbar />
       </header>
     )
   }
 
-  handleObserverView = (inView) => this.setState({ isSticky: !inView })
+  handleObserverView = ({ isIntersecting }) => {
+    this.setState({ isSticky: !isIntersecting })
+  }
 }
 
 Header.propTypes = {

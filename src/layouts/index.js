@@ -1,3 +1,6 @@
+/* eslint-disable import/first */
+typeof window !== 'undefined' && require('intersection-observer')
+
 import 'shared/styles/index.css'
 
 import React, { Component } from 'react'
@@ -13,10 +16,6 @@ import styles from './index.module.css'
 addLocaleData(localeData)
 
 class Layout extends Component {
-  componentDidMount () {
-    require('intersection-observer')
-  }
-
   render () {
     const { children } = this.props
     return (

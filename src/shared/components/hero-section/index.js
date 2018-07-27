@@ -5,7 +5,7 @@ import axios from 'axios'
 import classNames from 'classnames'
 import { distanceInWordsToNow } from 'date-fns'
 import locales from 'utils/dateFnsLocales'
-import Observer from 'react-intersection-observer'
+import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
 import LocalesBar from 'shared/components/locales-bar'
@@ -108,7 +108,7 @@ class Hero extends Component {
     </div>
   )
 
-  handleObserverView = (inView) => this.setState({ inView })
+  handleObserverView = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 
   handleAxiosResponse = (data) => {
     const messages = this.messages
