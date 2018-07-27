@@ -59,4 +59,19 @@
             color: var(--color-yellow);
         }
     }
+
+    &.incompatible {
+        & .switch {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        & .title {
+            opacity: 0.5;
+        }
+    }
+
+    & .tooltip {
+        padding: 14px 20px;
+    }
 }

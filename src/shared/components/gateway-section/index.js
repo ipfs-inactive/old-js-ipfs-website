@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import classNames from 'classnames'
-import { register, getRegistration } from 'shared/service-worker/register'
+import { isCompatible, register, unregister, getRegistration } from 'shared/service-worker/registration'
 import Observer from 'react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
@@ -15,7 +15,8 @@ class GatewaySection extends Component {
 
     this.state = {
       isActive: false,
-      inView: false
+      inView: false,
+      incompatible: false
     }
   }
 
@@ -24,10 +25,12 @@ class GatewaySection extends Component {
       .then((registration) => {
         registration && this.setState({ isActive: true })
       })
+
+    this.setState({ icompatible: !(isCompatible()) })
   }
 
   render () {
-    const { isActive, inView } = this.state
+    const { isActive, inView, icompatible } = this.state
     const { messages } = this.props.intl
     const contentClasses = classNames(styles.content, {
       [styles.active]: isActive
@@ -50,7 +53,7 @@ class GatewaySection extends Component {
           <ToggleButton isActive={ isActive }
             onClick={ this.handleToggleClick }
             className={ styles.toggle }
-            title={ messages.serviceWorker.toggleButtonText }/>
+            incompatible={ icompatible }/>
         </div>
       </div>
     )
@@ -60,16 +63,11 @@ class GatewaySection extends Component {
     const { isActive } = this.state
 
     if (isActive) {
-      getRegistration()
-        .then((registration) => {
-          if (registration) {
-            console.log('reg', registration)
-            return registration.unregister()
-          }
-        })
+      unregister()
         .then(() => {
           this.setState({ isActive: false })
         })
+        .catch(() => console.log('failed to unregister'))
     } else {
       register()
         .then(() => {
