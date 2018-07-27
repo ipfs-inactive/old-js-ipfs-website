@@ -22,6 +22,7 @@ export const getRegistration = () => {
   if ('serviceWorker' in navigator) {
     return navigator.serviceWorker.getRegistration('/')
   }
+  return Promise.reject() // eslint-disable-line prefer-promise-reject-errors
 }
 
 export const isCompatible = () => {
