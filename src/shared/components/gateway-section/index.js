@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
+import { Slide, ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import classNames from 'classnames'
 import { isCompatible, register, unregister, getRegistration } from 'shared/service-worker/registration'
 import Observer from 'react-intersection-observer'
@@ -16,7 +18,8 @@ class GatewaySection extends Component {
     this.state = {
       isActive: false,
       inView: false,
-      incompatible: false
+      incompatible: false,
+      inProgress: false
     }
   }
 
@@ -30,7 +33,7 @@ class GatewaySection extends Component {
   }
 
   render () {
-    const { isActive, inView, icompatible } = this.state
+    const { isActive, inView, icompatible, inProgress } = this.state
     const { messages } = this.props.intl
     const contentClasses = classNames(styles.content, {
       [styles.active]: isActive
@@ -50,10 +53,16 @@ class GatewaySection extends Component {
           <Observer onChange={ this.handleObserverView } >
             <GatewaySvgAnimation isActive={ isActive } inView={ inView } />
           </Observer>
-          <ToggleButton isActive={ isActive }
+          <ToggleButton
+            isActive={ isActive }
             onClick={ this.handleToggleClick }
             className={ styles.toggle }
-            incompatible={ icompatible }/>
+            incompatible={ icompatible }
+            inProgress={ inProgress } />
+          <ToastContainer
+            className={ styles.toastContainer}
+            transition={Slide}
+            pauseOnHover={false} />
         </div>
       </div>
     )
@@ -61,19 +70,26 @@ class GatewaySection extends Component {
 
   handleToggleClick = () => {
     const { isActive } = this.state
+    const { messages } = this.props.intl
+
+    this.setState({ inProgress: true })
 
     if (isActive) {
       unregister()
-        .then(() => {
-          this.setState({ isActive: false })
-        })
+        .then(() => this.setState({ isActive: false }))
         .catch(() => console.log('failed to unregister'))
+        .finally(() => this.setState({ inProgress: false }))
     } else {
       register()
-        .then(() => {
-          this.setState({ isActive: true })
+        .then(() => this.setState({ isActive: true }))
+        .catch(() => {
+          const toastId = toast.error(messages.serviceWorker.toastErrorMessage)
+          setTimeout(() => toast.update(toastId, {
+            render: 'Please try again.',
+            autoClose: 2500
+          }), 5000)
         })
-        .catch(() => console.log('failed to register'))
+        .finally(() => this.setState({ inProgress: false }))
     }
   }
 

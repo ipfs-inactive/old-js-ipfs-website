@@ -97,4 +97,12 @@
             }
         }
     }
+
+    & .toastContainer {
+        margin-top: calc(var(--navbar-desktop-height) + 3px);
+
+        & .error {
+            background-color: var(--color-error);
+        }
+    }
 }
