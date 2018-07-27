@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import classNames from 'classnames'
 import { isCompatible, register, unregister, getRegistration } from 'shared/service-worker/registration'
-import Observer from 'react-intersection-observer'
+import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
 import GatewaySvgAnimation from 'shared/components/gateway-section/gateway-svg-animation'
@@ -25,6 +25,7 @@ class GatewaySection extends Component {
       .then((registration) => {
         registration && this.setState({ isActive: true })
       })
+      .catch((err) => console.error(err))
 
     this.setState({ icompatible: !(isCompatible()) })
   }
@@ -77,7 +78,7 @@ class GatewaySection extends Component {
     }
   }
 
-  handleObserverView = (inView) => this.setState({ inView })
+  handleObserverView = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 }
 
 export default injectIntl(GatewaySection)

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
@@ -28,77 +28,81 @@ import BeamsNodes12 from 'shared/media/images/gateway-section/beams-nodes-12.svg
 
 import styles from './index.module.css'
 
-const GatewaySvgAnimation = ({ isActive, inView }) => {
-  const containerClasses = classNames(styles.container, {
-    [styles.active]: isActive,
-    [styles.animationOff]: !inView
-  })
+class GatewaySvgAnimation extends Component {
+  render() {
+    const { isActive, inView } = this.props
 
-  return (
-    <div className={ containerClasses }>
-      <GatewaySvg />
-      <div className={ styles.gatewayBlueBeams }>
-        <GatewayBlueBeams />
+    const containerClasses = classNames(styles.container, {
+      [styles.active]: isActive,
+      [styles.animationOff]: !inView
+    })
+
+    return (
+      <div className={containerClasses}>
+        <GatewaySvg />
+        <div className={styles.gatewayBlueBeams}>
+          <GatewayBlueBeams />
+        </div>
+        <div className={styles.gatewayWhiteBeam1}>
+          <GatewayWhiteBeam1 />
+        </div>
+        <div className={styles.gatewayWhiteBeam2}>
+          <GatewayWhiteBeam2 />
+        </div>
+        <div className={styles.serviceWorkerBeam1}>
+          <ServiceWorkerBeam1 />
+        </div>
+        <div className={styles.serviceWorkerBeam2}>
+          <ServiceWorkerBeam2 />
+        </div>
+        <div className={styles.serviceWorkerBeam3}>
+          <ServiceWorkerBeam3 />
+        </div>
+        <div className={styles.serviceWorkerBeam4}>
+          <ServiceWorkerBeam4 />
+        </div>
+        <div className={styles.serviceWorkerArrowBeams}>
+          <ServiceWorkerArrowBeams />
+        </div>
+        <div className={styles.beamsNodes1}>
+          <BeamsNodes1 />
+        </div>
+        <div className={styles.beamsNodes2}>
+          <BeamsNodes2 />
+        </div>
+        <div className={styles.beamsNodes3}>
+          <BeamsNodes3 />
+        </div>
+        <div className={styles.beamsNodes4}>
+          <BeamsNodes4 />
+        </div>
+        <div className={styles.beamsNodes5}>
+          <BeamsNodes5 />
+        </div>
+        <div className={styles.beamsNodes6}>
+          <BeamsNodes6 />
+        </div>
+        <div className={styles.beamsNodes7}>
+          <BeamsNodes7 />
+        </div>
+        <div className={styles.beamsNodes8}>
+          <BeamsNodes8 />
+        </div>
+        <div className={styles.beamsNodes9}>
+          <BeamsNodes9 />
+        </div>
+        <div className={styles.beamsNodes10}>
+          <BeamsNodes10 />
+        </div>
+        <div className={styles.beamsNodes11}>
+          <BeamsNodes11 />
+        </div>
+        <div className={styles.beamsNodes12}>
+          <BeamsNodes12 />
+        </div>
       </div>
-      <div className={ styles.gatewayWhiteBeam1 }>
-        <GatewayWhiteBeam1 />
-      </div>
-      <div className={ styles.gatewayWhiteBeam2 }>
-        <GatewayWhiteBeam2 />
-      </div>
-      <div className={ styles.serviceWorkerBeam1 }>
-        <ServiceWorkerBeam1 />
-      </div>
-      <div className={ styles.serviceWorkerBeam2 }>
-        <ServiceWorkerBeam2 />
-      </div>
-      <div className={ styles.serviceWorkerBeam3 }>
-        <ServiceWorkerBeam3 />
-      </div>
-      <div className={ styles.serviceWorkerBeam4 }>
-        <ServiceWorkerBeam4 />
-      </div>
-      <div className={ styles.serviceWorkerArrowBeams }>
-        <ServiceWorkerArrowBeams />
-      </div>
-      <div className={ styles.beamsNodes1 }>
-        <BeamsNodes1 />
-      </div>
-      <div className={ styles.beamsNodes2 }>
-        <BeamsNodes2 />
-      </div>
-      <div className={ styles.beamsNodes3 }>
-        <BeamsNodes3 />
-      </div>
-      <div className={ styles.beamsNodes4 }>
-        <BeamsNodes4 />
-      </div>
-      <div className={ styles.beamsNodes5 }>
-        <BeamsNodes5 />
-      </div>
-      <div className={ styles.beamsNodes6 }>
-        <BeamsNodes6 />
-      </div>
-      <div className={ styles.beamsNodes7 }>
-        <BeamsNodes7 />
-      </div>
-      <div className={ styles.beamsNodes8 }>
-        <BeamsNodes8 />
-      </div>
-      <div className={ styles.beamsNodes9 }>
-        <BeamsNodes9 />
-      </div>
-      <div className={ styles.beamsNodes10 }>
-        <BeamsNodes10 />
-      </div>
-      <div className={ styles.beamsNodes11 }>
-        <BeamsNodes11 />
-      </div>
-      <div className={ styles.beamsNodes12 }>
-        <BeamsNodes12 />
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 GatewaySvgAnimation.propTypes = {
