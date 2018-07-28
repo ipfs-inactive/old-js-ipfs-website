@@ -55,10 +55,10 @@
     & .rightContainer {
         max-width: 70%;
         flex: 1;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 
         & img {
             width: 100%;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
         }
     }
 }
