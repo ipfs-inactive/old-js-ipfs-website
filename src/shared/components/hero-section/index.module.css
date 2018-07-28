@@ -124,7 +124,7 @@
             color: var(--color-light-blue);
             font-family: var(--typography-roboto-text-font);
             font-size: var(--typography-text-size-mobile);
-            transition: opacity var(--transition-long-duration) ease;
+            transition: opacity var(--info-transition-duration) ease;
 
             &.hidden {
                 opacity: 0;

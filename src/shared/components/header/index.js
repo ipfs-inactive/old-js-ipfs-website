@@ -17,9 +17,7 @@ class Header extends Component {
 
   componentDidMount () {
     this.scrollToComponent = require('react-scroll-to-component')
-    this.setState({
-      gettingStartedElement: document.getElementById('gsContainer')
-    })
+    this.gettingStartedElement = document.getElementById('gsContainer')
   }
 
   render () {

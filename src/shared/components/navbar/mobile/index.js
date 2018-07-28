@@ -86,13 +86,13 @@ class MobileNavbar extends Component {
     }
 
     handleGettingStartedClick = () => {
-      this.props.scrollToGettingStarted()
+      this.props.onGoToGettingStarted()
     }
 }
 
 MobileNavbar.propTypes = {
   intl: PropTypes.object.isRequired,
-  scrollToGettingStarted: PropTypes.func
+  onGoToGettingStarted: PropTypes.func
 }
 
 export default injectIntl(MobileNavbar)

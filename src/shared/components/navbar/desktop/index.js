@@ -40,14 +40,14 @@ class DesktopNavbar extends Component {
   }
 
   handleGettingStartedClick = () => {
-    this.props.scrollToGettingStarted()
+    this.props.onGoToGettingStarted()
   }
 }
 
 DesktopNavbar.propTypes = {
   isSticky: PropTypes.bool.isRequired,
   intl: PropTypes.object.isRequired,
-  scrollToGettingStarted: PropTypes.func
+  onGoToGettingStarted: PropTypes.func
 }
 
 export default injectIntl(DesktopNavbar)
