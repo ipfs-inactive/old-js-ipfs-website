@@ -12,15 +12,11 @@ import ToggleButton from 'shared/components/toggle-button'
 import styles from './index.module.css'
 
 class GatewaySection extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      isActive: false,
-      inView: false,
-      incompatible: false,
-      inProgress: false
-    }
+  state = {
+    isActive: false,
+    inView: false,
+    incompatible: false,
+    inProgress: false
   }
 
   componentDidMount () {

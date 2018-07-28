@@ -8,12 +8,8 @@ import MobileNavbar from 'shared/components/navbar/mobile'
 import styles from './index.module.css'
 
 class Header extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      isSticky: false
-    }
+  state = {
+    isSticky: false
   }
 
   render () {

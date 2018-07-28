@@ -16,12 +16,8 @@ const settings = {
 }
 
 class Carousel extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      isMobile: undefined
-    }
+  state = {
+    isMobile: undefined
   }
 
   componentDidMount () {

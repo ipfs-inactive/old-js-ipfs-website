@@ -19,14 +19,14 @@ import styles from './index.module.css'
 const defaultScrollOptions = { offset: -66, align: 'top', duration: 800 }
 
 class Hero extends Component {
+  state = {
+    info: undefined,
+    errorMessage: undefined,
+    inView: true
+  }
+
   constructor (props) {
     super(props)
-
-    this.state = {
-      info: undefined,
-      errorMessage: undefined,
-      inView: true
-    }
 
     const { messages } = this.props.intl
     this.messages = messages
