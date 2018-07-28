@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "aegir": "ipfs/aegir#feat/add-eslint-overrides-support",
+    "babel-eslint": "^8.2.6",
     "babel-preset-moxy": "^2.3.3",
     "browserslist-config-google": "^1.5.0",
     "eslint": "^4.19.1",
