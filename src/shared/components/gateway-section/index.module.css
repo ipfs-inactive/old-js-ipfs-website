@@ -1,37 +1,5 @@
 @import "shared/styles/imports/variables.css";
 
-@keyframes fillIn {
-    to { stroke-dashoffset: 0; }
-}
-
-@keyframes pulse {
-    0% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes pulseReverse {
-    0% {
-        opacity: 0.1;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.1;
-    }
-}
-
 .container {
     position: relative;
     width: 100%;
