@@ -12,12 +12,8 @@ import Community from 'shared/components/community-section'
 import styles from './index.module.css'
 
 class Home extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      featsSectionRef: undefined
-    }
+  state = {
+    featsSectionRef: undefined
   }
 
   render () {

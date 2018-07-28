@@ -8,12 +8,12 @@ import Link from 'shared/components/link'
 import styles from './index.module.css'
 
 class LocalesDropdown extends Component {
+  state = {
+    isOpen: false
+  }
+
   constructor (props) {
     super(props)
-
-    this.state = {
-      isOpen: false
-    }
 
     this.availableLocales = getLocalesAcronym()
     this.currentLocale = props.intl.locale

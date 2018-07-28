@@ -9,14 +9,10 @@ import Link from 'shared/components/link'
 import styles from './index.module.css'
 
 class MobileNavbar extends Component {
-  constructor (props) {
-    super(props)
-
-    this.state = {
-      isOpen: false,
-      scrolled: false
-    }
-  }
+  state = {
+    isOpen: false,
+    scrolled: false
+  };
 
   componentDidMount () {
     window.addEventListener('scroll', this.handleScroll)

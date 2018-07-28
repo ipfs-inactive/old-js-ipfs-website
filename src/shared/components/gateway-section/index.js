@@ -12,15 +12,11 @@ import ToggleButton from './toggle-button'
 import styles from './index.module.css'
 
 class GatewaySection extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      isActive: false,
-      inView: false,
-      incompatible: false,
-      inProgress: false
-    }
+  state = {
+    isActive: false,
+    inView: false,
+    incompatible: false,
+    inProgress: false
   }
 
   componentDidMount () {
@@ -51,7 +47,7 @@ class GatewaySection extends Component {
             <h6 className={ styles.title }>{ messages.serviceWorker.activationSuccessTitle }</h6>
             <ReactMarkdown source={ messages.serviceWorker.activationSuccessText } />
           </div>
-          <Observer onChange={ this.handleObserverView } >
+          <Observer onChange={ this.handleObserverChange } >
             <GatewaySvgAnimation isActive={ isActive } inView={ inView } />
           </Observer>
           <ToggleButton
@@ -95,7 +91,7 @@ class GatewaySection extends Component {
     }
   }
 
-  handleObserverView = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
+  handleObserverChange = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 }
 
 export default injectIntl(GatewaySection)

@@ -9,13 +9,9 @@ import styles from './index.module.css'
 const defaultScrollOptions = { offset: -150, align: 'top', duration: 600 }
 
 class Accordion extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      openedItemIndex: -1
-    }
-  }
+  state = {
+    openedItemIndex: -1
+  };
 
   componentDidMount () {
     this.scrollToComponent = require('react-scroll-to-component')
