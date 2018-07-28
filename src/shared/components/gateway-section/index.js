@@ -8,7 +8,7 @@ import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
 import GatewaySvgAnimation from 'shared/components/gateway-section/gateway-svg-animation'
-import ToggleButton from 'shared/components/toggle-button'
+import ToggleButton from './toggle-button'
 import styles from './index.module.css'
 
 class GatewaySection extends Component {
@@ -48,8 +48,8 @@ class GatewaySection extends Component {
             <p>{ messages.serviceWorker.sectionDesc }</p>
           </span>
           <div className={ styles.message }>
-            <h6 className={ styles.title }>{ messages.serviceWorker.message.title }</h6>
-            <ReactMarkdown source={ messages.serviceWorker.message.text } />
+            <h6 className={ styles.title }>{ messages.serviceWorker.activationSuccessTitle }</h6>
+            <ReactMarkdown source={ messages.serviceWorker.activationSuccessText } />
           </div>
           <Observer onChange={ this.handleObserverView } >
             <GatewaySvgAnimation isActive={ isActive } inView={ inView } />
@@ -61,35 +61,36 @@ class GatewaySection extends Component {
             incompatible={ icompatible }
             inProgress={ inProgress } />
           <ToastContainer
-            className={ styles.toastContainer}
-            transition={Slide}
-            pauseOnHover={false} />
+            className={ styles.toastContainer }
+            transition={ Slide }
+            pauseOnHover={ false } />
         </div>
       </div>
     )
   }
 
   handleToggleClick = () => {
-    const { isActive } = this.state
     const { messages } = this.props.intl
+
+    // Can't activate service-worker if serving from `/ipfs/xxx` or `/ipns/xxx` because
+    // it must be served from the root
+    if (/^\/(?:ipfs|ipns)\/[^/]+/.test(window.location.pathname)) {
+      return toast.warning(messages.serviceWorker.nonRootScopeWarningMessage)
+    }
+
+    const { isActive } = this.state
 
     this.setState({ inProgress: true })
 
     if (isActive) {
       unregister()
         .then(() => this.setState({ isActive: false }))
-        .catch(() => console.log('failed to unregister'))
+        .catch(() => toast.error(messages.serviceWorker.deactivationErrorMessage))
         .finally(() => this.setState({ inProgress: false }))
     } else {
       register()
         .then(() => this.setState({ isActive: true }))
-        .catch(() => {
-          const toastId = toast.error(messages.serviceWorker.toastErrorMessage)
-          setTimeout(() => toast.update(toastId, {
-            render: 'Please try again.',
-            autoClose: 2500
-          }), 5000)
-        })
+        .catch(() => toast.error(messages.serviceWorker.activationErrorMessage))
         .finally(() => this.setState({ inProgress: false }))
     }
   }
