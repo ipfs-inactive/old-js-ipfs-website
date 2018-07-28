@@ -2,8 +2,6 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .container {
-    width: 100%;
-
     & .serviceWorker {
         position: relative;
         z-index: 3;
