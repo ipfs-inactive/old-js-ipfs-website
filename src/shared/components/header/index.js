@@ -19,7 +19,7 @@ class Header extends Component {
 
     return (
       <header className={ classNames(styles.header, className) }>
-        <Observer className={ styles.target } onChange={ this.handleObserverView }>
+        <Observer className={ styles.target } onChange={ this.handleObserverChange }>
           <span />
         </Observer>
         <DesktopNavbar isSticky={ isSticky } localesBarHeight={ localesBarHeight } />
@@ -28,9 +28,7 @@ class Header extends Component {
     )
   }
 
-  handleObserverView = ({ isIntersecting }) => {
-    this.setState({ isSticky: !isIntersecting })
-  }
+  handleObserverChange = ({ isIntersecting }) => this.setState({ isSticky: !isIntersecting })
 }
 
 Header.propTypes = {

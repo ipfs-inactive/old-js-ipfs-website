@@ -62,7 +62,7 @@ class Hero extends Component {
     const messages = this.messages
 
     return (
-      <Observer onChange={ this.handleObserverView } className={ observerClass }>
+      <Observer onChange={ this.handleObserverChange } className={ observerClass }>
         <div className={ styles.wrapperContainer }>
           <div className={ styles.container }>
             <LocalesBar className={ styles.localesBar } />
@@ -108,7 +108,7 @@ class Hero extends Component {
     </div>
   )
 
-  handleObserverView = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
+  handleObserverChange = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 
   handleAxiosResponse = (data) => {
     const messages = this.messages

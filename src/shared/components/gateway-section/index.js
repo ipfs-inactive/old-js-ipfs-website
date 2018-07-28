@@ -47,7 +47,7 @@ class GatewaySection extends Component {
             <h6 className={ styles.title }>{ messages.serviceWorker.message.title }</h6>
             <ReactMarkdown source={ messages.serviceWorker.message.text } />
           </div>
-          <Observer onChange={ this.handleObserverView } >
+          <Observer onChange={ this.handleObserverChange } >
             <GatewaySvgAnimation isActive={ isActive } inView={ inView } />
           </Observer>
           <ToggleButton
@@ -90,7 +90,7 @@ class GatewaySection extends Component {
     }
   }
 
-  handleObserverView = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
+  handleObserverChange = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 }
 
 export default injectIntl(GatewaySection)
