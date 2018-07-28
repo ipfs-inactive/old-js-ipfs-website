@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'JS IPFS'
   },
+  pathPrefix: '.',
   plugins: [
     'gatsby-plugin-react-helmet',
     {
@@ -9,6 +10,7 @@ module.exports = {
       options: {
         include: /media/
       }
-    }
+    },
+    'gatsby-plugin-ipfs'
   ]
 }

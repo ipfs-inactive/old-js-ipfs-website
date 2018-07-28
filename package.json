@@ -40,7 +40,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
     "lint": "aegir lint && stylelint \"**/*.css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -54,6 +54,7 @@
     "eslint-config-moxy": "^5.4.1",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-react": "^7.10.0",
+    "gatsby-plugin-ipfs": "~0.1.0",
     "postcss-reporter": "^5.0.0",
     "serviceworker-webpack-plugin": "~0.2.3",
     "stylelint": "^9.2.0",
