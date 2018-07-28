@@ -28,7 +28,7 @@ class ToggleButton extends Component {
           <span className={ sliderClasses } />
         </label>
         <span className={titleClasses}>
-          { inProgress && !isActive ? messages.serviceWorker.activatingMessageText : messages.serviceWorker.toggleButtonText }
+          { inProgress && !isActive ? messages.serviceWorker.activatingToggleText : messages.serviceWorker.toggleText }
         </span>
         {
           incompatible && (
