@@ -58,12 +58,12 @@ class Hero extends Component {
       [styles.hidden]: !isDataLoaded && !existsError,
       [styles.error]: !isDataLoaded && existsError
     })
-    const observerClass = classNames({ [styles.animationOff]: !inView })
+    const wrapperContainerClasses = classNames(styles.wrapperContainer, { [styles.animationOff]: !inView })
     const messages = this.messages
 
     return (
-      <Observer onChange={ this.handleObserverChange } className={ observerClass }>
-        <div className={ styles.wrapperContainer }>
+      <Observer onChange={ this.handleObserverChange }>
+        <div className={ wrapperContainerClasses }>
           <div className={ styles.container }>
             <LocalesBar className={ styles.localesBar } />
             <div className={ styles.orbitContainer } >

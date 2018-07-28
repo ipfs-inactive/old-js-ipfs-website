@@ -1,6 +1,10 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
+:root {
+    --info-transition-duration: 1500ms;
+}
+
 @keyframes orbit {
     from { transform: rotateZ(0deg); }
     to { transform: rotateZ(360deg); }
@@ -11,32 +15,12 @@
     100% { transform: translateY(-10px); }
 }
 
-:root {
-    --info-transition-duration: 1500ms;
-}
-
-.animationOff .wrapperContainer .container {
-    & .orbitContainer .orbits {
-        & .outsideRing {
-            animation-play-state: paused;
-        }
-
-        & .middleRing {
-            animation-play-state: paused;
-        }
-
-        & .insideRing {
-            animation-play-state: paused;
-        }
-    }
-
-    & .content .arrowUp {
-        animation-play-state: paused;
-    }
-}
-
 .wrapperContainer {
     min-height: 100vh;
+
+    &.animationOff * {
+        animation-play-state: paused !important;
+    }
 }
 
 .container {
