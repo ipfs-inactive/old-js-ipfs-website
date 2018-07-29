@@ -27,12 +27,12 @@ class ToggleButton extends Component {
         <label className={ styles.switch } onClick={ this.handleToggleButton }>
           <span className={ sliderClasses } />
         </label>
-        <span className={titleClasses}>
+        <span className={ titleClasses }>
           { inProgress && !isActive ? messages.serviceWorker.activatingToggleText : messages.serviceWorker.toggleText }
         </span>
         {
           incompatible && (
-            <ReactTooltip id='incompatible-sw' className={styles.tooltip}>
+            <ReactTooltip id='incompatible-sw' className={ styles.tooltip }>
               { messages.serviceWorker.incompatibleMessageText }
             </ReactTooltip>
           )

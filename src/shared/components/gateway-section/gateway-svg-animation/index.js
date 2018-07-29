@@ -38,66 +38,66 @@ class GatewaySvgAnimation extends Component {
     })
 
     return (
-      <div className={containerClasses}>
+      <div className={ containerClasses }>
         <GatewaySvg />
-        <div className={styles.gatewayBlueBeams}>
+        <div className={ styles.gatewayBlueBeams }>
           <GatewayBlueBeams />
         </div>
-        <div className={styles.gatewayWhiteBeam1}>
+        <div className={ styles.gatewayWhiteBeam1 }>
           <GatewayWhiteBeam1 />
         </div>
-        <div className={styles.gatewayWhiteBeam2}>
+        <div className={ styles.gatewayWhiteBeam2 }>
           <GatewayWhiteBeam2 />
         </div>
-        <div className={styles.serviceWorkerBeam1}>
+        <div className={ styles.serviceWorkerBeam1 }>
           <ServiceWorkerBeam1 />
         </div>
-        <div className={styles.serviceWorkerBeam2}>
+        <div className={ styles.serviceWorkerBeam2 }>
           <ServiceWorkerBeam2 />
         </div>
-        <div className={styles.serviceWorkerBeam3}>
+        <div className={ styles.serviceWorkerBeam3 }>
           <ServiceWorkerBeam3 />
         </div>
-        <div className={styles.serviceWorkerBeam4}>
+        <div className={ styles.serviceWorkerBeam4 }>
           <ServiceWorkerBeam4 />
         </div>
-        <div className={styles.serviceWorkerArrowBeams}>
+        <div className={ styles.serviceWorkerArrowBeams }>
           <ServiceWorkerArrowBeams />
         </div>
-        <div className={styles.beamsNodes1}>
+        <div className={ styles.beamsNodes1 }>
           <BeamsNodes1 />
         </div>
-        <div className={styles.beamsNodes2}>
+        <div className={ styles.beamsNodes2 }>
           <BeamsNodes2 />
         </div>
-        <div className={styles.beamsNodes3}>
+        <div className={ styles.beamsNodes3 }>
           <BeamsNodes3 />
         </div>
-        <div className={styles.beamsNodes4}>
+        <div className={ styles.beamsNodes4 }>
           <BeamsNodes4 />
         </div>
-        <div className={styles.beamsNodes5}>
+        <div className={ styles.beamsNodes5 }>
           <BeamsNodes5 />
         </div>
-        <div className={styles.beamsNodes6}>
+        <div className={ styles.beamsNodes6 }>
           <BeamsNodes6 />
         </div>
-        <div className={styles.beamsNodes7}>
+        <div className={ styles.beamsNodes7 }>
           <BeamsNodes7 />
         </div>
-        <div className={styles.beamsNodes8}>
+        <div className={ styles.beamsNodes8 }>
           <BeamsNodes8 />
         </div>
-        <div className={styles.beamsNodes9}>
+        <div className={ styles.beamsNodes9 }>
           <BeamsNodes9 />
         </div>
-        <div className={styles.beamsNodes10}>
+        <div className={ styles.beamsNodes10 }>
           <BeamsNodes10 />
         </div>
-        <div className={styles.beamsNodes11}>
+        <div className={ styles.beamsNodes11 }>
           <BeamsNodes11 />
         </div>
-        <div className={styles.beamsNodes12}>
+        <div className={ styles.beamsNodes12 }>
           <BeamsNodes12 />
         </div>
       </div>
