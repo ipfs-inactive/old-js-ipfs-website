@@ -22,35 +22,17 @@ class Hero extends Component {
     inView: true
   }
 
-  constructor (props) {
-    super(props)
-
-    const { messages } = this.props.intl
-    this.messages = messages
-  }
-
   componentDidMount () {
-    const self = this
-
     axios.get('https://api.npms.io/v2/package/ipfs')
-      .then(function ({ data: { collected } }) {
-        self.handleAxiosResponse(collected)
-      })
-      .catch(function (error) {
-        self.handleAxiosError(error)
-      })
+      .then(this.handleAxiosResponse)
+      .catch(this.handleAxiosError)
   }
 
   render () {
-    const { info, errorMessage, inView } = this.state
-    const isDataLoaded = Boolean(info)
-    const hasError = Boolean(errorMessage)
-    const infoContainerClasses = classNames(styles.infoContainer, {
-      [styles.hidden]: !isDataLoaded && !hasError,
-      [styles.error]: !isDataLoaded && hasError
-    })
+    const { intl: { messages } } = this.props
+    const { info, inView } = this.state
+    const infoContainerClasses = classNames(styles.infoContainer, { [styles.show]: Boolean(info) })
     const wrapperContainerClasses = classNames(styles.wrapperContainer, { [styles.animationOff]: !inView })
-    const messages = this.messages
 
     return (
       <Observer onChange={ this.handleObserverChange }>
@@ -75,7 +57,7 @@ class Hero extends Component {
               <h1>{ messages.hero.welcomeMessage }</h1>
               <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
               <div className={ infoContainerClasses }>
-                { (isDataLoaded && !hasError) && this.renderPkgInfo(info, isDataLoaded) }
+                { info && this.renderPkgInfo(info) }
               </div>
             </div>
           </div>
@@ -84,16 +66,17 @@ class Hero extends Component {
     )
   }
 
-  renderPkgInfo = (info, isDataLoaded) => {
+  renderPkgInfo = (info) => {
     const pkgInfoArr = Object.values(info)
 
-    return <div>{ pkgInfoArr.map((infoElement, index) => <span key={ `pkgInfo-${index}` }>{ isDataLoaded ? infoElement : '' }</span>) }</div>
+    return <div>{ pkgInfoArr.map((infoElement, index) => <span key={ `pkgInfo-${index}` }>{ infoElement }</span>) }</div>
   }
 
   handleObserverChange = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 
-  handleAxiosResponse = (data) => {
-    const messages = this.messages
+  handleAxiosResponse = (response) => {
+    const data = response.data.collected
+    const { intl: { messages } } = this.props
 
     const currentVersion = data.metadata.version
     const currentVersionStr = `${messages.hero.currentVersion} ${currentVersion}`
@@ -119,9 +102,11 @@ class Hero extends Component {
   }
 
   handleAxiosError = (error) => {
-    const { messages } = this.props.intl
+    console.error(error)
 
+    const { messages } = this.props.intl
     let errorMessage = messages.hero.errorMessage.template
+
     if (error.response) {
       errorMessage += `${error.response.status} ${messages.hero.errorMessage.part1}`
     } else if (error.request) {
@@ -129,7 +114,7 @@ class Hero extends Component {
     } else {
       errorMessage += error.message
     }
-    console.error(error)
+
     toast.error(errorMessage)
   }
 
@@ -161,6 +146,7 @@ class Hero extends Component {
       const fromMonthNumber = fromDate.getMonth()
       const toMonthNumber = toDate.getMonth()
       const monthsDiff = Math.abs(fromMonthNumber - toMonthNumber)
+
       return monthsDiff <= 1
     }
 
@@ -169,6 +155,7 @@ class Hero extends Component {
 
   getDateFnsCurrentLocale = (locales) => {
     const currentLocale = this.props.intl.locale
+
     return locales[currentLocale]
   }
 }
