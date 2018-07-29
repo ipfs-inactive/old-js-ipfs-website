@@ -34,7 +34,7 @@
     "react-toastify": "^4.1.0",
     "react-tooltip": "^3.6.1",
     "recompose": "~0.27.1",
-    "service-worker-gateway": "~0.1.5",
+    "service-worker-gateway": "~0.1.6",
     "slick-carousel": "^1.8.1"
   },
   "keywords": [
