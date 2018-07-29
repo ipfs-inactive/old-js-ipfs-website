@@ -64,31 +64,15 @@
       }
     ]
   },
-
   "gettingStarted": {
     "sectionTitle": "Getting Started",
-    "sectionDesc": "TODO(Hugo+Marco)",
-    "list": [
-      {
-        "title": "Install",
-        "desc": "This project is available through npm. To install run:",
-        "note": "Requires npm@3 and node@6 or above, tested on OSX & Linux, expected to work on Windows."
-      },
-      {
-        "title": "Use in Node.js",
-        "desc": "To include this project programmatically:"
-      },
-      {
-        "title": "Through command line tool",
-        "desc": "In order to use js-ipfs as a CLI, you must install it with the global flag. Run the following (even if you have ipfs installed locally):",
-        "note": "The CLI is available by using the command jsipfs in your terminal. This is aliased, instead of using ipfs, to make sure it does not conflict with the Go implementation."
-      },
-      {
-        "title": "Use in the browser",
-        "desc": "Learn how to bundle with browserify and webpack in the examples folder.\n\nYou can also load it using a <script> using the unpkg CDN or the jsDelivr CDN. Inserting one of the following lines will make a Ipfs object available in the global namespace.",
-        "note": "Inserting one of the above lines will make an Ipfs constructor available in the global namespace."
-      }
-    ]
+    "sectionDesc": "IPFS allows you to store and distribute data, addressing it by its hash. If the data changes, the hash changes as well.",
+    "addDataToIPFS": "Adding data to IPFS",
+    "output": "Output",
+    "getDataFromIPFS": "Getting data from IPFS",
+    "usingJavascript": "Using Javascript in the Browser or Node.js",
+    "usingCli": "Using the CLI",
+    "usingGateway": "Using the HTTP Gateway"
   },
 
   "serviceWorker": {

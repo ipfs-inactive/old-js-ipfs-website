@@ -4,6 +4,7 @@
 .gatsbyHighlight .preCustom {
     width: 60%;
     margin: auto;
+    outline: none;
     background: var(--color-syntax-highlighter-background);
     border-radius: 2px;
 
