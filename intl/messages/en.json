@@ -64,10 +64,15 @@
       }
     ]
   },
-
   "gettingStarted": {
     "sectionTitle": "Getting Started",
-    "sectionDesc": "TODO(Hugo+Marco)",
+    "sectionDesc": "IPFS allows you to store and distribute data, addressing it by its hash. If the data changes, the hash changes as well.",
+    "addDataToIPFS": "Adding data to IPFS",
+    "output": "Output",
+    "getDataFromIPFS": "Getting data from IPFS",
+    "usingJavascript": "Using Javascript in the Browser or Node.js",
+    "usingCli": "Using the CLI",
+    "usingGateway": "Using the HTTP Gateway",
     "list": [
       {
         "title": "Install",

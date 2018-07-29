@@ -6,12 +6,12 @@ import classNames from 'classnames'
 import 'prismjs/themes/prism-okaidia.css'
 import styles from './index.module.css'
 
-const SyntaxHighlighter = ({ codeStr, language }) => {
-  const htmlCode = Prism.highlight(codeStr, Prism.languages.js, 'js')
+const SyntaxHighlighter = ({ codeStr, language, className }) => {
+  const htmlCode = Prism.highlight(codeStr, Prism.languages.js, language)
   const preClasses = classNames(`language-${language}`, styles.preCustom)
 
   return (
-    <div className={ styles.gatsbyHighlight } >
+    <div className={ styles.gatsbyHighlight + ' ' + className } >
       <pre className={ preClasses }>
         <code dangerouslySetInnerHTML={ { __html: htmlCode } } />
       </pre>
