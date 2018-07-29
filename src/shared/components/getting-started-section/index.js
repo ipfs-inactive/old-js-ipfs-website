@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import { LiveProvider, LiveError } from 'react-live'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import LiveEditor from 'shared/components/react-live/live-editor'
 import LivePreview from 'shared/components/react-live/live-preview'
 import HexSvg from 'shared/media/backgrounds/hexagons.svg'
 import Button from 'shared/components/button'
+import Link from 'shared/components/link'
 import {
   transformCode,
   log,
@@ -17,6 +20,8 @@ import {
 import styles from './index.module.css'
 import SyntaxHighlighter from 'shared/components/syntax-highlighter'
 import 'prismjs/themes/prism-okaidia.css'
+
+const CID_LENGTH = 46
 
 class GettingStarted extends Component {
   state = {
@@ -41,7 +46,10 @@ class GettingStarted extends Component {
       this.scopeAdd = {IPFS: this.ipfs, console: log(this.handleChange('add'))}
       this.scopeGet = {IPFS: this.ipfs, console: log(this.handleChange('get'))}
       this.setState({ipfsLoaded: true})
-    }).catch(console.error)
+    }).catch((err) => {
+      console.log(err)
+      toast.error('Error getting IPFS')
+    })
   }
 
   render () {
@@ -52,6 +60,7 @@ class GettingStarted extends Component {
       outputGet,
       ipfsLoaded
     } = this.state
+
     return (
       <div className={ styles.container }>
         <div className={ styles.backgroundSvg }>
@@ -65,10 +74,10 @@ class GettingStarted extends Component {
           </span>
           <div className={ styles.panel } >
             <p className={ styles.liveSnippetTitle }>{messages.gettingStarted.addDataToIPFS}</p>
-            <LiveProvider key="add" className={styles.liveSnippet} code={codeAdd} scope={this.scopeAdd} mountStylesheet={false} transformCode={transformCode}>
+            <LiveProvider key="add" className={ styles.liveSnippet } code={ codeAdd } scope={ this.scopeAdd } mountStylesheet={ false } transformCode={ transformCode }>
               <div className={ styles.liveSnippetEditorContainer }>
-                <LiveEditor ref={this.refAdd} className={'language-js ' + styles.liveSnippetEditor}/>
-                <button className={ styles.liveSnippetRun } onClick={this.handleRunClick('add')}>Run</button>
+                <LiveEditor ref={ this.refAdd } className={ 'language-js ' + styles.liveSnippetEditor }/>
+                <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('add') }>Run</button>
               </div>
               <div className={ styles.liveSnippetPreview } >
                 <p className={ styles.liveSnippetOutput }>{messages.gettingStarted.output}</p>
@@ -81,10 +90,11 @@ class GettingStarted extends Component {
             </LiveProvider>
             <p className={ styles.liveSnippetTitle }>{messages.gettingStarted.getDataFromIPFS}</p>
             <p className={ styles.liveSnippetSubtitle }>{messages.gettingStarted.usingJavascript}</p>
-            <LiveProvider key="get" className={ styles.liveSnippet } code={codeGet(cid)} scope={this.scopeGet} mountStylesheet={false} transformCode={transformCode}>
+            <LiveProvider key="get" className={ styles.liveSnippet } code={ codeGet(cid) } scope={ this.scopeGet } mountStylesheet={ false } transformCode={ transformCode }>
+
               <div className={ styles.liveSnippetEditorContainer }>
-                <LiveEditor ref={this.refGet} className={'language-js ' + styles.liveSnippetEditor}/>
-                <button className={ styles.liveSnippetRun } onClick={this.handleRunClick('get')}>Run</button>
+                <LiveEditor ref={ this.refGet } className={ 'language-js ' + styles.liveSnippetEditor }/>
+                <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('get') }>Run</button>
               </div>
               <div className={ styles.liveSnippetPreview } >
                 <p className={ styles.liveSnippetOutput }>{messages.gettingStarted.output}</p>
@@ -102,7 +112,7 @@ jsipfs get ${cid}` } language='bash' />
             </div>
 
             <p className={ styles.liveSnippetSubtitle }>{messages.gettingStarted.usingGateway}</p>
-            <a className={ styles.liveSnippetLink } target="_blank" rel="noopener noreferrer" href={`https://ipfs.io/ipfs/${cid}`}>{`https://ipfs.io/ipfs/${cid}`}</a>
+            <Link className={ styles.liveSnippetLink } href={ `https://ipfs.io/ipfs/${cid}` }>{`https://ipfs.io/ipfs/${cid}`}</Link>
           </div>
           <Button translationId="buttonLearnMore" href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials" />
         </div>
@@ -126,7 +136,7 @@ jsipfs get ${cid}` } language='bash' />
     }
 
     if (content) {
-      if (typeof content === 'string' && content.length === 46 && content !== this.state.cid) {
+      if (typeof content === 'string' && content.length === CID_LENGTH && content !== this.state.cid) {
         preload(content)
         this.setState({cid: content})
       }

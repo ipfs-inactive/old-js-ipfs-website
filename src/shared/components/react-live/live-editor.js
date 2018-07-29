@@ -6,7 +6,7 @@ export default class LiveEditor extends Component {
 
   constructor (props, context) {
     super(props, context)
-    this.code = this.context.live.code
+    this.code = context.live.code
   }
 
   run () {
@@ -16,11 +16,11 @@ export default class LiveEditor extends Component {
   render () {
     return (
       <Editor
-        {...this.props}
+        { ...this.props }
         code={ this.context.live.code }
-        onChange={(code) => {
+        onChange={ (code) => {
           this.code = code
-        }}
+        } }
       />
     )
   }

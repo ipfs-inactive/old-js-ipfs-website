@@ -11,7 +11,7 @@ class LivePreview extends Component {
 
     return (
       <div >
-        {Element && <Element/>}
+        { Element && <Element/> }
       </div>
     )
   }
