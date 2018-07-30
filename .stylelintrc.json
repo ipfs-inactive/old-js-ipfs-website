@@ -1,3 +1,6 @@
 {
-    "extends": "stylelint-config-moxy"
+    "extends": "stylelint-config-moxy",
+    "rules": {
+      "indentation": 2
+    }
 }

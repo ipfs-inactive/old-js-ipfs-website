@@ -2,39 +2,39 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .container {
-    width: 100vw;
-    z-index: 3;
-    padding: 25px;
+  width: 100vw;
+  z-index: 3;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  background: var(--color-yellow);
+  color: var(--color-dark-blue);
+  font-family: var(--typography-text-font);
+  font-size: var(--typography-text-size-small);
+  text-align: justify;
+
+  & .iconContainer {
+    flex: 0 0 26px;
+
+    & svg {
+      width: 100%;
+    }
+  }
+
+  & .wrapContainer {
+    padding: 0 13px;
     display: flex;
-    justify-content: center;
-    background: var(--color-yellow);
-    color: var(--color-dark-blue);
-    font-family: var(--typography-text-font);
-    font-size: var(--typography-text-size-small);
-    text-align: justify;
+    align-items: center;
 
-    & .iconContainer {
-        flex: 0 0 26px;
-
-        & svg {
-            width: 100%;
-        }
+    & .textContainer strong {
+      margin-right: 5px;
     }
-
-    & .wrapContainer {
-        padding: 0 13px;
-        display: flex;
-        align-items: center;
-
-        & .textContainer strong {
-            margin-right: 5px;
-        }
-    }
+  }
 
 }
 
 @media (--layout-lte-small) {
-    .container {
-        font-size: var(--typography-text-size-xsmall);
-    }
+  .container {
+    font-size: var(--typography-text-size-xsmall);
+  }
 }

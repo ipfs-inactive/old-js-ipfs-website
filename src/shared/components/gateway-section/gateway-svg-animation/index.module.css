@@ -1,246 +1,246 @@
 @keyframes fillIn {
-    to { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 0; }
 }
 
 @keyframes pulse {
-    0% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 1;
+  }
 
-    50% {
-        opacity: 0.1;
-    }
+  50% {
+    opacity: 0.1;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes pulseReverse {
-    0% {
-        opacity: 0.1;
-    }
+  0% {
+    opacity: 0.1;
+  }
 
-    50% {
-        opacity: 1;
-    }
+  50% {
+    opacity: 1;
+  }
 
-    100% {
-        opacity: 0.1;
-    }
+  100% {
+    opacity: 0.1;
+  }
 }
 
 .container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 
-    &.animationOff {
-        & div {
-            animation-play-state: paused;
-        }
+  &.animationOff {
+    & div {
+      animation-play-state: paused;
     }
+  }
 
-    &.active {
-        & svg {
-            & g[id="gateway"] {
-                & g[id="_white-connection_"],
-                & g[id="_white-nodes_"],
-                & g[id="_http-gateway-arrow_"] {
-                    opacity: 0.3;
-                    transition: opacity 500ms ease-in-out;
-                    stroke-dasharray: 2;
-                }
-            }
-
-            & g[id="service-worker"] {
-                & g[id="_yellow-nodes_"] {
-                    opacity: 1;
-                    transition: opacity 1s ease-in-out;
-                    transition-delay: 2s;
-                }
-
-                & g[id="_browser-service-worker-arrow_"] {
-                    opacity: 1;
-                    animation: fillIn 3s linear forwards;
-                    stroke-dasharray: 1000;
-                    stroke-dashoffset: 1000;
-
-                    & polygon:nth-child(3) {
-                        opacity: 1;
-                        transition: opacity 300ms ease-in-out;
-                        transition-delay: 500ms;
-                    }
-                }
-
-                & g[id="_service-worker-icon_"],
-                & path[id="_service-worker-text_"] {
-                    opacity: 1;
-                    transition: opacity 1s ease-in-out;
-                    transition-delay: 500ms;
-                }
-
-                & g[id="_yellow-conection_"] {
-                    opacity: 1;
-
-                    & path {
-                        animation: fillIn 1.5s linear forwards;
-                        animation-delay: 1300ms;
-                        stroke-dasharray: 1000;
-                        stroke-dashoffset: 1000;
-                    }
-                }
-            }
-        }
-
-        & .gatewayBlueBeams,
-        & .gatewayWhiteBeam1,
-        & .gatewayWhiteBeam2 {
-            display: none;
-        }
-
-        & .serviceWorkerArrowBeams {
-            opacity: 1;
-            animation: pulseReverse 3s infinite ease-in-out alternate;
-            animation-delay: 1300ms;
-            transition: opacity 1s ease-in-out;
-            transition-delay: 1300ms;
-        }
-
-        & .serviceWorkerBeam1 {
-            opacity: 1;
-            animation: pulseReverse 4s infinite ease-in-out alternate;
-            animation-delay: 1600ms;
-            transition: opacity 300ms ease-in-out;
-            transition-delay: 1600ms;
-        }
-
-        & .serviceWorkerBeam2 {
-            opacity: 1;
-            animation: pulseReverse 6s infinite ease-in-out alternate;
-            animation-delay: 1800ms;
-            transition: opacity 300ms ease-in-out;
-            transition-delay: 1800ms;
-        }
-
-        & .serviceWorkerBeam3 {
-            opacity: 1;
-            animation: pulseReverse 5s infinite ease-in-out alternate;
-            animation-delay: 2000ms;
-            transition: opacity 500ms ease-in-out;
-            transition-delay: 2000ms;
-        }
-
-        & .serviceWorkerBeam4 {
-            opacity: 1;
-            animation: pulseReverse 3s infinite ease-in-out alternate;
-            animation-delay: 2200ms;
-            transition: opacity 800ms ease-in-out;
-            transition-delay: 2200ms;
-        }
-    }
-
+  &.active {
     & svg {
-        width: 115%;
+      & g[id="gateway"] {
+        & g[id="_white-connection_"],
+        & g[id="_white-nodes_"],
+        & g[id="_http-gateway-arrow_"] {
+          opacity: 0.3;
+          transition: opacity 500ms ease-in-out;
+          stroke-dasharray: 2;
+        }
+      }
 
-        & g[id="gateway"] {
-            & g[id="_white-connection_"],
-            & g[id="_white-nodes_"],
-            & g[id="_http-gateway-arrow_"] {
-                opacity: 1;
-                transition: opacity 500ms ease-in-out;
-            }
+      & g[id="service-worker"] {
+        & g[id="_yellow-nodes_"] {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+          transition-delay: 2s;
         }
 
-        & g[id="service-worker"] {
-            & g[id="_yellow-nodes_"] {
-                opacity: 0;
-                transition: opacity 500ms ease-in-out;
-            }
+        & g[id="_browser-service-worker-arrow_"] {
+          opacity: 1;
+          animation: fillIn 3s linear forwards;
+          stroke-dasharray: 1000;
+          stroke-dashoffset: 1000;
 
-            & g[id="_browser-service-worker-arrow_"] {
-                opacity: 0;
-                transition: opacity 500ms ease-in-out;
-
-                & polygon:nth-child(3) {
-                    opacity: 0;
-                    transition: opacity 500ms ease-in-out;
-                }
-            }
-
-            & g[id="_service-worker-icon_"],
-            & path[id="_service-worker-text_"] {
-                opacity: 0;
-                transition: opacity 500ms ease-in-out;
-            }
-
-            & g[id="_yellow-conection_"] {
-                opacity: 0;
-                transition: opacity 500ms ease-in-out;
-            }
+          & polygon:nth-child(3) {
+            opacity: 1;
+            transition: opacity 300ms ease-in-out;
+            transition-delay: 500ms;
+          }
         }
+
+        & g[id="_service-worker-icon_"],
+        & path[id="_service-worker-text_"] {
+          opacity: 1;
+          transition: opacity 1s ease-in-out;
+          transition-delay: 500ms;
+        }
+
+        & g[id="_yellow-conection_"] {
+          opacity: 1;
+
+          & path {
+            animation: fillIn 1.5s linear forwards;
+            animation-delay: 1300ms;
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+          }
+        }
+      }
     }
 
-    & > div {
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
-
-    & .gatewayBlueBeams {
-        animation: pulseReverse 3s infinite ease-in-out alternate;
-    }
-
-    & .gatewayWhiteBeam1 {
-        animation: pulse 5s infinite ease-in-out alternate;
-        animation-delay: 800ms;
-    }
-
+    & .gatewayBlueBeams,
+    & .gatewayWhiteBeam1,
     & .gatewayWhiteBeam2 {
-        animation: pulse 4s infinite ease-in-out alternate;
-        animation-delay: 1200ms;
+      display: none;
     }
 
-    & .serviceWorkerBeam1,
-    & .serviceWorkerBeam2,
-    & .serviceWorkerBeam3,
-    & .serviceWorkerBeam4,
     & .serviceWorkerArrowBeams {
+      opacity: 1;
+      animation: pulseReverse 3s infinite ease-in-out alternate;
+      animation-delay: 1300ms;
+      transition: opacity 1s ease-in-out;
+      transition-delay: 1300ms;
+    }
+
+    & .serviceWorkerBeam1 {
+      opacity: 1;
+      animation: pulseReverse 4s infinite ease-in-out alternate;
+      animation-delay: 1600ms;
+      transition: opacity 300ms ease-in-out;
+      transition-delay: 1600ms;
+    }
+
+    & .serviceWorkerBeam2 {
+      opacity: 1;
+      animation: pulseReverse 6s infinite ease-in-out alternate;
+      animation-delay: 1800ms;
+      transition: opacity 300ms ease-in-out;
+      transition-delay: 1800ms;
+    }
+
+    & .serviceWorkerBeam3 {
+      opacity: 1;
+      animation: pulseReverse 5s infinite ease-in-out alternate;
+      animation-delay: 2000ms;
+      transition: opacity 500ms ease-in-out;
+      transition-delay: 2000ms;
+    }
+
+    & .serviceWorkerBeam4 {
+      opacity: 1;
+      animation: pulseReverse 3s infinite ease-in-out alternate;
+      animation-delay: 2200ms;
+      transition: opacity 800ms ease-in-out;
+      transition-delay: 2200ms;
+    }
+  }
+
+  & svg {
+    width: 115%;
+
+    & g[id="gateway"] {
+      & g[id="_white-connection_"],
+      & g[id="_white-nodes_"],
+      & g[id="_http-gateway-arrow_"] {
+        opacity: 1;
+        transition: opacity 500ms ease-in-out;
+      }
+    }
+
+    & g[id="service-worker"] {
+      & g[id="_yellow-nodes_"] {
         opacity: 0;
         transition: opacity 500ms ease-in-out;
-    }
+      }
 
-    & .beamsNodes1,
-    & .beamsNodes11 {
-        animation: pulse 6s infinite ease-in-out;
-    }
+      & g[id="_browser-service-worker-arrow_"] {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
 
-    & .beamsNodes2,
-    & .beamsNodes4 {
-        animation: pulse 6s infinite ease-in-out;
-        animation-delay: 1s;
-    }
+        & polygon:nth-child(3) {
+          opacity: 0;
+          transition: opacity 500ms ease-in-out;
+        }
+      }
 
-    & .beamsNodes3 {
-        animation: pulse 4s infinite ease-in-out;
-        animation-delay: 1200ms;
-    }
+      & g[id="_service-worker-icon_"],
+      & path[id="_service-worker-text_"] {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+      }
 
-    & .beamsNodes6,
-    & .beamsNodes10 {
-        animation: pulse 8s infinite ease-in-out;
-        animation-delay: 1500ms;
+      & g[id="_yellow-conection_"] {
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+      }
     }
+  }
 
-    & .beamsNodes7,
-    & .beamsNodes8 {
-        animation: pulse 6s infinite ease-in-out;
-        animation-delay: 2200ms;
-    }
+  & > div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
 
-    & .beamsNodes5,
-    & .beamsNodes9,
-    & .beamsNodes12 {
-        animation: pulse 4s infinite ease-in-out;
-        animation-delay: 1900ms;
-    }
+  & .gatewayBlueBeams {
+    animation: pulseReverse 3s infinite ease-in-out alternate;
+  }
+
+  & .gatewayWhiteBeam1 {
+    animation: pulse 5s infinite ease-in-out alternate;
+    animation-delay: 800ms;
+  }
+
+  & .gatewayWhiteBeam2 {
+    animation: pulse 4s infinite ease-in-out alternate;
+    animation-delay: 1200ms;
+  }
+
+  & .serviceWorkerBeam1,
+  & .serviceWorkerBeam2,
+  & .serviceWorkerBeam3,
+  & .serviceWorkerBeam4,
+  & .serviceWorkerArrowBeams {
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+  }
+
+  & .beamsNodes1,
+  & .beamsNodes11 {
+    animation: pulse 6s infinite ease-in-out;
+  }
+
+  & .beamsNodes2,
+  & .beamsNodes4 {
+    animation: pulse 6s infinite ease-in-out;
+    animation-delay: 1s;
+  }
+
+  & .beamsNodes3 {
+    animation: pulse 4s infinite ease-in-out;
+    animation-delay: 1200ms;
+  }
+
+  & .beamsNodes6,
+  & .beamsNodes10 {
+    animation: pulse 8s infinite ease-in-out;
+    animation-delay: 1500ms;
+  }
+
+  & .beamsNodes7,
+  & .beamsNodes8 {
+    animation: pulse 6s infinite ease-in-out;
+    animation-delay: 2200ms;
+  }
+
+  & .beamsNodes5,
+  & .beamsNodes9,
+  & .beamsNodes12 {
+    animation: pulse 4s infinite ease-in-out;
+    animation-delay: 1900ms;
+  }
 }

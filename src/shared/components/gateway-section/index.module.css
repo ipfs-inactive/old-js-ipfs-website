@@ -1,108 +1,108 @@
 @import "shared/styles/imports/variables.css";
 
 .container {
+  position: relative;
+  width: 100%;
+  max-height: 90vh;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--color-menu-dark-blue);
+  color: var(--color-white);
+
+  & .content {
     position: relative;
-    width: 100%;
-    max-height: 90vh;
-    z-index: 3;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background: var(--color-menu-dark-blue);
-    color: var(--color-white);
+    width: var(--container-width);
+    max-width: var(--max-container-width);
+    padding: 7% 0 0 0;
 
-    & .content {
-        position: relative;
-        width: var(--container-width);
-        max-width: var(--max-container-width);
-        padding: 7% 0 0 0;
-
-        &.active {
-            & .message {
-                opacity: 1;
-                transition-delay: 2300ms;
-            }
-        }
-
-        & .message {
-            position: absolute;
-            right: 0;
-            max-width: 35%;
-            z-index: 10;
-            overflow: scroll;
-            padding: 25px 15px;
-            opacity: 0;
-            background: var(--color-dark-blue);
-            border-radius: 10px;
-            color: var(--color-white);
-            font-family: var(--typography-display-font);
-            font-size: var(--typography-text-size-small);
-            transition: opacity var(--transition-default-duration) ease;
-
-            & a {
-                color: var(--color-white);
-            }
-
-            & .title {
-                margin-bottom: 15px;
-                color: var(--color-light-blue);
-                text-transform: unset;
-            }
-
-            & ul {
-                padding-left: 25px;
-
-                & li {
-                    margin-top: 10px;
-
-                    & a {
-                        text-decoration: none;
-                    }
-                }
-            }
-        }
-
-        & .toggle {
-            position: absolute;
-            bottom: 3%;
-        }
-
-        & h1 {
-            font-weight: var(--typography-text-weight-semibold);
-            text-align: center;
-            line-height: var(--line-height-large);
-        }
-
-        & .sectionDescription {
-            width: 100%;
-            margin-bottom: 3%;
-            display: flex;
-            justify-content: center;
-
-            & p {
-                width: 60%;
-                font-weight: var(--typography-text-weight);
-                text-align: center;
-                line-height: var(--line-height-medium);
-            }
-        }
+    &.active {
+      & .message {
+        opacity: 1;
+        transition-delay: 2300ms;
+      }
     }
 
-    & .toastContainer {
-        margin-top: calc(var(--navbar-desktop-height) + 3px);
+    & .message {
+      position: absolute;
+      right: 0;
+      max-width: 35%;
+      z-index: 10;
+      overflow: scroll;
+      padding: 25px 15px;
+      opacity: 0;
+      background: var(--color-dark-blue);
+      border-radius: 10px;
+      color: var(--color-white);
+      font-family: var(--typography-display-font);
+      font-size: var(--typography-text-size-small);
+      transition: opacity var(--transition-default-duration) ease;
 
-        & .error {
-            background-color: var(--color-error);
+      & a {
+        color: var(--color-white);
+      }
+
+      & .title {
+        margin-bottom: 15px;
+        color: var(--color-light-blue);
+        text-transform: unset;
+      }
+
+      & ul {
+        padding-left: 25px;
+
+        & li {
+          margin-top: 10px;
+
+          & a {
+            text-decoration: none;
+          }
         }
+      }
     }
+
+    & .toggle {
+      position: absolute;
+      bottom: 3%;
+    }
+
+    & h1 {
+      font-weight: var(--typography-text-weight-semibold);
+      text-align: center;
+      line-height: var(--line-height-large);
+    }
+
+    & .sectionDescription {
+      width: 100%;
+      margin-bottom: 3%;
+      display: flex;
+      justify-content: center;
+
+      & p {
+        width: 60%;
+        font-weight: var(--typography-text-weight);
+        text-align: center;
+        line-height: var(--line-height-medium);
+      }
+    }
+  }
+
+  & .toastContainer {
+    margin-top: calc(var(--navbar-desktop-height) + 3px);
+
+    & .error {
+      background-color: var(--color-error);
+    }
+  }
 }
 
 @media (max-height: 800px) {
-    .container {
-        max-height: unset;
+  .container {
+    max-height: unset;
 
-        & .content .message {
-            max-width: 25%;
-        }
+    & .content .message {
+      max-width: 25%;
     }
+  }
 }

@@ -2,99 +2,99 @@
 @import "shared/styles/imports/custom-medias.css";
 
 :root {
-    --transition-duration-double: calc(var(--transition-default-duration) * 2);
-    --transition-duration-half: calc(var(--transition-default-duration) / 2);
+  --transition-duration-double: calc(var(--transition-default-duration) * 2);
+  --transition-duration-half: calc(var(--transition-default-duration) / 2);
 }
 
 .container {
-    width: 100vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & .navbarContainer {
+    padding: 20px 5% 15px 5%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    background: transparent;
+    transition: background var(--transition-duration-double) ease;
 
-    & .navbarContainer {
-        padding: 20px 5% 15px 5%;
+    & .menuIconWrapper {
+      display: inline-block;
+      cursor: pointer;
+
+      & .bar1,
+      & .bar2,
+      & .bar3 {
+        width: 30px;
+        height: 2px;
+        margin: 5px 0;
+        background: var(--color-white);
+        transition: var(--transition-duration-half);
+      }
+    }
+
+    & .openedMenuIcon {
+      & .bar1 {
+        transform: rotate(-45deg) translate(-4px, 5px);
+      }
+
+      & .bar2 {
+        opacity: 0;
+      }
+
+      & .bar3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+    }
+  }
+
+  & .navbarContainerScrolled {
+    background: var(--color-menu-dark-blue);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
+    transition: all var(--transition-default-duration) ease;
+  }
+
+  & ul {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: var(--color-menu-dark-blue);
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
+
+    & li {
+      padding-left: calc(5% + 30px);
+
+      & .menuLink {
+        padding: 10px 20px;
+        display: block;
+        color: var(--color-white);
+        font-size: var(--typography-text-size-large);
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      &.githubContributers {
         display: flex;
-        justify-content: space-between;
-        background: transparent;
-        transition: background var(--transition-duration-double) ease;
+        align-items: center;
+      }
 
-        & .menuIconWrapper {
-            display: inline-block;
-            cursor: pointer;
-
-            & .bar1,
-            & .bar2,
-            & .bar3 {
-                width: 30px;
-                height: 2px;
-                margin: 5px 0;
-                background: var(--color-white);
-                transition: var(--transition-duration-half);
-            }
-        }
-
-        & .openedMenuIcon {
-            & .bar1 {
-                transform: rotate(-45deg) translate(-4px, 5px);
-            }
-
-            & .bar2 {
-                opacity: 0;
-            }
-
-            & .bar3 {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-        }
+      &:last-child {
+        margin-bottom: 25px;
+      }
     }
+  }
 
-    & .navbarContainerScrolled {
-        background: var(--color-menu-dark-blue);
-        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
-        transition: all var(--transition-default-duration) ease;
-    }
-
-    & ul {
-        overflow: hidden;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        background-color: var(--color-menu-dark-blue);
-        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.76);
-
-        & li {
-            padding-left: calc(5% + 30px);
-
-            & .menuLink {
-                padding: 10px 20px;
-                display: block;
-                color: var(--color-white);
-                font-size: var(--typography-text-size-large);
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            &.githubContributers {
-                display: flex;
-                align-items: center;
-            }
-
-            &:last-child {
-                margin-bottom: 25px;
-            }
-        }
-    }
-
-    & .menuList {
-        max-height: 0;
-        clear: both;
-        transition: max-height var(--transition-duration-half) ease;
-    }
+  & .menuList {
+    max-height: 0;
+    clear: both;
+    transition: max-height var(--transition-duration-half) ease;
+  }
 }
 
 @media (--layout-gte-medium) {
-    .container {
-        display: none;
-    }
+  .container {
+    display: none;
+  }
 }

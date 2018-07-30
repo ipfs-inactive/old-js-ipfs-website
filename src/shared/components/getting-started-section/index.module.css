@@ -2,197 +2,197 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .container {
-    position: relative;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-light-grey);
+
+  & .backgroundSvg {
+    position: absolute;
     width: 100%;
-    z-index: 3;
-    overflow: hidden;
+    height: 300px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+
+    & .hex1,
+    & .hex2 {
+      width: 20%;
+      height: 100%;
+      fill: var(--color-hex-svg-fill);
+    }
+
+    & .hex2 {
+      transform: translateY(200%);
+    }
+  }
+
+  & .content {
+    width: var(--container-width);
+    max-width: var(--max-container-width);
+    z-index: 2;
+    padding: 10% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: var(--color-light-grey);
+    text-align: center;
 
-    & .backgroundSvg {
-        position: absolute;
-        width: 100%;
-        height: 300px;
-        z-index: 1;
-        display: flex;
-        justify-content: space-between;
-
-        & .hex1,
-        & .hex2 {
-            width: 20%;
-            height: 100%;
-            fill: var(--color-hex-svg-fill);
-        }
-
-        & .hex2 {
-            transform: translateY(200%);
-        }
+    & h1 {
+      font-weight: var(--typography-text-weight-semibold);
+      text-align: center;
+      line-height: var(--line-height-large);
     }
 
-    & .content {
-        width: var(--container-width);
-        max-width: var(--max-container-width);
-        z-index: 2;
-        padding: 10% 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    & .sectionDescription {
+      width: 100%;
+      display: flex;
+      justify-content: center;
 
-        & h1 {
-            font-weight: var(--typography-text-weight-semibold);
-            text-align: center;
-            line-height: var(--line-height-large);
-        }
-
-        & .sectionDescription {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-
-            & p {
-                width: 60%;
-                font-weight: var(--typography-text-weight);
-                line-height: var(--line-height-medium);
-            }
-        }
-
-        & .panel {
-            width: 100%;
-            margin: 5% 0;
-        }
+      & p {
+        width: 60%;
+        font-weight: var(--typography-text-weight);
+        line-height: var(--line-height-medium);
+      }
     }
+
+    & .panel {
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
 }
 
 .liveSnippet {
-    width: 60%;
-    overflow: hidden;
-    margin: auto;
-    margin-bottom: 75px;
-    border-radius: 2px;
+  width: 60%;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 75px;
+  border-radius: 2px;
 }
 
 .liveSnippet pre[class*="language-"] {
-    margin: 0;
-    border-radius: 0;
+  margin: 0;
+  border-radius: 0;
 }
 
 .liveSnippetTitle {
-    color: var(--color-syntax-highlighter-background);
-    font-size: 28px;
-    font-weight: var(--typography-text-weight-semibold);
+  color: var(--color-syntax-highlighter-background);
+  font-size: 28px;
+  font-weight: var(--typography-text-weight-semibold);
 }
 
 .liveSnippetSubtitle {
-    color: var(--color-syntax-highlighter-background);
-    font-weight: var(--typography-text-weight-semibold);
+  color: var(--color-syntax-highlighter-background);
+  font-weight: var(--typography-text-weight-semibold);
 }
 
 .liveSnippetEditorContainer {
-    position: relative;
+  position: relative;
 }
 
 .liveSnippetCliContainer {
-    margin-bottom: 75px;
+  margin-bottom: 75px;
 }
 
 .liveSnippetEditor {
-    position: relative;
-    outline: none;
-    background: var(--color-syntax-highlighter-background) !important;
+  position: relative;
+  outline: none;
+  background: var(--color-syntax-highlighter-background) !important;
 }
 
 .liveSnippetPreview {
-    min-height: 100px;
-    padding: 1em;
-    background: white;
-    text-align: left;
+  min-height: 100px;
+  padding: 1em;
+  background: white;
+  text-align: left;
 }
 
 .liveSnippetOutput {
-    margin: 0;
-    display: inline-block;
-    opacity: 0.4;
-    color: #122247;
-    font-size: 12px;
-    line-height: 22px;
-    letter-spacing: 0;
+  margin: 0;
+  display: inline-block;
+  opacity: 0.4;
+  color: #122247;
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0;
 }
 
 .liveSnippetRun {
-    position: absolute;
-    right: 25px;
-    bottom: 25px;
-    width: 100px;
-    height: 40px;
-    display: inline-block;
-    border: 0;
-    outline: none;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    font-size: 12px;
-    text-align: center;
-    line-height: 22px;
-    letter-spacing: 0;
-    cursor: pointer;
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  border: 0;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  line-height: 22px;
+  letter-spacing: 0;
+  cursor: pointer;
 }
 
 .liveSnippetRun:hover {
-    background: #59d2d8;
-    color: #122247;
+  background: #59d2d8;
+  color: #122247;
 }
 
 .liveSnippetLink {
-    width: 60%;
-    overflow: auto;
-    margin: auto;
-    margin-bottom: 75px;
-    padding: 1em;
-    display: block;
-    outline: none;
-    background: var(--color-syntax-highlighter-background);
-    border-radius: 2px;
-    color: #f8f8f2;
-    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-    text-decoration: none;
-    text-align: left;
-    line-height: 1.5;
-    tab-size: 4;
-    white-space: pre;
-    word-spacing: normal;
-    word-wrap: normal;
-    word-break: normal;
-    hyphens: none;
+  width: 60%;
+  overflow: auto;
+  margin: auto;
+  margin-bottom: 75px;
+  padding: 1em;
+  display: block;
+  outline: none;
+  background: var(--color-syntax-highlighter-background);
+  border-radius: 2px;
+  color: #f8f8f2;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  text-decoration: none;
+  text-align: left;
+  line-height: 1.5;
+  tab-size: 4;
+  white-space: pre;
+  word-spacing: normal;
+  word-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 
 .liveSnippetLink:hover {
-    color: var(--color-yellow);
-    text-decoration: none;
+  color: var(--color-yellow);
+  text-decoration: none;
 }
 
 @media (--layout-lte-small) {
-    .container {
-        & .backgroundSvg {
-            display: none;
-        }
-
-        & .content {
-            width: var(--container-width-mobile);
-
-            & .sectionDescription p {
-                width: 90%;
-            }
-        }
+  .container {
+    & .backgroundSvg {
+      display: none;
     }
 
-    .liveSnippet {
-        width: 100%;
-    }
+    & .content {
+      width: var(--container-width-mobile);
 
-    .liveSnippetLink {
-        width: 100%;
+      & .sectionDescription p {
+        width: 90%;
+      }
     }
+  }
+
+  .liveSnippet {
+    width: 100%;
+  }
+
+  .liveSnippetLink {
+    width: 100%;
+  }
 
 }

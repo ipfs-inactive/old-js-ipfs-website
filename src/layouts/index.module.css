@@ -1,18 +1,18 @@
 .app {
-    /* Stretch app to fill our screen height */
-    display: flex;
-    flex: 1 0 auto;
-    flex-direction: column;
+  /* Stretch app to fill our screen height */
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
 }
 
 .header {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 
 .children {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 .footer {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }
