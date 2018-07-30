@@ -1,4 +1,5 @@
 @import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
 
 .container {
   position: relative;
@@ -103,6 +104,24 @@
 
     & .content .message {
       max-width: 25%;
+    }
+  }
+}
+
+@media (--layout-lte-small) {
+  .container {
+    max-height: unset;
+
+    & .content {
+      width: var(--container-width-mobile);
+
+      & .sectionDescription p {
+        width: 90%;
+      }
+
+      & .toggle {
+        bottom: calc(3% + 30px);
+      }
     }
   }
 }

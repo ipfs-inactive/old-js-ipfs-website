@@ -1,3 +1,6 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
 @keyframes fillIn {
   to { stroke-dashoffset: 0; }
 }
@@ -33,9 +36,10 @@
 .container {
   position: relative;
   width: 100%;
+  height: 100%;
 
   &.animationOff {
-    & div {
+    & div > div {
       animation-play-state: paused;
     }
   }
@@ -62,6 +66,7 @@
         & g[id="_browser-service-worker-arrow_"] {
           opacity: 1;
           animation: fillIn 3s linear forwards;
+          animation-delay: 300ms;
           stroke-dasharray: 1000;
           stroke-dashoffset: 1000;
 
@@ -140,7 +145,7 @@
   }
 
   & svg {
-    width: 115%;
+    width: 120%;
 
     & g[id="gateway"] {
       & g[id="_white-connection_"],
@@ -180,7 +185,8 @@
     }
   }
 
-  & > div {
+  & .desktop > div,
+  & .mobile > div {
     position: absolute;
     top: 0;
     width: 100%;
@@ -242,5 +248,36 @@
   & .beamsNodes12 {
     animation: pulse 4s infinite ease-in-out;
     animation-delay: 1900ms;
+  }
+}
+
+@media (--layout-lte-small) {
+  .container {
+    max-height: 95vh;
+
+    & .desktop {
+      display: none;
+    }
+
+    & .mobile {
+      & svg {
+        width: 105%;
+      }
+
+      & > div {
+        animation-play-state: paused;
+      }
+    }
+  }
+  @media (max-height: 650px) {
+    .container {
+      max-height: unset;
+    }
+  }
+}
+
+@media (--layout-gte-medium) {
+  .mobile {
+    display: none;
   }
 }
