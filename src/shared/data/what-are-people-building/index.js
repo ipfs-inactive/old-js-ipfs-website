@@ -1,6 +1,6 @@
 import React from 'react'
 
-// import CompanionSvg from 'shared/media/images/what-are-people-building/companion.svg'
+import CompanionSvg from 'shared/media/images/what-are-people-building/companion.svg'
 import PeerpadSvg from 'shared/media/images/what-are-people-building/peerpad.svg'
 import ParatiiSvg from 'shared/media/images/what-are-people-building/paratii.svg'
 
@@ -36,7 +36,7 @@ const projects = [
   },
   {
     translationListIndex: 4,
-    // icon: <CompanionSvg />,
+    icon: <CompanionSvg />,
     image: CompanionPrintScreen,
     link: 'https://github.com/ipfs-shipyard/ipfs-companion'
   },

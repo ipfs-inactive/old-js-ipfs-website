@@ -10,11 +10,6 @@
     to { transform: rotateZ(360deg); }
 }
 
-@keyframes pulse {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-
 .wrapperContainer {
     min-height: 100vh;
 
@@ -24,9 +19,10 @@
 }
 
 .container {
-    position: fixed;
+    position: relative;
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,16 +41,13 @@
         top: -7%;
         width: 100%;
         height: 100%;
-        z-index: 0;
-        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
 
         & .orbits {
             position: relative;
-            width: 80%;
-            height: 80%;
+            width: 90%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,7 +95,7 @@
         & svg {
             width: 29%;
             height: auto;
-            margin-bottom: 1.5%;
+            margin: 0 0 1.5% 4%;
         }
 
         & h1 {
@@ -112,32 +105,30 @@
             line-height: var(--line-height-large);
         }
 
-        & p {
-            font-size: var(--typography-text-size);
-            font-weight: var(--typography-text-weight-light);
-            text-align: center;
-            line-height: var(--line-height-medium);
+        & .textDesc {
+            max-width: 70%;
+
+            & p {
+                font-size: var(--typography-text-size);
+                font-weight: var(--typography-text-weight-light);
+                text-align: center;
+                line-height: var(--line-height-medium);
+            }
         }
 
         & .infoContainer {
             width: 100%;
+            min-height: 60px;
             margin-top: 2%;
             padding-bottom: calc(var(--bottom-half-height) * 2);
-            transform: scale(1);
-            opacity: 1;
+            opacity: 0;
             color: var(--color-light-blue);
             font-family: var(--typography-roboto-text-font);
             font-size: var(--typography-text-size-mobile);
-            transition: opacity var(--info-transition-duration) ease, transform var(--info-transition-duration) ease;
+            transition: opacity var(--info-transition-duration) ease;
 
-            &.error {
-                color: var(--color-error);
-            }
-
-            &.hidden {
-                transform: scale(0.9);
-                opacity: 0;
-                transition: all 0ms;
+            &.show {
+                opacity: 1;
             }
 
             & div {
@@ -147,32 +138,8 @@
                 justify-content: center;
                 align-items: center;
 
-                & span {
+                & span:not(:last-child) {
                     margin-right: 4%;
-                }
-            }
-        }
-
-        & .arrowUp {
-            width: 35px;
-            height: 35px;
-            animation: pulse 1s infinite alternate;
-
-            & svg {
-                width: 100%;
-                height: auto;
-
-                & path {
-                    transition: fill var(--transition-default-duration) ease;
-                }
-            }
-
-            &:hover {
-                cursor: pointer;
-                animation-play-state: paused;
-
-                & svg path {
-                    fill: var(--color-white);
                 }
             }
         }
@@ -181,8 +148,6 @@
 
 @media (--layout-lte-small) {
     .container {
-        position: relative;
-
         & .orbitContainer {
             display: none;
         }
@@ -194,33 +159,42 @@
             & svg {
                 width: 75%;
                 max-width: 300px;
-                margin-bottom: 10%;
+                margin: 0 0 10% 10%;
             }
 
-            & p {
-                font-size: var(--typography-text-size);
+            & .textDesc {
+                & p {
+                    font-size: var(--typography-text-size);
+                }
             }
 
             & .infoContainer div {
                 flex-direction: column;
 
                 & span {
-                    margin-top: 12px;
+                    margin: 12px 0 0 0;
                 }
             }
+        }
+    }
+}
 
-            & .arrowUp {
-                margin-bottom: 10%;
-            }
+@media (--layout-lte-medium) {
+    .container {
+        & .orbitContainer {
+            width: 125%;
+        }
+
+        & .content .textDesc {
+            max-width: 90%;
         }
     }
 }
 
 @media (--layout-gte-xxlarge) {
     .container {
-        & .orbitContainer .orbits {
-            width: 60%;
-            height: 60%;
+        & .orbitContainer {
+            width: 75%;
         }
     }
 }

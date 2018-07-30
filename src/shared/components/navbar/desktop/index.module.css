@@ -21,17 +21,19 @@
         display: flex;
         justify-content: center;
 
-        & a {
+        & a,
+        & .link {
             margin-right: 3%;
             display: flex;
             align-items: center;
             color: var(--color-white);
             text-decoration: none;
             text-transform: uppercase;
+            cursor: pointer;
             transition: var(--transition-default-duration) ease;
 
             &:nth-child(4) {
-                margin-right: 10px;
+                margin-right: 15px;
             }
 
             &:hover {

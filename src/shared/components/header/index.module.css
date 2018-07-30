@@ -13,7 +13,7 @@
 
     & .target {
         position: absolute;
-        top: -1px;
+        top: -2px;
         width: 100%;
     }
 }

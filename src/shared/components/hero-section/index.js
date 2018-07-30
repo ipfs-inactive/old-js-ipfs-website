@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
+import { toast } from 'react-toastify'
 import { PropTypes } from 'prop-types'
 import axios from 'axios'
 import classNames from 'classnames'
@@ -12,54 +13,26 @@ import LocalesBar from 'shared/components/locales-bar'
 import OutsideRingSvg from 'shared/media/backgrounds/outsidering.svg'
 import MiddleRingSvg from 'shared/media/backgrounds/middlering.svg'
 import InsideRingSvg from 'shared/media/backgrounds/insidering.svg'
-import ArrowUp from 'shared/media/icons/arrow-up.svg'
 import CubeSvg from 'shared/media/images/cube.svg'
 import styles from './index.module.css'
-
-const defaultScrollOptions = { offset: -66, align: 'top', duration: 800 }
 
 class Hero extends Component {
   state = {
     info: undefined,
-    errorMessage: undefined,
     inView: true
   }
 
-  constructor (props) {
-    super(props)
-
-    const { messages } = this.props.intl
-    this.messages = messages
-  }
-
   componentDidMount () {
-    this.scrollToComponent = require('react-scroll-to-component')
-    const self = this
-    this._ismounted = true
-
     axios.get('https://api.npms.io/v2/package/ipfs')
-      .then(function ({ data: { collected } }) {
-        self.handleAxiosResponse(collected)
-      })
-      .catch(function (error) {
-        self.handleAxiosError(error)
-      })
-  }
-
-  componentWillUnmount () {
-    this._ismounted = false
+      .then(this.handleAxiosResponse)
+      .catch(this.handleAxiosError)
   }
 
   render () {
-    const { info, errorMessage, inView } = this.state
-    const isDataLoaded = Boolean(info)
-    const existsError = Boolean(errorMessage)
-    const infoContainerClasses = classNames(styles.infoContainer, {
-      [styles.hidden]: !isDataLoaded && !existsError,
-      [styles.error]: !isDataLoaded && existsError
-    })
+    const { intl: { messages } } = this.props
+    const { info, inView } = this.state
+    const infoContainerClasses = classNames(styles.infoContainer, { [styles.show]: Boolean(info) })
     const wrapperContainerClasses = classNames(styles.wrapperContainer, { [styles.animationOff]: !inView })
-    const messages = this.messages
 
     return (
       <Observer onChange={ this.handleObserverChange }>
@@ -82,12 +55,9 @@ class Hero extends Component {
             <div className={ styles.content }>
               <CubeSvg />
               <h1>{ messages.hero.welcomeMessage }</h1>
-              <ReactMarkdown source={ messages.hero.textDescription } />
+              <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
               <div className={ infoContainerClasses }>
-                { isDataLoaded && !existsError ? this.renderPkgInfo(info, isDataLoaded) : this.renderErrorMessage(errorMessage) }
-              </div>
-              <div className={ styles.arrowUp } onClick={ this.handleArrowClick }>
-                <ArrowUp />
+                { info && this.renderPkgInfo(info) }
               </div>
             </div>
           </div>
@@ -96,36 +66,32 @@ class Hero extends Component {
     )
   }
 
-  renderPkgInfo = (info, isDataLoaded) => {
+  renderPkgInfo = (info) => {
     const pkgInfoArr = Object.values(info)
 
-    return <div>{ pkgInfoArr.map((infoElement, index) => <span key={ `pkgInfo-${index}` }>{ isDataLoaded ? infoElement : '' }</span>) }</div>
+    return <div>{ pkgInfoArr.map((infoElement, index) => <span key={ `pkgInfo-${index}` }>{ infoElement }</span>) }</div>
   }
-
-  renderErrorMessage = (errorMessage) => (
-    <div>
-      <span>{ errorMessage }</span>
-    </div>
-  )
 
   handleObserverChange = ({ isIntersecting }) => this.setState({ inView: isIntersecting })
 
-  handleAxiosResponse = (data) => {
-    const messages = this.messages
+  handleAxiosResponse = (response) => {
+    const data = response.data.collected
+    const { intl } = this.props
+    const { messages } = intl
 
     const currentVersion = data.metadata.version
-    const currentVersionStr = `${messages.hero.currentVersion} ${currentVersion}`
+    const currentVersionStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.currentVersion }, { version: currentVersion })
 
     const dateFnsLocale = this.getDateFnsCurrentLocale(locales)
     const isDateFnsLocaleFound = Boolean(dateFnsLocale)
     const dateFnsLocaleObject = isDateFnsLocaleFound ? { locale: dateFnsLocale } : {}
     const latestUpdateDate = new Date(data.metadata.date)
     const latestUpdateWords = distanceInWordsToNow(latestUpdateDate, dateFnsLocaleObject)
-    const latestUpdateDateStr = `${messages.hero.latestUpdate} ${latestUpdateWords}`
+    const latestUpdateDateStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.latestUpdate }, { date: latestUpdateWords })
 
     const downloads = this.calculateDownloads(data.npm.downloads, { lastMonth: true })
     const formattedDownloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    const downloadsStr = `${messages.hero.downloadsLastMonth} ${formattedDownloads}`
+    const downloadsStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.downloadsLastMonth }, { count: formattedDownloads })
 
     const info = {
       currentVersionStr,
@@ -137,20 +103,11 @@ class Hero extends Component {
   }
 
   handleAxiosError = (error) => {
-    let errorMessage = 'Something went wrong while fetching package data: '
-    if (error.response) {
-      errorMessage += `${error.response.status} status code.`
-    } else if (error.request) {
-      errorMessage += 'request was made but no response was received.'
-    } else {
-      errorMessage += error.message
-    }
-    this.setState({ errorMessage })
-  }
+    console.error(error)
 
-  handleArrowClick = () => {
-    const { featsRef } = this.props
-    featsRef && this.scrollToComponent(featsRef, defaultScrollOptions)
+    const { messages } = this.props.intl
+
+    toast.error(messages.hero.errorPckMessage)
   }
 
   calculateDownloads = (downloadsArr, options = { lastMonth: false }) => {
@@ -181,6 +138,7 @@ class Hero extends Component {
       const fromMonthNumber = fromDate.getMonth()
       const toMonthNumber = toDate.getMonth()
       const monthsDiff = Math.abs(fromMonthNumber - toMonthNumber)
+
       return monthsDiff <= 1
     }
 
@@ -189,13 +147,13 @@ class Hero extends Component {
 
   getDateFnsCurrentLocale = (locales) => {
     const currentLocale = this.props.intl.locale
+
     return locales[currentLocale]
   }
 }
 
 Hero.propTypes = {
-  intl: PropTypes.object.isRequired,
-  featsRef: PropTypes.object
+  intl: PropTypes.object.isRequired
 }
 
 export default injectIntl(Hero)

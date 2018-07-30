@@ -5,6 +5,7 @@ import Carousel from 'shared/components/carousel'
 
 import styles from './index.module.css'
 
+const scrollToComponent = typeof window !== 'undefined' && require('react-scroll-to-component')
 const defaultScrollOptions = { offset: 0, align: 'center', duration: 600 }
 
 class VideosList extends Component {
@@ -15,10 +16,6 @@ class VideosList extends Component {
     const activeIndex = list.findIndex(this.findActiveVideo)
 
     this.state = { activeIndex }
-  }
-
-  componentDidMount () {
-    this.scrollToComponent = require('react-scroll-to-component')
   }
 
   render () {
@@ -43,7 +40,8 @@ class VideosList extends Component {
             className={ styles.reactPlayer }
             url={ activeVideo.link }
             width="100%"
-            height="100%" />
+            height="100%"
+            controls />
         </div>
       )
     }
@@ -62,7 +60,7 @@ class VideosList extends Component {
 
     handleRemainingVideoClick = (activeIndex) => {
       this.setState({ activeIndex })
-      this.scrollToComponent(this.activeVideoRef, defaultScrollOptions)
+      scrollToComponent(this.activeVideoRef, defaultScrollOptions)
     }
 
     handleAtiveVideoRef = (element) => {

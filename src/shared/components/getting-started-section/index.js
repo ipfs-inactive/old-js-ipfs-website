@@ -62,7 +62,7 @@ class GettingStarted extends Component {
     } = this.state
 
     return (
-      <div className={ styles.container }>
+      <div className={ styles.container } id="gsContainer">
         <div className={ styles.backgroundSvg }>
           <div className={ styles.hex1 }><HexSvg /></div>
           <div className={ styles.hex2 }><HexSvg /></div>

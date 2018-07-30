@@ -18,6 +18,7 @@ addLocaleData(localeData)
 class Layout extends Component {
   render () {
     const { children } = this.props
+
     return (
       <IntlProvider locale="<%= locale %>" messages={ messages }>
         <div className={ styles.app }>
