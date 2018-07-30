@@ -14,7 +14,7 @@
   },
 
   "hero": {
-    "welcomeMessage": "Un protocollo P2P completo e scritto interamente in Javascript",
+    "welcomeMessage": "Un protocollo P2P completo e scritto interamente in JavaScript",
     "textDescription": "js-ipfs permette di implementare il protocollo IPFS direttamente nei Browsers. Scritto interamente in JavaScript, usabile nel Browser, nei Service Worker, nelle Web Extension e con Node.js**, apre le porte ad un mondo di possibilit&agrave;.",
     "currentVersion": "Versione corrente: {version}",
     "latestUpdate": "Ultimo update: {date}",
