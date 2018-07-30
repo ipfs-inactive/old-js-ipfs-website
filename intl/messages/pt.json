@@ -1,30 +1,30 @@
 {
   "buttons": {
-    "buttonLearnMore": "Learn More",
+    "buttonLearnMore": "Descobre mais",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
     "buttonIrcFreenode": "IRC Freenode"
   },
 
   "navbar": {
-    "item1": "Get Started",
-    "item2": "Tutorials",
+    "item1": "Iniciação",
+    "item2": "Tutoriais",
     "item3": "API",
     "item4": "Open Source"
   },
 
   "hero": {
-    "welcomeMessage": "A full P2P protocol written entirely in JavaScript",
-    "textDescription": "js-ipfs paves the way for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser, a Service Worker, a Web Extension and Node.js**, opening the door to a world of possibilities.",
-    "currentVersion": "Current version: {version}",
-    "latestUpdate": "Latest update: {date}",
-    "downloadsLastMonth": "Downloads last month: {count}",
-    "errorPckMessage": "Couldn't fetch IPFS package data."
+    "welcomeMessage": "Uma implementação completa de um protocolo P2P escrito integralmente em JavaScript",
+    "textDescription": "js-ipfs estabelece o caminho para a implementação do protocolo IPFS no Browser. Programado competamente em JavaScript, pode ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades.",
+    "currentVersion": "Versão actual: {version}",
+    "latestUpdate": "Última actualização: {date}",
+    "downloadsLastMonth": "Contagem de downloads do último mês: {count}",
+    "errorPckMessage": "Não foi possível recolher a informação do modulo."
   },
 
   "banner": {
-    "highlightMessage": "The js-ipfs library is in Alpha state.",
-    "message": "The codebase hasn't been audited by security specialists and it shouldn't be used to store, share or publish sensitive information."
+    "highlightMessage": "O js-ipfs ainda se encontra em estado Alfa.",
+    "message": "O código ainda não foi revisto por especialistas em segurança e por consequência não é recomendado que seja usado para guardar, partilhar e/ou publicar informação que tenha um caracter sensível."
   },
 
   "features": {
