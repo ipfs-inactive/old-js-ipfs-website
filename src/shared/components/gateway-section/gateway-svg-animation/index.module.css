@@ -39,8 +39,8 @@
   height: 100%;
 
   &.animationOff {
-    & div {
-      animation-play-state: paused !important;
+    & div > div {
+      animation-play-state: paused;
     }
   }
 
@@ -265,7 +265,7 @@
       }
 
       & > div {
-        animation-play-state: paused !important;
+        animation-play-state: paused;
       }
     }
   }

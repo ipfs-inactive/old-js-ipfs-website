@@ -109,15 +109,19 @@
 }
 
 @media (--layout-lte-small) {
-    .container {
-        max-height: unset;
+  .container {
+    max-height: unset;
 
-        & .content {
-            width: var(--container-width-mobile);
+    & .content {
+      width: var(--container-width-mobile);
 
-            & .sectionDescription p {
-                width: 90%;
-            }
-        }
+      & .sectionDescription p {
+        width: 90%;
+      }
+
+      & .toggle {
+        bottom: calc(3% + 30px);
+      }
     }
+  }
 }
