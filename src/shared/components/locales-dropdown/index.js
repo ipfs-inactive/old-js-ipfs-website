@@ -65,7 +65,7 @@ class LocalesDropdown extends Component {
           <span className={ arrowClasses } />
         </button>
         <div className={ dropdownContentClasses }>
-          {availableLocalesOptions}
+          { availableLocalesOptions }
         </div>
       </div>
     )

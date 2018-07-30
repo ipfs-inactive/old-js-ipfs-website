@@ -73,23 +73,23 @@ class GettingStarted extends Component {
             <p>{ messages.gettingStarted.sectionDesc }</p>
           </span>
           <div className={ styles.panel } >
-            <p className={ styles.liveSnippetTitle }>{messages.gettingStarted.addDataToIPFS}</p>
+            <p className={ styles.liveSnippetTitle }>{ messages.gettingStarted.addDataToIPFS }</p>
             <LiveProvider key="add" className={ styles.liveSnippet } code={ codeAdd } scope={ this.scopeAdd } mountStylesheet={ false } transformCode={ transformCode }>
               <div className={ styles.liveSnippetEditorContainer }>
                 <LiveEditor ref={ this.refAdd } className={ 'language-js ' + styles.liveSnippetEditor }/>
                 <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('add') }>Run</button>
               </div>
               <div className={ styles.liveSnippetPreview } >
-                <p className={ styles.liveSnippetOutput }>{messages.gettingStarted.output}</p>
+                <p className={ styles.liveSnippetOutput }>{ messages.gettingStarted.output }</p>
                 <pre>
-                  <code>{outputAdd}</code>
+                  <code>{ outputAdd }</code>
                 </pre>
-                {ipfsLoaded && <LivePreview/>}
-                {ipfsLoaded && <LiveError/>}
+                { ipfsLoaded && <LivePreview/> }
+                { ipfsLoaded && <LiveError/> }
               </div>
             </LiveProvider>
-            <p className={ styles.liveSnippetTitle }>{messages.gettingStarted.getDataFromIPFS}</p>
-            <p className={ styles.liveSnippetSubtitle }>{messages.gettingStarted.usingJavascript}</p>
+            <p className={ styles.liveSnippetTitle }>{ messages.gettingStarted.getDataFromIPFS }</p>
+            <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingJavascript }</p>
             <LiveProvider key="get" className={ styles.liveSnippet } code={ codeGet(cid) } scope={ this.scopeGet } mountStylesheet={ false } transformCode={ transformCode }>
 
               <div className={ styles.liveSnippetEditorContainer }>
@@ -97,22 +97,22 @@ class GettingStarted extends Component {
                 <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('get') }>Run</button>
               </div>
               <div className={ styles.liveSnippetPreview } >
-                <p className={ styles.liveSnippetOutput }>{messages.gettingStarted.output}</p>
+                <p className={ styles.liveSnippetOutput }>{ messages.gettingStarted.output }</p>
                 <pre>
-                  <code>{outputGet}</code>
+                  <code>{ outputGet }</code>
                 </pre>
-                {(ipfsLoaded && cid) && <LivePreview/>}
-                {ipfsLoaded && <LiveError/>}
+                { (ipfsLoaded && cid) && <LivePreview/> }
+                { ipfsLoaded && <LiveError/> }
               </div>
             </LiveProvider>
-            <p className={ styles.liveSnippetSubtitle }>{messages.gettingStarted.usingCli}</p>
+            <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingCli }</p>
             <div className={ styles.liveSnippetCliContainer }>
               <SyntaxHighlighter codeStr={ `npm install ipfs -g
 jsipfs get ${cid}` } language='bash' />
             </div>
 
-            <p className={ styles.liveSnippetSubtitle }>{messages.gettingStarted.usingGateway}</p>
-            <Link className={ styles.liveSnippetLink } href={ `https://ipfs.io/ipfs/${cid}` }>{`https://ipfs.io/ipfs/${cid}`}</Link>
+            <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingGateway }</p>
+            <Link className={ styles.liveSnippetLink } href={ `https://ipfs.io/ipfs/${cid}` }>{ `https://ipfs.io/ipfs/${cid}` }</Link>
           </div>
           <Button translationId="buttonLearnMore" href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials" />
         </div>
