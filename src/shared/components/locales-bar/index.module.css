@@ -2,37 +2,37 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .localesBar {
-    padding: 20px 0 25px 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: var(--typography-text-size-small);
-    transition: all var(--transition-default-duration) ease;
+  padding: 20px 0 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: var(--typography-text-size-small);
+  transition: all var(--transition-default-duration) ease;
 
-    & a {
-        margin-top: 5px;
-        padding: 0 7px;
-        border-right: 1px solid var(--color-blue-dark-shade);
-        color: var(--color-blue-dark-shade);
-        text-decoration: none;
-        transition: var(--transition-default-duration) ease;
+  & a {
+    margin-top: 5px;
+    padding: 0 7px;
+    border-right: 1px solid var(--color-blue-dark-shade);
+    color: var(--color-blue-dark-shade);
+    text-decoration: none;
+    transition: var(--transition-default-duration) ease;
 
-        &:last-child {
-            border-right: unset;
-        }
-
-        &:hover {
-            color: var(--color-white);
-        }
-
-        &.active {
-            color: var(--color-yellow);
-        }
+    &:last-child {
+      border-right: unset;
     }
+
+    &:hover {
+      color: var(--color-white);
+    }
+
+    &.active {
+      color: var(--color-yellow);
+    }
+  }
 }
 
 @media (--layout-lte-small) {
-    .localesBar {
-        display: none;
-    }
+  .localesBar {
+    display: none;
+  }
 }

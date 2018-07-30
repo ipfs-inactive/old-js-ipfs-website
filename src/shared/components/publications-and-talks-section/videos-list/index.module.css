@@ -2,49 +2,49 @@
 @import "shared/styles/imports/custom-medias.css";
 
 :root {
-    --player-border-radius: 10px;
+  --player-border-radius: 10px;
 }
 
 .talksContainer {
-    width: 70%;
-    margin-top: 5%;
+  width: 70%;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+
+  & .selectedVideo {
+    position: relative;
+    overflow: hidden;
+    padding-top: var(--video-ratio);
+    border-radius: var(--player-border-radius);
+
+    & .reactPlayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  & .remainingVideosContainer {
+    margin-top: 50px;
     display: flex;
-    flex-direction: column;
-
-    & .selectedVideo {
-        position: relative;
-        overflow: hidden;
-        padding-top: var(--video-ratio);
-        border-radius: var(--player-border-radius);
-
-        & .reactPlayer {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    }
-
-    & .remainingVideosContainer {
-        margin-top: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 @media (--layout-lte-small) {
-    .talksContainer {
-        width: 85%;
+  .talksContainer {
+    width: 85%;
 
-        & .remainingVideosContainer {
-            width: 80%;
-            margin: 20px auto;
-        }
+    & .remainingVideosContainer {
+      width: 80%;
+      margin: 20px auto;
     }
+  }
 }
 
 @media (--layout-lte-xsmall) {
-    .talksContainer {
-        width: 100%;
-    }
+  .talksContainer {
+    width: 100%;
+  }
 }

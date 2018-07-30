@@ -2,19 +2,19 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .gatsbyHighlight .preCustom {
-    width: 60%;
-    margin: auto;
-    outline: none;
-    background: var(--color-syntax-highlighter-background);
-    border-radius: 2px;
+  width: 60%;
+  margin: auto;
+  outline: none;
+  background: var(--color-syntax-highlighter-background);
+  border-radius: 2px;
 
-    /* & :global(.keyword) {
+  /* & :global(.keyword) {
         color: red;
     } */
 }
 
 @media (--layout-lte-small) {
-    .gatsbyHighlight .preCustom {
-        width: 100%;
-    }
+  .gatsbyHighlight .preCustom {
+    width: 100%;
+  }
 }

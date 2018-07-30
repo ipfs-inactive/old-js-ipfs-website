@@ -8,50 +8,50 @@
 /* ========== Montserrat ========== */
 
 @font-face {
-    font-family: "Montserrat";
-    font-weight: normal;
-    font-style: normal;
-    src:
-        url("../media/fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
-        url("../media/fonts/montserrat/Montserrat-Regular.woff") format("woff");
+  font-family: "Montserrat";
+  font-weight: normal;
+  font-style: normal;
+  src:
+    url("../media/fonts/montserrat/Montserrat-Regular.woff2") format("woff2"),
+    url("../media/fonts/montserrat/Montserrat-Regular.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Montserrat";
-    font-weight: 700;
-    font-style: normal;
-    src:
-        url("../media/fonts/montserrat/Montserrat-Bold.woff2") format("woff2"),
-        url("../media/fonts/montserrat/Montserrat-Bold.woff") format("woff");
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: normal;
+  src:
+    url("../media/fonts/montserrat/Montserrat-Bold.woff2") format("woff2"),
+    url("../media/fonts/montserrat/Montserrat-Bold.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-style: normal;
-    src:
-        url("../media/fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2"),
-        url("../media/fonts/montserrat/Montserrat-SemiBold.woff") format("woff");
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: normal;
+  src:
+    url("../media/fonts/montserrat/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../media/fonts/montserrat/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
-    font-family: "Montserrat";
-    font-weight: 300;
-    font-style: normal;
-    src:
-        url("../media/fonts/montserrat/Montserrat-Light.woff2") format("woff2"),
-        url("../media/fonts/montserrat/Montserrat-Light.woff") format("woff");
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style: normal;
+  src:
+    url("../media/fonts/montserrat/Montserrat-Light.woff2") format("woff2"),
+    url("../media/fonts/montserrat/Montserrat-Light.woff") format("woff");
 }
 
 /* ========== Roboto ========== */
 
 @font-face {
-    font-family: "Roboto";
-    font-weight: 300;
-    font-style: normal;
-    src:
-        url("../media/fonts/roboto/Roboto-Light.woff2") format("woff2"),
-        url("../media/fonts/roboto/Roboto-Light.woff") format("woff");
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: normal;
+  src:
+    url("../media/fonts/roboto/Roboto-Light.woff2") format("woff2"),
+    url("../media/fonts/roboto/Roboto-Light.woff") format("woff");
 }
 
 /* ==========================================================================
@@ -59,15 +59,15 @@
    ========================================================================== */
 
 body {
-    color: var(--color-black);
-    font-family: var(--typography-text-font);
-    font-size: var(--typography-text-size);
-    overflow-wrap: break-word;  /* Break long words by default */
+  color: var(--color-black);
+  font-family: var(--typography-text-font);
+  font-size: var(--typography-text-size);
+  overflow-wrap: break-word;  /* Break long words by default */
 }
 
 ::selection {
-    background: color(var(--color-black) lightness(25%));
-    color: var(--color-white);
+  background: color(var(--color-black) lightness(25%));
+  color: var(--color-white);
 }
 
 /* ==========================================================================
@@ -75,13 +75,13 @@ body {
   ========================================================================== */
 
 a {
-    color: var(--color-black);
-    transition: color 200ms;
+  color: var(--color-black);
+  transition: color 200ms;
 }
 
 a:hover {
-    color: color(var(--color-black) lightness(25%));
-    text-decoration: underline;
+  color: color(var(--color-black) lightness(25%));
+  text-decoration: underline;
 }
 
 /* ==========================================================================
@@ -94,35 +94,35 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: 0;
-    font-family: var(--typography-display-font);
-    font-weight: 600;
-    text-transform: uppercase;
-    line-height: 1.1;
+  margin-top: 0;
+  font-family: var(--typography-display-font);
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 
 h1 {
-    font-size: 42px;
+  font-size: 42px;
 }
 
 h2 {
-    font-size: 36px;
+  font-size: 36px;
 }
 
 h3 {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 h4 {
-    font-size: 28px;
+  font-size: 28px;
 }
 
 h5 {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 h6 {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 /* ==========================================================================
@@ -130,15 +130,15 @@ h6 {
   ========================================================================== */
 
 p {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 @media (--layout-lte-small) {
-    body {
-        font-size: var(--typography-text-size-mobile);
-    }
+  body {
+    font-size: var(--typography-text-size-mobile);
+  }
 
-    h1 {
-        font-size: 36px;
-    }
+  h1 {
+    font-size: 36px;
+  }
 }

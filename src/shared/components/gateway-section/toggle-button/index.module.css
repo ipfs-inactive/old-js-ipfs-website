@@ -1,88 +1,88 @@
 @import "shared/styles/imports/variables.css";
 
 .wrapper {
-    width: 100%;
+  width: 100%;
 
-    & .switch {
-        position: relative;
-        width: 60px;
-        height: 34px;
-        display: inline-block;
+  & .switch {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    display: inline-block;
 
-        & .slider {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border: 1px solid var(--color-white);
-            cursor: pointer;
-            transition: var(--transition-default-duration);
+    & .slider {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 1px solid var(--color-white);
+      cursor: pointer;
+      transition: var(--transition-default-duration);
 
-            &::before {
-                content: "";
-                position: absolute;
-                bottom: 3px;
-                left: 4px;
-                width: 26px;
-                height: 26px;
-                background-color: var(--color-white);
-                transition: var(--transition-default-duration);
-            }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        left: 4px;
+        width: 26px;
+        height: 26px;
+        background-color: var(--color-white);
+        transition: var(--transition-default-duration);
+      }
 
-            &.active {
-                &::before {
-                    transform: translateX(24px);
-                    background-color: var(--color-yellow);
-                }
-            }
-
-            &.round {
-                border-radius: 34px;
-
-                &::before {
-                    border-radius: 50%;
-                }
-            }
+      &.active {
+        &::before {
+          transform: translateX(24px);
+          background-color: var(--color-yellow);
         }
+      }
+
+      &.round {
+        border-radius: 34px;
+
+        &::before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  & .title {
+    position: absolute;
+    top: 0;
+    margin-left: 15px;
+    color: var(--color-white);
+    line-height: 34px;
+    transition: color var(--transition-default-duration);
+
+    &.active {
+      color: var(--color-yellow);
+    }
+  }
+
+  &.incompatible {
+    & .switch {
+      opacity: 0.5;
+      pointer-events: none;
     }
 
     & .title {
-        position: absolute;
-        top: 0;
-        margin-left: 15px;
-        color: var(--color-white);
-        line-height: 34px;
-        transition: color var(--transition-default-duration);
+      opacity: 0.5;
+    }
+  }
 
-        &.active {
-            color: var(--color-yellow);
-        }
+  &.inProgress {
+    & .switch {
+      opacity: 0.5;
+      pointer-events: none;
     }
 
-    &.incompatible {
-        & .switch {
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        & .title {
-            opacity: 0.5;
-        }
+    & .title {
+      color: var(--color-yellow);
     }
+  }
 
-    &.inProgress {
-        & .switch {
-            opacity: 0.5;
-            pointer-events: none;
-        }
-
-        & .title {
-            color: var(--color-yellow);
-        }
-    }
-
-    & .tooltip {
-        padding: 14px 20px;
-    }
+  & .tooltip {
+    padding: 14px 20px;
+  }
 }

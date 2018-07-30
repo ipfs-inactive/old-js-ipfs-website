@@ -2,59 +2,59 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .container {
-    position: relative;
-    width: 100%;
-    z-index: 3;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-white);
+  color: var(--color-dark-blue);
+
+  & .content {
+    width: var(--container-width);
+    max-width: var(--max-container-width);
+    padding: 10% 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background: var(--color-white);
-    color: var(--color-dark-blue);
+    text-align: center;
 
-    & .content {
-        width: var(--container-width);
-        max-width: var(--max-container-width);
-        padding: 10% 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-
-        & h1 {
-            font-weight: var(--typography-text-weight-semibold);
-            text-align: center;
-            line-height: var(--line-height-large);
-        }
-
-        & .sectionDescription {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-
-            & p {
-                width: 60%;
-                font-weight: var(--typography-text-weight);
-                line-height: var(--line-height-medium);
-            }
-        }
-
-        & .featuresContainer {
-            margin-top: 5%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    & h1 {
+      font-weight: var(--typography-text-weight-semibold);
+      text-align: center;
+      line-height: var(--line-height-large);
     }
+
+    & .sectionDescription {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      & p {
+        width: 60%;
+        font-weight: var(--typography-text-weight);
+        line-height: var(--line-height-medium);
+      }
+    }
+
+    & .featuresContainer {
+      margin-top: 5%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }
 
 @media (--layout-lte-small) {
-    .container .content {
-        width: var(--container-width-mobile);
+  .container .content {
+    width: var(--container-width-mobile);
 
-        & .sectionDescription p {
-            width: 90%;
-        }
+    & .sectionDescription p {
+      width: 90%;
     }
+  }
 }
