@@ -111,5 +111,13 @@
 @media (--layout-lte-small) {
     .container {
         max-height: unset;
+
+        & .content {
+            width: var(--container-width-mobile);
+
+            & .sectionDescription p {
+                width: 90%;
+            }
+        }
     }
 }
