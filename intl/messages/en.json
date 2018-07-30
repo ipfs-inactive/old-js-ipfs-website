@@ -15,7 +15,7 @@
 
   "hero": {
     "welcomeMessage": "A full P2P protocol written entirely in JavaScript",
-    "textDescription": "js-ipfs paves the way for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser, a Service Worker, a Web Extension and Node.js**, opening the door to a world of possibilities.",
+    "textDescription": "js-ipfs paves the way for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser, a Service Worker, a Web Extension and Node.js, opening the door to a world of possibilities.",
     "currentVersion": "Current version: {version}",
     "latestUpdate": "Latest update: {date}",
     "downloadsLastMonth": "Downloads last month: {count}",
