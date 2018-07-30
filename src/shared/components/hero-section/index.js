@@ -76,21 +76,22 @@ class Hero extends Component {
 
   handleAxiosResponse = (response) => {
     const data = response.data.collected
-    const { intl: { messages } } = this.props
+    const { intl } = this.props
+    const { messages } = intl
 
     const currentVersion = data.metadata.version
-    const currentVersionStr = `${messages.hero.currentVersion} ${currentVersion}`
+    const currentVersionStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.currentVersion }, { version: currentVersion })
 
     const dateFnsLocale = this.getDateFnsCurrentLocale(locales)
     const isDateFnsLocaleFound = Boolean(dateFnsLocale)
     const dateFnsLocaleObject = isDateFnsLocaleFound ? { locale: dateFnsLocale } : {}
     const latestUpdateDate = new Date(data.metadata.date)
     const latestUpdateWords = distanceInWordsToNow(latestUpdateDate, dateFnsLocaleObject)
-    const latestUpdateDateStr = `${messages.hero.latestUpdate} ${latestUpdateWords}`
+    const latestUpdateDateStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.latestUpdate }, { date: latestUpdateWords })
 
     const downloads = this.calculateDownloads(data.npm.downloads, { lastMonth: true })
     const formattedDownloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    const downloadsStr = `${messages.hero.downloadsLastMonth} ${formattedDownloads}`
+    const downloadsStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.downloadsLastMonth }, { count: formattedDownloads })
 
     const info = {
       currentVersionStr,
@@ -105,17 +106,8 @@ class Hero extends Component {
     console.error(error)
 
     const { messages } = this.props.intl
-    let errorMessage = messages.hero.errorMessage.template
 
-    if (error.response) {
-      errorMessage += `${error.response.status} ${messages.hero.errorMessage.part1}`
-    } else if (error.request) {
-      errorMessage += messages.hero.errorMessage.part2
-    } else {
-      errorMessage += error.message
-    }
-
-    toast.error(errorMessage)
+    toast.error(messages.hero.errorPckMessage)
   }
 
   calculateDownloads = (downloadsArr, options = { lastMonth: false }) => {

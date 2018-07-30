@@ -86,6 +86,7 @@ class MobileNavbar extends Component {
     }
 
     handleGettingStartedClick = () => {
+      this.setState({ isOpen: false })
       this.props.onGoToGettingStarted()
     }
 }

@@ -29,6 +29,7 @@
             color: var(--color-white);
             text-decoration: none;
             text-transform: uppercase;
+            cursor: pointer;
             transition: var(--transition-default-duration) ease;
 
             &:nth-child(4) {
@@ -37,7 +38,6 @@
 
             &:hover {
                 color: var(--color-yellow);
-                cursor: pointer;
             }
         }
 
