@@ -28,16 +28,16 @@
   },
 
   "features": {
-    "sectionTitle": "Features",
-    "sectionDesc": "Packed with all the things you know and love about IPFS. This implementation also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications.",
+    "sectionTitle": "Características",
+    "sectionDesc": "Com todas as functionalidades que tu conheces e adoras sobre o IPFS. Esta implementação também carrega alguns extras que são únicos para uma implementação que funciona no browser. É a caixa de ferramenta ideal para todas as tuas applicações para a DWeb.",
     "list": [
       {
-        "title": "Run on Node.js and the Browser",
-        "desc": "js-ipfs works out of the box on Node.js, Electron and any modern browser. It is also customizable by design so that you can use it on your favorite runtime."
+        "title": "Corre em Node.js e no Browser",
+        "desc": "js-ipfs functiona automaticamente em Node.js, Electron e em qualquer browser moderno. É também customizavel de forma a que o possas usar na tua plataforma favorita."
       },
       {
-        "title": "Implements the full IPFS Stack",
-        "desc": "No feature was left behind. js-ipfs is not a light client, it is the full implementation of the IPFS protocol."
+        "title": "Implementação completa do IPFS Stack",
+        "desc": "Nenhuma funcionalidade foi deixada de lado. O js-ipfs não é um light client, é uma implementação completa do protocol IPFS."
       },
       {
         "title": "Use PubSub to communicate in realtime with the other peers",
