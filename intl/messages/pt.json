@@ -64,6 +64,7 @@
       }
     ]
   },
+
   "gettingStarted": {
     "sectionTitle": "Getting Started",
     "sectionDesc": "IPFS allows you to store and distribute data, addressing it by its hash. If the data changes, the hash changes as well.",
