@@ -17,7 +17,7 @@ class GatewaySection extends Component {
   state = {
     isActive: false,
     inView: false,
-    incompatible: false,
+    incompatible: typeof window !== 'undefined' ? !isCompatible() : false,
     inProgress: false,
     isMessageVisible: true
   }
@@ -28,8 +28,6 @@ class GatewaySection extends Component {
         registration && this.setState({ isActive: true })
       })
       .catch((err) => console.error(err))
-
-    this.setState({ incompatible: !(isCompatible()) })
   }
 
   componentWillUnmount () {
