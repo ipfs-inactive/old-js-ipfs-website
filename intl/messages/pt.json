@@ -68,7 +68,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Getting Started",
-    "sectionDesc": "IPFS allows you to store and distribute data, addressing it by its hash. If the data changes, the hash changes as well.",
+    "sectionDesc": "IPFS gives you a Content Addressing primitive for all your data on the DWeb. You can make data available to the network or fetch existing data through its CID, the Content Identified. Try it out below!",
     "addDataToIPFS": "Adding data to IPFS",
     "output": "Output",
     "getDataFromIPFS": "Getting data from IPFS",
