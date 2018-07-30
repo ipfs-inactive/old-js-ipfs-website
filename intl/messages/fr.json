@@ -62,32 +62,17 @@
   },
   "gettingStarted": {
     "sectionTitle": "Commencer",
-    "sectionDesc": "TODO(Hugo+Marco)",
-    "list": [
-      {
-        "title": "Installer",
-        "desc": "Ce projet est disponible via npm. Pour installer run:",
-        "note": "Nécessite npm @ 3 et node @ 6 ou supérieur, testé sur OSX et Linux, devrait fonctionner sous Windows."
-      },
-      {
-        "title": "Utiliser dans Node.js",
-        "desc": "Pour inclure ce projet par programme:"
-      },
-      {
-        "title": "À travers de l'outil de ligne de commande",
-        "desc": "Pour utiliser js-ipfs en tant que CLI, vous devez l'installer avec le ‘flag global’. Exécutez ce qui suit (même si ipfs est installé localement):",
-        "note": "L'interface de ligne de commande est disponible en utilisant la commande jsipfs dans votre terminal.Ceci est un alias, au lieu d'utiliser ipfs, pour s'assurer qu'il n'est pas en conflit avec l'implémentation de Go."
-      },
-      {
-        "title": "Utiliser dans le navigateur",
-        "desc": "Apprenez à combiner avec browserify et webpack dans le dossier examples\n\nVous pouvez aussi le charger en utilisant un <script> en utilisant le CDN unpkg ou le CDN jsDelivr. L'insertion de l'une des lignes suivantes rendra un objet Ipfs disponible dans le espace de noms global.",
-        "note": "L'insertion de l'une des lignes ci-dessus rendra un constructeur Ipfs disponible dans l'espace de noms global."
-      }
-    ]
+    "sectionDesc": "IPFS gives you a Content Addressing primitive for all your data on the DWeb. You can make data available to the network or fetch existing data through its CID, the Content Identified. Try it out below!",
+    "addDataToIPFS": "Adding data to IPFS",
+    "output": "Output",
+    "getDataFromIPFS": "Getting data from IPFS",
+    "usingJavascript": "Using Javascript in the Browser or Node.js",
+    "usingCli": "Using the CLI",
+    "usingGateway": "Using the HTTP Gateway"
   },
   "serviceWorker": {
-    "sectionTitle": "Service Worker",
-    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique quis dui nec pellentesque. Cras sed porta neque, in vulputate turpis. Maecenas convallis quam urna, eu volutpat enim rhoncus ut.",
+    "sectionTitle": "Service Worker Gateway",
+    "sectionDesc": "Turn this page into a full IPFS Gateway without touching any servers or using HTTP to fetch content from the IPFS Network! Yes, you read it right, the Service Worker Gateway with js-ipfs can connect directly to the IPFS Network.",
     "activationSuccessTitle": "Félicitations! Votre navigateur est maintenant une passerelle IPFS entièrement opérationnelle",
     "activationSuccessText": "Chargez n'importe quel contenu comme vous le feriez normalement avec https://gateway.ipfs.io. Voici quelques exemples que vous pouvez essayer: \n - [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao) \n - [js.ipfs.io - /ipfs/<add when published>](https://js.ipfs.io/ipfs/<add when published>) \n - [awesome.ipfs.io - /ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus](https://js.ipfs.io/ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus) \n - [peerpad.net - /ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi](https://js.ipfs.io/ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi) \n Try with any other hash by opening https://js.ipfs.io/ipfs/<your hash>",
     "toggleText": "Activer le Service Worker",
