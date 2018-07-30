@@ -16,7 +16,7 @@ const Home = () => (
     <Features />
     <GettingStarted />
     <Gateway />
-    {/* <WhatCanYouBuild /> */}
+    { /* <WhatCanYouBuild /> */ }
     <WhatArePeopleBuilding />
     <PublicationsAndTalks />
     <Community />
