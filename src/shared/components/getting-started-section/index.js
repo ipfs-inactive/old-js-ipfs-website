@@ -28,7 +28,7 @@ class GettingStarted extends Component {
     ipfsLoaded: false,
     outputAdd: null,
     outputGet: null,
-    cid: null
+    cid: 'QmPChd2hVbrJ6bfo3WBcTW4iZnpHm8TEzWkLHmLpXhF68A'
   }
 
   constructor (props) {
