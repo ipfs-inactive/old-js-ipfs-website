@@ -53,7 +53,7 @@
       },
       {
         "title": "libp2p è built-in",
-        "desc": "libp2p è lo stack di rete modulare creato per IPFS e che puoi utilizzare direttamente, tramite IPFS, per le tue applicazioni."
+        "desc": "[libp2p](https://libp2p.io/) è lo stack di rete modulare creato per IPFS e che puoi utilizzare direttamente, tramite IPFS, per le tue applicazioni."
       },
       {
         "title": "Esegui come daemon",
