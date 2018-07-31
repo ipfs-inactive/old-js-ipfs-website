@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import ReactMarkdown from 'react-markdown'
 
 import MobileGatewaySvg from 'shared/media/images/gateway-section/mobile-gateway.svg'
 import MobileGatewayBeams1 from 'shared/media/images/gateway-section/mobile-gateway-beams-1.svg'
@@ -39,20 +41,36 @@ import BeamsNodes10 from 'shared/media/images/gateway-section/beams-nodes-10.svg
 import BeamsNodes11 from 'shared/media/images/gateway-section/beams-nodes-11.svg'
 import BeamsNodes12 from 'shared/media/images/gateway-section/beams-nodes-12.svg'
 
+import CloseIcon from 'shared/media/icons/close-icon.svg'
+
 import styles from './index.module.css'
 
 class GatewaySvgAnimation extends Component {
   render () {
-    const { isActive, inView } = this.props
+    const { isActive, inView, isMessageVisible, intl: { messages } } = this.props
     const containerClasses = classNames(styles.container, {
       [styles.active]: isActive,
-      [styles.animationOff]: !inView
+      [styles.animationOff]: !inView,
+      [styles.messageClosed]: isActive && !isMessageVisible
     })
 
     return (
       <div className={ containerClasses }>
         { this.renderDesktopGateway() }
         { this.renderMobileGateway() }
+        <div className={ styles.message }>
+          <div className={ styles.header }>
+            <div className={ styles.title }>
+              { messages.serviceWorker.activationSuccessTitle }
+            </div>
+            <div className={ styles.close }>
+              <CloseIcon onClick={ this.handleCloseClick }/>
+            </div>
+          </div>
+          <div className={ styles.body }>
+            <ReactMarkdown source={ messages.serviceWorker.activationSuccessText } />
+          </div>
+        </div>
       </div>
     )
   }
@@ -155,12 +173,19 @@ class GatewaySvgAnimation extends Component {
       </div>
     </div>
   )
+
+  handleCloseClick = () => {
+    const { onMessageCloseClick } = this.props
+
+    onMessageCloseClick()
+  }
 }
 
 GatewaySvgAnimation.propTypes = {
   isActive: PropTypes.bool.isRequired,
   inView: PropTypes.bool,
-  isMobile: PropTypes.bool
+  isMessageVisible: PropTypes.bool,
+  onMessageCloseClick: PropTypes.func
 }
 
-export default GatewaySvgAnimation
+export default injectIntl(GatewaySvgAnimation)
