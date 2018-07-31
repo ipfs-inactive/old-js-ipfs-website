@@ -3,6 +3,7 @@ import React from 'react'
 import CompanionSvg from 'shared/media/images/what-are-people-building/companion.svg'
 import PeerpadSvg from 'shared/media/images/what-are-people-building/peerpad.svg'
 import ParatiiSvg from 'shared/media/images/what-are-people-building/paratii.svg'
+import DwebArchiveSvg from 'shared/media/images/what-are-people-building/dwebarchive.svg'
 
 import CompanionPrintScreen from 'shared/media/images/what-are-people-building/companion.jpg'
 import FilenationPrintScreen from 'shared/media/images/what-are-people-building/filenation.jpg'
@@ -25,6 +26,7 @@ const projects = [
   },
   {
     translationListIndex: 2,
+    icon: <DwebArchiveSvg />,
     image: DwebArchivePrintScreen,
     link: 'https://github.com/internetarchive/dweb-archive'
   },
