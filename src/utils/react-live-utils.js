@@ -41,19 +41,13 @@ function log (fn) {
   }
 }
 
-function stubIpfs (nodeLocal) {
-  const node = window.ipfs || nodeLocal
-
+function stubIpfs (node) {
   node.once = (e, fn) => {
     fn()
   }
 
   node.on = (e, fn) => {
     fn()
-  }
-
-  if (window.ipfs) {
-    node.types = nodeLocal.types
   }
 
   const WrapIPFS = function () {
@@ -81,17 +75,11 @@ function getIpfs (opts) {
   })
 }
 
-function preload (cid) {
-  return window.fetch(`https://node1.preload.ipfs.io/api/v0/refs?r=true&arg=${cid}`)
-    .catch(err => console.error(err))
-}
-
 export {
   transformCode,
   log,
   stubIpfs,
   getIpfs,
-  preload,
   codeAdd,
   codeGet
 }
