@@ -108,7 +108,7 @@ class GettingStarted extends Component {
             <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingCli }</p>
             <div className={ styles.liveSnippetCliContainer }>
               <SyntaxHighlighter codeStr={ `npm install ipfs -g
-jsipfs get ${cid}` } language='bash' />
+jsipfs cat ${cid}` } language='bash' />
             </div>
 
             <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingGateway }</p>
