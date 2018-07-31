@@ -74,7 +74,7 @@ class Carousel extends Component {
     const slideClassName = classNames({ noPadding: shouldRemovePadding })
 
     return (
-      <Slider { ...{ ...settings, slidesToShow: numberOfSlidesToShow } } className={ slideClassName } >
+      <Slider { ...{ ...settings, slidesToShow: numberOfSlidesToShow } } className={ slideClassName } lazyLoad='ondemand'>
         { items }
       </Slider>
     )
