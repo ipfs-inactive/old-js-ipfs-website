@@ -4,6 +4,6 @@ module.exports = {
     { acronym: 'en', fullForm: 'English' },
     { acronym: 'pt', fullForm: 'Português (PT)' },
     { acronym: 'it', fullForm: 'Italiano' },
-    { acronym: 'zh-cn', fullForm: '简体中文' }
+    { acronym: 'zh', fullForm: '简体中文' }
   ]
 }
