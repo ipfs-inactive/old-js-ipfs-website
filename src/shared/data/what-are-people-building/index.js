@@ -3,6 +3,7 @@ import React from 'react'
 import CompanionSvg from 'shared/media/images/what-are-people-building/companion.svg'
 import PeerpadSvg from 'shared/media/images/what-are-people-building/peerpad.svg'
 import ParatiiSvg from 'shared/media/images/what-are-people-building/paratii.svg'
+import FilenationSvg from 'shared/media/images/what-are-people-building/Filenation.svg'
 
 import CompanionPrintScreen from 'shared/media/images/what-are-people-building/companion.jpg'
 import FilenationPrintScreen from 'shared/media/images/what-are-people-building/filenation.jpg'
@@ -20,6 +21,7 @@ const projects = [
   },
   {
     translationListIndex: 1,
+    icon: <FilenationSvg />,
     image: FilenationPrintScreen,
     link: 'https://filenation.io'
   },
