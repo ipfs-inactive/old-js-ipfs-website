@@ -10,6 +10,9 @@ import GatewaySvgAnimation from 'shared/components/gateway-section/gateway-svg-a
 import ToggleButton from './toggle-button'
 import styles from './index.module.css'
 
+const scrollToComponent = typeof window !== 'undefined' && require('react-scroll-to-component')
+const defaultScrollOptions = { offset: 0, align: 'bottom', duration: 600 }
+
 class GatewaySection extends Component {
   state = {
     isActive: false,
@@ -29,6 +32,18 @@ class GatewaySection extends Component {
     this.setState({ incompatible: !(isCompatible()) })
   }
 
+  componentWillUnmount () {
+    clearTimeout(this.scrollTimeout)
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    if (!prevState.isActive && this.state.isActive) {
+      this.scrollTimeout = setTimeout(() => {
+        scrollToComponent(this.sectionContainerRef, defaultScrollOptions)
+      }, 2300)
+    }
+  }
+
   render () {
     const { isActive, inView, incompatible, inProgress, isMessageVisible } = this.state
     const { messages } = this.props.intl
@@ -37,7 +52,7 @@ class GatewaySection extends Component {
     })
 
     return (
-      <div className={ styles.container }>
+      <div className={ styles.container } ref={ this.handleContainerRef }>
         <div className={ contentClasses }>
           <h1>{ messages.serviceWorker.sectionTitle }</h1>
           <span className={ styles.sectionDescription }>
@@ -67,6 +82,10 @@ class GatewaySection extends Component {
 
   handleCloseClick = () => {
     this.setState({ isMessageVisible: false })
+  }
+
+  handleContainerRef = (element) => {
+    this.sectionContainerRef = element
   }
 
   handleToggleClick = () => {

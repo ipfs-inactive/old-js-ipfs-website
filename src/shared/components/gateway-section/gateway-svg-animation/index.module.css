@@ -74,7 +74,9 @@
       }
 
       & .close {
-        padding: 20px 20px 0 0;
+        min-width: 19px;
+        min-height: 19px;
+        margin: 20px;
 
         & svg {
           opacity: 0.8;
@@ -357,7 +359,7 @@
         margin-bottom: 10%;
 
         & .header .close {
-          width: 60px;
+          margin: 15px;
         }
 
         & .body {
