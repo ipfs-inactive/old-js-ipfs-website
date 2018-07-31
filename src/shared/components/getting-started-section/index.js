@@ -13,7 +13,6 @@ import {
   transformCode,
   log,
   getIpfs,
-  preload,
   codeAdd,
   codeGet
 } from 'utils/react-live-utils'
@@ -137,7 +136,6 @@ jsipfs get ${cid}` } language='bash' />
 
     if (content) {
       if (typeof content === 'string' && content.length === CID_LENGTH && content !== this.state.cid) {
-        preload(content)
         this.setState({cid: content})
       }
     }
