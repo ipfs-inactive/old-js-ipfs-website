@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import ReactPlayer from 'react-player'
 import PropTypes from 'prop-types'
 import Carousel from 'shared/components/carousel'
+import Youtube from 'shared/components/youtube'
 
 import styles from './index.module.css'
 
@@ -33,15 +33,9 @@ class VideosList extends Component {
       const { activeIndex } = this.state
       const { list } = this.props
       const activeVideo = list[activeIndex]
-
       return (
         <div className={ styles.selectedVideo } ref={ this.handleAtiveVideoRef }>
-          <ReactPlayer
-            className={ styles.reactPlayer }
-            url={ activeVideo.link }
-            width="100%"
-            height="100%"
-            controls />
+          <Youtube link={ activeVideo.link }/>
         </div>
       )
     }
