@@ -52,7 +52,8 @@ class Carousel extends Component {
             icon={ item.icon }
             desc={ translationsList[translationIndex].desc }
             link={ item.link }
-            image={ item.image } />
+            image={ item.image }
+            index={ index } />
         )
       })
     } else if (modifier === 'videos') {
