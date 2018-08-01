@@ -1,0 +1,147 @@
+{
+  "buttons": {
+    "buttonLearnMore": "了解更多",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC聊天频道"
+  },
+
+  "navbar": {
+    "item1": "入门指南",
+    "item2": "教程",
+    "item3": "API",
+    "item4": "源代码"
+  },
+
+  "hero": {
+    "welcomeMessage": "一个完全使用JavaScript编写的完整版的P2P协议",
+    "textDescription": "js-ipfs为浏览器中直接应用IPFS协议奠定了基础。 它完全使用JavaScript编写，可以运行在浏览器、Service Worker、浏览器插件和Node.js中，为应用打开了通往各种可能性的大门。",
+    "currentVersion": "当前版本：{version}",
+    "latestUpdate": "最近更新：{date}",
+    "downloadsLastMonth": "最近一个月的下载量：{count}",
+    "errorPckMessage": "无法获取IPFS数据包。"
+  },
+
+  "banner": {
+    "highlightMessage": " js-ipfs库当前为Alpha版本。",
+    "message": "代码库未经安全专家审核，请勿用于存储、共享或者发布敏感信息。"
+  },
+
+  "features": {
+    "sectionTitle": "功能特性",
+    "sectionDesc": "js-ipfs实现你所了解和喜爱IPFS的全部功能。同时，还专门为浏览器开发了特有功能，js-ipfs为分布式web应用开发提供了强大的工具支持。",
+    "list": [
+      {
+        "title": "运行在Node.js和浏览器中",
+        "desc": "js-ipfs在Node.js，Electron和任何现代浏览器上开箱即用。 同时，它可以通过定制化设计满足您的个性化使用需求。"
+      },
+      {
+        "title": "实现完整的IPFS技术栈",
+        "desc": "js-ipfs不是一个轻量级的客户端，它完整的实现了IPFS协议的全部功能，没有任何功能被遗漏。"
+      },
+      {
+        "title": "利用PubSub功能与其它节点进行实时通信",
+        "desc": "IPFS节点可以基于订阅的主题创建网络拓扑结构，以实时广播相关事件。"
+      },
+      {
+        "title": "从IPFS网络中的任何位置添加和检索文件",
+        "desc": "IPFS旨在利用内容寻址和进程寻址的强大功能来查找网络中包含您要查找的内容的节点并进行数据检索。 其它节点也可以以同样的方式找到您添加的任何数据。"
+      },
+      {
+        "title": "利用DAG API遍历任意哈希链数据结构",
+        "desc": "IPFS使用[IPLD]（https://ipld.io/）（星际链接数据模型）使您能够与多种数据源（如git，区块链等）的数据进行交互。"
+      },
+      {
+        "title": "内建libp2p功能",
+        "desc": "libp2p是一个模块化网络栈。它是为IPFS所开发的网络层功能，现在您可以通过IPFS在应用程序中直接使用。"
+      },
+      {
+        "title": "作为守护程序运行",
+        "desc": "js-ipfs也可以作为守护进程运行，以便您可以使用已经熟悉的HTTP API（源自于go-ipfs）与其进行交互。"
+      },
+      {
+        "title": "为可变数据创建固定地址",
+        "desc": "利用IPNS（星际命名系统），在身份验证和认证的基础上，通过创建可变指针（记录）的方式来发布数据更新。"
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "入门指南",
+    "sectionDesc": "IPFS为分布式web上的数据提供了内容寻址。可以通过CID（内容识别符）使数据在网络上可用或者获取现有数据。试一下！",
+    "addDataToIPFS": "添加数据到IPFS",
+    "output": "输出结果",
+    "getDataFromIPFS": "从IPFS获取数据",
+    "usingJavascript": "在浏览器或者Node.js中使用JavaScript",
+    "usingCli": "使用CLI",
+    "usingGateway": "使用HTTP网关"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Service Worker网关",
+    "sectionDesc": "无需借助任何服务器，也无需使用HTTP从IPFS网络获取内容即可将此页面转换为完整的IPFS网关！ 是的，你没看错，带有js-ipfs的Service Worker网关可以直接连接到IPFS网络。",
+    "activationSuccessTitle": "恭喜！ 您的浏览器现在是一个完全可用的IPFS网关",
+    "activationSuccessText": "与使用 https://gateway.ipfs.io网关一样，您可以从IPFS里面下载任何数据。试试下面的例子： \n - [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao) \n - [js.ipfs.io - /ipfs/<add when published>](https://js.ipfs.io/ipfs/<add when published>) \n - [awesome.ipfs.io - /ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus](https://js.ipfs.io/ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus) \n - [peerpad.net - /ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi](https://js.ipfs.io/ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi) \n 通过下面的链接地址试一下其它哈希值 https://js.ipfs.io/ipfs/<你的哈希值>",
+    "toggleText": "启用Service Worker",
+    "activatingToggleText": "正在激活Service Worker...",
+    "activationErrorMessage": "启用Service Worker时发生错误。",
+    "deactivationErrorMessage": "禁用Service Worker时发生错误。",
+    "nonRootScopeWarningMessage": "当前页面无法激活Service Worker。 请尝试从https://js.ipfs.io 激活"
+  },
+
+  "whatCanYouBuildTitle": "您可以用js-ipfs做什么",
+  "whatCanYouBuildSectionDesc": "",
+  "whatCanYouBuildItem1Name": "",
+  "whatCanYouBuildItem1Title": "",
+  "whatCanYouBuildItem1Subtitle": "",
+  "whatCanYouBuildItem1Desc": "",
+  "whatCanYouBuildItem2Name": "",
+  "whatCanYouBuildItem2Title": "",
+  "whatCanYouBuildItem2Subtitle": "",
+  "whatCanYouBuildItem2Desc": "",
+  "whatCanYouBuildItem3Name": "",
+  "whatCanYouBuildItem3Title": "",
+  "whatCanYouBuildItem3Subtitle": "",
+  "whatCanYouBuildItem3Desc": "",
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "看看大家正在使用它做什么",
+    "sectionDesc": "",
+    "list": [
+      {
+        "desc": "Paratii使用js-ipfs和以太坊合约构建了一套用于视频流和内容管理的开源技术。Portal是一个网络应用程序，用来管理运行在IPFS上的加密视频。"
+      },
+      {
+        "desc": "去中心化的WeTransfer。Filenation利用IPFS提供了一种最简单的文件分享方式，它允许您使用IPFS将文件作为链接发送到电子邮件。"
+      },
+      {
+        "desc": "去中心化的Internet Archive。支持访问分布式Web中超过四千万份的存档文件。使用内容种子网关和JavaScript编写用户界面，同时支持Firefox和Chrome。"
+      },
+      {
+        "desc": "PeerPad是一个运行在去中心化网络上，基于IPFS和Y.js构建的可协作实时编辑器。所有参与节点可以实现点对点的直接通信，无需借助于中央服务或者第三方参与。"
+      },
+      {
+        "desc": "IPFS web插件赋予了浏览器强大的功能。IPFS Companion是一个可用于Chrome，Firefox和Brave浏览器的插件，可让您轻松访问IPFS网络。它还包含其他特有的功能，如文件共享和供Web开发人员使用的API。"
+      },
+      {
+        "desc": "[Orbit Chat](https://orbit.chat)是一个建立在OrbitDB之上的无服务器，分布式，点对点聊天应用程序。 OrbitDB使用[IPFS](https://ipfs.io)作为其数据存储，使用[IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub)和其它节点自动同步数据库。"
+      }
+    ]
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "发布和专题演讲",
+    "sectionDesc": "观看IPFS社区关于IPFS JavaScript项目的最近更新、演示和其它演讲。更多IPFS开发者会议的演讲内容会被陆续添加到这里。"
+  },
+
+  "community": {
+    "sectionTitle": "社区",
+    "sectionDesc": "js-ipfs是获得MIT许可的开源项目，来自于IPFS社区。您可以通过多种方式为项目作出贡献：编写文档、使用libp2p编写应用和工具、创建示例和教程，加入我们的产品例会与我们一起讨论libp2p。",
+    "socialNetworksText": "来吧，快来加入我们！"
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs项目已经启动并由以下赞助商提供赞助",
+    "leftContent": "协议实验室| 除非另有说明，内容遵守CC-BY 3.0许可协议"
+  }
+}

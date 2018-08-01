@@ -27,6 +27,9 @@
   --color-github: #102b6e;
   --color-github-hover: #1130bc;
   --color-error: #ea5037;
+
+  --color-menu-dark-blue-opacity: rgba(14, 32, 76, 0.9);
+  --color-dark-blue-opacity: rgba(11, 22, 50, 0.9);
 }
 
 /* ==========================================================================

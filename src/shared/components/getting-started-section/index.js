@@ -13,7 +13,6 @@ import {
   transformCode,
   log,
   getIpfs,
-  preload,
   codeAdd,
   codeGet
 } from 'utils/react-live-utils'
@@ -28,7 +27,7 @@ class GettingStarted extends Component {
     ipfsLoaded: false,
     outputAdd: null,
     outputGet: null,
-    cid: null
+    cid: 'QmPChd2hVbrJ6bfo3WBcTW4iZnpHm8TEzWkLHmLpXhF68A'
   }
 
   constructor (props) {
@@ -108,7 +107,7 @@ class GettingStarted extends Component {
             <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingCli }</p>
             <div className={ styles.liveSnippetCliContainer }>
               <SyntaxHighlighter codeStr={ `npm install ipfs -g
-jsipfs get ${cid}` } language='bash' />
+jsipfs cat ${cid}` } language='bash' />
             </div>
 
             <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingGateway }</p>
@@ -130,16 +129,12 @@ jsipfs get ${cid}` } language='bash' />
     }
 
     if (editor === 'add') {
+      if (typeof content === 'string' && content.length === CID_LENGTH && content !== this.state.cid) {
+        this.setState({cid: content})
+      }
       this.setState({outputAdd: content})
     } else {
       this.setState({outputGet: content})
-    }
-
-    if (content) {
-      if (typeof content === 'string' && content.length === CID_LENGTH && content !== this.state.cid) {
-        preload(content)
-        this.setState({cid: content})
-      }
     }
   }
 

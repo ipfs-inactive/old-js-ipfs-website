@@ -23,49 +23,18 @@
         opacity: 1;
         transition-delay: 2300ms;
       }
-    }
 
-    & .message {
-      position: absolute;
-      right: 0;
-      max-width: 35%;
-      z-index: 10;
-      overflow: scroll;
-      padding: 25px 15px;
-      opacity: 0;
-      background: var(--color-dark-blue);
-      border-radius: 10px;
-      color: var(--color-white);
-      font-family: var(--typography-display-font);
-      font-size: var(--typography-text-size-small);
-      transition: opacity var(--transition-default-duration) ease;
-
-      & a {
-        color: var(--color-white);
-      }
-
-      & .title {
-        margin-bottom: 15px;
-        color: var(--color-light-blue);
-        text-transform: unset;
-      }
-
-      & ul {
-        padding-left: 25px;
-
-        & li {
-          margin-top: 10px;
-
-          & a {
-            text-decoration: none;
-          }
+      &.messageClosed {
+        & .message {
+          opacity: 0;
+          transition-delay: 0s;
         }
       }
     }
 
     & .toggle {
       position: absolute;
-      bottom: 3%;
+      bottom: 8%;
     }
 
     & h1 {
@@ -101,10 +70,6 @@
 @media (max-height: 800px) {
   .container {
     max-height: unset;
-
-    & .content .message {
-      max-width: 25%;
-    }
   }
 }
 
