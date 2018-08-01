@@ -47,6 +47,8 @@ class Carousel extends Component {
       numberOfSlidesToShow = 1
     }
 
+    settings.slidesToShow = numberOfSlidesToShow
+
     if (modifier === 'projects') {
       items = itemsList.map((item, index) => {
         const translationIndex = item.translationListIndex
@@ -77,7 +79,7 @@ class Carousel extends Component {
     const slideClassName = classNames({ noPadding: shouldRemovePadding })
 
     return (
-      <Slider { ...{ ...settings, slidesToShow: numberOfSlidesToShow } }
+      <Slider { ...settings }
         className={ slideClassName }
         lazyLoad='ondemand' >
         { items }
