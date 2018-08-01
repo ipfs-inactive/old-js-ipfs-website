@@ -40,12 +40,12 @@
         "desc": "Nenhuma funcionalidade foi deixada de lado. O js-ipfs não é um light client, é uma implementação completa do protocol IPFS."
       },
       {
-        "title": "Use PubSub to communicate in realtime with the other peers",
-        "desc": "IPFS nodes can create network topologies based on topics of interest to broadcast events in realtime."
+        "title": "Usa PubSub para comunicar em tempo real com todos os outros peers",
+        "desc": "Os nós do IPFS criam topologias de rede dedicadas a volta dos tópicos de interesse de forma a que os eventos sejam propagados em tempo real."
       },
       {
-        "title": "Add and retrieve files from anywhere in the IPFS Network",
-        "desc": "IPFS is designed to use the power of Content Addressing and Process Addressing to find the nodes in the network that have the content you are looking for and retrieve it. In the same way, you can add any piece of data and other nodes will find it too."
+        "title": "Providencia e/ou encontra ficheiros de qualquer zona na rede IPFS",
+        "desc": "IPFS foi desenhado para tirar proveito de endereçamento de conteúdo e processo para encontrar nós na rede com os dados dos quais procuras. Da mesma forma, todos os dados que forem adicionados também vão estar disponíveis para qualquer outro nó."
       },
       {
         "title": "Use the DAG API to traverse over any hash linked data structure",
