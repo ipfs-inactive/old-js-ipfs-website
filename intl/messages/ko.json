@@ -72,7 +72,7 @@
     "addDataToIPFS": "IPFS에 데이터 추가하기",
     "output": "결과",
     "getDataFromIPFS": "IPFS로 부터 데이터 가져오기",
-    "usingJavascript": "Using Javascript in the Browser or Node.js",
+    "usingJavascript": "Browser 또는 Node.js에서 JavaScript로 사용하기",
     "usingCli": "CLI 사용하기",
     "usingGateway": "HTTP 게이트웨이 사용하기"
   },
