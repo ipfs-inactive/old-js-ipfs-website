@@ -129,15 +129,12 @@ jsipfs cat ${cid}` } language='bash' />
     }
 
     if (editor === 'add') {
-      this.setState({outputAdd: content})
-    } else {
-      this.setState({outputGet: content})
-    }
-
-    if (content) {
       if (typeof content === 'string' && content.length === CID_LENGTH && content !== this.state.cid) {
         this.setState({cid: content})
       }
+      this.setState({outputAdd: content})
+    } else {
+      this.setState({outputGet: content})
     }
   }
 
