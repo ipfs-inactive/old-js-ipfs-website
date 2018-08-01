@@ -53,7 +53,7 @@
       },
       {
         "title": "libp2p 내장",
-        "desc": "libp2p는 IPFS를 위해 만들어진 Modular Networking Stack이며 그리고 IPFS를 통해 당신의 Application에 직접적으로 사용할 수 있습니다."
+        "desc": "[libp2p](https://libp2p.io/)는 IPFS를 위해 만들어진 Modular Networking Stack이며 그리고 IPFS를 통해 당신의 Application에 직접적으로 사용할 수 있습니다."
       },
       {
         "title": "데몬으로 실행가능",
