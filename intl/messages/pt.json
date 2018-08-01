@@ -1,67 +1,67 @@
 {
   "buttons": {
-    "buttonLearnMore": "Learn More",
+    "buttonLearnMore": "Descobre mais",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
     "buttonIrcFreenode": "IRC Freenode"
   },
 
   "navbar": {
-    "item1": "Get Started",
-    "item2": "Tutorials",
+    "item1": "Iniciação",
+    "item2": "Tutoriais",
     "item3": "API",
     "item4": "Open Source"
   },
 
   "hero": {
-    "welcomeMessage": "A full P2P protocol written entirely in JavaScript",
-    "textDescription": "js-ipfs paves the way for the Browser implementation of the IPFS protocol. Written entirely in JavaScript, it **runs in a Browser, a Service Worker, a Web Extension and Node.js**, opening the door to a world of possibilities.",
-    "currentVersion": "Current version: {version}",
-    "latestUpdate": "Latest update: {date}",
-    "downloadsLastMonth": "Downloads last month: {count}",
-    "errorPckMessage": "Couldn't fetch IPFS package data."
+    "welcomeMessage": "Uma implementação completa de um protocolo P2P escrito integralmente em JavaScript",
+    "textDescription": "js-ipfs estabelece o caminho para a implementação do protocolo IPFS no Browser. Programado competamente em JavaScript, pode ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades.",
+    "currentVersion": "Versão actual: {version}",
+    "latestUpdate": "Última actualização: {date}",
+    "downloadsLastMonth": "Contagem de downloads do último mês: {count}",
+    "errorPckMessage": "Não foi possível recolher a informação do modulo."
   },
 
   "banner": {
-    "highlightMessage": "The js-ipfs library is in Alpha state.",
-    "message": "The codebase hasn't been audited by security specialists and it shouldn't be used to store, share or publish sensitive information."
+    "highlightMessage": "O js-ipfs ainda se encontra em estado Alfa.",
+    "message": "O código ainda não foi revisto por especialistas em segurança e por consequência não é recomendado que seja usado para guardar, partilhar e/ou publicar informação que tenha um caracter sensível."
   },
 
   "features": {
-    "sectionTitle": "Features",
-    "sectionDesc": "Packed with all the things you know and love about IPFS. This implementation also carries some extra neat things that are unique to the Browser. It's the toolkit to power all your DWeb Applications.",
+    "sectionTitle": "Características",
+    "sectionDesc": "Com todas as functionalidades que tu conheces e adoras sobre o IPFS. Esta implementação também carrega alguns extras que são únicos para uma implementação que funciona no browser. É a caixa de ferramenta ideal para todas as tuas applicações para a DWeb.",
     "list": [
       {
-        "title": "Run on Node.js and the Browser",
-        "desc": "js-ipfs works out of the box on Node.js, Electron and any modern browser. It is also customizable by design so that you can use it on your favorite runtime."
+        "title": "Corre em Node.js e no Browser",
+        "desc": "js-ipfs functiona automaticamente em Node.js, Electron e em qualquer browser moderno. É também customizavel de forma a que o possas usar na tua plataforma favorita."
       },
       {
-        "title": "Implements the full IPFS Stack",
-        "desc": "No feature was left behind. js-ipfs is not a light client, it is the full implementation of the IPFS protocol."
+        "title": "Implementação completa do IPFS Stack",
+        "desc": "Nenhuma funcionalidade foi deixada de lado. O js-ipfs não é um light client, é uma implementação completa do protocol IPFS."
       },
       {
-        "title": "Use PubSub to communicate in realtime with the other peers",
-        "desc": "IPFS nodes can create network topologies based on topics of interest to broadcast events in realtime."
+        "title": "Usa PubSub para comunicar em tempo real com todos os outros peers",
+        "desc": "Os nós do IPFS criam topologias de rede dedicadas a volta dos tópicos de interesse de forma a que os eventos sejam propagados em tempo real."
       },
       {
-        "title": "Add and retrieve files from anywhere in the IPFS Network",
-        "desc": "IPFS is designed to use the power of Content Addressing and Process Addressing to find the nodes in the network that have the content you are looking for and retrieve it. In the same way, you can add any piece of data and other nodes will find it too."
+        "title": "Providencia e/ou encontra ficheiros de qualquer zona na rede IPFS",
+        "desc": "IPFS foi desenhado para tirar proveito de endereçamento de conteúdo e processo para encontrar nós na rede com os dados dos quais procuras. Da mesma forma, todos os dados que forem adicionados também vão estar disponíveis para qualquer outro nó."
       },
       {
-        "title": "Use the DAG API to traverse over any hash linked data structure",
-        "desc": "IPFS uses [IPLD](https://ipld.io/), the InterPlanetary Linked-Data, a model that enables you interact with data from multiple sources, such as git, blockchains and more."
+        "title": "Usa a DAG API para atravessar qualquer estrutura de dados que seja ligada por hashes",
+        "desc": "IPFS use o [IPLD](https://ipld.io/), a \"InterPlanetary Linked-Data\", um modelo de dados que permite interagir com dados de muitas fontes, como por exemplo git, blockchains entre outras."
       },
       {
-        "title": "libp2p is built in",
-        "desc": "libp2p is the Modular Networking Stack that was created for IPFS and now you can use it through IPFS for your application directly as well."
+        "title": "libp2p incluída",
+        "desc": "libp2p é o stack de rede modular que foi criado para o IPFS e agora podes usar na tua aplicação através do IPFS."
       },
       {
-        "title": "Run it as a daemon",
-        "desc": "js-ipfs also comes with the option to run it as a daemon so that you can interact with it using the HTTP API that you are familiar with from go-ipfs."
+        "title": "Executa como um processo independente",
+        "desc": "js-ipfs vem também com a opção de ser executado como um processo independente que podes intereagir através da API HTTP que já estás famialirizado do go-ipfs."
       },
       {
-        "title": "Create stable addresses for changing data",
-        "desc": "It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) to distribute updates in an authenticated and certified way."
+        "title": "Cria endereços estáveis para os dados em constante mudança",
+        "desc": "O IPNS, \"Interplanetary Naming System\", oferece uma forma de criar ponteiros mutáveis (registos) para propagar actualizações de uma forma certificada."
       }
     ]
   },
