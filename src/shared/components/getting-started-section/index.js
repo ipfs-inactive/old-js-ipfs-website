@@ -27,8 +27,8 @@ class GettingStarted extends Component {
     runAdd: false,
     runGet: false,
     ipfsLoaded: false,
-    outputAdd: null,
-    outputGet: null,
+    outputAdd: '',
+    outputGet: '',
     cid: 'QmPChd2hVbrJ6bfo3WBcTW4iZnpHm8TEzWkLHmLpXhF68A'
   }
 
@@ -144,7 +144,7 @@ jsipfs cat ${cid}` } language='bash' />
 
   handleRunClick = (editor) => () => {
     if (editor === 'add') {
-      this.setState({ runAdd: true })
+      this.setState({ runAdd: true, runGet: false, outputGet: '' })
       this.refAdd.current.run()
     } else {
       this.setState({ runGet: true })
