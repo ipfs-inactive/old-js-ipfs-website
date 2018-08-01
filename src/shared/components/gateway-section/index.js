@@ -5,18 +5,21 @@ import 'react-toastify/dist/ReactToastify.css'
 import classNames from 'classnames'
 import { isCompatible, register, unregister, getRegistration } from 'shared/service-worker/registration'
 import Observer from '@researchgate/react-intersection-observer'
-import ReactMarkdown from 'react-markdown'
 
 import GatewaySvgAnimation from 'shared/components/gateway-section/gateway-svg-animation'
 import ToggleButton from './toggle-button'
 import styles from './index.module.css'
+
+const scrollToComponent = typeof window !== 'undefined' && require('react-scroll-to-component')
+const defaultScrollOptions = { offset: 0, align: 'bottom', duration: 600 }
 
 class GatewaySection extends Component {
   state = {
     isActive: false,
     inView: false,
     incompatible: false,
-    inProgress: false
+    inProgress: false,
+    isMessageVisible: true
   }
 
   componentDidMount () {
@@ -26,35 +29,47 @@ class GatewaySection extends Component {
       })
       .catch((err) => console.error(err))
 
-    this.setState({ icompatible: !(isCompatible()) })
+    this.setState({ incompatible: !(isCompatible()) })
+  }
+
+  componentWillUnmount () {
+    clearTimeout(this.scrollTimeout)
+  }
+
+  componentDidUpdate (prevProps, prevState) {
+    if (!prevState.isActive && this.state.isActive) {
+      this.scrollTimeout = setTimeout(() => {
+        scrollToComponent(this.sectionContainerRef, defaultScrollOptions)
+      }, 2300)
+    }
   }
 
   render () {
-    const { isActive, inView, icompatible, inProgress } = this.state
+    const { isActive, inView, incompatible, inProgress, isMessageVisible } = this.state
     const { messages } = this.props.intl
     const contentClasses = classNames(styles.content, {
       [styles.active]: isActive
     })
 
     return (
-      <div className={ styles.container }>
+      <div className={ styles.container } ref={ this.handleContainerRef }>
         <div className={ contentClasses }>
           <h1>{ messages.serviceWorker.sectionTitle }</h1>
           <span className={ styles.sectionDescription }>
             <p>{ messages.serviceWorker.sectionDesc }</p>
           </span>
-          <div className={ styles.message }>
-            <h6 className={ styles.title }>{ messages.serviceWorker.activationSuccessTitle }</h6>
-            <ReactMarkdown source={ messages.serviceWorker.activationSuccessText } />
-          </div>
           <Observer onChange={ this.handleObserverChange } >
-            <GatewaySvgAnimation isActive={ isActive } inView={ inView } />
+            <GatewaySvgAnimation isActive={ isActive }
+              inView={ inView }
+              isMessageVisible={ isMessageVisible }
+              onMessageCloseClick={ this.handleCloseClick }
+            />
           </Observer>
           <ToggleButton
             isActive={ isActive }
             onClick={ this.handleToggleClick }
             className={ styles.toggle }
-            incompatible={ icompatible }
+            incompatible={ incompatible }
             inProgress={ inProgress } />
           <ToastContainer
             className={ styles.toastContainer }
@@ -63,6 +78,14 @@ class GatewaySection extends Component {
         </div>
       </div>
     )
+  }
+
+  handleCloseClick = () => {
+    this.setState({ isMessageVisible: false })
+  }
+
+  handleContainerRef = (element) => {
+    this.sectionContainerRef = element
   }
 
   handleToggleClick = () => {
@@ -80,7 +103,7 @@ class GatewaySection extends Component {
 
     if (isActive) {
       unregister()
-        .then(() => this.setState({ isActive: false }))
+        .then(() => this.setState({ isActive: false, isMessageVisible: true }))
         .catch(() => toast.error(messages.serviceWorker.deactivationErrorMessage))
         .finally(() => this.setState({ inProgress: false }))
     } else {
