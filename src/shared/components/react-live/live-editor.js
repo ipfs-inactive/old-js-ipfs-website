@@ -13,6 +13,10 @@ export default class LiveEditor extends Component {
     this.context.live.onChange(this.code)
   }
 
+  componentDidUpdate () {
+    this.code = this.context.live.code
+  }
+
   render () {
     return (
       <Editor
