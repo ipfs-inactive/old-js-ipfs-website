@@ -48,20 +48,20 @@
         "desc": "IPFS foi desenhado para tirar proveito de endereçamento de conteúdo e processo para encontrar nós na rede com os dados dos quais procuras. Da mesma forma, todos os dados que forem adicionados também vão estar disponíveis para qualquer outro nó."
       },
       {
-        "title": "Use the DAG API to traverse over any hash linked data structure",
-        "desc": "IPFS uses [IPLD](https://ipld.io/), the InterPlanetary Linked-Data, a model that enables you interact with data from multiple sources, such as git, blockchains and more."
+        "title": "Usa a DAG API para atravessar qualquer estrutura de dados que seja ligada por hashes",
+        "desc": "IPFS use o [IPLD](https://ipld.io/), a \"InterPlanetary Linked-Data\", um modelo de dados que permite interagir com dados de muitas fontes, como por exemplo git, blockchains entre outras."
       },
       {
-        "title": "libp2p is built in",
-        "desc": "libp2p is the Modular Networking Stack that was created for IPFS and now you can use it through IPFS for your application directly as well."
+        "title": "libp2p incluída",
+        "desc": "libp2p é o stack de rede modular que foi criado para o IPFS e agora podes usar na tua aplicação através do IPFS."
       },
       {
-        "title": "Run it as a daemon",
-        "desc": "js-ipfs also comes with the option to run it as a daemon so that you can interact with it using the HTTP API that you are familiar with from go-ipfs."
+        "title": "Executa como um processo independente",
+        "desc": "js-ipfs vem também com a opção de ser executado como um processo independente que podes intereagir através da API HTTP que já estás famialirizado do go-ipfs."
       },
       {
-        "title": "Create stable addresses for changing data",
-        "desc": "It comes with IPNS, the Interplanetary Naming System, a way to author mutable pointers (records) to distribute updates in an authenticated and certified way."
+        "title": "Cria endereços estáveis para os dados em constante mudança",
+        "desc": "O IPNS, \"Interplanetary Naming System\", oferece uma forma de criar ponteiros mutáveis (registos) para propagar actualizações de uma forma certificada."
       }
     ]
   },
