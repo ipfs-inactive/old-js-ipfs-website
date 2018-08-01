@@ -53,7 +53,7 @@
       },
       {
         "title": "Wbudowany libp2p",
-        "desc": "libp2p jest modularnym stosem sieciowym stworzonym na potrzeby IPFS. Możliwy jest bezpośredni dostęp do libp2p, dzięki czemu możesz go wykorzystać we własnych aplikacjach."
+        "desc": "[libp2p](https://libp2p.io/) jest modularnym stosem sieciowym stworzonym na potrzeby IPFS. Możliwy jest bezpośredni dostęp do libp2p, dzięki czemu możesz go wykorzystać we własnych aplikacjach."
       },
       {
         "title": "Uruchom jako demon",

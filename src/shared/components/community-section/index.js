@@ -31,9 +31,9 @@ class Community extends Component {
             <div className={ styles.socialLinksContainer }>
               <p>{ messages.community.socialNetworksText }</p>
               <div className={ styles.socialLinks }>
-                <Button translationId="buttonIrcFreenode" path="/test" />
-                <Button translationId="buttonGithub" path="/test" modifier="github" />
-                <Button translationId="buttonTwitter" path="/test" modifier="twitter" />
+                <Button translationId="buttonIrcFreenode" href="http://webchat.freenode.net/?channels=%23ipfs" />
+                <Button translationId="buttonGithub" href="https://github.com/ipfs/js-ipfs" modifier="github" />
+                <Button translationId="buttonTwitter" href="https://twitter.com/ipfsbot" modifier="twitter" />
               </div>
             </div>
           </div>

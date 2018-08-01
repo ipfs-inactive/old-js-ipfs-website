@@ -20,21 +20,6 @@
   & .image {
     width: 70%;
     margin-bottom: 15px;
-
-    & svg {
-      & g[id="first_group"] {
-        & > path:first-child {
-          transition: var(--transition-default-duration) ease;
-        }
-
-        &:hover {
-          & > path:first-child {
-            fill: var(--color-yellow);
-          }
-        }
-
-      }
-    }
   }
 
   & .title {

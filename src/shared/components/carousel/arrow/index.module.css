@@ -1,0 +1,91 @@
+@import "shared/styles/imports/variables.css";
+
+.container {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  outline: 0;
+  opacity: 1;
+  background: none;
+  cursor: pointer;
+  transition: opacity var(--transition-default-duration) ease;
+
+  &:hover:not(:active) {
+    opacity: 0.6;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 60px;
+    height: 60px;
+  }
+
+  &.left {
+    left: -10px;
+
+    & .arrow {
+      transform: rotate(-135deg);
+    }
+
+  }
+
+  &.right {
+    right: -10px;
+
+    & .arrow {
+      transform: rotate(45deg);
+    }
+  }
+
+  & .arrow {
+    box-sizing: border-box;
+    width: 13px;
+    height: 12px;
+    margin: 0;
+    padding: 0;
+    transform: translate(0, -50%);
+    display: inline-block;
+    vertical-align: middle;
+    border-width: 4px 4px 0 0;
+    border-style: solid;
+    border-color: #b9b9b9;
+    background: transparent;
+    border-radius: 0 2px 0 0;
+    color: #b9b9b9;
+    text-align: left;
+    text-indent: -9999px;
+    white-space: nowrap;
+    transition: opacity 300ms ease;
+
+    &::before {
+      top: -3px;
+      right: 0;
+      width: 23px;
+      height: 4px;
+      transform: rotate(-45deg);
+      transform-origin: right top;
+      box-shadow: inset 0 0 0 32px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      border-radius: 2px;
+    }
+
+    &::after {
+      top: -4px;
+      left: -2px;
+      width: 4px;
+      height: 4px;
+      box-shadow: inset 0 0 0 32px, 11px 11px;
+    }
+  }
+}

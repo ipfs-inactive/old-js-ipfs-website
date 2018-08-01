@@ -4,17 +4,27 @@
   padding: unset !important;
 }
 
+.noPadding > button:first-of-type {
+  top: 35%;
+  left: -45px;
+}
+
+.noPadding > button:last-of-type {
+  top: 35%;
+  right: -45px;
+}
+
 .noPadding .slick-next,
 .noPadding .slick-prev {
   top: 35%;
 }
 
 .noPadding .slick-next {
-  right: -35px;
+  right: -55px;
 }
 
 .noPadding .slick-prev {
-  left: -35px;
+  left: -55px;
 }
 
 .slick-slider {
@@ -58,7 +68,6 @@
   left: 0;
   margin-left: auto;
   margin-right: auto;
-  display: block;
 }
 
 .slick-track::before,

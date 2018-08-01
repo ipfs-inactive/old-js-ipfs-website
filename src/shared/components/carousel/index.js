@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
 
+import Arrow from 'shared/components/carousel/arrow'
 import CarouselProjectsItem from 'shared/components/carousel/carousel-projects-item'
 import CarouselVideosItem from 'shared/components/carousel/carousel-videos-item'
 import './index.css'
@@ -12,7 +13,9 @@ const settings = {
   infinite: true,
   speed: 500,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  prevArrow: <Arrow direction="left"/>,
+  nextArrow: <Arrow/>
 }
 
 class Carousel extends Component {
@@ -44,6 +47,8 @@ class Carousel extends Component {
       numberOfSlidesToShow = 1
     }
 
+    settings.slidesToShow = numberOfSlidesToShow
+
     if (modifier === 'projects') {
       items = itemsList.map((item, index) => {
         const translationIndex = item.translationListIndex
@@ -74,7 +79,9 @@ class Carousel extends Component {
     const slideClassName = classNames({ noPadding: shouldRemovePadding })
 
     return (
-      <Slider { ...{ ...settings, slidesToShow: numberOfSlidesToShow } } className={ slideClassName } >
+      <Slider { ...settings }
+        className={ slideClassName }
+        lazyLoad='ondemand' >
         { items }
       </Slider>
     )
