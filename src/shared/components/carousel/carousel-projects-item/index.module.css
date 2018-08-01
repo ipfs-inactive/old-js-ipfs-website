@@ -1,11 +1,6 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
-:root {
-  --svg-color: #40477e;
-  --svg-opacity: 0.32;
-}
-
 .container {
   padding: 15px;
   display: flex;
@@ -31,10 +26,12 @@
 
         & svg {
           width: 100%;
+          max-height: 85px;
+        }
 
-          & > * {
-            opacity: var(--svg-opacity);
-            fill: var(--svg-color);
+        &.alignLeft {
+          & svg {
+            margin-left: -55%;
           }
         }
       }

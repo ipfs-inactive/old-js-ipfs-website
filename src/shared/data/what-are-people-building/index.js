@@ -1,8 +1,11 @@
 import React from 'react'
 
-import CompanionSvg from 'shared/media/images/what-are-people-building/companion.svg'
-import PeerpadSvg from 'shared/media/images/what-are-people-building/peerpad.svg'
 import ParatiiSvg from 'shared/media/images/what-are-people-building/paratii.svg'
+import FileNationSvg from 'shared/media/images/what-are-people-building/filenation.svg'
+import DwebArchiveSvg from 'shared/media/images/what-are-people-building/dwebarchive.svg'
+import PeerpadSvg from 'shared/media/images/what-are-people-building/peerpad.svg'
+import CompanionSvg from 'shared/media/images/what-are-people-building/companion.svg'
+import OrbitSvg from 'shared/media/images/what-are-people-building/orbitchat.svg'
 
 import CompanionPrintScreen from 'shared/media/images/what-are-people-building/companion.jpg'
 import FilenationPrintScreen from 'shared/media/images/what-are-people-building/filenation.jpg'
@@ -20,11 +23,13 @@ const projects = [
   },
   {
     translationListIndex: 1,
+    icon: <FileNationSvg />,
     image: FilenationPrintScreen,
     link: 'https://filenation.io'
   },
   {
     translationListIndex: 2,
+    icon: <DwebArchiveSvg />,
     image: DwebArchivePrintScreen,
     link: 'https://github.com/internetarchive/dweb-archive'
   },
@@ -42,6 +47,7 @@ const projects = [
   },
   {
     translationListIndex: 5,
+    icon: <OrbitSvg />,
     image: OrbitPrintScreen,
     link: 'https://orbit.chat'
   }
