@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import ReactPlayer from 'react-player'
 import PropTypes from 'prop-types'
+import Youtube from 'shared/components/youtube'
 
 import styles from './index.module.css'
 
@@ -10,13 +10,7 @@ class CarouselVideosItem extends Component {
 
     return (
       <div className={ styles.videoItemContainer } onClick={ this.handleRemainingVideoClick }>
-        <div className={ styles.videoPlaceholder }>
-          <ReactPlayer
-            className={ styles.reactPlayer }
-            url={ link }
-            width="100%"
-            height="100%" />
-        </div>
+        <Youtube link={ link } blockPlay/>
         <p className={ styles.videoTitle }>{ title }</p>
       </div>
     )
@@ -24,7 +18,6 @@ class CarouselVideosItem extends Component {
 
   handleRemainingVideoClick = () => {
     const { index, onClick } = this.props
-
     return onClick(index)
   }
 }

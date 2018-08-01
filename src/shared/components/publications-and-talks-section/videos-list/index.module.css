@@ -14,14 +14,7 @@
   & .selectedVideo {
     position: relative;
     overflow: hidden;
-    padding-top: var(--video-ratio);
     border-radius: var(--player-border-radius);
-
-    & .reactPlayer {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
   }
 
   & .remainingVideosContainer {
