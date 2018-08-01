@@ -24,6 +24,8 @@ const CID_LENGTH = 46
 
 class GettingStarted extends Component {
   state = {
+    runAdd: false,
+    runGet: false,
     ipfsLoaded: false,
     outputAdd: null,
     outputGet: null,
@@ -55,6 +57,8 @@ class GettingStarted extends Component {
     const { intl: { messages } } = this.props
     const {
       cid,
+      runAdd,
+      runGet,
       outputAdd,
       outputGet,
       ipfsLoaded
@@ -83,7 +87,7 @@ class GettingStarted extends Component {
                 <pre>
                   <code>{ outputAdd }</code>
                 </pre>
-                { ipfsLoaded && <LivePreview/> }
+                { (ipfsLoaded && runAdd) && <LivePreview/> }
                 { ipfsLoaded && <LiveError/> }
               </div>
             </LiveProvider>
@@ -100,7 +104,7 @@ class GettingStarted extends Component {
                 <pre>
                   <code>{ outputGet }</code>
                 </pre>
-                { (ipfsLoaded && cid) && <LivePreview/> }
+                { (ipfsLoaded && runGet) && <LivePreview/> }
                 { ipfsLoaded && <LiveError/> }
               </div>
             </LiveProvider>
@@ -140,8 +144,10 @@ jsipfs cat ${cid}` } language='bash' />
 
   handleRunClick = (editor) => () => {
     if (editor === 'add') {
+      this.setState({ runAdd: true })
       this.refAdd.current.run()
     } else {
+      this.setState({ runGet: true })
       this.refGet.current.run()
     }
   }
