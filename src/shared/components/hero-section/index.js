@@ -4,8 +4,6 @@ import { toast } from 'react-toastify'
 import { PropTypes } from 'prop-types'
 import axios from 'axios'
 import classNames from 'classnames'
-import { distanceInWordsToNow } from 'date-fns'
-import locales from 'utils/dateFnsLocales'
 import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
@@ -79,19 +77,21 @@ class Hero extends Component {
     const { intl } = this.props
     const { messages } = intl
 
-    const currentVersion = data.metadata.version
-    const currentVersionStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.currentVersion }, { version: currentVersion })
-
-    const dateFnsLocale = this.getDateFnsCurrentLocale(locales)
-    const isDateFnsLocaleFound = Boolean(dateFnsLocale)
-    const dateFnsLocaleObject = isDateFnsLocaleFound ? { locale: dateFnsLocale } : {}
-    const latestUpdateDate = new Date(data.metadata.date)
-    const latestUpdateWords = distanceInWordsToNow(latestUpdateDate, dateFnsLocaleObject)
-    const latestUpdateDateStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.latestUpdate }, { date: latestUpdateWords })
+    const currentVersionStr = intl.formatMessage(
+      { id: '_dummy', defaultMessage: messages.hero.currentVersion },
+      { version: data.metadata.version }
+    )
+    const latestUpdateDateStr = intl.formatMessage(
+      { id: '_dummy', defaultMessage: messages.hero.latestUpdate },
+      { date: intl.formatRelative(new Date(data.metadata.date)) }
+    )
 
     const downloads = this.calculateDownloads(data.npm.downloads, { lastMonth: true })
     const formattedDownloads = downloads.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-    const downloadsStr = intl.formatMessage({ id: '_dummy', defaultMessage: messages.hero.downloadsLastMonth }, { count: formattedDownloads })
+    const downloadsStr = intl.formatMessage(
+      { id: '_dummy', defaultMessage: messages.hero.downloadsLastMonth },
+      { count: formattedDownloads }
+    )
 
     const info = {
       currentVersionStr,
@@ -143,12 +143,6 @@ class Hero extends Component {
     }
 
     return false
-  }
-
-  getDateFnsCurrentLocale = (locales) => {
-    const currentLocale = this.props.intl.locale
-
-    return locales[currentLocale]
   }
 }
 
