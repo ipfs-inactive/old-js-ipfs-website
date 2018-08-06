@@ -1,6 +1,8 @@
 node_modules
 npm-debug.log
 /.cache
-/public
 /coverage
 /src/layouts/index-*.js
+!/public
+/public/*
+!/public/favicon
