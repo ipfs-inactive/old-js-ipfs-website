@@ -83,6 +83,7 @@
   }
 
   & .tooltip {
+    max-width: 75%;
     padding: 14px 20px;
   }
 }
