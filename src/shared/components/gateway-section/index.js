@@ -36,7 +36,7 @@ class GatewaySection extends Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
-    if (!prevState.isActive && this.state.isActive) {
+    if ((!prevState.isActive && this.state.isActive) && this.state.inView) {
       this.scrollTimeout = setTimeout(() => {
         scrollToComponent(this.sectionContainerRef, defaultScrollOptions)
       }, 2300)
