@@ -22,8 +22,12 @@
     display: flex;
     align-items: center;
 
-    & .textContainer strong {
-      margin-right: 5px;
+    & .textContainer {
+      line-height: 16px;
+
+      & strong {
+        margin-right: 5px;
+      }
     }
   }
 
