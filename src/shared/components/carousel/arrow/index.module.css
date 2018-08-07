@@ -45,7 +45,7 @@
   & .arrow {
     box-sizing: border-box;
     width: 13px;
-    height: 12px;
+    height: 13px;
     margin: 0;
     padding: 0;
     transform: translate(0, -50%);
@@ -55,7 +55,7 @@
     border-style: solid;
     border-color: #b9b9b9;
     background: transparent;
-    border-radius: 0 2px 0 0;
+    border-radius: 1px 2px 0 0;
     color: #b9b9b9;
     text-align: left;
     text-indent: -9999px;
