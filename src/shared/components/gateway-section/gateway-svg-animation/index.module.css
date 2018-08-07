@@ -237,9 +237,11 @@
     }
   }
 
-  & svg {
+  & .desktop svg {
     width: 120%;
+  }
 
+  & svg {
     & g[data-name="gateway"] {
       & g[data-name="white-connection"],
       & g[data-name="white-nodes"],
