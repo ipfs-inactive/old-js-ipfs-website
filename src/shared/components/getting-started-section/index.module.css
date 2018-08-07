@@ -131,12 +131,14 @@
   border: 0;
   outline: none;
   background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
   color: #fff;
   font-size: 12px;
   text-align: center;
   line-height: 22px;
   letter-spacing: 0;
   cursor: pointer;
+  transition: all var(--transition-default-duration) ease;
 }
 
 .liveSnippetRun:hover {
