@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { getDefaultLocale, getLocalesAcronym } from 'utils/getLocalesUtils'
+import { defaultLocale, availableLocales } from 'shared/intl-config'
 
 import Link from 'shared/components/link'
 import styles from './index.module.css'
@@ -10,13 +10,6 @@ import styles from './index.module.css'
 class LocalesDropdown extends Component {
   state = {
     isOpen: false
-  }
-
-  constructor (props) {
-    super(props)
-
-    this.availableLocales = getLocalesAcronym()
-    this.currentLocale = props.intl.locale
   }
 
   componentDidMount () {
@@ -28,6 +21,8 @@ class LocalesDropdown extends Component {
   }
 
   render () {
+    const { intl: { locale: currentLocale } } = this.props
+
     const dropButtonClasses = classNames(styles.dropButton, {
       [styles.openedDropdown]: this.state.isOpen
     })
@@ -38,22 +33,21 @@ class LocalesDropdown extends Component {
     const dropdownContentClasses = classNames(styles.dropdownContent, {
       [styles.show]: this.state.isOpen
     })
-    const defaultLocale = getDefaultLocale()
 
-    const availableLocalesOptions = this.availableLocales.map((locale, index) => {
-      const isSameLocale = locale === this.currentLocale
+    const availableLocalesOptions = availableLocales.map((locale, index) => {
+      const isSameLocale = locale.acronym === currentLocale
 
       if (isSameLocale) {
         return null
       }
 
-      const to = defaultLocale === locale ? '/' : `/${locale}`
+      const to = defaultLocale === locale.acronym ? '/' : `/${locale.acronym}`
 
       return (
         <Link key={ index }
           to={ to }
           prefixLocale={ false }>
-          { locale.toUpperCase() }
+          { locale.acronym.toUpperCase() }
         </Link>
       )
     })
@@ -61,7 +55,7 @@ class LocalesDropdown extends Component {
     return (
       <div className={ styles.dropdown }>
         <button className={ dropButtonClasses } onClick={ this.handleToggleDropdown }>
-          { this.currentLocale.toUpperCase() }
+          { currentLocale.toUpperCase() }
           <span className={ arrowClasses } />
         </button>
         <div className={ dropdownContentClasses }>

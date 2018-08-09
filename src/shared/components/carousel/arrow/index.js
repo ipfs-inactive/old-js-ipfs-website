@@ -14,13 +14,9 @@ const Arrow = ({ direction, onClick }) => {
   )
 }
 
-Arrow.defaultProps = {
-  direction: 'right'
-}
-
 Arrow.propTypes = {
   onClick: PropTypes.func,
-  direction: PropTypes.oneOf(['left', 'right'])
+  direction: PropTypes.oneOf(['left', 'right']).isRequired
 }
 
 export default Arrow

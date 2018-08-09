@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { PropTypes } from 'prop-types'
 import axios from 'axios'
 import classNames from 'classnames'
@@ -8,10 +9,11 @@ import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
 import LocalesBar from 'shared/components/locales-bar'
-import OutsideRingSvg from 'shared/media/backgrounds/outsidering.svg'
-import MiddleRingSvg from 'shared/media/backgrounds/middlering.svg'
-import InsideRingSvg from 'shared/media/backgrounds/insidering.svg'
-import CubeSvg from 'shared/media/images/cube.svg'
+import Svg from 'shared/components/svg'
+import outsideRingSvg from './images/outside-ring.sprite.svg'
+import middleRingSvg from './images/middle-ring.sprite.svg'
+import insideRingSvg from './images/inside-ring.sprite.svg'
+import cubeSvg from './images/cube.svg'
 import styles from './index.module.css'
 
 class Hero extends Component {
@@ -40,18 +42,18 @@ class Hero extends Component {
             <div className={ styles.orbitContainer } >
               <div className={ styles.orbits }>
                 <div className={ styles.outsideRing }>
-                  <OutsideRingSvg />
+                  <Svg svg={ outsideRingSvg } />
                 </div>
                 <div className={ styles.middleRing }>
-                  <MiddleRingSvg />
+                  <Svg svg={ middleRingSvg } />
                 </div>
                 <div className={ styles.insideRing }>
-                  <InsideRingSvg />
+                  <Svg svg={ insideRingSvg } />
                 </div>
               </div>
             </div>
             <div className={ styles.content }>
-              <CubeSvg />
+              <Svg svg={ cubeSvg } className={ styles.cube } />
               <h1>{ messages.hero.welcomeMessage }</h1>
               <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
               <div className={ infoContainerClasses }>

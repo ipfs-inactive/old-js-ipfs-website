@@ -19,18 +19,22 @@
     justify-content: space-between;
     align-items: center;
 
+    & .leftContent {
+      margin-right: 25px;
+    }
+
     & .rightContent {
-      margin-left: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
       & .text {
-        margin-right: 5px;
+        margin-right: 7px;
         text-align: right;
       }
 
-      & svg {
+      & .protocolLogo {
+        width: auto;
         height: 35px;
         fill: var(--color-text-footer);
       }

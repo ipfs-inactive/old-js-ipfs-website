@@ -1,13 +1,14 @@
 import React from 'react'
 
-import Item1Svg from 'shared/media/images/videostreaming.svg'
-import Item2Svg from 'shared/media/images/realtime.svg'
-import Item3Svg from 'shared/media/images/blockchain.svg'
+import Svg from 'shared/components/svg'
+import videoStreamingSvg from 'shared/media/images/video-streaming.sprite.svg'
+import realtimeSvg from 'shared/media/images/realtime.sprite.svg'
+import blockchainSvg from 'shared/media/images/blockchain.sprite.svg'
 
 const items = [
   {
     name: 'whatCanYouBuildItem1Name',
-    image: <Item1Svg />,
+    image: <Svg svg={ videoStreamingSvg } />,
     title: 'whatCanYouBuildItem1Title',
     subtitle: 'whatCanYouBuildItem1Subtitle',
     desc: 'whatCanYouBuildItem1Desc',
@@ -19,7 +20,7 @@ const items = [
   },
   {
     name: 'whatCanYouBuildItem2Name',
-    image: <Item2Svg />,
+    image: <Svg svg={ realtimeSvg } />,
     title: 'whatCanYouBuildItem2Title',
     subtitle: 'whatCanYouBuildItem2Subtitle',
     desc: 'whatCanYouBuildItem2Desc',
@@ -31,7 +32,7 @@ const items = [
   },
   {
     name: 'whatCanYouBuildItem3Name',
-    image: <Item3Svg />,
+    image: <Svg svg={ blockchainSvg } />,
     title: 'whatCanYouBuildItem3Title',
     subtitle: 'whatCanYouBuildItem3Subtitle',
     desc: 'whatCanYouBuildItem3Desc',

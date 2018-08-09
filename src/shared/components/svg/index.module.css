@@ -1,0 +1,16 @@
+@import "shared/styles/imports/variables.css";
+
+.svg {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  user-select: none;
+  transition: fill var(--transition-default-duration) ease, fill-opacity var(--transition-default-duration) ease;
+
+  & svg {
+    width: inherit;
+    height: inherit;
+    display: block;  /* Remove little margin between the svg and its parent */
+  }
+}

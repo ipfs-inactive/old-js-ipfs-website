@@ -1,7 +1,7 @@
 import React from 'react'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
-import FeatureItem from 'shared/components/features-section/feature-item'
+import FeatureItem from './feature-item'
 import ReactMarkdown from 'react-markdown'
 
 import featsArr from 'shared/data/features'
@@ -12,11 +12,12 @@ const Features = ({ intl: { messages } }) => {
   const translationFeats = messages.features.list
   const feats = featsArr.map((feat, index) => {
     const translationFeat = translationFeats[feat.translationListIndex]
+
     return (
       <FeatureItem key={ `feat-${index}` }
         title={ translationFeat.title }
         description={ translationFeat.desc }
-        icon={ feat.icon } />
+        image={ feat.image } />
     )
   })
 

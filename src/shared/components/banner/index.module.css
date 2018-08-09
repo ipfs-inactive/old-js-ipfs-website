@@ -15,10 +15,6 @@
 
   & .iconContainer {
     flex: 0 0 26px;
-
-    & svg {
-      width: 100%;
-    }
   }
 
   & .wrapContainer {

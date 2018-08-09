@@ -74,9 +74,8 @@
       }
 
       & .close {
-        min-width: 19px;
-        min-height: 19px;
         margin: 20px;
+        flex: 0 0 19px;
 
         & svg {
           opacity: 0.8;
@@ -140,24 +139,24 @@
     }
 
     & svg {
-      & g[id="gateway"] {
-        & g[id="_white-connection_"],
-        & g[id="_white-nodes_"],
-        & g[id="_http-gateway-arrow_"] {
+      & g[data-name="gateway"] {
+        & g[data-name="white-connection"],
+        & g[data-name="white-nodes"],
+        & g[data-name="http-gateway-arrow"] {
           opacity: 0.3;
           transition: opacity 500ms ease-in-out;
           stroke-dasharray: 2;
         }
       }
 
-      & g[id="service-worker"] {
-        & g[id="_yellow-nodes_"] {
+      & g[data-name="service-worker"] {
+        & g[data-name="yellow-nodes"] {
           opacity: 1;
           transition: opacity 1s ease-in-out;
           transition-delay: 2s;
         }
 
-        & g[id="_browser-service-worker-arrow_"] {
+        & g[data-name="browser-service-worker-arrow"] {
           opacity: 1;
           animation: fillIn 3s linear forwards;
           animation-delay: 300ms;
@@ -171,14 +170,14 @@
           }
         }
 
-        & g[id="_service-worker-icon_"],
-        & path[id="_service-worker-text_"] {
+        & g[data-name="service-worker-icon"],
+        & path[data-name="service-worker-text"] {
           opacity: 1;
           transition: opacity 1s ease-in-out;
           transition-delay: 500ms;
         }
 
-        & g[id="_yellow-conection_"] {
+        & g[data-name="yellow-conection"] {
           opacity: 1;
 
           & path {
@@ -241,22 +240,22 @@
   & svg {
     width: 120%;
 
-    & g[id="gateway"] {
-      & g[id="_white-connection_"],
-      & g[id="_white-nodes_"],
-      & g[id="_http-gateway-arrow_"] {
+    & g[data-name="gateway"] {
+      & g[data-name="white-connection"],
+      & g[data-name="white-nodes"],
+      & g[data-name="http-gateway-arrow"] {
         opacity: 1;
         transition: opacity 500ms ease-in-out;
       }
     }
 
-    & g[id="service-worker"] {
-      & g[id="_yellow-nodes_"] {
+    & g[data-name="service-worker"] {
+      & g[data-name="yellow-nodes"] {
         opacity: 0;
         transition: opacity 500ms ease-in-out;
       }
 
-      & g[id="_browser-service-worker-arrow_"] {
+      & g[data-name="browser-service-worker-arrow"] {
         opacity: 0;
         transition: opacity 500ms ease-in-out;
 
@@ -266,13 +265,13 @@
         }
       }
 
-      & g[id="_service-worker-icon_"],
-      & path[id="_service-worker-text_"] {
+      & g[data-name="service-worker-icon"],
+      & path[data-name="service-worker-text"] {
         opacity: 0;
         transition: opacity 500ms ease-in-out;
       }
 
-      & g[id="_yellow-conection_"] {
+      & g[data-name="yellow-conection"] {
         opacity: 0;
         transition: opacity 500ms ease-in-out;
       }

@@ -10,12 +10,11 @@ const path = require('path')
 const fs = require('fs')
 const template = require('lodash/template')
 const wrap = require('lodash/wrap')
-const { defaultLocale } = require('./intl/config')
+const { defaultLocale, availableLocales } = require('./intl/config')
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
-const { getLocalesAcronym } = require('./src/utils/getLocalesUtils')
-const availableLocalesAcronym = getLocalesAcronym()
+const SvgStorePlugin = require('external-svg-sprite-loader/lib/SvgStorePlugin')
 
-module.exports.modifyWebpackConfig = ({ config, program }) => {
+module.exports.modifyWebpackConfig = ({ config, program, stage }) => {
   // Allow requires from the src/ folder
   config.merge({
     resolve: {
@@ -32,20 +31,6 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
 
     return current
   })
-
-  // Add prefix to all svg class or id selectors to avoid styles override
-  // config.merge((current) => {
-  //     config.loader('svg-react-loader', (current) => {
-  //         current.query = {
-  //             ...current.query,
-  //             classIdPrefix: true,
-  //         };
-  //
-  //         return current;
-  //     });
-  //
-  //     return current;
-  // });
 
   // Allow requires from the src/ folder for postcss
   config.merge((current) => {
@@ -114,17 +99,107 @@ module.exports.modifyWebpackConfig = ({ config, program }) => {
 
     return current
   })
+
+  // SVGs (external + inline + standard)
+  config.merge((current) => {
+    // External SVGs
+    config.loader('external-svgs-1', (current) => ({
+      test: /\.sprite\.svg$/,
+      loader: 'external-svg-sprite-loader',
+      query: {
+        test: /\.svg$/,
+        name: 'static/svg-sprite.[hash].svg'
+      }
+    }))
+
+    config.loader('external-svgs-2', (current) => ({
+      test: /\.sprite\.svg$/,
+      loader: 'svgo-loader',
+      query: {
+        plugins: [
+          { removeViewBox: false },
+          { removeDimensions: true },
+          { inlineStyles: { onlyMatchedOnce: false } },
+          { removeAttrs: { attrs: 'class' } }
+        ]
+      }
+    }))
+
+    current.plugins.push(new SvgStorePlugin())
+
+    // Inline SVGs
+    config.loader('inline-svgs-1', () => ({
+      loader: 'raw-loader',
+      test: /\.inline\.svg$/
+    }))
+
+    config.loader('inline-svgs-2', () => ({
+      loader: 'svgo-loader',
+      test: /\.inline\.svg$/
+    }))
+
+    config.loader('inline-svgs-3', () => ({
+      loader: 'svg-css-modules-loader',
+      test: /\.inline\.svg$/,
+      query: {
+        transformId: true
+      }
+    }))
+
+    // Standard SVGs referenced by a URL
+    config.loader('standard-svgs-1', () => ({
+      test: /\.svg$/,
+      exclude: [/\.sprite\.svg$/, /\.inline\.svg$/],
+      loader: 'file-loader'
+    }))
+
+    config.loader('standard-svgs-2', () => ({
+      test: /\.svg$/,
+      exclude: [/\.sprite\.svg$/, /\.inline\.svg$/],
+      loader: 'svgo-loader',
+      query: {
+        plugins: [
+          { inlineStyles: { onlyMatchedOnce: false } },
+          { removeAttrs: { attrs: 'class' } }
+        ]
+      }
+    }))
+
+    // Ensure that the Gatsby's default SVG handling doesn't mess with the previous declarations
+    config.loader('url-loader', (current) => ({
+      ...current,
+      exclude: /\.svg$/
+    }))
+
+    return current
+  })
+
+  // Do not inline images
+  // We have a lot of small images that summed together increase the inital HTML files by a lot
+  config.loader('url-loader', (current) => ({
+    ...current,
+    loader: 'file-loader'
+  }))
+
+  // Shrink CSS module class names in production
+  if (stage === 'build-css' || stage === 'build-javascript' || stage === 'build-html') {
+    config.loader('cssModules', (current) => ({
+      ...current,
+      loader: current.loader.replace(/localIdentName=[^!]+/, 'localIdentName=[hash:base64:10]')
+    }))
+  }
 }
 
 exports.createLayouts = () => {
   // Create a layout for each locale, based on a template
   const layoutTemplate = fs.readFileSync(path.join(__dirname, 'src/layouts/index.js'))
 
-  availableLocalesAcronym.forEach((locale) => {
-    const localeLayout = template(layoutTemplate)({ locale })
-      .replace(/LayoutQuery/, `LayoutQuery_${locale}`)
+  availableLocales.forEach((locale) => {
+    const acronym = locale.acronym
+    const localeLayout = template(layoutTemplate)({ locale: acronym })
+      .replace(/LayoutQuery/, `LayoutQuery_${acronym}`)
 
-    fs.writeFileSync(path.join(__dirname, `src/layouts/index-${locale}.js`), localeLayout)
+    fs.writeFileSync(path.join(__dirname, `src/layouts/index-${acronym}.js`), localeLayout)
   })
 }
 
@@ -134,11 +209,13 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
 
   deletePage(page)
 
-  availableLocalesAcronym.forEach((locale) => {
+  availableLocales.forEach((locale) => {
+    const acronym = locale.acronym
+
     createPage({
       ...page,
-      layout: `index-${locale}`,
-      path: locale === defaultLocale ? page.path : `/${locale}${page.path}`
+      layout: `index-${acronym}`,
+      path: acronym === defaultLocale ? page.path : `/${acronym}${page.path}`
     })
   })
 }

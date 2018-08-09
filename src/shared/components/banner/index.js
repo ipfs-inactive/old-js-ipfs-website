@@ -2,13 +2,14 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 import { PropTypes } from 'prop-types'
 
-import AlphaSvg from 'shared/media/icons/alpha-sign.svg'
+import Svg from 'shared/components/svg'
+import alphaSignSvg from './images/alpha-sign.sprite.svg'
 import styles from './index.module.css'
 
 const Banner = ({ intl: { messages } }) => (
   <div className={ styles.container }>
     <div className={ styles.iconContainer }>
-      <AlphaSvg />
+      <Svg svg={ alphaSignSvg } />
     </div>
     <div className={ styles.wrapContainer }>
       <div className={ styles.textContainer } >
