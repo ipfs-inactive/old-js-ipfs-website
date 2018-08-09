@@ -138,7 +138,7 @@
   line-height: 22px;
   letter-spacing: 0;
   cursor: pointer;
-  transition: all var(--transition-default-duration) ease;
+  transition: background var(--transition-default-duration) ease, color var(--transition-default-duration) ease;
 }
 
 .liveSnippetRun:hover {
