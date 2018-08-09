@@ -21,7 +21,6 @@ class ToggleButton extends Component {
     const titleClasses = classnames(styles.title, {
       [styles.active]: isActive
     })
-    const toggleText = this.getToggleText()
 
     return (
       <div data-tip data-for='incompatible-sw' className={ wrapperClasses }>
@@ -29,7 +28,7 @@ class ToggleButton extends Component {
           <span className={ sliderClasses } />
         </label>
         <span className={ titleClasses }>
-          { toggleText }
+          { this.getToggleText() }
         </span>
         {
           incompatible && (
@@ -50,11 +49,7 @@ class ToggleButton extends Component {
     const { isActive, inProgress, intl: { messages } } = this.props
 
     if (!isActive) {
-      if (!inProgress) {
-        return messages.serviceWorker.toggleText
-      } else {
-        return messages.serviceWorker.activatingToggleText
-      }
+      return (!inProgress ? messages.serviceWorker.toggleText : messages.serviceWorker.activatingToggleText)
     }
     return messages.serviceWorker.activatedToggleText
   }
