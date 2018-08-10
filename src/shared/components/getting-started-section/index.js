@@ -6,19 +6,19 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import LiveEditor from 'shared/components/react-live/live-editor'
 import LivePreview from 'shared/components/react-live/live-preview'
-import HexSvg from 'shared/media/backgrounds/hexagons.svg'
+import Svg from 'shared/components/svg'
 import Button from 'shared/components/button'
 import Link from 'shared/components/link'
+import SyntaxHighlighter from 'shared/components/syntax-highlighter'
 import {
   transformCode,
   log,
   getIpfs,
   codeAdd,
   codeGet
-} from 'utils/react-live-utils'
+} from 'shared/utils/react-live'
+import hexagonsSvg from 'shared/media/images/hexagons.sprite.svg'
 import styles from './index.module.css'
-import SyntaxHighlighter from 'shared/components/syntax-highlighter'
-import 'prismjs/themes/prism-okaidia.css'
 
 const CID_LENGTH = 46
 
@@ -44,9 +44,9 @@ class GettingStarted extends Component {
   componentDidMount () {
     getIpfs().then(stubed => {
       this.ipfs = stubed
-      this.scopeAdd = {IPFS: this.ipfs, console: log(this.handleChange('add'))}
-      this.scopeGet = {IPFS: this.ipfs, console: log(this.handleChange('get'))}
-      this.setState({ipfsLoaded: true})
+      this.scopeAdd = { IPFS: this.ipfs, console: log(this.handleChange('add')) }
+      this.scopeGet = { IPFS: this.ipfs, console: log(this.handleChange('get')) }
+      this.setState({ ipfsLoaded: true })
     }).catch((err) => {
       console.log(err)
       toast.error('Error getting IPFS')
@@ -67,8 +67,8 @@ class GettingStarted extends Component {
     return (
       <div className={ styles.container } id="gsContainer">
         <div className={ styles.backgroundSvg }>
-          <div className={ styles.hex1 }><HexSvg /></div>
-          <div className={ styles.hex2 }><HexSvg /></div>
+          <div className={ styles.hex1 }><Svg svg={ hexagonsSvg } /></div>
+          <div className={ styles.hex2 }><Svg svg={ hexagonsSvg } /></div>
         </div>
         <div className={ styles.content }>
           <h1>{ messages.gettingStarted.sectionTitle }</h1>
@@ -134,11 +134,11 @@ jsipfs cat ${cid}` } language='bash' />
 
     if (editor === 'add') {
       if (typeof content === 'string' && content.length === CID_LENGTH && content !== this.state.cid) {
-        this.setState({cid: content})
+        this.setState({ cid: content })
       }
-      this.setState({outputAdd: content})
+      this.setState({ outputAdd: content })
     } else {
-      this.setState({outputGet: content})
+      this.setState({ outputGet: content })
     }
   }
 

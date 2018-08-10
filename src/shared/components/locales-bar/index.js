@@ -2,23 +2,20 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
-import { getDefaultLocale, getLocales, getIndexByAcronym } from 'utils/getLocalesUtils'
+import { defaultLocale, availableLocales } from 'shared/intl-config'
 
 import Link from 'shared/components/link'
 import styles from './index.module.css'
 
-const LocalesBar = ({ intl: { locale }, className }) => {
-  const locales = getLocales()
-  const currentLocaleIndex = getIndexByAcronym(locale)
+const LocalesBar = ({ intl: { locale: currentLocale }, className }) => {
   const localesBarClassName = classNames(styles.localesBar, className)
-  const defaultLocale = getDefaultLocale()
-  const renderLocales = locales.map((locale, index) => {
+  const renderLocales = availableLocales.map((locale, index) => {
     const to = defaultLocale === locale.acronym ? '/' : `/${locale.acronym}/`
 
     return (
       <Link key={ `locale-${index}` }
         prefixLocale={ false }
-        className={ classNames(index === currentLocaleIndex && styles.active) }
+        className={ classNames(currentLocale === locale.acronym && styles.active) }
         to={ to } >
         { locale.fullForm }
       </Link>

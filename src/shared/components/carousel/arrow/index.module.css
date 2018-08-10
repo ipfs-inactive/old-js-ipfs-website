@@ -60,7 +60,7 @@
     text-align: left;
     text-indent: -9999px;
     white-space: nowrap;
-    transition: opacity 300ms ease;
+    transition: opacity var(--transition-default-duration) ease;
 
     &::before {
       top: -3px;

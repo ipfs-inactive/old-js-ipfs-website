@@ -4,7 +4,8 @@ import { PropTypes } from 'prop-types'
 import ReactMarkdown from 'react-markdown'
 import Observer from '@researchgate/react-intersection-observer'
 
-import HexSvg from 'shared/media/backgrounds/hexagons.svg'
+import Svg from 'shared/components/svg'
+import hexagonsSvg from 'shared/media/images/hexagons.sprite.svg'
 import data from 'shared/data/community'
 import Button from 'shared/components/button'
 import styles from './index.module.css'
@@ -22,8 +23,8 @@ class Community extends Component {
       <Observer onChange={ this.handleObserverChange }>
         <div className={ styles.container }>
           <div className={ styles.backgroundSvg }>
-            <div className={ styles.hex1 }><HexSvg /></div>
-            <div className={ styles.hex2 }><HexSvg /></div>
+            <div className={ styles.hex1 }><Svg svg={ hexagonsSvg } /></div>
+            <div className={ styles.hex2 }><Svg svg={ hexagonsSvg } /></div>
           </div>
           <div className={ styles.content }>
             <h1>{ messages.community.sectionTitle }</h1>

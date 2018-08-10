@@ -4,10 +4,10 @@ import ReactMarkdown from 'react-markdown'
 
 import styles from './index.module.css'
 
-const FeatureItem = ({ icon, title, description }) => (
+const FeatureItem = ({ image, title, description }) => (
   <div className={ styles.featureItem }>
     <div className={ styles.image }>
-      { icon }
+      { image }
     </div>
     <ReactMarkdown className={ styles.title } source={ title } />
     <ReactMarkdown className={ styles.description } source={ description } />
@@ -15,7 +15,7 @@ const FeatureItem = ({ icon, title, description }) => (
 )
 
 FeatureItem.propTypes = {
-  icon: PropTypes.element.isRequired,
+  image: PropTypes.element.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 }

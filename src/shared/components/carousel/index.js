@@ -4,8 +4,8 @@ import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
 
 import Arrow from 'shared/components/carousel/arrow'
-import CarouselProjectsItem from 'shared/components/carousel/carousel-projects-item'
-import CarouselVideosItem from 'shared/components/carousel/carousel-videos-item'
+import ProjectsItem from './projects-item'
+import VideosItem from './videos-item'
 import './index.css'
 
 const settings = {
@@ -15,45 +15,30 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow: <Arrow direction="left"/>,
-  nextArrow: <Arrow/>
+  nextArrow: <Arrow direction="right"/>
 }
 
 class Carousel extends Component {
   state = {
-    isMobile: undefined
+    isMobile: typeof window === 'undefined' ? false : window.innerWidth <= 768
   }
 
   componentDidMount () {
-    window.addEventListener('resize', this.updateWindowDimensions)
-
-    this.timeout = setTimeout(() => {
-      this.setState({
-        isMobile: window.innerWidth <= 768
-      })
-    }, 15)
-  }
-
-  componentWillUnmount () {
-    clearTimeout(this.timeout)
+    window.addEventListener('resize', this.handleResize)
   }
 
   render () {
     let items
     const { itemsList, modifier, size, onVideoClick, activeIndex, translationsList } = this.props
     const { isMobile } = this.state
-
-    let numberOfSlidesToShow = size
-    if (isMobile) {
-      numberOfSlidesToShow = 1
-    }
-
-    settings.slidesToShow = numberOfSlidesToShow
+    const numberOfSlidesToShow = isMobile ? 1 : size
+    const finalSettings = { ...settings, slidesToShow: numberOfSlidesToShow }
 
     if (modifier === 'projects') {
       items = itemsList.map((item, index) => {
         const translationIndex = item.translationListIndex
         return (
-          <CarouselProjectsItem key={ `carousel-item-${index}` }
+          <ProjectsItem key={ `carousel-item-${index}` }
             icon={ item.icon }
             desc={ translationsList[translationIndex].desc }
             link={ item.link }
@@ -65,7 +50,7 @@ class Carousel extends Component {
       items = itemsList.map((item, index) => {
         return (
           index !== activeIndex &&
-            <CarouselVideosItem key={ `carousel-videos-item-${index}` }
+            <VideosItem key={ `carousel-videos-item-${index}` }
               link={ item.link }
               title={ item.title }
               index={ index }
@@ -79,7 +64,7 @@ class Carousel extends Component {
     const slideClassName = classNames({ noPadding: shouldRemovePadding })
 
     return (
-      <Slider { ...settings }
+      <Slider { ...finalSettings }
         className={ slideClassName }
         lazyLoad='ondemand' >
         { items }
@@ -87,10 +72,9 @@ class Carousel extends Component {
     )
   }
 
-  checkWindow = () => typeof window !== 'undefined'
-
-  updateWindowDimensions = () => {
+  handleResize = () => {
     const { isMobile } = this.state
+
     if ((window.innerWidth <= 768 && !isMobile) || (window.innerWidth > 768 && isMobile)) {
       this.setState(({ isMobile }) => ({ isMobile: !isMobile }))
     }

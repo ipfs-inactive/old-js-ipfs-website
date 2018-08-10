@@ -4,44 +4,45 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactMarkdown from 'react-markdown'
 
-import MobileGatewaySvg from 'shared/media/images/gateway-section/mobile-gateway.svg'
-import MobileGatewayBeams1 from 'shared/media/images/gateway-section/mobile-gateway-beams-1.svg'
-import MobileGatewayBlueBeams from 'shared/media/images/gateway-section/mobile-gateway-blue-beams.svg'
+import Svg from 'shared/components/svg'
+import mobileGatewaySvg from '../images/animation/mobile-gateway.inline.svg'
+import mobileGatewayBeams1 from '../images/animation/mobile-gateway-beams-1.inline.svg'
+import mobileGatewayBlueBeams from '../images/animation/mobile-gateway-blue-beams.inline.svg'
 
-import MobileServiceWorkerBeam1 from 'shared/media/images/gateway-section/mobile-serviceworker-yellowbeam-1.svg'
-import MobileServiceWorkerBeam2 from 'shared/media/images/gateway-section/mobile-serviceworker-yellowbeam-2.svg'
-import MobileServiceWorkerArrowBeams from 'shared/media/images/gateway-section/mobile-serviceworker-arrow-beams.svg'
+import mobileServiceWorkerBeam1 from '../images/animation/mobile-serviceworker-yellowbeam-1.inline.svg'
+import mobileServiceWorkerBeam2 from '../images/animation/mobile-serviceworker-yellowbeam-2.inline.svg'
+import mobileServiceWorkerArrowBeams from '../images/animation/mobile-serviceworker-arrow-beams.inline.svg'
 
-import MobileBeamsNodes1 from 'shared/media/images/gateway-section/mobile-beams-nodes-1.svg'
-import MobileBeamsNodes2 from 'shared/media/images/gateway-section/mobile-beams-nodes-2.svg'
-import MobileBeamsNodes3 from 'shared/media/images/gateway-section/mobile-beams-nodes-3.svg'
-import MobileBeamsNodes4 from 'shared/media/images/gateway-section/mobile-beams-nodes-4.svg'
+import mobileBeamsNodes1 from '../images/animation/mobile-beams-nodes-1.inline.svg'
+import mobileBeamsNodes2 from '../images/animation/mobile-beams-nodes-2.inline.svg'
+import mobileBeamsNodes3 from '../images/animation/mobile-beams-nodes-3.inline.svg'
+import mobileBeamsNodes4 from '../images/animation/mobile-beams-nodes-4.inline.svg'
 
-import GatewaySvg from 'shared/media/images/gateway-section/gateway.svg'
-import GatewayBlueBeams from 'shared/media/images/gateway-section/gateway-blue-beams.svg'
-import GatewayWhiteBeam1 from 'shared/media/images/gateway-section/gateway-whitebeam-1.svg'
-import GatewayWhiteBeam2 from 'shared/media/images/gateway-section/gateway-whitebeam-2.svg'
+import gatewaySvg from '../images/animation/gateway.inline.svg'
+import gatewayBlueBeams from '../images/animation/gateway-blue-beams.inline.svg'
+import gatewayWhiteBeam1 from '../images/animation/gateway-whitebeam-1.inline.svg'
+import gatewayWhiteBeam2 from '../images/animation/gateway-whitebeam-2.inline.svg'
 
-import ServiceWorkerBeam1 from 'shared/media/images/gateway-section/serviceworker-yellowbeam-1.svg'
-import ServiceWorkerBeam2 from 'shared/media/images/gateway-section/serviceworker-yellowbeam-2.svg'
-import ServiceWorkerBeam3 from 'shared/media/images/gateway-section/serviceworker-yellowbeam-3.svg'
-import ServiceWorkerBeam4 from 'shared/media/images/gateway-section/serviceworker-yellowbeam-4.svg'
-import ServiceWorkerArrowBeams from 'shared/media/images/gateway-section/service-worker-arrow-beams.svg'
+import serviceWorkerBeam1 from '../images/animation/serviceworker-yellowbeam-1.inline.svg'
+import serviceWorkerBeam2 from '../images/animation/serviceworker-yellowbeam-2.inline.svg'
+import serviceWorkerBeam3 from '../images/animation/serviceworker-yellowbeam-3.inline.svg'
+import serviceWorkerBeam4 from '../images/animation/serviceworker-yellowbeam-4.inline.svg'
+import serviceWorkerArrowBeams from '../images/animation/service-worker-arrow-beams.inline.svg'
 
-import BeamsNodes1 from 'shared/media/images/gateway-section/beams-nodes-1.svg'
-import BeamsNodes2 from 'shared/media/images/gateway-section/beams-nodes-2.svg'
-import BeamsNodes3 from 'shared/media/images/gateway-section/beams-nodes-3.svg'
-import BeamsNodes4 from 'shared/media/images/gateway-section/beams-nodes-4.svg'
-import BeamsNodes5 from 'shared/media/images/gateway-section/beams-nodes-5.svg'
-import BeamsNodes6 from 'shared/media/images/gateway-section/beams-nodes-6.svg'
-import BeamsNodes7 from 'shared/media/images/gateway-section/beams-nodes-7.svg'
-import BeamsNodes8 from 'shared/media/images/gateway-section/beams-nodes-8.svg'
-import BeamsNodes9 from 'shared/media/images/gateway-section/beams-nodes-9.svg'
-import BeamsNodes10 from 'shared/media/images/gateway-section/beams-nodes-10.svg'
-import BeamsNodes11 from 'shared/media/images/gateway-section/beams-nodes-11.svg'
-import BeamsNodes12 from 'shared/media/images/gateway-section/beams-nodes-12.svg'
+import beamsNodes1 from '../images/animation/beams-nodes-1.inline.svg'
+import beamsNodes2 from '../images/animation/beams-nodes-2.inline.svg'
+import beamsNodes3 from '../images/animation/beams-nodes-3.inline.svg'
+import beamsNodes4 from '../images/animation/beams-nodes-4.inline.svg'
+import beamsNodes5 from '../images/animation/beams-nodes-5.inline.svg'
+import beamsNodes6 from '../images/animation/beams-nodes-6.inline.svg'
+import beamsNodes7 from '../images/animation/beams-nodes-7.inline.svg'
+import beamsNodes8 from '../images/animation/beams-nodes-8.inline.svg'
+import beamsNodes9 from '../images/animation/beams-nodes-9.inline.svg'
+import beamsNodes10 from '../images/animation/beams-nodes-10.inline.svg'
+import beamsNodes11 from '../images/animation/beams-nodes-11.inline.svg'
+import beamsNodes12 from '../images/animation/beams-nodes-12.inline.svg'
 
-import CloseIcon from 'shared/media/icons/close-icon.svg'
+import closeIconSvg from '../images/close-icon.sprite.svg'
 
 import styles from './index.module.css'
 
@@ -64,7 +65,7 @@ class GatewaySvgAnimation extends Component {
               { messages.serviceWorker.activationSuccessTitle }
             </div>
             <div className={ styles.close }>
-              <CloseIcon onClick={ this.handleCloseClick }/>
+              <Svg svg={ closeIconSvg } onClick={ this.handleCloseClick }/>
             </div>
           </div>
           <div className={ styles.body }>
@@ -77,99 +78,99 @@ class GatewaySvgAnimation extends Component {
 
   renderDesktopGateway = () => (
     <div className={ styles.desktop }>
-      <GatewaySvg />
+      <Svg svg={ gatewaySvg } />
       <div className={ styles.gatewayBlueBeams }>
-        <GatewayBlueBeams />
+        <Svg svg={ gatewayBlueBeams } />
       </div>
       <div className={ styles.gatewayWhiteBeam1 }>
-        <GatewayWhiteBeam1 />
+        <Svg svg={ gatewayWhiteBeam1 } />
       </div>
       <div className={ styles.gatewayWhiteBeam2 }>
-        <GatewayWhiteBeam2 />
+        <Svg svg={ gatewayWhiteBeam2 } />
       </div>
       <div className={ styles.serviceWorkerBeam1 }>
-        <ServiceWorkerBeam1 />
+        <Svg svg={ serviceWorkerBeam1 } />
       </div>
       <div className={ styles.serviceWorkerBeam2 }>
-        <ServiceWorkerBeam2 />
+        <Svg svg={ serviceWorkerBeam2 } />
       </div>
       <div className={ styles.serviceWorkerBeam3 }>
-        <ServiceWorkerBeam3 />
+        <Svg svg={ serviceWorkerBeam3 } />
       </div>
       <div className={ styles.serviceWorkerBeam4 }>
-        <ServiceWorkerBeam4 />
+        <Svg svg={ serviceWorkerBeam4 } />
       </div>
       <div className={ styles.serviceWorkerArrowBeams }>
-        <ServiceWorkerArrowBeams />
+        <Svg svg={ serviceWorkerArrowBeams } />
       </div>
       <div className={ styles.beamsNodes1 }>
-        <BeamsNodes1 />
+        <Svg svg={ beamsNodes1 } />
       </div>
       <div className={ styles.beamsNodes2 }>
-        <BeamsNodes2 />
+        <Svg svg={ beamsNodes2 } />
       </div>
       <div className={ styles.beamsNodes3 }>
-        <BeamsNodes3 />
+        <Svg svg={ beamsNodes3 } />
       </div>
       <div className={ styles.beamsNodes4 }>
-        <BeamsNodes4 />
+        <Svg svg={ beamsNodes4 } />
       </div>
       <div className={ styles.beamsNodes5 }>
-        <BeamsNodes5 />
+        <Svg svg={ beamsNodes5 } />
       </div>
       <div className={ styles.beamsNodes6 }>
-        <BeamsNodes6 />
+        <Svg svg={ beamsNodes6 } />
       </div>
       <div className={ styles.beamsNodes7 }>
-        <BeamsNodes7 />
+        <Svg svg={ beamsNodes7 } />
       </div>
       <div className={ styles.beamsNodes8 }>
-        <BeamsNodes8 />
+        <Svg svg={ beamsNodes8 } />
       </div>
       <div className={ styles.beamsNodes9 }>
-        <BeamsNodes9 />
+        <Svg svg={ beamsNodes9 } />
       </div>
       <div className={ styles.beamsNodes10 }>
-        <BeamsNodes10 />
+        <Svg svg={ beamsNodes10 } />
       </div>
       <div className={ styles.beamsNodes11 }>
-        <BeamsNodes11 />
+        <Svg svg={ beamsNodes11 } />
       </div>
       <div className={ styles.beamsNodes12 }>
-        <BeamsNodes12 />
+        <Svg svg={ beamsNodes12 } />
       </div>
     </div>
   )
 
   renderMobileGateway = () => (
     <div className={ styles.mobile }>
-      <MobileGatewaySvg />
+      <Svg svg={ mobileGatewaySvg } />
       <div className={ styles.gatewayBlueBeams }>
-        <MobileGatewayBlueBeams />
+        <Svg svg={ mobileGatewayBlueBeams } />
       </div>
       <div className={ styles.gatewayWhiteBeam1 }>
-        <MobileGatewayBeams1 />
+        <Svg svg={ mobileGatewayBeams1 } />
       </div>
       <div className={ styles.serviceWorkerBeam1 }>
-        <MobileServiceWorkerBeam1 />
+        <Svg svg={ mobileServiceWorkerBeam1 } />
       </div>
       <div className={ styles.serviceWorkerBeam2 }>
-        <MobileServiceWorkerBeam2 />
+        <Svg svg={ mobileServiceWorkerBeam2 } />
       </div>
       <div className={ styles.serviceWorkerArrowBeams }>
-        <MobileServiceWorkerArrowBeams />
+        <Svg svg={ mobileServiceWorkerArrowBeams } />
       </div>
       <div className={ styles.beamsNodes1 }>
-        <MobileBeamsNodes1 />
+        <Svg svg={ mobileBeamsNodes1 } />
       </div>
       <div className={ styles.beamsNodes2 }>
-        <MobileBeamsNodes2 />
+        <Svg svg={ mobileBeamsNodes2 } />
       </div>
       <div className={ styles.beamsNodes3 }>
-        <MobileBeamsNodes3 />
+        <Svg svg={ mobileBeamsNodes3 } />
       </div>
       <div className={ styles.beamsNodes4 }>
-        <MobileBeamsNodes4 />
+        <Svg svg={ mobileBeamsNodes4 } />
       </div>
     </div>
   )

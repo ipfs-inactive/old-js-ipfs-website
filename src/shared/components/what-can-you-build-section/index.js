@@ -2,7 +2,7 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 import ReactMarkdown from 'react-markdown'
 
-import Accordion from 'shared/components/what-can-you-build-section/accordion'
+import Accordion from './accordion'
 import styles from './index.module.css'
 
 const WhatCanYouBuild = ({ intl: { messages } }) => (

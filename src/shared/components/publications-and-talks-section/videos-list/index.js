@@ -13,7 +13,7 @@ class VideosList extends Component {
     super(props)
 
     const { list } = props
-    const activeIndex = list.findIndex(this.findActiveVideo)
+    const activeIndex = list.findIndex((video) => video.active)
 
     this.state = { activeIndex }
   }
@@ -49,8 +49,6 @@ class VideosList extends Component {
         onVideoClick={ this.handleRemainingVideoClick }
         activeIndex={ activeIndex } />
     }
-
-    findActiveVideo = (video) => Boolean(video.active)
 
     handleRemainingVideoClick = (activeIndex) => {
       this.setState({ activeIndex })

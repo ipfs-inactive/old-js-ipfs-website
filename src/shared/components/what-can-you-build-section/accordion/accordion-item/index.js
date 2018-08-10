@@ -3,8 +3,9 @@ import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import ReactPlayer from 'react-player'
 
-import HexSvgBig from 'shared/media/backgrounds/hexagons-big.svg'
 import Button from 'shared/components/button'
+import Svg from 'shared/components/svg'
+import hexagonsBigSvg from 'shared/media/images/hexagons-big.sprite.svg'
 import styles from './index.module.css'
 
 class AccordionItem extends Component {
@@ -20,11 +21,11 @@ class AccordionItem extends Component {
         </button>
         <div className={ styles.panel } ref={ this.handlePanelRef } style={ { maxHeight: panelHeight } }>
           <div className={ styles.backgroundSvgLine1 }>
-            <div className={ styles.hex1 }><HexSvgBig /></div>
-            <div className={ styles.hex2 }><HexSvgBig /></div>
+            <div className={ styles.hex1 }><Svg svg={ hexagonsBigSvg } /></div>
+            <div className={ styles.hex2 }><Svg svg={ hexagonsBigSvg } /></div>
           </div>
           <div className={ styles.backgroundSvgLine2 }>
-            <div className={ styles.hex3 }><HexSvgBig /></div>
+            <div className={ styles.hex3 }><Svg svg={ hexagonsBigSvg } /></div>
           </div>
           <div className={ styles.panelContent }>
             <div className={ styles.panelLeftContent } >
