@@ -3,7 +3,8 @@ import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
 import { injectIntl } from 'react-intl'
 
-import ProtocolIcon from 'shared/media/images/pl-logo.svg'
+import Svg from 'shared/components/svg'
+import protocolLogoSvg from './images/pl-logo.svg'
 import styles from './index.module.css'
 
 const Footer = ({ className, intl: { messages } }) => (
@@ -12,7 +13,7 @@ const Footer = ({ className, intl: { messages } }) => (
       <div className={ styles.leftContent }>&copy; { messages.footer.leftContent }</div>
       <div className={ styles.rightContent }>
         <div className={ styles.text }>{ messages.footer.rightContent }</div>
-        <ProtocolIcon />
+        <Svg className={ styles.protocolLogo } svg={ protocolLogoSvg } />
       </div>
     </div>
   </footer>

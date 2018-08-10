@@ -6,7 +6,7 @@ import classNames from 'classnames'
 import { isCompatible, register, unregister, getRegistration } from 'shared/service-worker/registration'
 import Observer from '@researchgate/react-intersection-observer'
 
-import GatewaySvgAnimation from 'shared/components/gateway-section/gateway-svg-animation'
+import GatewaySvgAnimation from './gateway-svg-animation'
 import ToggleButton from './toggle-button'
 import styles from './index.module.css'
 
@@ -19,7 +19,8 @@ class GatewaySection extends Component {
     inView: false,
     incompatible: typeof window !== 'undefined' ? !isCompatible() : false,
     inProgress: false,
-    isMessageVisible: true
+    isMessageVisible: true,
+    renderAnimation: typeof window !== 'undefined'
   }
 
   componentDidMount () {
@@ -43,7 +44,7 @@ class GatewaySection extends Component {
   }
 
   render () {
-    const { isActive, inView, incompatible, inProgress, isMessageVisible } = this.state
+    const { isActive, inView, incompatible, inProgress, isMessageVisible, renderAnimation } = this.state
     const { messages } = this.props.intl
     const contentClasses = classNames(styles.content, {
       [styles.active]: isActive
@@ -56,13 +57,16 @@ class GatewaySection extends Component {
           <span className={ styles.sectionDescription }>
             <p>{ messages.serviceWorker.sectionDesc }</p>
           </span>
-          <Observer onChange={ this.handleObserverChange } >
-            <GatewaySvgAnimation isActive={ isActive }
-              inView={ inView }
-              isMessageVisible={ isMessageVisible }
-              onMessageCloseClick={ this.handleCloseClick }
-            />
-          </Observer>
+          { renderAnimation && (
+            <Observer onChange={ this.handleObserverChange } >
+              <GatewaySvgAnimation
+                isActive={ isActive }
+                inView={ inView }
+                isMessageVisible={ isMessageVisible }
+                onMessageCloseClick={ this.handleCloseClick }
+              />
+            </Observer>
+          ) }
           <ToggleButton
             isActive={ isActive }
             onClick={ this.handleToggleClick }
