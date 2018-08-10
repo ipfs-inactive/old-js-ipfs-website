@@ -86,7 +86,9 @@
     "activatingToggleText": "正在激活Service Worker...",
     "activationErrorMessage": "启用Service Worker时发生错误。",
     "deactivationErrorMessage": "禁用Service Worker时发生错误。",
-    "nonRootScopeWarningMessage": "当前页面无法激活Service Worker。 请尝试从 https://js.ipfs.io 激活"
+    "nonRootScopeWarningMessage": "当前页面无法激活Service Worker。 请尝试从 https://js.ipfs.io 激活",
+    "incompatibleMessageText": "This browser does not support Service Workers.",
+    "activatedToggleText": "Disable Service Worker"
   },
 
   "whatCanYouBuildTitle": "您可以用js-ipfs做什么",
