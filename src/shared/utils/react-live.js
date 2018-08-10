@@ -69,6 +69,7 @@ function getIpfs (opts) {
 
     var script = document.createElement('script')
     script.src = 'https://unpkg.com/ipfs/dist/index.min.js'
+    script.defer = true
     script.onload = onLoad
     script.onerror = reject
     document.body.appendChild(script)
