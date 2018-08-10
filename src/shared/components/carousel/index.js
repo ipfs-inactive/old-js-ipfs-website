@@ -20,11 +20,15 @@ const settings = {
 
 class Carousel extends Component {
   state = {
-    isMobile: typeof window === 'undefined' ? false : window.innerWidth <= 768
+    isMobile: false
   }
 
   componentDidMount () {
     window.addEventListener('resize', this.handleResize)
+
+    this.setState({
+      isMobile: window.innerWidth <= 768
+    })
   }
 
   render () {
