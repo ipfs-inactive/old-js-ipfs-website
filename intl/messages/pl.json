@@ -86,7 +86,9 @@
     "activatingToggleText": "Włączam Service Worker...",
     "activationErrorMessage": "Wystąpił błąd podczas włączania Service Worker.",
     "deactivationErrorMessage": "Wystąpił błąd podczas wyłączania Service Worker.",
-    "nonRootScopeWarningMessage": "Service Worker nie może być włączony z obecnego URL. Spróbuj ponownie na https://js.ipfs.io"
+    "nonRootScopeWarningMessage": "Service Worker nie może być włączony z obecnego URL. Spróbuj ponownie na https://js.ipfs.io",
+    "incompatibleMessageText": "This browser does not support Service Workers.",
+    "activatedToggleText": "Disable Service Worker"
   },
 
   "whatCanYouBuildTitle": "Co możesz zbudować dzięki js-ipfs",

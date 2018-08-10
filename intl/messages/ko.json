@@ -86,7 +86,9 @@
     "activatingToggleText": "서비스 워커 활성화 중...",
     "activationErrorMessage": "서비스 워커를 활성화 할 때 오류가 발생했습니다.",
     "deactivationErrorMessage": "서비스 워커를 비 활성화 할 때 오류가 발생했습니다.",
-    "nonRootScopeWarningMessage": "현재의 URL에서 서비스 워커를 활성화 할 수 없습니다. 대신 https://js.ipfs.io 를 사용해 보세요."
+    "nonRootScopeWarningMessage": "현재의 URL에서 서비스 워커를 활성화 할 수 없습니다. 대신 https://js.ipfs.io 를 사용해 보세요.",
+    "incompatibleMessageText": "This browser does not support Service Workers.",
+    "activatedToggleText": "Disable Service Worker"
   },
 
   "whatCanYouBuildTitle": "What you can build with js-ipfs",
