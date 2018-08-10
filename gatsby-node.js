@@ -135,7 +135,13 @@ module.exports.modifyWebpackConfig = ({ config, program, stage }) => {
 
     config.loader('inline-svgs-2', () => ({
       loader: 'svgo-loader',
-      test: /\.inline\.svg$/
+      test: /\.inline\.svg$/,
+      query: {
+        plugins: [
+          { removeDimensions: true },
+          { cleanupIDs: false }
+        ]
+      }
     }))
 
     config.loader('inline-svgs-3', () => ({
