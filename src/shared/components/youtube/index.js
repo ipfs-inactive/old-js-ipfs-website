@@ -15,7 +15,7 @@ class Youtube extends Component {
       <div onClick={ this.handleClick } className={ styles.youtube } >
         { !this.state.clicked && (
           <div className={ classNames(styles.preview, blockPlay && styles.previewSmall) }>
-            <img className={ styles.thumbnail } src={ `https://i.ytimg.com/vi/${id}/hqdefault.jpg` }/>
+            <img className={ styles.thumbnail } src={ `https://i.ytimg.com/vi/${id}/hqdefault.jpg` } alt="" />
             <div className={ styles.play }>
               <Svg svg={ playSvg } />
             </div>

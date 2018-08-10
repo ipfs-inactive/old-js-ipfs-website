@@ -16,7 +16,7 @@ const ProjectItem = ({ icon, desc, link, image, index }) => (
         <Button translationId="buttonLearnMore" href={ link } />
       </div>
     </div>
-    <div className={ styles.rightContainer }><img src={ image } /></div>
+    <div className={ styles.rightContainer }><img src={ image } alt="" /></div>
   </div>
 )
 

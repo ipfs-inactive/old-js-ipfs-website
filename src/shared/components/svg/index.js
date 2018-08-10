@@ -18,7 +18,8 @@ SpriteSvg.propTypes = {
 }
 
 const InlineSvg = ({ svg, ...rest }) => (
-  <i { ...rest }
+  <i
+    { ...rest }
     dangerouslySetInnerHTML={ { __html: svg } } />
 )
 
@@ -27,7 +28,7 @@ InlineSvg.propTypes = {
 }
 
 const ImageSvg = ({ ...rest }) => (
-  <img { ...rest } />
+  <img alt="" { ...rest } />
 )
 
 const Svg = (props) => {
