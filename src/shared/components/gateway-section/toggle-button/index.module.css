@@ -8,6 +8,7 @@
     width: 60px;
     height: 34px;
     display: inline-block;
+    vertical-align: middle;
 
     & .slider {
       position: absolute;
@@ -48,11 +49,9 @@
   }
 
   & .title {
-    position: absolute;
-    top: 0;
     margin-left: 15px;
+    vertical-align: middle;
     color: var(--color-white);
-    line-height: 34px;
     transition: color var(--transition-default-duration);
 
     &.active {

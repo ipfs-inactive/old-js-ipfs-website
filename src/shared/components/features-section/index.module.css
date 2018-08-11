@@ -44,7 +44,7 @@
       margin-top: 5%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-between;
     }
   }
 }
@@ -54,7 +54,7 @@
     width: var(--container-width-mobile);
 
     & .sectionDescription p {
-      width: 90%;
+      width: 95%;
     }
   }
 }

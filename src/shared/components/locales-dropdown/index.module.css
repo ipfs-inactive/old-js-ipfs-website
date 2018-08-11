@@ -76,10 +76,6 @@
       text-decoration: none;
       text-align: left;
 
-      &:last-child {
-        border-bottom: unset;
-      }
-
       &:hover {
         color: var(--color-yellow);
       }

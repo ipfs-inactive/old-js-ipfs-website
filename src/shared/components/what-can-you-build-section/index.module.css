@@ -49,7 +49,7 @@
     width: var(--container-width-mobile);
 
     & .sectionDescription p {
-      width: 90%;
+      width: 95%;
     }
   }
 }
