@@ -14,7 +14,9 @@ const Features = ({ intl: { messages } }) => {
     const translationFeat = translationFeats[feat.translationListIndex]
 
     return (
-      <FeatureItem key={ `feat-${index}` }
+      <FeatureItem
+        key={ `feat-${index}` }
+        className={ styles.featuresItem }
         title={ translationFeat.title }
         description={ translationFeat.desc }
         image={ feat.image } />
@@ -29,6 +31,11 @@ const Features = ({ intl: { messages } }) => {
         <ReactMarkdown className={ styles.sectionDescription } source={ messages.features.sectionDesc } />
         <div className={ styles.featuresContainer }>
           { feats }
+          { /* Repeat max items per row so that columns are aligned */ }
+          <div className={ styles.featuresItem } />
+          <div className={ styles.featuresItem } />
+          <div className={ styles.featuresItem } />
+          <div className={ styles.featuresItem } />
         </div>
       </div>
     </div>

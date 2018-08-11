@@ -24,22 +24,3 @@
     line-height: var(--line-height-xsmall);
   }
 }
-
-@media (--layout-lte-medium) {
-  .featureItem {
-    width: calc(33.3% - 25px);
-  }
-}
-
-@media (--layout-lte-small) {
-  .featureItem {
-    width: calc(50% - 15px);
-  }
-}
-
-@media (--layout-lte-xsmall) {
-  .featureItem {
-    width: 100%;
-    padding: 0 30px;
-  }
-}
