@@ -4,7 +4,6 @@
 .container {
   position: relative;
   width: 100%;
-  max-height: 90vh;
   z-index: 3;
   overflow: hidden;
   display: flex;
@@ -67,21 +66,13 @@
   }
 }
 
-@media (max-height: 800px) {
-  .container {
-    max-height: unset;
-  }
-}
-
 @media (--layout-lte-small) {
   .container {
-    max-height: unset;
-
     & .content {
       width: var(--container-width-mobile);
 
       & .sectionDescription p {
-        width: 90%;
+        width: 95%;
       }
 
       & .toggle {

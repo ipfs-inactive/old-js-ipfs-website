@@ -69,7 +69,6 @@
 
     & .socialLinksContainer {
       position: relative;
-      min-width: 100%;
       z-index: 5;
       margin-top: 35px;
       display: flex;
@@ -112,12 +111,10 @@
       width: var(--container-width-mobile);
 
       & .sectionDescription p {
-        width: 90%;
+        width: 95%;
       }
 
       & .socialLinksContainer {
-        min-width: unset;
-
         & .socialLinks {
           flex-direction: column;
 

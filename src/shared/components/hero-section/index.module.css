@@ -95,7 +95,7 @@
 
     & h1 {
       font-weight: var(--typography-text-weight-semibold);
-      text-transform: unset;
+      text-transform: none;
       text-align: center;
       line-height: var(--line-height-large);
     }
@@ -166,7 +166,8 @@
       & .infoContainer div {
         flex-direction: column;
 
-        & span {
+        & span,
+        & span:not(:last-child) {
           margin: 12px 0 0 0;
         }
       }
@@ -181,7 +182,7 @@
     }
 
     & .content .textDesc {
-      max-width: 90%;
+      max-width: 95%;
     }
   }
 }

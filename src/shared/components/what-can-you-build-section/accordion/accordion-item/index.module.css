@@ -145,21 +145,21 @@
       & .panelLeftContent {
         & .imageAndTextContainer {
           margin-bottom: var(--vertical-margin-content);
-          margin-right: unset;
+          margin-right: 0;
           display: flex;
           flex-direction: column-reverse;
 
           & h2 {
-            position: unset;
+            position: static;
             width: 100%;
-            max-width: unset;
-            margin-right: unset;
+            max-width: none;
+            margin-right: 0;
             text-align: center;
           }
 
           & .img {
             margin: auto;
-            transform: unset;
+            transform: none;
           }
         }
       }

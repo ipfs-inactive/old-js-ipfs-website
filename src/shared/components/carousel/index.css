@@ -1,7 +1,7 @@
 /* We are not using cssmodules here because we need to override slick-carousel default styles */
 
 .noPadding {
-  padding: unset !important;
+  padding: 0 !important;
 }
 
 .noPadding > button:first-of-type {

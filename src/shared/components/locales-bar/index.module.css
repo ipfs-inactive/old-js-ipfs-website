@@ -18,7 +18,7 @@
     transition: var(--transition-default-duration) ease;
 
     &:last-child {
-      border-right: unset;
+      border-right: 0;
     }
 
     &:hover {

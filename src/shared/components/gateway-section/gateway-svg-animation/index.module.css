@@ -36,28 +36,29 @@
 .container {
   position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 525px;
 
-  &.animationOff {
-    & div > div {
-      animation-play-state: paused;
-    }
+  &.animationOff * {
+    animation-play-state: paused !important;
   }
 
   & .message {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
-    max-width: 50%;
+    width: 50%;
+    max-width: 575px;
     z-index: 10;
     overflow: hidden;
+    transform: translateY(-50%);
     display: flex;
     flex-direction: column;
+    visibility: hidden;
     opacity: 0;
     border-radius: 6px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
     font-family: var(--typography-text-font);
-    transition: opacity var(--transition-default-duration) ease;
+    transition: opacity var(--transition-default-duration) ease, visibility 0s var(--transition-default-duration) linear;
 
     & .header {
       display: flex;
@@ -90,7 +91,9 @@
     }
 
     & .body {
-      padding: 30px;
+      max-height: 370px;
+      overflow-y: auto;
+      padding: 25px 30px;
       flex-grow: 1;
       background: var(--color-menu-dark-blue-opacity);
       font-size: var(--typography-text-size-xsmall);
@@ -111,33 +114,29 @@
 
         & li {
           margin: 0 0 0 15px;
+          word-break: break-all;
 
           &:last-child {
-            margin-bottom: unset;
-
-            & p:last-child {
-              margin-top: 30px;
-              margin-left: -15px;
-            }
+            margin-bottom: 0;
           }
         }
+      }
+
+      & p:last-child {
+        margin-bottom: 0;
       }
     }
   }
 
-  &.active {
+  &.active:not(.messageClosed) {
     & .message {
+      visibility: visible;
       opacity: 1;
       transition-delay: 2600ms;
     }
+  }
 
-    &.messageClosed {
-      & .message {
-        opacity: 0;
-        transition-delay: 0s;
-      }
-    }
-
+  &.active {
     & svg {
       & g[data-name="gateway"] {
         & g[data-name="white-connection"],
@@ -346,54 +345,66 @@
   }
 }
 
+@media (max-width: 1325px) {
+  .container {
+    & .message {
+      top: 25px;
+      transform: none;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    & .message {
+      & .header {
+        & .title {
+          padding: 15px 0 15px 20px;
+        }
+
+        & .close {
+          margin: 15px;
+        }
+      }
+
+      & .body {
+        padding: 15px 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    & .message {
+      top: 0;
+      right: -5%;
+      width: 55%;
+    }
+  }
+}
+
 @media (--layout-lte-small) {
   .container {
     max-height: 95vh;
 
-    &.active {
-      max-height: unset;
+    &.active:not(.messageClosed) {
+      max-height: none;
+    }
 
-      & .message {
-        position: relative;
-        max-width: 100%;
-        margin-top: -200px;
-        margin-bottom: 10%;
+    & .message {
+      position: relative;
+      right: 0;
+      width: 100%;
+      max-width: none;
+      margin-top: -200px;
+      margin-bottom: 10%;
 
-        & .header .close {
-          margin: 15px;
-        }
+      & .body {
+        line-height: 24px;
 
-        & .body {
-          line-height: 20px;
-
-          & a {
-            color: var(--color-yellow);
-          }
-
-          & ul {
-            list-style-type: none;
-
-            & li {
-              margin: 0 0 15px 0;
-
-              &:last-child {
-                margin-bottom: unset;
-
-                & p:last-child {
-                  margin-left: 0;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      &.messageClosed {
-        max-height: 95vh;
-
-        & .message {
-          height: 158px;
-          z-index: -20;
+        & a {
+          color: var(--color-yellow);
         }
       }
     }
@@ -409,17 +420,6 @@
 
       & > div {
         animation-play-state: paused !important;
-      }
-    }
-  }
-  @media (max-height: 700px) {
-    .container {
-      max-height: unset !important;
-
-      &.active {
-        & .message {
-          position: relative;
-        }
       }
     }
   }

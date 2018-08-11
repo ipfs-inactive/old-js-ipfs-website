@@ -22,8 +22,8 @@
   .header {
     position: fixed;
     top: 0;
-    bottom: unset;
-    height: unset;
+    bottom: auto;
+    height: auto;
 
     & .target {
       display: none;
