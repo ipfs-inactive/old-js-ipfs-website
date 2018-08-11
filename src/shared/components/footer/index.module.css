@@ -42,7 +42,7 @@
   }
 }
 
-@media (--layout-lte-small) {
+@media (max-width: 1000px) {
   .footer .container {
     width: var(--container-width-mobile);
     padding: 35px 0;
@@ -52,6 +52,10 @@
     & .leftContent {
       margin-bottom: 15px;
       margin-right: 0;
+    }
+
+    & .rightContent {
+      max-width: 80%;
     }
   }
 }
