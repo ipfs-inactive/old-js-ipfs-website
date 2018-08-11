@@ -22,5 +22,9 @@
     font-size: var(--typography-text-size-small);
     font-weight: var(--typography-text-weight);
     line-height: var(--line-height-xsmall);
+
+    & p:last-child {
+      margin-bottom: 0;
+    }
   }
 }

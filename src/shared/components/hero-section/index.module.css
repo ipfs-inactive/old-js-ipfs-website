@@ -157,10 +157,8 @@
         margin: 0 0 10% 10%;
       }
 
-      & .textDesc {
-        & p {
-          font-size: var(--typography-text-size);
-        }
+      & .textDesc p {
+        font-size: var(--typography-text-size);
       }
 
       & .infoContainer div {

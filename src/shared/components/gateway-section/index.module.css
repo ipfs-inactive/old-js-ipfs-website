@@ -15,7 +15,7 @@
     position: relative;
     width: var(--container-width);
     max-width: var(--max-container-width);
-    padding: 7% 0 0 0;
+    padding: 10% 0 0 0;
 
     &.active {
       & .message {
