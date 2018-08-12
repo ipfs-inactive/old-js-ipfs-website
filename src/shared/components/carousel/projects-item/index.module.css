@@ -23,11 +23,6 @@
       & .logo {
         width: 70%;
         margin-bottom: 15px;
-
-        & img {
-          /* Some images don't occupy 100% so they need to be centered, e.g.: internet archive */
-          margin: 0 auto;
-        }
       }
 
       & .desc {
@@ -66,6 +61,13 @@
 
       & .topContainer {
         align-items: center;
+
+        & .logo {
+          & img {
+            /* Some images don't occupy 100% so they need to be centered, e.g.: internet archive */
+            margin: 0 auto;
+          }
+        }
 
         & .desc {
           margin: 30px 0;
