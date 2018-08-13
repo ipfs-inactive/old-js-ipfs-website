@@ -8,6 +8,7 @@ import classNames from 'classnames'
 import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
+import NavBar from 'shared/components/nav-bar'
 import LocalesBar from 'shared/components/locales-bar'
 import Svg from 'shared/components/svg'
 import outsideRingSvg from './images/outside-ring.sprite.svg'
@@ -31,34 +32,33 @@ class Hero extends Component {
   render () {
     const { intl: { messages } } = this.props
     const { info, inView } = this.state
+    const containerClasses = classNames(styles.container, { [styles.animationOff]: !inView })
     const infoContainerClasses = classNames(styles.infoContainer, { [styles.show]: Boolean(info) })
-    const wrapperContainerClasses = classNames(styles.wrapperContainer, { [styles.animationOff]: !inView })
 
     return (
       <Observer onChange={ this.handleObserverChange }>
-        <div className={ wrapperContainerClasses }>
-          <div className={ styles.container }>
-            <LocalesBar className={ styles.localesBar } />
-            <div className={ styles.orbitContainer } >
-              <div className={ styles.orbits }>
-                <div className={ styles.outsideRing }>
-                  <Svg svg={ outsideRingSvg } />
-                </div>
-                <div className={ styles.middleRing }>
-                  <Svg svg={ middleRingSvg } />
-                </div>
-                <div className={ styles.insideRing }>
-                  <Svg svg={ insideRingSvg } />
-                </div>
+        <div className={ containerClasses }>
+          <NavBar />
+          <LocalesBar className={ styles.localesBar } />
+          <div className={ styles.orbitContainer } >
+            <div className={ styles.orbits }>
+              <div className={ styles.outsideRing }>
+                <Svg svg={ outsideRingSvg } />
+              </div>
+              <div className={ styles.middleRing }>
+                <Svg svg={ middleRingSvg } />
+              </div>
+              <div className={ styles.insideRing }>
+                <Svg svg={ insideRingSvg } />
               </div>
             </div>
-            <div className={ styles.content }>
-              <Svg svg={ cubeSvg } className={ styles.cube } />
-              <h1>{ messages.hero.welcomeMessage }</h1>
-              <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
-              <div className={ infoContainerClasses }>
-                { info && this.renderPkgInfo(info) }
-              </div>
+          </div>
+          <div className={ styles.content }>
+            <Svg svg={ cubeSvg } className={ styles.cube } />
+            <h1>{ messages.hero.welcomeMessage }</h1>
+            <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
+            <div className={ infoContainerClasses }>
+              { info && this.renderPkgInfo(info) }
             </div>
           </div>
         </div>

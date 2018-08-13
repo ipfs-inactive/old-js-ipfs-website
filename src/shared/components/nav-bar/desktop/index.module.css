@@ -9,14 +9,14 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: var(--navbar-desktop-height);
+  height: var(--nav-bar-desktop-height);
   padding: 20px 0;
   background: var(--color-menu-dark-blue);
   font-size: var(--typography-menu-text-size);
   text-align: center;
   transition: var(--transition-default-duration) ease;
 
-  & .navbarMenu {
+  & .navBarMenu {
     display: flex;
     justify-content: center;
 

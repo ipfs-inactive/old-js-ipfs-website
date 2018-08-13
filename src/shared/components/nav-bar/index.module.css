@@ -1,11 +1,11 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
-.header {
+.navBar {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: var(--navbar-desktop-height);
+  height: var(--nav-bar-desktop-height);
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -13,13 +13,13 @@
 
   & .target {
     position: absolute;
-    top: -2px;
+    top: 0;
     width: 100%;
   }
 }
 
 @media (--layout-lte-small) {
-  .header {
+  .navBar {
     position: fixed;
     top: 0;
     bottom: auto;

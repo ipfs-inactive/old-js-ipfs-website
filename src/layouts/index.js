@@ -8,7 +8,6 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { addLocaleData, IntlProvider } from 'react-intl'
 import localeData from 'react-intl/locale-data/<%= locale %>'
-import Header from 'shared/components/header'
 import Footer from 'shared/components/footer'
 import messages from '../../intl/messages/<%= locale %>.json'
 import { withPrefix } from 'gatsby-link'
@@ -39,7 +38,6 @@ class Layout extends Component {
             ] } >
           </Helmet>
 
-          <Header className={ styles.header } />
           <main className={ styles.children }>
             { children() }
           </main>

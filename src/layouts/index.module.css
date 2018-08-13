@@ -5,10 +5,6 @@
   flex-direction: column;
 }
 
-.header {
-  flex: 0 0 auto;
-}
-
 .children {
   flex: 1 0 auto;
 }

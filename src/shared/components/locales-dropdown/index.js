@@ -21,8 +21,9 @@ class LocalesDropdown extends Component {
   }
 
   render () {
-    const { intl: { locale: currentLocale } } = this.props
+    const { intl: { locale: currentLocale }, className } = this.props
 
+    const dropdownClasses = classNames(styles.dropdown, className)
     const dropButtonClasses = classNames(styles.dropButton, {
       [styles.openedDropdown]: this.state.isOpen
     })
@@ -53,7 +54,7 @@ class LocalesDropdown extends Component {
     })
 
     return (
-      <div className={ styles.dropdown }>
+      <div className={ dropdownClasses }>
         <button className={ dropButtonClasses } onClick={ this.handleToggleDropdown }>
           { currentLocale.toUpperCase() }
           <span className={ arrowClasses } />
@@ -83,7 +84,8 @@ class LocalesDropdown extends Component {
 }
 
 LocalesDropdown.propTypes = {
-  intl: PropTypes.object.isRequired
+  intl: PropTypes.object.isRequired,
+  className: PropTypes.string
 }
 
 export default injectIntl(LocalesDropdown)

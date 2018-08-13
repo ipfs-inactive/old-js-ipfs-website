@@ -6,7 +6,7 @@
     "buttonIrcFreenode": "IRC聊天频道"
   },
 
-  "navbar": {
+  "navBar": {
     "item1": "入门指南",
     "item2": "教程",
     "item3": "API",
