@@ -14,7 +14,7 @@ You can do it in 2 steps:
 
 #### 1. Add a line to the config to add your language to the supported list.
 
-In the file [intl/config](), add a line for your language. Example, if you were to add Portuguese to:
+In the file [intl/config](intl/config.js), add a line for your language. Example, if you were to add Portuguese to:
 
 ```
 module.exports = {
@@ -52,4 +52,3 @@ When you are finished, submit it as a PR to this repo. Once it gets merged it wi
 ## Development
 
 `TODO`
-
