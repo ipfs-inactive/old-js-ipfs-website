@@ -6,7 +6,7 @@
     "buttonIrcFreenode": "IRC Freenode"
   },
 
-  "navbar": {
+  "navBar": {
     "item1": "시작하기",
     "item2": "튜토리얼",
     "item3": "API",

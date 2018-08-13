@@ -2,7 +2,7 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .container {
-  width: 100vw;
+  width: 100%;
   z-index: 3;
   padding: 25px;
   display: flex;

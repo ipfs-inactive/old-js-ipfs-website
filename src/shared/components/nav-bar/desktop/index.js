@@ -7,29 +7,29 @@ import PropTypes from 'prop-types'
 import Link from 'shared/components/link'
 import styles from './index.module.css'
 
-class DesktopNavbar extends Component {
+class DesktopNavBar extends Component {
   render () {
     const { isSticky, intl: { messages } } = this.props
-    const navbarClasses = classNames(styles.container,
+    const navBarClasses = classNames(styles.container,
       {
         [styles.sticky]: isSticky
       })
 
     return (
-      <div className={ navbarClasses } >
-        <div className={ styles.navbarMenu }>
+      <div className={ navBarClasses } >
+        <div className={ styles.navBarMenu }>
           <Helmet>
             <script async defer src="https://buttons.github.io/buttons.js" />
           </Helmet>
-          <div className={ styles.link } onClick={ this.handleGettingStartedClick }> { messages.navbar.item1 } </div>
+          <div className={ styles.link } onClick={ this.handleGettingStartedClick }> { messages.navBar.item1 } </div>
           <Link href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials">
-            { messages.navbar.item2 }
+            { messages.navBar.item2 }
           </Link>
           <Link href="https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC">
-            { messages.navbar.item3 }
+            { messages.navBar.item3 }
           </Link>
           <Link href="https://github.com/ipfs/js-ipfs">
-            { messages.navbar.item4 }
+            { messages.navBar.item4 }
           </Link>
           <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ipfs/js-ipfs on GitHub">
               Star
@@ -44,10 +44,10 @@ class DesktopNavbar extends Component {
   }
 }
 
-DesktopNavbar.propTypes = {
+DesktopNavBar.propTypes = {
   isSticky: PropTypes.bool.isRequired,
   intl: PropTypes.object.isRequired,
   onGoToGettingStarted: PropTypes.func
 }
 
-export default injectIntl(DesktopNavbar)
+export default injectIntl(DesktopNavBar)

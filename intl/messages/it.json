@@ -6,7 +6,7 @@
     "buttonIrcFreenode": "IRC Freenode"
   },
 
-  "navbar": {
+  "navBar": {
     "item1": "Primi passi",
     "item2": "Tutorials",
     "item3": "API",

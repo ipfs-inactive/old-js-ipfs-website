@@ -7,19 +7,24 @@
 }
 
 .container {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
 
-  & .navbarContainer {
-    padding: 20px 5% 15px 5%;
+  & .navBarContainer {
+    width: 100%;
+    padding: 16px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background: transparent;
     transition: background var(--transition-duration-double) ease;
 
-    & .menuIconWrapper {
+    &.navBarContainerScrolled {
+      background: var(--color-menu-dark-blue);
+      box-shadow: 0 5px 24px 0 rgba(14, 22, 48, 0.4);
+      transition: all var(--transition-default-duration) ease;
+    }
+
+    & .hamburger {
       display: inline-block;
       cursor: pointer;
 
@@ -32,36 +37,38 @@
         background: var(--color-white);
         transition: var(--transition-duration-half);
       }
-    }
 
-    & .openedMenuIcon {
-      & .bar1 {
-        transform: rotate(-45deg) translate(-4px, 5px);
-      }
+      &.hamburgerOpened {
+        & .bar1 {
+          transform: rotate(-45deg) translate(-4px, 5px);
+        }
 
-      & .bar2 {
-        opacity: 0;
-      }
+        & .bar2 {
+          opacity: 0;
+        }
 
-      & .bar3 {
-        transform: rotate(45deg) translate(-5px, -6px);
+        & .bar3 {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
       }
     }
   }
 
-  & .navbarContainerScrolled {
-    background: var(--color-menu-dark-blue);
-    box-shadow: 0 5px 24px 0 rgba(14, 22, 48, 0.4);
-    transition: all var(--transition-default-duration) ease;
+  & .localesDropdown {
+    position: relative;
+    top: 2px;
+    right: -5px;
   }
 
-  & ul {
+  & .menuList {
+    max-height: 0;
     overflow: hidden;
     margin: 0;
     padding: 0;
     list-style: none;
     background-color: var(--color-menu-dark-blue);
     box-shadow: 0 5px 24px 0 rgba(14, 22, 48, 0.4);
+    transition: max-height var(--transition-duration-half) ease;
 
     & li {
       padding-left: calc(5% + 30px);
@@ -84,12 +91,6 @@
         margin-bottom: 25px;
       }
     }
-  }
-
-  & .menuList {
-    max-height: 0;
-    clear: both;
-    transition: max-height var(--transition-duration-half) ease;
   }
 }
 
