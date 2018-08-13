@@ -1,9 +1,0 @@
-@import "shared/styles/imports/variables.css";
-@import "shared/styles/imports/custom-medias.css";
-
-.container {
-  & .serviceWorker {
-    position: relative;
-    z-index: 3;
-  }
-}
