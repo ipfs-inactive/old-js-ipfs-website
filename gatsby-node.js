@@ -221,7 +221,16 @@ exports.onCreatePage = ({ page, boundActionCreators }) => {
     createPage({
       ...page,
       layout: `index-${acronym}`,
-      path: acronym === defaultLocale ? page.path : `/${acronym}${page.path}`
+      path: `/${acronym}${page.path}`
     })
+
+    // If this is the default locale, create the page without the language in the path
+    if (acronym === defaultLocale) {
+      createPage({
+        ...page,
+        layout: `index-${acronym}`,
+        path: page.path
+      })
+    }
   })
 }
