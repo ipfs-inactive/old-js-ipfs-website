@@ -31,13 +31,13 @@ const projects = [
     translationListIndex: 2,
     icon: <Svg svg={ dwebArchiveSvg } style={ { maxWidth: 90 } }/>,
     image: dwebArchiveImage,
-    link: 'https://github.com/internetarchive/dweb-archive'
+    link: 'https://dweb.archive.org'
   },
   {
     translationListIndex: 3,
     icon: <Svg svg={ peerpadSvg } />,
     image: peerpadImage,
-    link: 'https://peerpad.net/'
+    link: 'https://peerpad.net'
   },
   {
     translationListIndex: 4,
