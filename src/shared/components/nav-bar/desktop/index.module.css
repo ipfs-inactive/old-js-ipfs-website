@@ -11,12 +11,14 @@
   width: 100%;
   height: var(--nav-bar-desktop-height);
   padding: 20px 0;
+  display: flex;
   background: var(--color-menu-dark-blue);
   font-size: var(--typography-menu-text-size);
   text-align: center;
   transition: var(--transition-default-duration) ease;
 
   & .navBarMenu {
+    width: 100%;
     display: flex;
     justify-content: center;
 
@@ -40,8 +42,15 @@
       }
     }
 
-    & > span {
-      margin-top: 2px;
+    & > .starContainer {
+      min-width: 97px;
+      min-height: 24px;
+      display: flex;
+      align-items: center;
+
+      & > span {
+        margin-top: 2px;
+      }
     }
   }
 }

@@ -31,9 +31,11 @@ class DesktopNavBar extends Component {
           <Link href="https://github.com/ipfs/js-ipfs">
             { messages.navBar.item4 }
           </Link>
-          <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ipfs/js-ipfs on GitHub">
+          <div className={ styles.starContainer }>
+            <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ipfs/js-ipfs on GitHub">
               Star
-          </a>
+            </a>
+          </div>
         </div>
       </div>
     )
