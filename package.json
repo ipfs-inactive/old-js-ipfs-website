@@ -32,7 +32,7 @@
     "react-toastify": "^4.1.0",
     "react-tooltip": "^3.6.1",
     "recompose": "~0.27.1",
-    "service-worker-gateway": "ipfs-shipyard/service-worker-gateway#98f3aa30a7527c57a8af694665ed50e1510199e8",
+    "service-worker-gateway": "~0.1.7",
     "slick-carousel": "^1.8.1"
   },
   "keywords": [
