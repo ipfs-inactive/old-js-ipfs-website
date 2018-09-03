@@ -104,6 +104,7 @@
     }
 
     & h1 {
+      min-height: 48px;
       font-weight: var(--typography-text-weight-semibold);
       text-transform: none;
       text-align: center;
@@ -112,6 +113,7 @@
 
     & .textDesc {
       max-width: 70%;
+      min-height: 54px;
 
       & p {
         font-size: var(--typography-text-size);
@@ -123,6 +125,7 @@
 
     & .infoContainer {
       width: 100%;
+      min-height: 16px;
       margin-top: 2%;
       opacity: 0;
       color: var(--color-light-blue);
