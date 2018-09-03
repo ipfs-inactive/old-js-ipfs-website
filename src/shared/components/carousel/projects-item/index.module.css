@@ -20,9 +20,21 @@
       flex-direction: column;
       align-items: flex-start;
 
-      & .logo {
+      & .logoWrapper {
         width: 70%;
         margin-bottom: 15px;
+
+        & .logoContainer {
+          position: relative;
+          width: 100%;
+
+          & .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
       }
 
       & .desc {
@@ -42,9 +54,18 @@
     max-width: 70%;
     flex: 1;
 
-    & img {
+    & .imageWrapper {
+      position: relative;
       width: 100%;
+      padding-bottom: 62.5%;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+      & img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
     }
   }
 }
