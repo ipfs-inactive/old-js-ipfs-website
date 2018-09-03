@@ -54,7 +54,11 @@ class Hero extends Component {
             </div>
           </div>
           <div className={ styles.content }>
-            <Svg svg={ cubeSvg } className={ styles.cube } />
+            <div className={ styles.cubeWrapper }>
+              <div className={ styles.cubeContainer }>
+                <Svg svg={ cubeSvg } className={ styles.cube } />
+              </div>
+            </div>
             <h1>{ messages.hero.welcomeMessage }</h1>
             <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
             <div className={ infoContainerClasses }>
