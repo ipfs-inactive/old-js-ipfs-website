@@ -85,10 +85,22 @@
     justify-content: center;
     align-items: center;
 
-    & .cube {
+    & .cubeWrapper {
       width: 29%;
-      height: auto;
       margin: 0 0 1.5% 4%;
+
+      & .cubeContainer {
+        position: relative;
+        width: 100%;
+        padding-bottom: 96.8%;
+
+        & .cube {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
     }
 
     & h1 {
@@ -138,7 +150,7 @@
 }
 
 @media (--layout-lte-large) {
-  .container .content .cube {
+  .container .content .cubeWrapper {
     width: 26%;
   }
 }
@@ -165,7 +177,7 @@
       width: var(--container-width-mobile);
       padding: 30% 0 50px;
 
-      & .cube {
+      & .cubeWrapper {
         width: 75%;
         max-width: 300px;
         margin: 0 0 10% 10%;
