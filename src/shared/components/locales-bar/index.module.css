@@ -15,7 +15,6 @@
     border-right: 1px solid var(--color-blue-dark-shade);
     color: var(--color-blue-dark-shade);
     text-decoration: none;
-    transition: var(--transition-default-duration) ease;
 
     &:last-child {
       border-right: 0;

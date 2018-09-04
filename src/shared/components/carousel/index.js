@@ -49,7 +49,7 @@ class Carousel extends Component {
             image={ item.image }
             index={ index }
             iconRatio={ item.iconRatio }
-            containerMaxWidth={ item.containerMaxWidth }/>
+            iconMaxWidth={ item.iconMaxWidth }/>
         )
       })
     } else if (modifier === 'videos') {

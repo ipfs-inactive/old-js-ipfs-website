@@ -20,15 +20,15 @@
       flex-direction: column;
       align-items: flex-start;
 
-      & .logoWrapper {
+      & .logoContainer {
         width: 70%;
         margin-bottom: 15px;
 
-        & .logoContainer {
+        & .logo {
           position: relative;
           width: 100%;
 
-          & .logo {
+          & > * {
             position: absolute;
             top: 0;
             left: 0;
@@ -60,7 +60,7 @@
       padding-bottom: 62.5%;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 
-      & img {
+      & > * {
         position: absolute;
         top: 0;
         left: 0;

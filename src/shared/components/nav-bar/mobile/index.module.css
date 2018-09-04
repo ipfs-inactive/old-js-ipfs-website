@@ -35,7 +35,9 @@
         height: 2px;
         margin: 5px 0;
         background: var(--color-white);
-        transition: var(--transition-duration-half);
+        transition:
+          transform var(--transition-duration-half) ease,
+          opacity var(--transition-duration-half) ease;
       }
 
       &.hamburgerOpened {

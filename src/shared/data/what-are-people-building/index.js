@@ -18,7 +18,7 @@ import peerpadImage from './images/peerpad.jpg'
   These 2 props are used to prevent page reflow:
     - iconRatio: (height / width) * 100. We are calculating the icon ratio before it is loaded and set a paddingBottom to its wrapper div
     with this percentage to work as a placeholder while the logo is beeing loaded.
-    - containerMaxWidth: When logos are squared their ratio would be almost 100%, that would make them too big. To circumvent that we set
+    - iconMaxWidth: When icons are squared their ratio would be almost 100%, that would make them too big. To circumvent that we set
     the container max-width to make the icon "scale down" keeping its ratio.
 */
 
@@ -41,7 +41,7 @@ const projects = [
     translationListIndex: 2,
     icon: <Svg svg={ dwebArchiveSvg } />,
     iconRatio: '97.1%',
-    containerMaxWidth: '90px',
+    iconMaxWidth: '90px',
     image: dwebArchiveImage,
     link: 'https://dweb.archive.org'
   },

@@ -37,8 +37,8 @@
    ========================================================================== */
 
 :root {
-  --typography-display-font: "Montserrat", sans-serif;
-  --typography-text-font: "Montserrat", sans-serif;
+  --typography-display-font: "Montserrat", Verdana, sans-serif;
+  --typography-text-font: "Montserrat", Tahoma, Verdana, sans-serif;
   --typography-roboto-text-font: "Roboto", sans-serif;
   --typography-text-size-large: 18px;
   --typography-text-size: 15px;
