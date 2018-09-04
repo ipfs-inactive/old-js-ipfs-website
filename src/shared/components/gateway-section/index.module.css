@@ -17,6 +17,10 @@
     max-width: var(--max-container-width);
     padding: 10% 0 0 0;
 
+    &.notRendering {
+      padding: 10% 0;
+    }
+
     &.active {
       & .message {
         opacity: 1;
