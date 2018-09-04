@@ -20,7 +20,7 @@ class GatewaySection extends Component {
     incompatible: false,
     inProgress: false,
     isMessageVisible: true,
-    renderAnimation: false
+    renderGateway: false
   }
 
   componentDidMount () {
@@ -30,7 +30,7 @@ class GatewaySection extends Component {
       })
       .catch((err) => console.error(err))
 
-    this.setState({ renderAnimation: true, incompatible: !isCompatible() })
+    this.setState({ renderGateway: true, incompatible: !isCompatible() })
   }
 
   componentWillUnmount () {
@@ -46,10 +46,9 @@ class GatewaySection extends Component {
   }
 
   render () {
-    const { isActive, inView, incompatible, inProgress, isMessageVisible, renderAnimation } = this.state
+    const { isActive, inView, incompatible, inProgress, isMessageVisible, renderGateway } = this.state
     const { messages } = this.props.intl
     const contentClasses = classNames(styles.content, {
-      [styles.notRendering]: !renderAnimation,
       [styles.active]: isActive
     })
 
@@ -60,16 +59,18 @@ class GatewaySection extends Component {
           <span className={ styles.sectionDescription }>
             <p>{ messages.serviceWorker.sectionDesc }</p>
           </span>
-          { renderAnimation && (
-            <Observer onChange={ this.handleObserverChange } >
-              <GatewaySvgAnimation
-                isActive={ isActive }
-                inView={ inView }
-                isMessageVisible={ isMessageVisible }
-                onMessageCloseClick={ this.handleCloseClick }
-              />
-            </Observer>
-          ) }
+          <div className={ styles.gatewayContainer }>
+            { renderGateway && (
+              <Observer onChange={ this.handleObserverChange }>
+                <GatewaySvgAnimation
+                  isActive={ isActive }
+                  inView={ inView }
+                  isMessageVisible={ isMessageVisible }
+                  onMessageCloseClick={ this.handleCloseClick }
+                />
+              </Observer>
+            ) }
+          </div>
           <ToggleButton
             isActive={ isActive }
             onClick={ this.handleToggleClick }

@@ -15,7 +15,6 @@
   background: var(--color-menu-dark-blue);
   font-size: var(--typography-menu-text-size);
   text-align: center;
-  transition: var(--transition-default-duration) ease;
 
   & .navBarMenu {
     width: 100%;
@@ -31,7 +30,7 @@
       text-decoration: none;
       text-transform: uppercase;
       cursor: pointer;
-      transition: var(--transition-default-duration) ease;
+      transition: color var(--transition-default-duration) ease;
 
       &:nth-child(4) {
         margin-right: 15px;

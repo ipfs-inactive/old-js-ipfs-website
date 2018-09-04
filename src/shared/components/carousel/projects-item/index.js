@@ -5,16 +5,14 @@ import ReactMarkdown from 'react-markdown'
 import Button from 'shared/components/button'
 import styles from './index.module.css'
 
-const ProjectItem = ({ icon, desc, link, image, index, iconRatio, containerMaxWidth }) => (
+const ProjectItem = ({ icon, desc, link, image, index, iconRatio, iconMaxWidth }) => (
   <div className={ styles.container }>
     <div className={ styles.leftContainer }>
       <div className={ styles.topContainer }>
         { icon &&
-          <div className={ styles.logoWrapper } style={ { maxWidth: containerMaxWidth } }>
-            <div className={ styles.logoContainer } style={ { paddingBottom: iconRatio } }>
-              <div className={ styles.logo }>{ icon }</div>
+            <div className={ styles.logoContainer } style={ { maxWidth: iconMaxWidth } }>
+              <div className={ styles.logo } style={ { paddingBottom: iconRatio } }>{ icon }</div>
             </div>
-          </div>
         }
         <ReactMarkdown className={ styles.desc } source={ desc } />
       </div>
@@ -24,7 +22,7 @@ const ProjectItem = ({ icon, desc, link, image, index, iconRatio, containerMaxWi
     </div>
     <div className={ styles.rightContainer }>
       <div className={ styles.imageWrapper }>
-        <img src={ image } alt="" />
+        <img src={ image } alt="Project Preview" />
       </div>
     </div>
   </div>
@@ -37,7 +35,7 @@ ProjectItem.propTypes = {
   image: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   iconRatio: PropTypes.string.isRequired,
-  containerMaxWidth: PropTypes.string
+  iconMaxWidth: PropTypes.string
 }
 
 export default ProjectItem
