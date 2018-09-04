@@ -49,6 +49,7 @@ class GatewaySection extends Component {
     const { isActive, inView, incompatible, inProgress, isMessageVisible, renderAnimation } = this.state
     const { messages } = this.props.intl
     const contentClasses = classNames(styles.content, {
+      [styles.notRendering]: !renderAnimation,
       [styles.active]: isActive
     })
 
