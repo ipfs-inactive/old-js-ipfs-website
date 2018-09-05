@@ -131,6 +131,11 @@
     ]
   },
 
+  "whatYouCanBuild": {
+    "sectionTitle": "TODO Title",
+    "sectionDesc": "TODO description."
+  },
+
   "publicationsAndTalks": {
     "sectionTitle": "内容发布和专题演讲",
     "sectionDesc": "查看IPFS社区关于JavaScript项目的最近更新，观看演示和其它演讲视频。更多关于IPFS开发者会与的精彩演讲内容会陆续在这里发布。"

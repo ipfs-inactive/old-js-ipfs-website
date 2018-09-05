@@ -131,6 +131,11 @@
     ]
   },
 
+  "whatYouCanBuild": {
+    "sectionTitle": "TODO Title",
+    "sectionDesc": "TODO description."
+  },
+
   "publicationsAndTalks": {
     "sectionTitle": "Publikacje i prezentacje",
     "sectionDesc": "Obejrzyj nowości, dema oraz prezentacje przygotowane przez społeczność na temat IPFS i JavaScript. Wkrótce dodamy wiele nowych materiałów z tegorocznych spotkań deweloperów."

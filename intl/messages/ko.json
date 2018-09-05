@@ -131,6 +131,11 @@
     ]
   },
 
+  "whatYouCanBuild": {
+    "sectionTitle": "TODO Title",
+    "sectionDesc": "TODO description."
+  },
+
   "publicationsAndTalks": {
     "sectionTitle": "발행물 & 대담",
     "sectionDesc": "IPFS의 JavaScript IPFS 커뮤티니의 데모들과 다른 대담의 프로젝트 업데이트를 지켜보세요. 우리는 곧 수십개의 IPFS 개발자 대담을 추가할 예정입니다."

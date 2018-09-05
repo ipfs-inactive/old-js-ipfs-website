@@ -1,0 +1,21 @@
+.container {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px 0;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  & > * {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
