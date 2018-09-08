@@ -4,7 +4,7 @@ module.exports = {
     { acronym: 'en', fullForm: 'English' },
     { acronym: 'pl', fullForm: 'Polski' },
     { acronym: 'it', fullForm: 'Italiano' },
-    { acronym: 'zh', fullForm: '简体中文' },
-    { acronym: 'ko', fullForm: '한국어' }
+    { acronym: 'zh-CN', fullForm: '简体中文' },
+    { acronym: 'ko-KR', fullForm: '한국어' }
   ]
 }

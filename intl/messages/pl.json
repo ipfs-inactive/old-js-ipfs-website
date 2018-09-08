@@ -92,23 +92,9 @@
   },
 
   "whatCanYouBuildTitle": "Co możesz zbudować dzięki js-ipfs",
-  "whatCanYouBuildSectionDesc": "",
-  "whatCanYouBuildItem1Name": "",
-  "whatCanYouBuildItem1Title": "",
-  "whatCanYouBuildItem1Subtitle": "",
-  "whatCanYouBuildItem1Desc": "",
-  "whatCanYouBuildItem2Name": "",
-  "whatCanYouBuildItem2Title": "",
-  "whatCanYouBuildItem2Subtitle": "",
-  "whatCanYouBuildItem2Desc": "",
-  "whatCanYouBuildItem3Name": "",
-  "whatCanYouBuildItem3Title": "",
-  "whatCanYouBuildItem3Subtitle": "",
-  "whatCanYouBuildItem3Desc": "",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "Przykładowe projekty",
-    "sectionDesc": "",
     "list": [
       {
         "desc": "Paratii buduje technologie open source do transmisji i kuracji wideo. Wykorzystuje js-ipfs oraz kontrakty Ethereum. Portal jest aplikacją webową z materiałami wideo na IPFS."
