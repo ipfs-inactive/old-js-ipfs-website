@@ -11,24 +11,30 @@
   transition:
     border-color var(--transition-default-duration) ease-in-out,
     background-color var(--transition-default-duration) ease-in-out;
+  transition-delay: 150ms;
 
   &:hover {
     border-color: var(--color-light-blue);
     cursor: pointer;
+    transition-delay: 0ms;
   }
 
   & span {
     opacity: 0.8;
     font-size: var(--typography-text-size-mobile);
     line-height: 22px;
+    transition: color var(--transition-default-duration) ease-in-out;
+    transition-delay: 150ms;
   }
 
   &.active {
     border-color: var(--color-light-blue);
     background-color: var(--color-light-blue);
+    transition-delay: 0ms;
 
     & span {
       color: var(--color-dark-blue);
+      transition-delay: 0ms;
     }
   }
 }

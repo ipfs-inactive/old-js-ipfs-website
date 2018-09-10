@@ -6,6 +6,7 @@
   text-align: center;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
 
   &::-webkit-scrollbar {
     display: none;

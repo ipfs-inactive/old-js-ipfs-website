@@ -1,6 +1,17 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
+:root {
+  --horizontal-scroller-width: 90%;
+  --horizontal-scroller-width-mobile: 94.5%;
+  --codesandbox-editor-background-color: #1c2022;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,13 +21,19 @@
   color: var(--color-white);
 
   & .content {
-    width: var(--container-width);
-    max-width: var(--max-container-width);
+    width: 100%;
     padding: 10% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    & h1,
+    & .sectionDescription,
+    & .iframeContainer {
+      width: var(--container-width);
+      max-width: var(--max-container-width);
+    }
 
     & h1 {
       font-weight: var(--typography-text-weight-semibold);
@@ -37,10 +54,56 @@
       }
     }
 
+    & .horizontalScroller > * {
+      &:first-child {
+        margin-left: calc(100% - var(--horizontal-scroller-width));
+      }
+
+      &:last-child {
+        margin-right: calc(100% - var(--horizontal-scroller-width));
+      }
+    }
+
     & .iframeContainer {
-      width: 100%;
+      position: relative;
       height: 500px;
       margin-top: 30px;
+
+      & .loadingContainer {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        background-color: var(--codesandbox-editor-background-color);
+        transition: opacity var(--transition-default-duration) ease-in-out;
+
+        &.hideLoading {
+          z-index: -10;
+          opacity: 0;
+        }
+
+        & .loadingCircle {
+          width: 80px;
+          height: 80px;
+          border: 2px solid var(--color-text-footer);
+          border-top: 2px solid var(--codesandbox-editor-background-color);
+          border-radius: 50%;
+          animation: spin 1s linear infinite;
+        }
+
+        & span {
+          margin-top: 20px;
+          color: var(--color-text-footer);
+          font-size: var(--typography-text-size-small);
+        }
+      }
 
       & iframe {
         width: 100%;
@@ -55,7 +118,21 @@
 
 @media (--layout-lte-small) {
   .container .content {
-    width: var(--container-width-mobile);
+    & h1,
+    & .sectionDescription,
+    & .iframeContainer {
+      width: var(--container-width-mobile);
+    }
+
+    & .horizontalScroller > * {
+      &:first-child {
+        margin-left: calc(100% - var(--horizontal-scroller-width-mobile));
+      }
+
+      &:last-child {
+        margin-right: calc(100% - var(--horizontal-scroller-width-mobile));
+      }
+    }
 
     & .sectionDescription p {
       width: 95%;
