@@ -30,7 +30,8 @@
 
     & h1,
     & .sectionDescription,
-    & .iframeContainer {
+    & .iframeContainer,
+    & .horizontalScroller {
       width: var(--container-width);
       max-width: var(--max-container-width);
     }
@@ -42,7 +43,6 @@
     }
 
     & .sectionDescription {
-      width: 100%;
       margin-bottom: 30px;
       display: flex;
       justify-content: center;
@@ -51,16 +51,6 @@
         width: 60%;
         font-weight: var(--typography-text-weight);
         line-height: var(--line-height-medium);
-      }
-    }
-
-    & .horizontalScroller > * {
-      &:first-child {
-        margin-left: calc(100% - var(--horizontal-scroller-width));
-      }
-
-      &:last-child {
-        margin-right: calc(100% - var(--horizontal-scroller-width));
       }
     }
 
@@ -124,13 +114,17 @@
       width: var(--container-width-mobile);
     }
 
-    & .horizontalScroller > * {
-      &:first-child {
-        margin-left: calc(100% - var(--horizontal-scroller-width-mobile));
-      }
+    & .horizontalScroller {
+      width: 100%;
 
-      &:last-child {
-        margin-right: calc(100% - var(--horizontal-scroller-width-mobile));
+      & div > * {
+        &:first-child {
+          margin-left: calc(100% - var(--horizontal-scroller-width-mobile));
+        }
+
+        &:last-child {
+          margin-right: calc(100% - var(--horizontal-scroller-width-mobile));
+        }
       }
     }
 

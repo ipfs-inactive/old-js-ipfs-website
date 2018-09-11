@@ -26,7 +26,19 @@ class WhatYouCanBuild extends PureComponent {
         <div className={ styles.content }>
           <h1>{ messages.whatYouCanBuild.sectionTitle }</h1>
           <ReactMarkdown className={ styles.sectionDescription } source={ messages.whatYouCanBuild.sectionDesc } />
-          <HorizontalScroller className={ styles.horizontalScroller } itemsArray={ this.getNavPills() }/>
+          <HorizontalScroller
+            className={ styles.horizontalScroller }
+            renderNavPills={
+              () => appsArr.map((app, index) => (
+                <NavPill
+                  key={ `app-${index}` }
+                  index={ index }
+                  title={ app.title }
+                  active={ this.state.activePillIndex === index }
+                  onPillClick={ this.handlePillClick }
+                />
+              ))
+            }/>
           { this.renderIframeContainer(isIframeLoaded, activeLink, editorView) }
         </div>
       </div>
@@ -51,31 +63,13 @@ class WhatYouCanBuild extends PureComponent {
     )
   }
 
-  getNavPills = () =>
-    appsArr.map((app, index) => {
-      return (
-        <NavPill
-          key={ `app-${index}` }
-          index={ index }
-          title={ app.title }
-          active={ this.state.activePillIndex === index }
-          onPillClick={ this.handlePillClick }
-        />
-      )
-    })
+  handleIframeLoad = () => this.setState({ isIframeLoaded: true })
 
-  handleIframeLoad = () => {
-    this.setState({
-      isIframeLoaded: true
-    })
-  }
-
-  handlePillClick = (index) => {
+  handlePillClick = (index) =>
     this.setState(({ activePillIndex }) => ({
       activePillIndex: index,
       isIframeLoaded: activePillIndex === index
     }))
-  }
 }
 
 export default withMobileSizeDetection(injectIntl(WhatYouCanBuild))

@@ -1,23 +1,26 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import classNames from 'classnames'
 import PropTypes from 'prop-types'
 
 import styles from './index.module.css'
 
-const NavPill = ({ index, title, active, onPillClick }) => {
-  const pillClasses = classNames(styles.pill, {
-    [styles.active]: active
-  })
+class NavPill extends PureComponent {
+  render() {
+    const { index, title, active, onPillClick } = this.props;
+    const pillClasses = classNames(styles.pill, {
+      [styles.active]: active
+    })
 
-  const handleOnClick = () => {
-    onPillClick(index)
+    const handleOnClick = () => {
+      onPillClick(index)
+    }
+
+    return (
+      <div className={ pillClasses } onClick={ handleOnClick }>
+        <span>{ title }</span>
+      </div>
+    )
   }
-
-  return (
-    <div className={ pillClasses } onClick={ handleOnClick }>
-      <span>{ title }</span>
-    </div>
-  )
 }
 
 NavPill.propTypes = {
