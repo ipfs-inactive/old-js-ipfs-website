@@ -1,15 +1,16 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
-import Svg from 'shared/components/svg'
 import ReactResizeDetector from 'react-resize-detector'
 import classNames from 'classnames'
 
-import arrowSvg from './images/arrow.sprite.svg'
+import ArrowButton from './arrows'
 import styles from './index.module.css'
 
 class HorizontalScroller extends PureComponent {
   state = {
-    showSliderButtons: false
+    showSliderButtons: false,
+    isLeftArrowActive: false,
+    isRightArrowActive: true
   }
 
   componentDidMount () {
@@ -18,21 +19,25 @@ class HorizontalScroller extends PureComponent {
 
   render () {
     const { renderNavPills, className } = this.props
-    const { showSliderButtons } = this.state
+    const { showSliderButtons, isLeftArrowActive, isRightArrowActive } = this.state
     const containerClasses = classNames(styles.container, className, {
       [styles.showButtons]: showSliderButtons
     })
 
     return (
       <div className={ containerClasses }>
-        <div className={ styles.leftButton } onClick={ this.handleLeftButtonClick }>
-          <Svg svg={ arrowSvg } />
-        </div>
-        <div className={ styles.rightButton } onClick={ this.handleRightButtonClick }>
-          <Svg svg={ arrowSvg } />
-        </div>
-        <div className={ styles.scroller } ref={ this.handleScrollerRef }>
-          <ReactResizeDetector handleWidth handleHeight onResize={ this.handleOnResizeScroller } />
+        <ArrowButton className={ styles.leftButton }
+          direction="left"
+          handleOnClick={ this.handleLeftButtonClick }
+          active={ isLeftArrowActive }/>
+        <ArrowButton className={ styles.rightButton }
+          direction="right"
+          handleOnClick={ this.handleRightButtonClick }
+          active={ isRightArrowActive }/>
+        <div className={ styles.scroller } ref={ this.handleScrollerRef } onScroll={ this.handleOnScroll }>
+          <ReactResizeDetector handleWidth
+            handleHeight
+            onResize={ this.handleOnResizeScroller } />
           <div className={ styles.pillsWrapper } ref={ this.handlePillsWrapperRef }>
             { renderNavPills() }
           </div>
@@ -43,20 +48,30 @@ class HorizontalScroller extends PureComponent {
 
   handleOnResizeScroller = (width) => {
     const { showSliderButtons } = this.state
-    this.pillsWrapperDivWidth = this.pillsWrapperRef.offsetWidth
-    console.log('size div: ', this.pillsWrapperDivWidth)
-    // +100 is used to take care of 50px margin added to both first and last buttons
-    this.scrollValue = (this.pillsWrapperDivWidth + 100) / 4
+    const pillsWrapperDivWidth = this.pillsWrapperRef.offsetWidth
+    this.maxScrollValue = pillsWrapperDivWidth - this.scrollerRef.offsetWidth
+    this.scrollValue = Math.ceil(this.maxScrollValue / 2) > 350
+      ? Math.ceil(this.maxScrollValue / 2)
+      : 350
     // -100 is used to take care of 50px margin added to first and last button when they're visible
-    const shouldShow = showSliderButtons ? (this.pillsWrapperDivWidth - 100) > width : this.pillsWrapperDivWidth > width
+    const shouldShow = showSliderButtons ? (pillsWrapperDivWidth - 100) > width : pillsWrapperDivWidth > width
     this.setState({
       showSliderButtons: shouldShow
     })
   }
 
-  handleScrollerRef = (ref) => this.scrollerRef = ref
+  handleOnScroll = () => {
+    this.currentScrollX = this.scrollerRef.scrollLeft
 
-  handlePillsWrapperRef = (ref) => this.pillsWrapperRef = ref
+    this.setState({
+      isLeftArrowActive: this.currentScrollX > 0,
+      isRightArrowActive: this.currentScrollX < this.maxScrollValue
+    })
+  }
+
+  handleScrollerRef = (ref) => { this.scrollerRef = ref }
+
+  handlePillsWrapperRef = (ref) => { this.pillsWrapperRef = ref }
 
   handleLeftButtonClick = () => this.swipeTo('left')
 
@@ -73,24 +88,21 @@ class HorizontalScroller extends PureComponent {
         left: this.currentScrollX,
         behavior: 'smooth'
       })
-      console.log(this.currentScrollX)
     }
   }
 
   decreaseScrollValue = () =>
-  this.currentScrollX - this.scrollValue < 0
-    ? this.currentScrollX
-    : this.currentScrollX - this.scrollValue
+    this.currentScrollX <= 0 ? this.currentScrollX : this.currentScrollX - this.scrollValue
 
   increaseScrollValue = () =>
-  this.currentScrollX + this.scrollValue > this.pillsWrapperDivWidth
-    ? this.currentScrollX
-    : this.currentScrollX + this.scrollValue
+    this.currentScrollX >= this.maxScrollValue
+      ? this.currentScrollX
+      : this.currentScrollX + this.scrollValue
 }
 
 HorizontalScroller.propTypes = {
   renderNavPills: PropTypes.func,
-  className: PropTypes.string,
+  className: PropTypes.string
 }
 
 export default HorizontalScroller

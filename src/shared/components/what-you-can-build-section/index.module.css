@@ -2,8 +2,6 @@
 @import "shared/styles/imports/custom-medias.css";
 
 :root {
-  --horizontal-scroller-width: 90%;
-  --horizontal-scroller-width-mobile: 94.5%;
   --codesandbox-editor-background-color: #1c2022;
 }
 
@@ -116,16 +114,6 @@
 
     & .horizontalScroller {
       width: 100%;
-
-      & div > * {
-        &:first-child {
-          margin-left: calc(100% - var(--horizontal-scroller-width-mobile));
-        }
-
-        &:last-child {
-          margin-right: calc(100% - var(--horizontal-scroller-width-mobile));
-        }
-      }
     }
 
     & .sectionDescription p {

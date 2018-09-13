@@ -5,8 +5,8 @@ import PropTypes from 'prop-types'
 import styles from './index.module.css'
 
 class NavPill extends PureComponent {
-  render() {
-    const { index, title, active, onPillClick } = this.props;
+  render () {
+    const { index, title, active, onPillClick } = this.props
     const pillClasses = classNames(styles.pill, {
       [styles.active]: active
     })

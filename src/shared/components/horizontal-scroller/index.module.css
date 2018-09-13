@@ -13,45 +13,7 @@
   &.showButtons {
     & .leftButton,
     & .rightButton {
-      position: absolute;
-      top: calc(50% - (var(--button-size) / 2));
-      width: var(--button-size);
-      height: var(--button-size);
-      z-index: 100;
       display: block;
-      background: var(--color-white);
-      border-radius: 50%;
-      color: var(--color-dark-blue);
-
-      & > i {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-
-        & > svg {
-          width: 55%;
-          fill: var(--color-dark-blue);
-        }
-      }
-
-      &:hover {
-        cursor: pointer;
-      }
-    }
-
-    & .leftButton {
-      left: 0;
-      box-shadow: 15px 0 24px 0 rgba(0, 0, 0, 0.5);
-    }
-
-    & .rightButton {
-      right: 0;
-      box-shadow: -15px 0 24px 0 rgba(0, 0, 0, 0.5);
-
-      & > i {
-        transform: rotate(180deg);
-      }
     }
 
     & .scroller .pillsWrapper > * {
@@ -62,6 +24,10 @@
       &:last-child {
         margin-right: calc(var(--button-size) + 50px);
       }
+    }
+
+    & .scroller {
+      overflow-x: hidden;
     }
   }
 
@@ -85,21 +51,21 @@
 
     & .pillsWrapper {
       display: inline-block;
-    }
 
-    & .pillsWrapper > * {
-      display: inline-block;
+      & > * {
+        display: inline-block;
 
-      &:first-child {
-        margin-left: 0;
-      }
+        &:first-child {
+          margin-left: 0;
+        }
 
-      &:last-child {
-        margin-right: 0;
-      }
+        &:last-child {
+          margin-right: 0;
+        }
 
-      &:not(:last-child) {
-        margin-right: 20px;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
       }
     }
   }
@@ -107,9 +73,29 @@
 
 @media (--layout-lte-small) {
   .container {
-    & .leftButton,
-    & .rightButton {
-      display: none;
+    &.showButtons {
+      & .leftButton,
+      & .rightButton {
+        display: none;
+      }
+
+      & .scroller {
+        overflow-x: scroll;
+
+        & .pillsWrapper {
+          margin: 0 calc((100% - var(--container-width-mobile)) / 2);
+
+          & > * {
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
