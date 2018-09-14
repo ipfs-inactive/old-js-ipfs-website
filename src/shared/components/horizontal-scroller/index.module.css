@@ -1,0 +1,103 @@
+@import "shared/styles/imports/variables.css";
+@import "shared/styles/imports/custom-medias.css";
+
+:root {
+  --button-size: 44px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &.showButtons {
+    & .arrow {
+      display: block;
+    }
+
+    & .scroller .pillsWrapper > * {
+      /*
+        Since arrows are positioned as absolute, we want to give a 50px margin on both first and last pills,
+        so we must take into account the arrows size.
+      */
+
+      &:first-child {
+        margin-left: calc(var(--button-size) + 50px);
+      }
+
+      &:last-child {
+        margin-right: calc(var(--button-size) + 50px);
+      }
+    }
+
+    & .scroller {
+      overflow-x: hidden;
+    }
+  }
+
+  & .arrow {
+    display: none;
+  }
+
+  & .scroller {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px 0;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & .pillsWrapper {
+      display: inline-block;
+
+      & > * {
+        display: inline-block;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (--layout-lte-small) {
+  .container {
+    &.showButtons {
+      & .arrow {
+        display: none;
+      }
+
+      & .scroller {
+        overflow-x: scroll;
+
+        & .pillsWrapper {
+          margin: 0 calc((100% - var(--container-width-mobile)) / 2);
+
+          & > * {
+            &:first-child {
+              margin-left: 0;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

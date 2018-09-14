@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Slider from 'react-slick'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
 
+import withMobileSizeDetection from 'shared/components/with-mobile-size-detection'
 import Arrow from 'shared/components/carousel/arrow'
 import ProjectsItem from './projects-item'
 import VideosItem from './videos-item'
@@ -18,73 +19,50 @@ const settings = {
   nextArrow: <Arrow direction="right"/>
 }
 
-class Carousel extends Component {
-  state = {
-    isMobile: false
-  }
+const Carousel = ({ itemsList, modifier, size, onVideoClick, activeIndex, translationsList, isMobile }) => {
+  let items
+  const numberOfSlidesToShow = isMobile ? 1 : size
+  const finalSettings = { ...settings, slidesToShow: numberOfSlidesToShow }
 
-  componentDidMount () {
-    window.addEventListener('resize', this.handleResize)
-
-    this.setState({
-      isMobile: window.innerWidth <= 768
+  // This logic should be removed from this component. It should receive 'items' as a prop.
+  if (modifier === 'projects') {
+    items = itemsList.map((item, index) => {
+      const translationIndex = item.translationListIndex
+      return (
+        <ProjectsItem key={ `carousel-item-${index}` }
+          icon={ item.icon }
+          desc={ translationsList[translationIndex].desc }
+          link={ item.link }
+          image={ item.image }
+          index={ index }
+          iconRatio={ item.iconRatio }
+          iconMaxWidth={ item.iconMaxWidth } />
+      )
     })
-  }
-
-  render () {
-    let items
-    const { itemsList, modifier, size, onVideoClick, activeIndex, translationsList } = this.props
-    const { isMobile } = this.state
-    const numberOfSlidesToShow = isMobile ? 1 : size
-    const finalSettings = { ...settings, slidesToShow: numberOfSlidesToShow }
-
-    if (modifier === 'projects') {
-      items = itemsList.map((item, index) => {
-        const translationIndex = item.translationListIndex
-        return (
-          <ProjectsItem key={ `carousel-item-${index}` }
-            icon={ item.icon }
-            desc={ translationsList[translationIndex].desc }
-            link={ item.link }
-            image={ item.image }
-            index={ index }
-            iconRatio={ item.iconRatio }
-            iconMaxWidth={ item.iconMaxWidth }/>
-        )
-      })
-    } else if (modifier === 'videos') {
-      items = itemsList.map((item, index) => {
-        return (
-          index !== activeIndex &&
+  } else if (modifier === 'videos') {
+    items = itemsList.map((item, index) => {
+      return (
+        index !== activeIndex &&
             <VideosItem key={ `carousel-videos-item-${index}` }
               link={ item.link }
               title={ item.title }
               index={ index }
               onClick={ onVideoClick }
             />
-        )
-      })
-    }
-
-    const shouldRemovePadding = modifier === 'videos'
-    const slideClassName = classNames({ noPadding: shouldRemovePadding })
-
-    return (
-      <Slider { ...finalSettings }
-        className={ slideClassName }
-        lazyLoad='ondemand' >
-        { items }
-      </Slider>
-    )
+      )
+    })
   }
 
-  handleResize = () => {
-    const { isMobile } = this.state
+  const shouldRemovePadding = modifier === 'videos'
+  const slideClassName = classNames({ noPadding: shouldRemovePadding })
 
-    if ((window.innerWidth <= 768 && !isMobile) || (window.innerWidth > 768 && isMobile)) {
-      this.setState(({ isMobile }) => ({ isMobile: !isMobile }))
-    }
-  }
+  return (
+    <Slider { ...finalSettings }
+      className={ slideClassName }
+      lazyLoad='ondemand' >
+      { items }
+    </Slider>
+  )
 }
 
 Carousel.defaultProps = {
@@ -100,4 +78,4 @@ Carousel.propTypes = {
   translationsList: PropTypes.array
 }
 
-export default Carousel
+export default withMobileSizeDetection(Carousel)

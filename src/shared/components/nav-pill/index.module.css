@@ -1,0 +1,42 @@
+@import "shared/styles/imports/variables.css";
+
+:root {
+  --color-light-blue-transparency: rgba(89, 229, 255, 0.4);
+  --animation-ease-in-out: ease-in-out;
+  --transition-delay: 150ms;
+}
+
+.pill {
+  padding: 10px 25px;
+  border: 1px solid var(--color-light-blue-transparency);
+  border-radius: 22px;
+  transition:
+    border-color var(--transition-default-duration) var(--animation-ease-in-out),
+    background-color var(--transition-default-duration) var(--animation-ease-in-out);
+  transition-delay: var(--transition-delay);
+
+  &:hover {
+    border-color: var(--color-light-blue);
+    cursor: pointer;
+    transition-delay: 0ms;
+  }
+
+  & span {
+    opacity: 0.8;
+    font-size: var(--typography-text-size-mobile);
+    line-height: 22px;
+    transition: color var(--transition-default-duration) var(--animation-ease-in-out);
+    transition-delay: var(--transition-delay);
+  }
+
+  &.active {
+    border-color: var(--color-light-blue);
+    background-color: var(--color-light-blue);
+    transition-delay: 0ms;
+
+    & span {
+      color: var(--color-dark-blue);
+      transition-delay: 0ms;
+    }
+  }
+}

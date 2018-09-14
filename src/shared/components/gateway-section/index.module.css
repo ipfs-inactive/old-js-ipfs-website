@@ -91,6 +91,10 @@
       & .toggle {
         bottom: calc(3% + 30px);
       }
+
+      & .gatewayContainer {
+        padding-bottom: 135%;
+      }
     }
   }
 }

@@ -131,6 +131,11 @@
     ]
   },
 
+  "whatYouCanBuild": {
+    "sectionTitle": "TODO Title",
+    "sectionDesc": "TODO description."
+  },
+
   "publicationsAndTalks": {
     "sectionTitle": "Publications & Talks",
     "sectionDesc": "Watch project updates, demos and other talks by the IPFS Community on the JavaScript project of IPFS. We will be adding dozens more talks soon from the IPFS Dev Meetings."
