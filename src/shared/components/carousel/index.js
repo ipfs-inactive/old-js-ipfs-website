@@ -24,6 +24,7 @@ const Carousel = ({ itemsList, modifier, size, onVideoClick, activeIndex, transl
   const numberOfSlidesToShow = isMobile ? 1 : size
   const finalSettings = { ...settings, slidesToShow: numberOfSlidesToShow }
 
+  // This logic should be removed from this component. It should receive 'items' as a prop.
   if (modifier === 'projects') {
     items = itemsList.map((item, index) => {
       const translationIndex = item.translationListIndex

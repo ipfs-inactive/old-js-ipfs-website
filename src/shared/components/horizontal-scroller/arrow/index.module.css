@@ -5,12 +5,14 @@
   --color-white-low-opacity: rgba(255, 255, 255, 0.2);
   --color-white-medium-opacity: rgba(255, 255, 255, 0.4);
   --button-size: 45px;
+  --animation-ease-in-out: ease-in-out;
 }
 
 .container {
+  /* This container is used to fill half of the background to avoid content being visible behind the arrow */
   position: absolute;
-  top: calc(50% - (var(--button-size) / 2));
-  width: calc(var(--button-size) / 2);
+  top: calc(50% - (var(--button-size) / 2)); /* This calc is used to center content vertically */
+  width: calc(var(--button-size) / 2); /* We only want to hide half of the content behind the arrow */
   height: var(--button-size);
   z-index: 10;
   background: var(--color-dark-blue);
@@ -26,8 +28,8 @@
     border-radius: 50%;
     box-shadow: 2px 0 60px 0 var(--color-dark-blue);
     transition:
-      background var(--transition-default-duration) ease-in-out,
-      border var(--transition-default-duration) ease-in-out;
+      background var(--transition-default-duration) var(--animation-ease-in-out),
+      border var(--transition-default-duration) var(--animation-ease-in-out);
 
     &.inactive {
       border: 1px solid var(--color-white-low-opacity);
@@ -53,7 +55,7 @@
 
       & > svg {
         width: 50%;
-        transition: fill var(--transition-default-duration) ease-in-out;
+        transition: fill var(--transition-default-duration) var(--animation-ease-in-out);
         fill: var(--color-dark-blue);
       }
     }

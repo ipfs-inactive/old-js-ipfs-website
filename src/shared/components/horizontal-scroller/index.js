@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import ReactResizeDetector from 'react-resize-detector'
 import classNames from 'classnames'
 
-import ArrowButton from './arrows'
+import Arrow from './arrow'
 import styles from './index.module.css'
 
 class HorizontalScroller extends PureComponent {
@@ -18,7 +18,7 @@ class HorizontalScroller extends PureComponent {
   }
 
   render () {
-    const { renderNavPills, className } = this.props
+    const { children, className } = this.props
     const { showSliderButtons, isLeftArrowActive, isRightArrowActive } = this.state
     const containerClasses = classNames(styles.container, className, {
       [styles.showButtons]: showSliderButtons
@@ -26,11 +26,11 @@ class HorizontalScroller extends PureComponent {
 
     return (
       <div className={ containerClasses }>
-        <ArrowButton className={ styles.leftButton }
+        <Arrow className={ styles.arrow }
           direction="left"
           handleOnClick={ this.handleLeftButtonClick }
           active={ isLeftArrowActive }/>
-        <ArrowButton className={ styles.rightButton }
+        <Arrow className={ styles.arrow }
           direction="right"
           handleOnClick={ this.handleRightButtonClick }
           active={ isRightArrowActive }/>
@@ -39,7 +39,7 @@ class HorizontalScroller extends PureComponent {
             handleHeight
             onResize={ this.handleOnResizeScroller } />
           <div className={ styles.pillsWrapper } ref={ this.handlePillsWrapperRef }>
-            { renderNavPills() }
+            { children }
           </div>
         </div>
       </div>
@@ -49,7 +49,16 @@ class HorizontalScroller extends PureComponent {
   handleOnResizeScroller = (width) => {
     const { showSliderButtons } = this.state
     const pillsWrapperDivWidth = this.pillsWrapperRef.offsetWidth
+    /*
+      maxScrollValue is the diference between the pills wrapper-div (contains all the pills)
+      and the scroller-div (pills visible area)
+    */
     this.maxScrollValue = pillsWrapperDivWidth - this.scrollerRef.offsetWidth
+    /*
+      scrollValue is the number of pixels that scroller-div should scroll when arrows are clicked.
+      scrollValue has a min value of 350 and a maxValue depending on maxScrollValue,
+      and it will allow users to click 2 times on the arrows to reach the last pills.
+     */
     this.scrollValue = Math.ceil(this.maxScrollValue / 2) > 350
       ? Math.ceil(this.maxScrollValue / 2)
       : 350
@@ -101,7 +110,7 @@ class HorizontalScroller extends PureComponent {
 }
 
 HorizontalScroller.propTypes = {
-  renderNavPills: PropTypes.func,
+  children: PropTypes.node,
   className: PropTypes.string
 }
 

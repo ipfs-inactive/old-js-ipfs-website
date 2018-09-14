@@ -6,13 +6,12 @@ import Svg from 'shared/components/svg'
 import arrowSvg from '../images/arrow.sprite.svg'
 import styles from './index.module.css'
 
-const ArrowButton = ({ direction, handleOnClick, className, active }) => {
+const Arrow = ({ direction, handleOnClick, className, active }) => {
   const containerClasses = classNames(styles.container, className, styles[direction])
   const buttonClasses = classNames(styles.button, {
     [styles.inactive]: !active
   })
 
-  // console.log('on render arrow')
   return (
     <div className={ containerClasses }>
       <div className={ buttonClasses } onClick={ handleOnClick }>
@@ -22,15 +21,15 @@ const ArrowButton = ({ direction, handleOnClick, className, active }) => {
   )
 }
 
-ArrowButton.defaultProps = {
+Arrow.defaultProps = {
   direction: 'right'
 }
 
-ArrowButton.propTypes = {
+Arrow.propTypes = {
   direction: PropTypes.string,
   handleOnClick: PropTypes.func,
   className: PropTypes.string,
   active: PropTypes.bool
 }
 
-export default ArrowButton
+export default Arrow

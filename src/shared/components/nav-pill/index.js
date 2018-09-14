@@ -12,7 +12,7 @@ class NavPill extends PureComponent {
     })
 
     const handleOnClick = () => {
-      onPillClick(index)
+      (Boolean(onPillClick) && typeof index !== 'undefined') && onPillClick(index)
     }
 
     return (
@@ -27,7 +27,7 @@ NavPill.propTypes = {
   index: PropTypes.number,
   title: PropTypes.string.isRequired,
   active: PropTypes.bool,
-  onClick: PropTypes.func
+  onPillClick: PropTypes.func
 }
 
 export default NavPill

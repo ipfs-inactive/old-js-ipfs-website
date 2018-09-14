@@ -11,12 +11,16 @@
   overflow: hidden;
 
   &.showButtons {
-    & .leftButton,
-    & .rightButton {
+    & .arrow {
       display: block;
     }
 
     & .scroller .pillsWrapper > * {
+      /*
+        Since arrows are positioned as absolute, we want to give a 50px margin on both first and last pills,
+        so we must take into account the arrows size.
+      */
+
       &:first-child {
         margin-left: calc(var(--button-size) + 50px);
       }
@@ -31,8 +35,7 @@
     }
   }
 
-  & .leftButton,
-  & .rightButton {
+  & .arrow {
     display: none;
   }
 
@@ -74,8 +77,7 @@
 @media (--layout-lte-small) {
   .container {
     &.showButtons {
-      & .leftButton,
-      & .rightButton {
+      & .arrow {
         display: none;
       }
 

@@ -26,24 +26,24 @@ class WhatYouCanBuild extends PureComponent {
         <div className={ styles.content }>
           <h1>{ messages.whatYouCanBuild.sectionTitle }</h1>
           <ReactMarkdown className={ styles.sectionDescription } source={ messages.whatYouCanBuild.sectionDesc } />
-          <HorizontalScroller
-            className={ styles.horizontalScroller }
-            renderNavPills={
-              () => appsArr.map((app, index) => (
-                <NavPill
-                  key={ `app-${index}` }
-                  index={ index }
-                  title={ app.title }
-                  active={ this.state.activePillIndex === index }
-                  onPillClick={ this.handlePillClick }
-                />
-              ))
-            }/>
+          <HorizontalScroller className={ styles.horizontalScroller }>
+            { this.renderNavPills() }
+          </HorizontalScroller>
           { this.renderIframeContainer(isIframeLoaded, activeLink, editorView) }
         </div>
       </div>
     )
   }
+
+  renderNavPills = () => appsArr.map((app, index) => (
+    <NavPill
+      key={ `app-${index}` }
+      index={ index }
+      title={ app.title }
+      active={ this.state.activePillIndex === index }
+      onPillClick={ this.handlePillClick }
+    />
+  ))
 
   renderIframeContainer = (isIframeLoaded, activeLink, editorView) => {
     const loadingContainerClasses = classNames(styles.loadingContainer, {
