@@ -1,0 +1,140 @@
+{
+  "buttons": {
+    "buttonLearnMore": "Apprendre Plus",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Freenode"
+  },
+
+  "navBar": {
+    "item1": "Démarrer",
+    "item2": "Tutoriels",
+    "item3": "API",
+    "item4": "Open-Source"
+  },
+
+  "hero": {
+    "welcomeMessage": "Un protocole P2P complet écrit entièrement en JavaScript",
+    "textDescription": "js-ipfs ouvre la voie à l'implémentation du protocole IPFS pour navigateur. Rédigé entièrement en JavaScript, il peut tourner sur un navigateur, sur un Service Worker, sur une extension Web et sur Node.js, ouvrant la porte à un monde de possibilités.",
+    "currentVersion": "Version actuelle:",
+    "latestUpdate": "Dernière mise à jour:",
+    "downloadsLastMonth": "Téléchargements le mois dernier:",
+    "errorPckMessage": "La récupération des données du paquet a échoué."
+  },
+
+  "banner": {
+    "highlightMessage": "La librairie js-ipfs est en alpha.",
+    "message": "Le code de base n'a pas été audité par des spécialistes de sécurité et ne doit pas être utilisé pour stocker, partager ou publier des informations sensibles."
+  },
+
+  "features": {
+    "sectionTitle": "Fonctionnalités",
+    "sectionDesc": "Contient toutes les choses que vous connaissez et aimez à propos de l'IPFS. Cette implémentation comporte également des fonctionnalités supplémentaires propres au navigateur. C'est la boîte à outils pour alimenter toutes vos applications DWeb.",
+    "list": [
+      {
+        "title": "S’exécute sur Node.js et sur navigateur",
+        "desc": "js-ipfs ne requiert aucune configuration et fonctionne sur Node.js, Electron et n'importe quel navigateur moderne. Il est également entièrement personnalisable afin que vous puissiez l'utiliser avec votre système préféré."
+      },
+      {
+        "title": "Implémentation complète d'IPFS",
+        "desc": "Aucune fonctionnalité n'a été oubliée. js-ipfs n'est pas un client léger, c'est l'implémentation complète du protocole IPFS."
+      },
+      {
+        "title": "Utiliser PubSub pour communiquer en temps réel avec les autres pairs",
+        "desc": "Les nœuds IPFS peuvent créer des topologies réseau basées sur des sujets d'intérêt pour diffuser des événements en temps réel."
+      },
+      {
+        "title": "Ajouter et récupérer des fichiers de n'importe où dans le réseau IPFS",
+        "desc": "IPFS est conçu pour utiliser la puissance de l'adressage de contenu et de l'adressage de processus pour trouver les nœuds du réseau ayant le contenu que vous recherchez et les récupérer. De la même manière, vous pouvez ajouter n'importe quelles données et d'autres nœuds les trouveront aussi."
+      },
+      {
+        "title": "Utilise l'API DAG pour traverser n'importe quelle structures de données basée sur des hash",
+        "desc": "IPFS utilise [IPLD] (https://ipld.io/), l'InterPlanetary Linked-Data, un modèle qui vous permet d'interagir avec des données provenant de plusieurs sources, telles que des git, des blockchains et plus encore."
+      },
+      {
+        "title": "libp2p est intégré",
+        "desc": "[libp2p](https://libp2p.io/) est le Modular Networking Stack qui a été créée pour IPFS, et maintenant vous pouvez l'utiliser directement via IPFS pour votre application."
+      },
+      {
+        "title": "Exécuter en tant que processus d'arrière-plan",
+        "desc": "js-ipfs a aussi une option pour l'exécuter en tant que processus d'arrière-plan afin que vous puissiez interagir avec lui en utilisant l'API HTTP que vous utilisez déjà avec go-ipfs."
+      },
+      {
+        "title": "Créer des adresses stables pour changer les données",
+        "desc": "Il est livré avec IPNS, l'InterPlanetary Naming System (système de nomination interplanétaire), un moyen d'utiliser des noms mutables pour distribuer les mises à jour de manière authentifiée et certifiée."
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "Commencer",
+    "sectionDesc": "IPFS vous donne un moyen d'indexer le contenu de toutes vos données sur le DWeb. Vous pouvez rendre vos données disponibles à travers le réseau ou en récupérer depuis leurs CID, l'identifiant de contenu. Essayez-le ci-dessous !",
+    "addDataToIPFS": "Ajouter des données à IPFS",
+    "output": "Sortie",
+    "getDataFromIPFS": "Obtenir des données depuis IPFS",
+    "usingJavascript": "En utilisant JavaScript sur le navigateur ou sur Node.js",
+    "usingCli": "En utilisant la console",
+    "usingGateway": "En utilisant la passerelle HTTP"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Passerelle du ServiceWorker",
+    "sectionDesc": "Transformez cette page en passerelle IPFS complète sans toucher à aucun serveur ni en utilisant HTTP pour récupérer le contenu du réseau IPFS! Exactement, vous avez bien lu, la passerelle du ServiceWorker peut se connecter directement au réseau IPFS avec js-ipfs.",
+    "activationSuccessTitle": "Félicitations ! Votre navigateur est maintenant une passerelle IPFS entièrement opérationnelle",
+    "activationSuccessText": "Chargez n'importe quel contenu comme vous le feriez normalement avec https://gateway.ipfs.io. Voici quelques exemples que vous pouvez essayer: \n - [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao) \n - [js.ipfs.io - /ipfs/<add when published>](https://js.ipfs.io/ipfs/<add when published>) \n - [awesome.ipfs.io - /ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus](https://js.ipfs.io/ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus) \n - [peerpad.net - /ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi](https://js.ipfs.io/ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi) \n Try with any other hash by opening https://js.ipfs.io/ipfs/<your hash>",
+    "toggleText": "Activer le ServiceWorker",
+    "activatingToggleText": "Activation du ServiceWorker...",
+    "activationErrorMessage": "Une erreur s'est produite lors de l'activation du Service Worker.",
+    "deactivationErrorMessage": "Une erreur s'est produite lors de la désactivation du Service Worker",
+    "nonRootScopeWarningMessage": "Le Service Worker ne peut pas être activé lors de la visualisation à partir de cette URL. Essayez plutôt avec https://js.ipfs.io.",
+    "incompatibleMessageText": "Ce navigateur ne supporte pas les Service Worker.",
+    "activatedToggleText": "Désactiver le Service Worker"
+  },
+
+  "whatCanYouBuildTitle": "Ce que vous pouvez construire avec js-ipfs",
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "Ce que les gens construisent avec",
+    "list": [
+      {
+        "desc": "Paratii construit une technologie open source pour le streaming et la curation vidéo, avec des contrats js-ipfs et Ethereum. Le Portal est une application Web avec des vidéos liées à la cryptographie qui fonctionne sur IPFS."
+      },
+      {
+        "desc": "Le WeTransfer décentralisé. Filenation est le moyen le plus simple d'envoyer vos fichiers à travers le monde en utilisant IPFS, il vous permet d'envoyer des fichiers sous forme de lien vers un email en utilisant IPFS."
+      },
+      {
+        "desc": "L'ensemble des archives Internet, mais décentralisé. Accédez à plus de 40 millions d'objets de l'archive via le DWeb. Combinant une passerelle et une interface JavaScript pour Firefox et Chrome."
+      },
+      {
+        "desc": "PeerPad est un éditeur collaboratif en temps réel qui fonctionne sur le web décentralisé, basé sur IPFS et Y.js. Il n'utilise pas de seconde ou de tierce partie: tous les nœuds participants communiquent directement entre eux sans service central."
+      },
+      {
+        "desc": "Donnez à votre navigateur de super pouvoirs avec l'extension Web IPFS. IPFS Companion est une extension qui peut être utilisée sur Chrome, Firefox et les navigateurs Brave, pour vous donner un accès transparent au réseau IPFS. Il contient également des fonctionnalités supplémentaires telles que le partage de fichiers et des API pour les développeurs Web."
+      },
+      {
+        "desc": "[Orbit Chat] (https://orbit.chat) est une application de chat peer-to-peer, distribuée, sans serveur, construite au-dessus d'OrbitDB. Ce dernier utilise [IPFS] (https://ipfs.io) comme données de stockage et [IPFS Pubsub] (https://ipfs.io/blog/29-js-ipfs-pubsub) pour synchroniser automatiquement les bases de données avec les pairs. "
+      }
+    ]
+  },
+
+  "whatYouCanBuild": {
+    "sectionTitle": "Ce que vous pouvez construire avec JS-IPFS",
+    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "Publications et Discussions",
+    "sectionDesc": "Regardez les mises à jour du projet, les démos et les autres discussions de la communauté sur le projet JavaScript d'IPFS. Nous allons bientôt ajouter des dizaines de discussions, issues des réunions de développement d'IPFS. "
+  },
+
+  "community": {
+    "sectionTitle": "Communauté",
+    "sectionDesc": "js-ipfs est un projet Open Source sous licence MIT de la communauté IPFS. Vous pouvez contribuer de plusieurs façons: aidez-nous à rédiger la spécification, les implémentations de code et les outils en utilisant libp2p, des exemples spécifiques et des tutoriels, et rejoignez nos appels réguliers sur les produits pour discuter sur libp2p avec nous.",
+    "socialNetworksText": "Rejoins nous !"
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs a été lancé et est sponsorisé par",
+    "leftContent": "Protocol Labs | Sauf indication contraire, contenu sous licence CC-BY 3.0"
+  }
+}
