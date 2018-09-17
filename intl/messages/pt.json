@@ -19,7 +19,7 @@
     "currentVersion": "Versão atual: {version}",
     "latestUpdate": "Última atualização: {date}",
     "downloadsLastMonth": "Contagem de downloads do último mês: {count}",
-    "errorPckMessage": "Não foi possível recolher a informação do modulo."
+    "errorPckMessage": "Não foi possível recolher a informação do módulo."
   },
 
   "banner": {
@@ -29,7 +29,7 @@
 
   "features": {
     "sectionTitle": "Características",
-    "sectionDesc": "Com todas as funcionalidades que tu conheces e adoras sobre o IPFS. Esta implementação também carrega alguns extras que são únicos para uma implementação que funciona no browser. É a caixa de ferramenta ideal para todas as tuas applicações para a DWeb.",
+    "sectionDesc": "Com todas as funcionalidades que tu conheces e adoras sobre o IPFS. Esta implementação também carrega alguns extras que são únicos para uma implementação que funciona no browser. É a caixa de ferramenta ideal para todas as tuas aplicações para a DWeb.",
     "list": [
       {
         "title": "Corre em Node.js e no Browser",
@@ -45,23 +45,23 @@
       },
       {
         "title": "Providencia e/ou encontra ficheiros de qualquer parte da rede IPFS",
-        "desc": "IPFS foi desenhado para tirar proveito de endereçamento de conteúdo e processo para encontrar nós na rede com os dados dos quais procuras. Da mesma forma, todos os dados que forem adicionados também vão estar disponíveis para qualquer outro nó."
+        "desc": "IPFS foi desenhado para tirar proveito do endereçamento de conteúdo para encontrar nós na rede com os dados que procuras. Da mesma forma, todos os dados que forem adicionados também vão estar disponíveis para qualquer outro nó."
       },
       {
         "title": "Usa a DAG API para atravessar qualquer estrutura de dados que seja ligada por hashes",
-        "desc": "IPFS usa o [IPLD](https://ipld.io/), a \"InterPlanetary Linked-Data\", um modelo de dados que permite interagir com dados de muitas fontes, como por exemplo git, blockchains entre outras."
+        "desc": "IPFS usa o [IPLD](https://ipld.io/), a \\\"InterPlanetary Linked-Data\\\", um modelo de dados que permite interagir com dados de muitas fontes, como por exemplo git, blockchains entre outras."
       },
       {
         "title": "libp2p incluída",
-        "desc": "libp2p é o stack de rede modular que foi criado para o IPFS e agora podes usar na tua aplicação através do IPFS."
+        "desc": "[libp2p](https://libp2p.io/) é a stack de rede modular que foi criada para o IPFS e agora podes usar também diretamente na tua aplicação através do IPFS."
       },
       {
         "title": "Executa como um processo independente",
-        "desc": "js-ipfs vem também com a opção de ser executado como um processo independente que podes intereagir através da API HTTP que já estás famialirizado do go-ipfs."
+        "desc": "js-ipfs vem também com a opção de ser executado como um processo independente com o qual podes interagir através da API HTTP que já estás familiarizado do go-ipfs."
       },
       {
         "title": "Cria endereços estáveis para os dados em constante mudança",
-        "desc": "O IPNS, \"Interplanetary Naming System\", oferece uma forma de criar ponteiros mutáveis (registos) para propagar actualizações de uma forma certificada."
+        "desc": "O IPNS, \\\"Interplanetary Naming System\\\", oferece uma forma de criar ponteiros mutáveis (registos) para propagar atualizações de uma forma certificada."
       }
     ]
   },
@@ -79,21 +79,22 @@
 
   "serviceWorker": {
     "sectionTitle": "Service Worker Gateway",
-    "sectionDesc": "Transforma esta página num Gateway de IPFS sem tocar em nenhum servidor ou usar HTTP para obter conteúdo da rede do IPFS. Sim, leste bem, o Service Worker Gateway com o js-ipfs conseguem conectar-se à rede do IPFS",
+    "sectionDesc": "Transforma esta página num Gateway de IPFS sem tocar em nenhum servidor ou usar HTTP para obter conteúdo da rede do IPFS. Sim, leste bem, o Service Worker Gateway com o js-ipfs conseguem conectar-se à rede do IPFS.",
     "activationSuccessTitle": "Parabéns! O teu browser é agora um Gateway de IPFS completamente operacional",
-    "activationSuccessText": "Carrega qualquer conteúdo como fazes normalmente com https://gateway.ipfs.io. Aqui ficam alguns exemplos para experimentares:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRXgjz48RS2Rp1WXdBtCHsjcz79et6BqQjyzNDWAPmagc](https://js.ipfs.io/ipfs/QmRXgjz48RS2Rp1WXdBtCHsjcz79et6BqQjyzNDWAPmagc)\n- [awesome.ipfs.io - /ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus](https://js.ipfs.io/ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus)\n - [peerpad.net - /ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi](https://js.ipfs.io/ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi)\n\nExperimenta outra hash qualquer abrindo https://js.ipfs.io/ipfs/<tua hash>",
+    "activationSuccessText": "Carrega qualquer conteúdo como fazes normalmente com https://gateway.ipfs.io. Aqui ficam alguns exemplos para experimentares:\\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\\n- [js.ipfs.io - /ipfs/QmRXgjz48RS2Rp1WXdBtCHsjcz79et6BqQjyzNDWAPmagc](https://js.ipfs.io/ipfs/QmRXgjz48RS2Rp1WXdBtCHsjcz79et6BqQjyzNDWAPmagc)\\n- [awesome.ipfs.io - /ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus](https://js.ipfs.io/ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus)\\n - [peerpad.net - /ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi](https://js.ipfs.io/ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi)\\n\\nExperimenta outra hash qualquer abrindo https://js.ipfs.io/ipfs/<tua hash>",
     "toggleText": "Ativar Service Worker",
     "activatingToggleText": "A ativar o Service Worker...",
     "activationErrorMessage": "Ocorreu um problema ao ativar o Service Worker.",
     "deactivationErrorMessage": "Ocorreu um problema ao desativar o Service Worker.",
-    "nonRootScopeWarningMessage": "O Service Worker não pode ser ativo neste URL. Tenta em https://js.ipfs.io.",
+    "nonRootScopeWarningMessage": "O Service Worker não pode ser ativado neste URL. Tenta em https://js.ipfs.io.",
     "incompatibleMessageText": "Este browser não suporta Service Workers.",
     "activatedToggleText": "Desativar Service Worker"
   },
 
+  "whatCanYouBuildTitle": "O que podes construir com js-ipfs",
+
   "whatArePeopleBuilding": {
     "sectionTitle": "O que está a ser criado",
-    "sectionDesc": "",
     "list": [
       {
         "desc": "Paratii implementa tecnologia open source para streaming e gestão de vídeo, utilizando js-ipfs e contratos Ethereum. Portal é uma web app de vídeos curados relacionados com criptografia que corre sobre IPFS."
@@ -117,8 +118,8 @@
   },
 
   "whatYouCanBuild": {
-    "sectionTitle": "TODO Title",
-    "sectionDesc": "TODO description."
+    "sectionTitle": "O que podes construir com JS-IPFS",
+    "sectionDesc": "PT-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
 
   "publicationsAndTalks": {
