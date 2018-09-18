@@ -92,23 +92,9 @@
   },
 
   "whatCanYouBuildTitle": "Cosa puoi creare con js-ipfs",
-  "whatCanYouBuildSectionDesc": "",
-  "whatCanYouBuildItem1Name": "",
-  "whatCanYouBuildItem1Title": "",
-  "whatCanYouBuildItem1Subtitle": "",
-  "whatCanYouBuildItem1Desc": "",
-  "whatCanYouBuildItem2Name": "",
-  "whatCanYouBuildItem2Title": "",
-  "whatCanYouBuildItem2Subtitle": "",
-  "whatCanYouBuildItem2Desc": "",
-  "whatCanYouBuildItem3Name": "",
-  "whatCanYouBuildItem3Title": "",
-  "whatCanYouBuildItem3Subtitle": "",
-  "whatCanYouBuildItem3Desc": "",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "Cosa stanno creando gli altri",
-    "sectionDesc": "",
     "list": [
       {
         "desc": "Paratii implementa tecnologie open source per lo streaming e la gestione di video, con js-ipfs e contratti Ethereum. Il portale è una Web App con video curati sul tema della crittografia, il tutto su IPFS."

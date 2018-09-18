@@ -92,23 +92,9 @@
   },
 
   "whatCanYouBuildTitle": "您可以用js-ipfs做什么",
-  "whatCanYouBuildSectionDesc": "",
-  "whatCanYouBuildItem1Name": "",
-  "whatCanYouBuildItem1Title": "",
-  "whatCanYouBuildItem1Subtitle": "",
-  "whatCanYouBuildItem1Desc": "",
-  "whatCanYouBuildItem2Name": "",
-  "whatCanYouBuildItem2Title": "",
-  "whatCanYouBuildItem2Subtitle": "",
-  "whatCanYouBuildItem2Desc": "",
-  "whatCanYouBuildItem3Name": "",
-  "whatCanYouBuildItem3Title": "",
-  "whatCanYouBuildItem3Subtitle": "",
-  "whatCanYouBuildItem3Desc": "",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "看看大家正在使用它做什么",
-    "sectionDesc": "",
     "list": [
       {
         "desc": "Paratii使用js-ipfs和以太坊合约构建了一套用于视频流和内容管理的开源技术。Portal是一个网络应用程序，用来管理运行在IPFS上的加密视频。"
