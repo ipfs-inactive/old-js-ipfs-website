@@ -15,13 +15,21 @@ Most of the website content is data-driven, you can check the [data](https://git
 
 - [Deployment](#deployment)
 
-- [Dependencies](#dependencies)
+- [Contributions Guidelines](#contributions-guidelines)
 
 - [Contribute](#contribute)
+
+- [License](#license)
 
 <a name="development"/>
 
 ## Development
+
+### Dependencies
+- `gatsbyjs v1` to build the website
+- `Node.js >= v8.11` and `npm` for build tools
+- `Transifex Client` for locales
+- `ipfs` to deploy changes
 
 ### Install
 ```sh
@@ -40,6 +48,16 @@ Generates the static HTML and JavaScript code bundles by performing a production
 
 #### **npm run lint**
 Runs [aegir](https://github.com/ipfs/aegir) lint.
+
+
+### Supported Browsers
+We are currently targeting:
+
+| Browser       | Versions      |
+| ------------- |:-------------:|
+| Chrome        | >= 69         |
+| Firefox       | >= 62         |
+| Safari        | >= 11.1       |
 
 
 ## Deployment
@@ -73,31 +91,19 @@ After that, go to the [messages](https://github.com/ipfs/js.ipfs.io/tree/master/
 **Note:** This process will be automated as soon as we tackle [this issue](https://github.com/ipfs/js.ipfs.io/issues/171).
 
 
-## Dependencies
-- `gatsbyjs` to build the website
-- `Node.js` and `npm` for build tools
-- `Transifex Client` for translations
-- `ipfs` to deploy changes
+## Contributions Guidelines
+Want to help us? Please, do!
 
-## Contribute
-Please contribute! There's a lot of ways you can help us out:
-- Don't see the Website translated in your language? Did you find an invalid translation? [Check here](#new-lang) how you can help us!
-- Add your talk to the website! [See how](#talk) you can do it.
-- Want to show what's possible to build with `js-ipfs`? [Check here](#apps) how to add your app to the website!
-- Take a look at the [issues](https://github.com/ipfs/js.ipfs.io/issues) or open a PR.
+### Translations
 
-<a name="new-lang"/>
-
-## Translations
-
-### Invalid translation?
+#### Invalid translation?
 1. Create a [Transifex](https://www.transifex.com/signup/?join_project=js-ipfs-website) account
 2. Go to https://www.transifex.com/ipfs/js-ipfs-website/, select a language, find an invalid string and propose a new translation
 
-### Missing language? Help us translate!
+#### Missing language? Help us translate!
 You can do it in 2 steps:
 
-#### 1. Create a PR that adds a line to the config file with a new language code
+##### 1. Create a PR that adds a line to the config file with a new language code
 In the file [intl/config](intl/config.js), add a line for your language. Example, if you were to add Portuguese, you would only have to add the new language to the `availableLocales` array:
 
 ```
@@ -110,7 +116,7 @@ module.exports = {
 }
 ```
 
-#### 2. Translate content at Transifex
+##### 2. Translate content at Transifex
 
 - Go to https://www.transifex.com/ipfs/js-ipfs-website and start translating.
 - If your language is missing request it on Transifex or as an issue in this repo.
@@ -134,7 +140,7 @@ When you are finished, submit it as a PR to this repo. Once it gets merged into 
 
 <a name="talk"/>
 
-## Add your talk to the website
+### Add your talk to the website
 You can add your talk to the website by creating a PR. You just need to add an object to the [`publicationsAndTalks`](https://github.com/ipfs/js.ipfs.io/blob/master/src/shared/data/publications-and-talks/index.js) array. Example, if you were to add a new entry, you would have to add the `link` to your talk and its `title`:
 
 ```js
@@ -153,7 +159,7 @@ const publicationsAndTalks = [
 
 <a name="apps">
 
-## Want to show what's possible to build with `js-ipfs`?
+### Want to show what's possible to build with `js-ipfs`?
 Sharing your app with us is very simple! You just need to host your code on [codesandbox](https://codesandbox.io/) and edit [`apps` array](https://github.com/ipfs/js.ipfs.io/blob/master/src/shared/data/what-you-can-build/index.js). Example, if you want to add a new app, you only have to add a new entry to the `apps` array by adding its title and the corresponding `codesandbox` share link:
 
 ```js
@@ -168,3 +174,17 @@ const apps = [
   }
 ]
 ```
+
+
+## Contribute
+Please contribute! There's a lot of ways you can help us out:
+- Don't see the Website translated in your language? Did you find an invalid translation? [Check here](#translations) how you can help us!
+- Add your talk to the website! [See how](#talk) you can do it.
+- Want to show what's possible to build with `js-ipfs`? [Check here](#apps) how to add your app to the website!
+- Take a look at the [issues](https://github.com/ipfs/js.ipfs.io/issues) or open a PR.
+
+[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
+
+
+## License
+[CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/)
