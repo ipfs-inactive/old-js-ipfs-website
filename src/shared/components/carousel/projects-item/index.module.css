@@ -1,6 +1,12 @@
 @import "shared/styles/imports/variables.css";
 @import "shared/styles/imports/custom-medias.css";
 
+:root {
+  --color-black-opacity: rgba(0, 0, 0, 0.3);
+  --color-black-low-opacity: rgba(0, 0, 0, 0.1);
+  --card-border-radius: 5px;
+}
+
 .container {
   padding: 15px;
   display: flex;
@@ -58,7 +64,7 @@
       position: relative;
       width: 100%;
       padding-bottom: 62.5%;
-      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 10px 0 var(--color-black-opacity);
 
       & > * {
         position: absolute;
@@ -72,35 +78,48 @@
 
 @media (--layout-lte-small) {
   .container {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
     flex-direction: column-reverse;
     align-items: center;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 0 20px -1px var(--color-black-low-opacity);
 
     & .leftContainer {
-      max-width: 90%;
+      max-width: 100%;
       margin-right: 0;
       align-items: center;
 
       & .topContainer {
-        align-items: center;
+        padding: 0 20px;
 
-        & .logo {
-          & img {
-            /* Some images don't occupy 100% so they need to be centered, e.g.: internet archive */
-            margin: 0 auto;
+        & .logoContainer {
+          width: 75%;
+          max-width: 200px;
+          margin: 30px 0;
+
+          & .logo {
+            width: 100%;
           }
         }
+      }
 
-        & .desc {
-          margin: 30px 0;
-          text-align: center;
+      & .bottomContainer {
+        width: 100%;
+
+        & a div {
+          width: 100%;
+          border-radius: 0;
+          border-bottom-right-radius: var(--card-border-radius);
+          border-bottom-left-radius: var(--card-border-radius);
         }
       }
     }
 
     & .rightContainer {
-      width: 100%;
-      max-width: none;
-      margin-bottom: 50px;
+      display: none;
     }
   }
 }

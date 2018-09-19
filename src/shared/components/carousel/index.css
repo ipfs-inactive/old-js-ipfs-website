@@ -235,7 +235,6 @@
 }
 
 .slick-dots {
-  position: absolute;
   bottom: -25px;
   width: 100%;
   margin: 0;
@@ -289,18 +288,30 @@
   opacity: 0.25;
   color: black;
   font-family: "slick";
-  font-size: 6px;
+  font-size: 24px;
   font-smoothing: antialiased;
   text-align: center;
   line-height: 20px;
+  transition:
+    color 300ms ease,
+    font-size 300ms ease,
+    opacity 300ms ease;
 }
 
 .slick-dots li.slick-active button::before {
   opacity: 0.75;
-  color: black;
+  color: #59e5ff;
+  font-size: 32px;
 }
 
 @media (width <= 768px) {
+  .slick-list,
+  .slick-track,
+  .slick-initialized .slick-slide,
+  .slick-initialized .slick-slide > div {
+    display: flex;
+  }
+
   .slick-prev,
   .slick-next {
     width: 10px;

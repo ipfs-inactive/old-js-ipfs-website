@@ -16,13 +16,32 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow: <Arrow direction="left"/>,
-  nextArrow: <Arrow direction="right"/>
+  nextArrow: <Arrow direction="right"/>,
+  responsive: [{
+    breakpoint: 769,
+    settings: {
+      centerPadding: '20%'
+    }
+  }, {
+    breakpoint: 481,
+    settings: {
+      centerPadding: '12%'
+    }
+  }]
 }
 
 const Carousel = ({ itemsList, modifier, size, onVideoClick, activeIndex, translationsList, isMobile }) => {
   let items
   const numberOfSlidesToShow = isMobile ? 1 : size
-  const finalSettings = { ...settings, slidesToShow: numberOfSlidesToShow }
+  const finalSettings = {
+    ...settings,
+    dots: isMobile,
+    infinite: !isMobile,
+    arrows: !isMobile,
+    centerMode: isMobile,
+    lazyLoad: !isMobile && 'ondemand',
+    slidesToShow: numberOfSlidesToShow
+  }
 
   // This logic should be removed from this component. It should receive 'items' as a prop.
   if (modifier === 'projects') {
@@ -57,9 +76,7 @@ const Carousel = ({ itemsList, modifier, size, onVideoClick, activeIndex, transl
   const slideClassName = classNames({ noPadding: shouldRemovePadding })
 
   return (
-    <Slider { ...finalSettings }
-      className={ slideClassName }
-      lazyLoad='ondemand' >
+    <Slider { ...finalSettings } className={ slideClassName }>
       { items }
     </Slider>
   )

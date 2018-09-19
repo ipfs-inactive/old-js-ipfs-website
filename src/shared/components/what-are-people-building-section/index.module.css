@@ -37,14 +37,18 @@
   }
 
   & .content {
-    width: var(--container-width);
-    max-width: var(--max-container-width);
+    width: 100%;
     z-index: 2;
     padding: 10% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+
+    & > * {
+      width: var(--container-width);
+      max-width: var(--max-container-width);
+    }
 
     & h1 {
       font-weight: var(--typography-text-weight-semibold);
@@ -74,7 +78,16 @@
     }
 
     & .content {
-      width: var(--container-width-mobile);
+      & > * {
+        width: var(--container-width-mobile);
+        max-width: unset;
+
+        &:last-child {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
 
       & .sectionDescription p {
         width: 95%;
