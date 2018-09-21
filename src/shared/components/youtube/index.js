@@ -22,11 +22,13 @@ class Youtube extends Component {
           </div>
         ) }
         { this.state.clicked && (
-          <iframe
-            src={ `https://www.youtube-nocookie.com/embed/${id}?autoplay=1` }
-            frameBorder="0"
-            allowFullScreen="1">
-          </iframe>
+          <div>
+            <iframe
+              src={ `https://www.youtube-nocookie.com/embed/${id}?autoplay=1` }
+              frameBorder="0"
+              allowFullScreen="1">
+            </iframe>
+          </div>
         ) }
       </div>
     )

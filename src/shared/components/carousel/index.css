@@ -237,7 +237,7 @@
 .slick-dots {
   bottom: -25px;
   width: 100%;
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
   display: block;
   list-style: none;
@@ -310,6 +310,10 @@
   .slick-initialized .slick-slide,
   .slick-initialized .slick-slide > div {
     display: flex;
+  }
+
+  .slick-initialized .slick-slide > div {
+    width: 100%;
   }
 
   .slick-prev,

@@ -9,6 +9,7 @@
   overflow: hidden;
   padding-bottom: 56.23%;
   background: #000;
+  border-radius: 5px;
 
   & iframe {
     position: absolute;

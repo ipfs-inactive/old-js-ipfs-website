@@ -50,9 +50,9 @@ class VideosList extends Component {
         activeIndex={ activeIndex } />
     }
 
-    handleRemainingVideoClick = (activeIndex) => {
+    handleRemainingVideoClick = (activeIndex, isMobile) => {
       this.setState({ activeIndex })
-      scrollToComponent(this.activeVideoRef, defaultScrollOptions)
+      !isMobile && scrollToComponent(this.activeVideoRef, defaultScrollOptions)
     }
 
     handleAtiveVideoRef = (element) => {

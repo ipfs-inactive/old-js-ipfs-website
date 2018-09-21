@@ -45,8 +45,7 @@
 @media (--layout-lte-small) {
   .videoItemContainer {
     & .videoTitle {
-      margin-top: 5px;
-      text-align: center;
+      display: none;
     }
   }
 }
