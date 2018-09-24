@@ -8,6 +8,7 @@ import classNames from 'classnames'
 import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
+import withMobileSizeDetection from 'shared/components/with-mobile-size-detection'
 import NavBar from 'shared/components/nav-bar'
 import LocalesBar from 'shared/components/locales-bar'
 import Svg from 'shared/components/svg'
@@ -59,8 +60,10 @@ class Hero extends Component {
                 <Svg svg={ cubeSvg } className={ styles.cube } />
               </div>
             </div>
-            <h1>{ messages.hero.welcomeMessage }</h1>
-            <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
+            <h1 className={ styles.long }>{ messages.hero.welcomeMessage.long }</h1>
+            <h1 className={ styles.short }>{ messages.hero.welcomeMessage.short }</h1>
+            <ReactMarkdown className={ classNames(styles.textDesc, styles.long) } source={ messages.hero.textDescription.long } />
+            <ReactMarkdown className={ classNames(styles.textDesc, styles.short) } source={ messages.hero.textDescription.short } />
             <div className={ infoContainerClasses }>
               { info && this.renderPkgInfo(info) }
             </div>
@@ -80,15 +83,17 @@ class Hero extends Component {
 
   handleAxiosResponse = (response) => {
     const data = response.data.collected
-    const { intl } = this.props
+    const { isMobile, intl } = this.props
     const { messages } = intl
+    const stringSize = isMobile ? 'short' : 'long'
+    let info
 
     const currentVersionStr = intl.formatMessage(
-      { id: '_dummy', defaultMessage: messages.hero.currentVersion },
+      { id: '_dummy', defaultMessage: messages.hero.currentVersion[stringSize] },
       { version: data.metadata.version }
     )
     const latestUpdateDateStr = intl.formatMessage(
-      { id: '_dummy', defaultMessage: messages.hero.latestUpdate },
+      { id: '_dummy', defaultMessage: messages.hero.latestUpdate[stringSize] },
       { date: intl.formatRelative(new Date(data.metadata.date)) }
     )
 
@@ -99,10 +104,18 @@ class Hero extends Component {
       { count: formattedDownloads }
     )
 
-    const info = {
-      currentVersionStr,
-      latestUpdateDateStr,
-      downloadsStr
+    if (isMobile) {
+      const versionAndDateStr = `${currentVersionStr} | ${latestUpdateDateStr}`
+      info = {
+        versionAndDateStr,
+        downloadsStr
+      }
+    } else {
+      info = {
+        currentVersionStr,
+        latestUpdateDateStr,
+        downloadsStr
+      }
     }
 
     this.setState({ info })
@@ -156,4 +169,4 @@ Hero.propTypes = {
   intl: PropTypes.object.isRequired
 }
 
-export default injectIntl(Hero)
+export default withMobileSizeDetection(injectIntl(Hero))

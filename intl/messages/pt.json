@@ -14,10 +14,22 @@
   },
 
   "hero": {
-    "welcomeMessage": "Uma implementação completa de um protocolo P2P escrito integralmente em JavaScript",
-    "textDescription": "js-ipfs estabelece o caminho para a implementação do protocolo IPFS no Browser. Programado competamente em JavaScript, pode ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades.",
-    "currentVersion": "Versão atual: {version}",
-    "latestUpdate": "Última atualização: {date}",
+    "welcomeMessage": {
+      "long": "Uma implementação completa de um protocolo P2P escrito integralmente em JavaScript",
+      "short": "Um protocolo P2P escrito em JavaScript"
+    },
+    "textDescription": {
+      "long": "js-ipfs estabelece o caminho para a implementação do protocolo IPFS no Browser. Programado competamente em JavaScript, pode ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades.",
+      "short": "js-ipfs pode ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades."
+    },
+    "currentVersion": {
+      "long": "Versão atual: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Última atualização: {date}",
+      "short": "Atualizado {date}"
+      },
     "downloadsLastMonth": "Contagem de downloads do último mês: {count}",
     "errorPckMessage": "Não foi possível recolher a informação do módulo."
   },
@@ -90,8 +102,6 @@
     "incompatibleMessageText": "Este browser não suporta Service Workers.",
     "activatedToggleText": "Desativar Service Worker"
   },
-
-  "whatCanYouBuildTitle": "O que podes construir com js-ipfs",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "O que está a ser criado",
