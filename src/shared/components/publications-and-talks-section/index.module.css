@@ -53,7 +53,7 @@
       max-width: var(--max-container-width);
 
       &:last-child {
-        width: 70%;
+        width: 60%;
       }
     }
 
