@@ -6,27 +6,28 @@ import styles from './index.module.css'
 
 class VideosItem extends Component {
   render () {
-    const { link, title } = this.props
+    const { link, title, isMobile } = this.props
 
     return (
       <div className={ styles.videoItemContainer } onClick={ this.handleRemainingVideoClick }>
-        <Youtube link={ link } blockPlay />
+        <Youtube link={ link } blockPlay={ !isMobile } />
         <p className={ styles.videoTitle }>{ title }</p>
       </div>
     )
   }
 
   handleRemainingVideoClick = () => {
-    const { index, onClick } = this.props
+    const { index, onClick, isMobile } = this.props
 
-    return onClick(index)
+    return onClick(index, isMobile)
   }
 }
 
 VideosItem.propTypes = {
   link: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  isMobile: PropTypes.bool
 }
 
 export default VideosItem

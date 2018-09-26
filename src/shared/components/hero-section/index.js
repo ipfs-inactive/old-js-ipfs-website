@@ -8,6 +8,7 @@ import classNames from 'classnames'
 import Observer from '@researchgate/react-intersection-observer'
 import ReactMarkdown from 'react-markdown'
 
+import withMobileSizeDetection from 'shared/components/with-mobile-size-detection'
 import NavBar from 'shared/components/nav-bar'
 import LocalesBar from 'shared/components/locales-bar'
 import Svg from 'shared/components/svg'
@@ -59,8 +60,10 @@ class Hero extends Component {
                 <Svg svg={ cubeSvg } className={ styles.cube } />
               </div>
             </div>
-            <h1>{ messages.hero.welcomeMessage }</h1>
-            <ReactMarkdown className={ styles.textDesc } source={ messages.hero.textDescription } />
+            <h1 className={ styles.long }>{ messages.hero.welcomeMessage.long }</h1>
+            <h1 className={ styles.short }>{ messages.hero.welcomeMessage.short }</h1>
+            <ReactMarkdown className={ classNames(styles.textDesc, styles.long) } source={ messages.hero.textDescription.long } />
+            <ReactMarkdown className={ classNames(styles.textDesc, styles.short) } source={ messages.hero.textDescription.short } />
             <div className={ infoContainerClasses }>
               { info && this.renderPkgInfo(info) }
             </div>
@@ -71,7 +74,8 @@ class Hero extends Component {
   }
 
   renderPkgInfo = (info) => {
-    const pkgInfoArr = Object.values(info)
+    const { isMobile } = this.props
+    const pkgInfoArr = Object.values(isMobile ? info.short : info.long)
 
     return <div>{ pkgInfoArr.map((infoElement, index) => <span key={ `pkgInfo-${index}` }>{ infoElement }</span>) }</div>
   }
@@ -84,11 +88,19 @@ class Hero extends Component {
     const { messages } = intl
 
     const currentVersionStr = intl.formatMessage(
-      { id: '_dummy', defaultMessage: messages.hero.currentVersion },
+      { id: '_dummy', defaultMessage: messages.hero.currentVersion.long },
       { version: data.metadata.version }
     )
     const latestUpdateDateStr = intl.formatMessage(
-      { id: '_dummy', defaultMessage: messages.hero.latestUpdate },
+      { id: '_dummy', defaultMessage: messages.hero.latestUpdate.long },
+      { date: intl.formatRelative(new Date(data.metadata.date)) }
+    )
+    const shortCurrentVersionStr = intl.formatMessage(
+      { id: '_dummy', defaultMessage: messages.hero.currentVersion.short },
+      { version: data.metadata.version }
+    )
+    const shortLatestUpdateDateStr = intl.formatMessage(
+      { id: '_dummy', defaultMessage: messages.hero.latestUpdate.short },
       { date: intl.formatRelative(new Date(data.metadata.date)) }
     )
 
@@ -100,9 +112,11 @@ class Hero extends Component {
     )
 
     const info = {
-      currentVersionStr,
-      latestUpdateDateStr,
-      downloadsStr
+      short: {
+        versionAndDateStr: `${shortCurrentVersionStr} | ${shortLatestUpdateDateStr}`,
+        downloadsStr
+      },
+      long: { currentVersionStr, latestUpdateDateStr, downloadsStr }
     }
 
     this.setState({ info })
@@ -156,4 +170,4 @@ Hero.propTypes = {
   intl: PropTypes.object.isRequired
 }
 
-export default injectIntl(Hero)
+export default withMobileSizeDetection(injectIntl(Hero))

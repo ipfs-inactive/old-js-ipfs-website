@@ -103,6 +103,14 @@
       }
     }
 
+    & .long {
+      display: block;
+    }
+
+    & .short {
+      display: none;
+    }
+
     & h1 {
       min-height: 48px;
       font-weight: var(--typography-text-weight-semibold);
@@ -184,6 +192,14 @@
         width: 75%;
         max-width: 300px;
         margin: 0 0 10% 10%;
+      }
+
+      & .long {
+        display: none;
+      }
+
+      & .short {
+        display: block;
       }
 
       & .textDesc p {

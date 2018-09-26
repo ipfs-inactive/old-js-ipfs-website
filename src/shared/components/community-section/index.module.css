@@ -115,14 +115,26 @@
       }
 
       & .socialLinksContainer {
+        width: 85%;
+
         & .socialLinks {
           flex-direction: column;
 
-          & > * {
+          & > a {
             margin-top: 12px;
+
+            & div {
+              width: 100%;
+            }
           }
         }
       }
     }
+  }
+}
+
+@media (--layout-lte-xsmall) {
+  .container .content .socialLinksContainer {
+    width: 100%;
   }
 }

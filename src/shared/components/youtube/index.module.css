@@ -1,5 +1,9 @@
 @import "shared/styles/imports/variables.css";
 
+:root {
+  --video-border-radius: 5px;
+}
+
 .youtube {
   position: relative;
   width: 100%;
@@ -9,6 +13,7 @@
   overflow: hidden;
   padding-bottom: 56.23%;
   background: #000;
+  border-radius: var(--video-border-radius);
 
   & iframe {
     position: absolute;
@@ -18,40 +23,31 @@
     height: 100%;
     z-index: 100;
     background: transparent;
+    border-radius: var(--video-border-radius);
   }
 
-  & .preview {
-    cursor: pointer;
+  & .placeholder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 200;
 
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-      background-color: rgba(0, 0, 0, 0);
-      transition: background-color var(--transition-default-duration) ease;
-    }
+    /* This 'transform' is used to enable GPU as it boosts up browser repainting process */
+    transform: translate3d(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-radius: var(--video-border-radius);
 
-    &:hover::after {
-      background-color: rgba(0, 0, 0, 0.3);
+    &.hide {
+      display: none;
     }
 
     & .thumbnail {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
       width: 100%;
-      max-width: 100%;
-      height: auto;
-      z-index: 1;
-      margin: auto;
-      display: block;
-      border: none;
     }
 
     & .play {
@@ -60,22 +56,32 @@
       left: 50%;
       width: 72px;
       height: 72px;
-      z-index: 3;
       margin: -36px 0 0 -36px;
-      transform: scale(0.85);
+      transform: scale(0.9);
       opacity: 0.85;
       transition: transform var(--transition-default-duration) ease, opacity var(--transition-default-duration) ease;
     }
 
-    &.previewSmall .play {
+    &.placeholderSmall .play {
       width: 44px;
       height: 44px;
       margin: -22px 0 0 -22px;
     }
 
-    &:hover .play {
-      transform: scale(1);
-      opacity: 1;
+    &.clicked {
+      & .thumbnail,
+      & .play {
+        display: none;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      & .play {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
   }
 }
