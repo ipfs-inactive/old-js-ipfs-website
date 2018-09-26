@@ -1,5 +1,9 @@
 @import "shared/styles/imports/variables.css";
 
+:root {
+  --video-border-radius: 5px;
+}
+
 .youtube {
   position: relative;
   width: 100%;
@@ -9,7 +13,7 @@
   overflow: hidden;
   padding-bottom: 56.23%;
   background: #000;
-  border-radius: 5px;
+  border-radius: var(--video-border-radius);
 
   & iframe {
     position: absolute;
@@ -19,7 +23,7 @@
     height: 100%;
     z-index: 100;
     background: transparent;
-    border-radius: 5px;
+    border-radius: var(--video-border-radius);
   }
 
   & .placeholder {
@@ -36,7 +40,7 @@
     justify-content: center;
     align-items: center;
     background: transparent;
-    border-radius: 5px;
+    border-radius: var(--video-border-radius);
 
     &.hide {
       display: none;

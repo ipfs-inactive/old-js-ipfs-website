@@ -5,12 +5,6 @@ import styles from './index.module.css'
 import playSvg from './media/play.sprite.svg'
 import ReactYoutube from 'react-youtube'
 
-const opts = {
-  playerVars: {
-    start: 1
-  }
-}
-
 class Youtube extends PureComponent {
   youtubePlayerState = {
     UNSTARTED: -1,
@@ -34,6 +28,7 @@ class Youtube extends PureComponent {
     const { link, blockPlay } = this.props
     const { clicked, isVisible } = this.state
     const id = link.split('v=')[1]
+    const opts = { playerVars: { start: 1 } }
     const placeholderClasses = classNames(styles.placeholder,
       blockPlay && styles.placeholderSmall,
       !isVisible && styles.hide,

@@ -74,7 +74,8 @@ class Hero extends Component {
   }
 
   renderPkgInfo = (info) => {
-    const pkgInfoArr = Object.values(info)
+    const { isMobile } = this.props
+    const pkgInfoArr = Object.values(isMobile ? info.short : info.long)
 
     return <div>{ pkgInfoArr.map((infoElement, index) => <span key={ `pkgInfo-${index}` }>{ infoElement }</span>) }</div>
   }
@@ -83,17 +84,23 @@ class Hero extends Component {
 
   handleAxiosResponse = (response) => {
     const data = response.data.collected
-    const { isMobile, intl } = this.props
+    const { intl } = this.props
     const { messages } = intl
-    const stringSize = isMobile ? 'short' : 'long'
-    let info
 
     const currentVersionStr = intl.formatMessage(
-      { id: '_dummy', defaultMessage: messages.hero.currentVersion[stringSize] },
+      { id: '_dummy', defaultMessage: messages.hero.currentVersion.long },
       { version: data.metadata.version }
     )
     const latestUpdateDateStr = intl.formatMessage(
-      { id: '_dummy', defaultMessage: messages.hero.latestUpdate[stringSize] },
+      { id: '_dummy', defaultMessage: messages.hero.latestUpdate.long },
+      { date: intl.formatRelative(new Date(data.metadata.date)) }
+    )
+    const shortCurrentVersionStr = intl.formatMessage(
+      { id: '_dummy', defaultMessage: messages.hero.currentVersion.short },
+      { version: data.metadata.version }
+    )
+    const shortLatestUpdateDateStr = intl.formatMessage(
+      { id: '_dummy', defaultMessage: messages.hero.latestUpdate.short },
       { date: intl.formatRelative(new Date(data.metadata.date)) }
     )
 
@@ -104,18 +111,12 @@ class Hero extends Component {
       { count: formattedDownloads }
     )
 
-    if (isMobile) {
-      const versionAndDateStr = `${currentVersionStr} | ${latestUpdateDateStr}`
-      info = {
-        versionAndDateStr,
+    const info = {
+      short: {
+        versionAndDateStr: `${shortCurrentVersionStr} | ${shortLatestUpdateDateStr}`,
         downloadsStr
-      }
-    } else {
-      info = {
-        currentVersionStr,
-        latestUpdateDateStr,
-        downloadsStr
-      }
+      },
+      long: { currentVersionStr, latestUpdateDateStr, downloadsStr }
     }
 
     this.setState({ info })
