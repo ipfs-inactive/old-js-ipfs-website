@@ -44,6 +44,7 @@
     & .orbits {
       position: relative;
       width: 90%;
+      height: 170%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -56,6 +57,9 @@
         height: 100%;
         display: flex;
         align-items: center;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
 
       & .outsideRing {

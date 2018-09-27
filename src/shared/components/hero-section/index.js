@@ -12,9 +12,9 @@ import withMobileSizeDetection from 'shared/components/with-mobile-size-detectio
 import NavBar from 'shared/components/nav-bar'
 import LocalesBar from 'shared/components/locales-bar'
 import Svg from 'shared/components/svg'
-import outsideRingSvg from './images/outside-ring.sprite.svg'
-import middleRingSvg from './images/middle-ring.sprite.svg'
-import insideRingSvg from './images/inside-ring.sprite.svg'
+import outsideRingSvg from './images/outside-ring.svg'
+import middleRingSvg from './images/middle-ring.svg'
+import insideRingSvg from './images/inside-ring.svg'
 import cubeSvg from './images/cube.svg'
 import styles from './index.module.css'
 
@@ -23,6 +23,10 @@ class Hero extends Component {
     info: undefined,
     inView: true
   }
+
+  outsideRingStyle = { backgroundImage: `url(${outsideRingSvg})` }
+  middleRingStyle = { backgroundImage: `url(${middleRingSvg})` }
+  insideRingStyle = { backgroundImage: `url(${insideRingSvg})` }
 
   componentDidMount () {
     axios.get('https://api.npms.io/v2/package/ipfs')
@@ -41,17 +45,11 @@ class Hero extends Component {
         <div className={ containerClasses }>
           <NavBar />
           <LocalesBar className={ styles.localesBar } />
-          <div className={ styles.orbitContainer } >
+          <div className={ styles.orbitContainer }>
             <div className={ styles.orbits }>
-              <div className={ styles.outsideRing }>
-                <Svg svg={ outsideRingSvg } />
-              </div>
-              <div className={ styles.middleRing }>
-                <Svg svg={ middleRingSvg } />
-              </div>
-              <div className={ styles.insideRing }>
-                <Svg svg={ insideRingSvg } />
-              </div>
+              <div className={ styles.outsideRing } style={ this.outsideRingStyle } />
+              <div className={ styles.middleRing } style={ this.middleRingStyle } />
+              <div className={ styles.insideRing } style={ this.insideRingStyle } />
             </div>
           </div>
           <div className={ styles.content }>
