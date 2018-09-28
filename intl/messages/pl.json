@@ -19,7 +19,11 @@
     "currentVersion": "Aktualna wersja: {version}",
     "latestUpdate": "Ostatnia aktualizacja: {date}",
     "downloadsLastMonth": "Pobrań w ubiegłym miesiącu: {count}",
-    "errorPckMessage": "Nie udało się pobrać informacji o pakiecie IPFS."
+    "errorPckMessage": "Nie udało się pobrać informacji o pakiecie IPFS.",
+    "animationButton": {
+      "enable": "Enable Animation",
+      "disable": "Disable Animation"
+    }
   },
 
   "banner": {

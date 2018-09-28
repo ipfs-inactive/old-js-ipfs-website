@@ -31,7 +31,11 @@
       "short": "Updated {date}"
       },
     "downloadsLastMonth": "Downloads last month: {count}",
-    "errorPckMessage": "Couldn't fetch IPFS package data."
+    "errorPckMessage": "Couldn't fetch IPFS package data.",
+    "animationButton": {
+      "enable": "Enable Animation",
+      "disable": "Disable Animation"
+    }
   },
 
   "banner": {

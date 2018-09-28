@@ -19,7 +19,11 @@
     "currentVersion": "Versione corrente: {version}",
     "latestUpdate": "Ultimo update: {date}",
     "downloadsLastMonth": "Download dell'ultimo mese: {count}",
-    "errorPckMessage": "Impossibile recuperare i dati da IPFS."
+    "errorPckMessage": "Impossibile recuperare i dati da IPFS.",
+    "animationButton": {
+      "enable": "Enable Animation",
+      "disable": "Disable Animation"
+    }
   },
 
   "banner": {
