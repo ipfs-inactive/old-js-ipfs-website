@@ -7,7 +7,7 @@ import styles from './index.module.css'
 const AnimationToggle = ({ className, title, onToggleClick }) => {
   const buttonClasses = classNames(styles.animationToggleButton, className)
 
-  const handleClick = () => onToggleClick && onToggleClick()
+  const handleClick = () => onToggleClick()
 
   return (
     <div className={ buttonClasses } onClick={ handleClick }>
@@ -18,7 +18,7 @@ const AnimationToggle = ({ className, title, onToggleClick }) => {
 
 AnimationToggle.propTypes = {
   className: PropTypes.string,
-  onToggleClick: PropTypes.func,
+  onToggleClick: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired
 }
 
