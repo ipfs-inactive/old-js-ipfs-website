@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
 import Observer from '@researchgate/react-intersection-observer'
@@ -10,7 +10,7 @@ import styles from './index.module.css'
 const scrollToComponent = typeof window !== 'undefined' && require('react-scroll-to-component')
 const defaultScrollOptions = { offset: -66, align: 'top', duration: 800 }
 
-class NavBar extends Component {
+class NavBar extends PureComponent {
   state = {
     isSticky: false,
     gettingStartedElement: undefined
