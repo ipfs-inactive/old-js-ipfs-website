@@ -1,0 +1,17 @@
+@import "shared/styles/imports/variables.css";
+
+.animationToggleButton {
+  z-index: 200;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--typography-text-size-xsmall);
+  line-height: 22px;
+  transition: color var(--transition-default-duration) ease-in-out;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+}

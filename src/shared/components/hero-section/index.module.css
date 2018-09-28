@@ -21,6 +21,12 @@
   background: var(--color-dark-blue);
   color: var(--color-white);
 
+  & .animationToggle {
+    position: absolute;
+    right: 20px;
+    bottom: calc(var(--nav-bar-desktop-height) + 20px);
+  }
+
   &.animationOff * {
     animation-play-state: paused !important;
   }
@@ -184,7 +190,8 @@
 
 @media (--layout-lte-small) {
   .container {
-    & .orbitContainer {
+    & .orbitContainer,
+    & .animationToggle {
       display: none;
     }
 
