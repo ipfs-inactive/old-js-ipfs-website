@@ -19,7 +19,11 @@
     "currentVersion": "현재 버전: {version}",
     "latestUpdate": "최근 업데이트: {date}",
     "downloadsLastMonth": "지난 달 다운로드 수: {count}",
-    "errorPckMessage": "IPFS 페키지 데이터를 가져올 수 없습니다."
+    "errorPckMessage": "IPFS 페키지 데이터를 가져올 수 없습니다.",
+    "animationButton": {
+      "enable": "Enable Animation",
+      "disable": "Disable Animation"
+    }
   },
 
   "banner": {

@@ -31,7 +31,11 @@
       "short": "Atualizado {date}"
       },
     "downloadsLastMonth": "Contagem de downloads do último mês: {count}",
-    "errorPckMessage": "Não foi possível recolher a informação do módulo."
+    "errorPckMessage": "Não foi possível recolher a informação do módulo.",
+    "animationButton": {
+      "enable": "Enable Animation",
+      "disable": "Disable Animation"
+    }
   },
 
   "banner": {

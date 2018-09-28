@@ -19,7 +19,11 @@
     "currentVersion": "当前版本：{version}",
     "latestUpdate": "最近更新：{date}",
     "downloadsLastMonth": "最近一个月的下载量：{count}",
-    "errorPckMessage": "无法获取IPFS数据包。"
+    "errorPckMessage": "无法获取IPFS数据包。",
+    "animationButton": {
+      "enable": "Enable Animation",
+      "disable": "Disable Animation"
+    }
   },
 
   "banner": {

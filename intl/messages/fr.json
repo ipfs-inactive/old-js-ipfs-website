@@ -19,7 +19,11 @@
     "currentVersion": "Version actuelle:",
     "latestUpdate": "Dernière mise à jour:",
     "downloadsLastMonth": "Téléchargements le mois dernier:",
-    "errorPckMessage": "La récupération des données du paquet a échoué."
+    "errorPckMessage": "La récupération des données du paquet a échoué.",
+    "animationButton": {
+      "enable": "Enable Animation",
+      "disable": "Disable Animation"
+    }
   },
 
   "banner": {
