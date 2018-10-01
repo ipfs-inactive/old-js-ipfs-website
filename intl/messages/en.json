@@ -61,7 +61,7 @@
       },
       {
         "title": "Add and retrieve files from anywhere in the IPFS Network",
-        "desc": "IPFS uses Content and Process Addressing to find and retrieve content from other nodes in the network. This means any data you add will be reachable by other nodes."
+        "desc": "IPFS is designed to use the power of Content Addressing to find the nodes in the network that have the content you are looking for. In the same way, you can add data and other nodes will find it too."
       },
       {
         "title": "Use the DAG API to traverse over any hash linked data structure",
