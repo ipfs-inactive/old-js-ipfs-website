@@ -52,9 +52,14 @@ class WhatYouCanBuild extends PureComponent {
 
     return (
       <div className={ styles.iframeContainer }>
-        <iframe src={ `${activeLink}?view=${editorView}` }
+        { /* <iframe src={ `${activeLink}?view=${editorView}` }
           sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-          onLoad={ this.handleIframeLoad } />
+          onLoad={ this.handleIframeLoad } /> */ }
+
+        <iframe height='414' scrolling='no' title='IPFS Video Streaming' src='//codepen.io/pedromssantos/embed/wYKydW/?height=414&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style={ {width: '100%'} } onLoad={ this.handleIframeLoad }>
+          See the Pen <a href='https://codepen.io/pedromssantos/pen/wYKydW/'>IPFS Video Streaming</a> by Pedro Santos (<a href='https://codepen.io/pedromssantos'>@pedromssantos</a>) on <a href='https://codepen.io'>CodePen</a>.
+        </iframe>
+
         <div className={ loadingContainerClasses }>
           <div className={ styles.loadingCircle } />
           <span>Loading, please wait...</span>

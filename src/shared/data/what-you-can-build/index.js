@@ -5,4 +5,7 @@ const apps = [
   }
 ]
 
+// jsfiddle https://jsfiddle.net/qpgtuynL/43/
+// codepen https://codepen.io/anon/pen/rqOpXG
+
 export default apps
