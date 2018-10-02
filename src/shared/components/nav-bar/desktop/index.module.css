@@ -42,13 +42,13 @@
     }
 
     & > .starContainer {
-      min-width: 97px;
-      min-height: 24px;
+      width: 100px;
+      height: 24px;
       display: flex;
       align-items: center;
 
-      & > span {
-        margin-top: 2px;
+      & > iframe {
+        margin-top: 3px;
       }
     }
   }

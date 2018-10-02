@@ -1,0 +1,154 @@
+{
+  "buttons": {
+    "buttonLearnMore": "Lær mere",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Freenode"
+  },
+
+  "navBar": {
+    "item1": "Kom i gang",
+    "item2": "Guider",
+    "item3": "API",
+    "item4": "Open Source"
+  },
+
+  "hero": {
+    "welcomeMessage": {
+      "long": "En komplet P2P protokol skrevet udelukkende i Javascript",
+      "short": "En P2P JavaScript protokol"
+    },
+    "textDescription": {
+      "long": "js-ipfs baner vejen for en browser-implementation af IPFS protokollen. Skrevet udelukkende i JavaScript og kørende fra en browser, en Service Worker, en brower-udvidelse og Node.js, hvilket åbner en verden af muligheder.",
+      "short": "js-ipfs kører i en Browser, en Service Worker, en Web-udvidelse og Node.js, og åbner derved en verden af muligheder."
+    },
+    "currentVersion": {
+      "long": "Nuværende version: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Seneste opdatering: {date}",
+      "short": "Opdateret {date}"
+      },
+    "downloadsLastMonth": "Downloads forrige måned: {count}",
+    "errorPckMessage": "Kunne ikke hente IPFS pakke data.",
+    "animationButton": {
+      "enable": "Aktiver animation",
+      "disable": "Deaktiver animation"
+    }
+  },
+
+  "banner": {
+    "highlightMessage": "Js-ipfs biblioteket er på alfa-stadiet",
+    "message": "Kodebasen har ikke gennemgået en sikkerheds-gennemgang af sikkerheds-specialister og bør ikke benyttes til at gemme, dele eller offentliggøre følsomme oplysninger."
+  },
+
+  "features": {
+    "sectionTitle": "Funktionalitet",
+    "sectionDesc": "Pakket med alt du kender og elsker fra IPFS. Denne implementering indeholder også nogle ekstra gode ting som er unikke for brug i en browser. Det er en værktøjs-kasse til at bygge alle dine DWeb applikationer.",
+    "list": [
+      {
+        "title": "Kør på Node.js og i browseren",
+        "desc": "js-ipfs fungerer ud af boksen på Node.js, Electron og i enhver moderne browser. Samtidig er det designet med fleksibilitet, på en sådan vis, at det kan tilpasses dit foretrukne afviklingsmiljø."
+      },
+      {
+        "title": "Implementerer den fulde IPFS-stack",
+        "desc": "Ingen funktion blev udeladt. js-ipfs er ikke en letvægtsklient, det er en komplet implementering af IPFS protokollen."
+      },
+      {
+        "title": "Anvend PubSub for at kommunikere live med andre klienter.",
+        "desc": "IPFS klienter kan skabe netværkstopologier, baseret på udvalgte emner, der bredt kan distribuere hændelser live."
+      },
+      {
+        "title": "Send og modtag filer fra ethvert sted i IPFS netværket.",
+        "desc": "IPFS benytter indholds- og process-adressering for at finde og modtage indhold fra andre klienter i netværket. Dette betyder at al data som du tilføjer vil andre klienter kunne tilgå."
+      },
+      {
+        "title": "Anvend DAG-API'et for at gennemløbe over enhver hash-bunden data-struktur.  ",
+        "desc": "IPFS benytter [IPLD](https://ipld.io/), for tvær-planetariske data-forbundethed, en model som muliggør interaktioner med data på tværs af forskellige kilder, som f.eks. git, blockchians mv."
+      },
+      {
+        "title": "libp2p er indbygget",
+        "desc": "[libp2p](https://libp2p.io/) er Den Modulære Netværks Stack som blev skabt til IPFS, og som du også kan benytte gennem IPFS direkte i din applikation."
+      },
+      {
+        "title": "Kør som en baggrunds-process",
+        "desc": "js-ipfs kommer også med mulighed for at køre som en baggrunds-process, sådan at du kan interagere med den via HTTP-API'et, som du kender det fra go-ipfs."
+      },
+      {
+        "title": "Opret stabile adresser for at skiftende data",
+        "desc": "Det leveres med IPNS, det tvær-planetariske navngivningssystem, som er en måde til at skabe foranderlige henvisninger (til elementer), sådan at man kan distribuere opdateringer på en valideret vis."
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "Kom i gang",
+    "sectionDesc": "IPFS giver dig en grundsten for indholds-adressering til alle dine data på DWeb. Du kan gøre data tilgængelig for netværket eller hente eksisterende data gennem dets CID, dets indholdsidentifikation. Prøv det nedenfor.",
+    "addDataToIPFS": "Tilføjelse af data til IPFS",
+    "output": "Resultat",
+    "getDataFromIPFS": "Hente data fra IPFS",
+    "usingJavascript": "Anvendelse af Javascript i browseren eller node.js",
+    "usingCli": "Anvendelse af kommandolinjen",
+    "usingGateway": "Anvendelse af HTTP gateway'en"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Service Worker Gateway",
+    "sectionDesc": "Omdan denne side til en fuld IPFS Gateway uden a røre servere eller at benytte HTTP til at downloade indhold fra IPFS netværket! Ja, du læste rigtigt, Server Worker Gateway med js-ipfs kan forbinde direkte til IPFS netværket.",
+    "activationSuccessTitle": "Tillykke! Din browser er nu en velfungerende IPFS Gateway.",
+    "activationSuccessText": "Indlæs ethvert indhold som du normalt ville gøre med https://gateway.ipfs.io. Her er nogle eksempler du kan prøve:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRXgjz48RS2Rp1WXdBtCHsjcz79et6BqQjyzNDWAPmagc](https://js.ipfs.io/ipfs/QmRXgjz48RS2Rp1WXdBtCHsjcz79et6BqQjyzNDWAPmagc)\n- [awesome.ipfs.io - /ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus](https://js.ipfs.io/ipfs/QmX7uKymLyHHdsVY9yXbj54AdKSaLuamXJHcXyWfKQ6fus)\n - [peerpad.net - /ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi](https://js.ipfs.io/ipfs/QmfQiRPTxVTT31ecDMAcUgTSTDt2HdPHKTuDWnD7T689oi)\n\nPrøv med andre hashes ved at åbne https://js.ipfs.io/ipfs/",
+    "toggleText": "Aktivere Service Worker",
+    "activatingToggleText": "Aktiverer Service Worker...",
+    "activationErrorMessage": "En fejl opstod ved aktivering af Service Worker'en",
+    "deactivationErrorMessage": "En fejl opstod ved deaktivering af Service Worker'en",
+    "nonRootScopeWarningMessage": "Service Worker'en kan ikke aktiveres mens denne URL fremvises. Prøv i stedet https://js.ipfs.io",
+    "incompatibleMessageText": "Denne browser understøtter ikke Service Worker.",
+    "activatedToggleText": "Deaktiver Service Worker"
+  },
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "Hvad andre bygger med det",
+    "list": [
+      {
+        "desc": "Paratii bygger open source teknologi for video streaming og kuratering, med js-ipfs og Ethererum kontrakter. Portalen er en web applikation med kurateret krypto-relaterede videoer som afvikles på IPFS."
+      },
+      {
+        "desc": "Det decentraliserede WeTransfer. Filenation er den simpleste måde at sende dine filer på tværs af kloden med IPFS, der lader dig sende filer som link i en e-mail vha. IPFS."
+      },
+      {
+        "desc": "Det fulde Internet Arkiv (Internet Archive), men på decentraliseret vis. Adgang til arkivets over 40 mio. elementer via Dweb. Kombinationen af en gateway der seeder og en javascript brugergrænseflade til Firefox og Chrome."
+      },
+      {
+        "desc": "PeerPad er et samarbejdende skriveprogram, der afvikles på det distribuerede net, bygget oven på IPFS og Y.js. Der benyttes ikke eksterne dele fra 2/3-parter, og alle deltagende klienter taler direkte med hinanden uden en central service."
+      },
+      {
+        "desc": "Giv din browser superkræfter med IPFS web udvidelsen. IPFS Følgesvend er en udvidelse som kan benyttes i Chrome, Firefox og Brave browsere giver dig gnidningsfri adgang til IPFS netværket. Pakket med ekstra funktionalitet som eksempelvis fil-deling og API'er for web-udviklere."
+      },
+      {
+        "desc": "[Orbit Chat](https://orbit.chat) er et serverløst, distribueret, klient-til-klient chat program baseret på OrbitDB. OrbitDB benytter [IPFS](https://ipfs.io) som dets data fundament og [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) for automatisk at synkronisere databaser med andre klienter."
+      }
+    ]
+  },
+
+  "whatYouCanBuild": {
+    "sectionTitle": "Hvad du kan bygge med js-ipfs",
+    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "Publikationer & foredrag",
+    "sectionDesc": "Følg projekt opdateringer, demoer og andre foredrag af IPFS fællesskabet for Javascript projektet under IPFS. Vi vil snart tilføje flere foredrag fra IPFS udviklingsmøder."
+  },
+
+  "community": {
+    "sectionTitle": "Fællesskab",
+    "sectionDesc": "js-ipfs er et MIT-licenseret, Open Source projekt fra IPFS fællesskabet. Der er mange måder hvorpå du kan bidrage: hjælp med at skrive specifikationer, kode-implementeringer og værktøjer der benytter libp2p, skab eksempler og læringsmateriale, og tilslut dig vores faste produkt snakke for at drøfte libp2p med os.",
+    "socialNetworksText": "Kom og hæng ud!"
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs blev grundlagt og sponseret af",
+    "leftContent": "Protocol Labs | Undtagen angivne steder, licenseret med CC-BY 3.0"
+  }
+}

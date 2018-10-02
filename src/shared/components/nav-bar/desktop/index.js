@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import classNames from 'classnames'
-import Helmet from 'react-helmet'
+// import Helmet from 'react-helmet'
 import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 
@@ -18,9 +18,9 @@ class DesktopNavBar extends Component {
     return (
       <div className={ navBarClasses } >
         <div className={ styles.navBarMenu }>
-          <Helmet>
+          { /* <Helmet>
             <script async defer src="https://buttons.github.io/buttons.js" />
-          </Helmet>
+          </Helmet> */ }
           <div className={ styles.link } onClick={ this.handleGettingStartedClick }> { messages.navBar.item1 } </div>
           <Link href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials">
             { messages.navBar.item2 }
@@ -32,9 +32,7 @@ class DesktopNavBar extends Component {
             { messages.navBar.item4 }
           </Link>
           <div className={ styles.starContainer }>
-            <a className="github-button" href="https://github.com/ipfs/js-ipfs" data-show-count="true" aria-label="Star ipfs/js-ipfs on GitHub">
-              Star
-            </a>
+            <iframe src='https://ghbtns.com/github-btn.html?user=ipfs&repo=js-ipfs&type=star&count=true' frameborder='0' scrolling='0' height='100%;' width='100%;'/>
           </div>
         </div>
       </div>
