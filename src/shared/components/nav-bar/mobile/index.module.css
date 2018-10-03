@@ -87,6 +87,11 @@
       &.githubContributers {
         display: flex;
         align-items: center;
+
+        & > iframe {
+          width: 100px;
+          height: 23px;
+        }
       }
 
       &:last-child {

@@ -1,6 +1,6 @@
 {
   "buttons": {
-    "buttonLearnMore": "Apprendre Plus",
+    "buttonLearnMore": "En  apprendre Plus",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
     "buttonIrcFreenode": "IRC Freenode"
@@ -14,15 +14,27 @@
   },
 
   "hero": {
-    "welcomeMessage": "Un protocole P2P complet écrit entièrement en JavaScript",
-    "textDescription": "js-ipfs ouvre la voie à l'implémentation du protocole IPFS pour navigateur. Rédigé entièrement en JavaScript, il peut tourner sur un navigateur, sur un Service Worker, sur une extension Web et sur Node.js, ouvrant la porte à un monde de possibilités.",
-    "currentVersion": "Version actuelle:",
-    "latestUpdate": "Dernière mise à jour:",
+    "welcomeMessage": {
+      "long": "Un protocole P2P complet écrit entièrement en JavaScript",
+      "short": "Un protocole JavaScript P2P"
+    },
+    "textDescription": {
+      "long": "js-ipfs ouvre la voie à l'implémentation du protocole IPFS dans les navigateurs. Ecrit intégralement en JavaScript, il peut s'exécuter dans le navigateur, un Service Worker, une extension Web et avec Node.js, ouvrant une porte vers un monde de possibilités.",
+      "short": "js-ipfs s'exécute dans le navigateur, un Service Worker, une extension Web et Node.js, ouvrant une porte vers un monde de possibilités."
+    },
+    "currentVersion": {
+      "long": "Version courante: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Dernière mise à jour: {date}",
+      "short": "Mis à jour{date}"
+      },
     "downloadsLastMonth": "Téléchargements le mois dernier:",
     "errorPckMessage": "La récupération des données du paquet a échoué.",
     "animationButton": {
-      "enable": "Enable Animation",
-      "disable": "Disable Animation"
+      "enable": "Activer Animation",
+      "disable": "Désactiver Animation"
     }
   },
 
@@ -94,8 +106,6 @@
     "incompatibleMessageText": "Ce navigateur ne supporte pas les Service Worker.",
     "activatedToggleText": "Désactiver le Service Worker"
   },
-
-  "whatCanYouBuildTitle": "Ce que vous pouvez construire avec js-ipfs",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "Ce que les gens construisent avec",

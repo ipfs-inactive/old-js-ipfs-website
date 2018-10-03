@@ -33,8 +33,8 @@
     "downloadsLastMonth": "Contagem de downloads do último mês: {count}",
     "errorPckMessage": "Não foi possível recolher a informação do módulo.",
     "animationButton": {
-      "enable": "Enable Animation",
-      "disable": "Disable Animation"
+      "enable": "Ligar Animação",
+      "disable": "Desligar Animação"
     }
   },
 
@@ -61,7 +61,7 @@
       },
       {
         "title": "Providencia e/ou encontra ficheiros de qualquer parte da rede IPFS",
-        "desc": "IPFS foi desenhado para tirar proveito do endereçamento de conteúdo para encontrar nós na rede com os dados que procuras. Da mesma forma, todos os dados que forem adicionados também vão estar disponíveis para qualquer outro nó."
+        "desc": "IPFS foi desenhado para tirar proveito do endereçamento de conteúdo para encontrar nós na rede com os dados que procuras. Da mesma forma, quaisquer dados adicionados também vão estar disponíveis para qualquer outro nó."
       },
       {
         "title": "Usa a DAG API para atravessar qualquer estrutura de dados que seja ligada por hashes",
