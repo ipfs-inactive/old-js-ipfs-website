@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown'
 import { injectIntl } from 'react-intl'
 import classNames from 'classnames'
 
-import withMobileSizeDetection from 'shared/components/with-mobile-size-detection'
 import NavPill from 'shared/components/nav-pill'
 import appsArr from 'shared/data/what-you-can-build'
 import HorizontalScroller from 'shared/components/horizontal-scroller'
@@ -16,10 +15,9 @@ class WhatYouCanBuild extends PureComponent {
   }
 
   render () {
-    const { isMobile, intl: { messages } } = this.props
+    const { intl: { messages } } = this.props
     const { activePillIndex, isIframeLoaded } = this.state
     const activeLink = appsArr[activePillIndex].link
-    const editorView = isMobile ? 'editor' : 'split'
 
     return (
       <div className={ styles.container }>
@@ -29,7 +27,7 @@ class WhatYouCanBuild extends PureComponent {
           <HorizontalScroller className={ styles.horizontalScroller }>
             { this.renderNavPills() }
           </HorizontalScroller>
-          { this.renderIframeContainer(isIframeLoaded, activeLink, editorView) }
+          { this.renderIframeContainer(isIframeLoaded, activeLink) }
         </div>
       </div>
     )
@@ -45,21 +43,16 @@ class WhatYouCanBuild extends PureComponent {
     />
   ))
 
-  renderIframeContainer = (isIframeLoaded, activeLink, editorView) => {
+  renderIframeContainer = (isIframeLoaded, activeLink) => {
     const loadingContainerClasses = classNames(styles.loadingContainer, {
       [styles.hideLoading]: isIframeLoaded
     })
 
     return (
       <div className={ styles.iframeContainer }>
-        { /* <iframe src={ `${activeLink}?view=${editorView}` }
-          sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
-          onLoad={ this.handleIframeLoad } /> */ }
-
-        <iframe height='414' scrolling='no' title='IPFS Video Streaming' src='//codepen.io/pedromssantos/embed/wYKydW/?height=414&theme-id=dark&default-tab=css,result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style={ {width: '100%'} } onLoad={ this.handleIframeLoad }>
-          See the Pen <a href='https://codepen.io/pedromssantos/pen/wYKydW/'>IPFS Video Streaming</a> by Pedro Santos (<a href='https://codepen.io/pedromssantos'>@pedromssantos</a>) on <a href='https://codepen.io'>CodePen</a>.
-        </iframe>
-
+        <iframe scrolling='no'
+          src={ `${activeLink}?theme-id=dark&default-tab=js,result&embed-version=2` }
+          onLoad={ this.handleIframeLoad } />
         <div className={ loadingContainerClasses }>
           <div className={ styles.loadingCircle } />
           <span>Loading, please wait...</span>
@@ -77,4 +70,4 @@ class WhatYouCanBuild extends PureComponent {
     }))
 }
 
-export default withMobileSizeDetection(injectIntl(WhatYouCanBuild))
+export default injectIntl(WhatYouCanBuild)
