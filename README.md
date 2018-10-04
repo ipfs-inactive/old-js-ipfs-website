@@ -1,7 +1,5 @@
 # [js.ipfs.io](https://js.ipfs.io)
 
-> The js-ipfs Project Website.
-
 This project builds out a static website for js-ipfs, available at [js.ipfs.io](https://js.ipfs.io/), to explain the JavaScript implementation of the IPFS protocol. It uses [gatsbyjs](https://www.gatsbyjs.org/) to generate the HTML pages.
 It provides an informative, public-facing website. The key aspects are the concepts, links, and the provided examples.
 Most of the website content is data-driven, you can check the [data](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/data) directory to see the sections information bundled as `js` files.
@@ -12,45 +10,45 @@ Most of the website content is data-driven, you can check the [data](https://git
 ## Table of Contents
 
 - [Development](#development)
-
 - [Deployment](#deployment)
-
 - [Contributions Guidelines](#contributions-guidelines)
-
 - [Contribute](#contribute)
-
 - [License](#license)
-
-<a name="development"/>
 
 ## Development
 
 ### Dependencies
+
 - `gatsbyjs v1` to build the website
 - `Node.js >= v8.11` and `npm` for build tools
 - `Transifex Client` for locales
 - `ipfs` to deploy changes
 
 ### Install
+
 ```sh
 > git clone https://github.com/ipfs/js.ipfs.io
 > npm install
 ```
 
 ### Usage
+
 The following commands are available:
 
 #### **npm run develop**
+
 Starts a hot-reloading development environment at [localhost:8000](localhost:8000).
 
 #### **npm run build**
+
 Generates the static HTML and JavaScript code bundles by performing a production build.
 
 #### **npm run lint**
+
 Runs [aegir](https://github.com/ipfs/aegir) lint.
 
-
 ### Supported Browsers
+
 We are currently targeting:
 
 | Browser       | Versions      |
@@ -61,6 +59,7 @@ We are currently targeting:
 
 
 ## Deployment
+
 When a branch gets `merged` to master, it is deployed to [dev.js.ipfs](https://dev.js.ipfs.io/).
 To deploy to [js.ipfs.io](https://js.ipfs.io/) the code should be merged into the `production` branch.
 
@@ -92,18 +91,22 @@ After that, go to the [messages](https://github.com/ipfs/js.ipfs.io/tree/master/
 
 
 ## Contributions Guidelines
+
 Want to help us? Please, do!
 
 ### Translations
 
 #### Invalid translation?
+
 1. Create a [Transifex](https://www.transifex.com/signup/?join_project=js-ipfs-website) account
 2. Go to https://www.transifex.com/ipfs/js-ipfs-website/, select a language, find an invalid string and propose a new translation
 
 #### Missing language? Help us translate!
+
 You can do it in 2 steps:
 
 ##### 1. Create a PR that adds a line to the config file with a new language code
+
 In the file [intl/config](intl/config.js), add a line for your language. Example, if you were to add Portuguese, you would only have to add the new language to the `availableLocales` array:
 
 ```
@@ -141,6 +144,7 @@ When you are finished, submit it as a PR to this repo. Once it gets merged into 
 <a name="talk"/>
 
 ### Add your talk to the website
+
 You can add your talk to the website by creating a PR. You just need to add an object to the [`publicationsAndTalks`](https://github.com/ipfs/js.ipfs.io/blob/master/src/shared/data/publications-and-talks/index.js) array. Example, if you were to add a new entry, you would have to add the `link` to your talk and its `title`:
 
 ```js
@@ -160,6 +164,7 @@ const publicationsAndTalks = [
 <a name="apps">
 
 ### Want to show what's possible to build with `js-ipfs`?
+
 Sharing your app with us is very simple! You just need to host your code on [codesandbox](https://codesandbox.io/) and edit [`apps` array](https://github.com/ipfs/js.ipfs.io/blob/master/src/shared/data/what-you-can-build/index.js). Example, if you want to add a new app, you only have to add a new entry to the `apps` array by adding its title and the corresponding `codesandbox` share link:
 
 ```js
@@ -177,6 +182,7 @@ const apps = [
 
 
 ## Contribute
+
 Please contribute! There's a lot of ways you can help us out:
 - Don't see the Website translated in your language? Did you find an invalid translation? [Check here](#translations) how you can help us!
 - Add your talk to the website! [See how](#talk) you can do it.
@@ -187,4 +193,4 @@ Please contribute! There's a lot of ways you can help us out:
 
 
 ## License
-[CC-BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+MIT
