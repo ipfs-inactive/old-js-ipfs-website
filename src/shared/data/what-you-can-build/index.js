@@ -1,7 +1,11 @@
 const apps = [
   {
     title: 'Browser Video Streaming',
-    link: 'https://codesandbox.io/s/9296r558my'
+    link: 'https://codepen.io/pedromssantos/embed/wYKydW'
+  },
+  {
+    title: 'Exchange Files in Browser',
+    link: 'https://codepen.io/pedromssantos/embed/oaxqZK'
   }
 ]
 
