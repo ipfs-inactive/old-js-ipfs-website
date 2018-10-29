@@ -1,0 +1,4 @@
+- Service worker precisamos de plugin?!?!?
+- Specify browserlist
+- Criar issue no Gatsby acerca de browserFields e de resolve.modules
+- Verificar opção desligar worker no gatsbyjs

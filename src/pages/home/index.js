@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Layout from 'shared/components/layout'
 import ScreenSizeProvider from 'shared/components/screen-size-provider'
 import Hero from 'shared/components/hero-section'
 import Features from 'shared/components/features-section'
@@ -9,21 +10,20 @@ import WhatArePeopleBuilding from 'shared/components/what-are-people-building-se
 import Gateway from 'shared/components/gateway-section'
 import PublicationsAndTalks from 'shared/components/publications-and-talks-section'
 import Community from 'shared/components/community-section'
-import styles from './index.module.css'
 
-const Home = () => (
-  <div className={ styles.container }>
-    <ScreenSizeProvider>
-      <Hero />
-      <Features />
-      <GettingStarted />
-      <Gateway />
-      <WhatArePeopleBuilding />
-      <WhatYouCanBuild />
-      <PublicationsAndTalks />
-      <Community />
-    </ScreenSizeProvider>
-  </div>
-)
-
-export default Home
+export default ({ pageContext }) => {
+  return (
+    <Layout intlInfo={ pageContext }>
+      <ScreenSizeProvider>
+        <Hero />
+        <Features />
+        <GettingStarted />
+        <Gateway />
+        <WhatArePeopleBuilding />
+        <WhatYouCanBuild />
+        <PublicationsAndTalks />
+        <Community />
+      </ScreenSizeProvider>
+    </Layout>
+  )
+}

@@ -7,22 +7,27 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { addLocaleData, IntlProvider } from 'react-intl'
-import localeData from 'react-intl/locale-data/<%= locale.split("-")[0] %>'
+import classNames from 'classnames'
 import Footer from 'shared/components/footer'
-import messages from '../../intl/messages/<%= locale %>.json'
-import { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby'
 
 import styles from './index.module.css'
 
-addLocaleData(localeData)
-
 class Layout extends Component {
+  constructor (props) {
+    super(props)
+
+    const localeData = require(`react-intl/locale-data/${props.intlInfo.acronym}`)
+
+    addLocaleData(localeData)
+  }
+
   render () {
-    const { children } = this.props
+    const { children, className, intlInfo: { messages, acronym } } = this.props
 
     return (
-      <IntlProvider locale="<%= locale %>" messages={ messages }>
-        <div className={ styles.app }>
+      <IntlProvider locale={ acronym } messages={ messages }>
+        <div className={ classNames(styles.app, className) }>
           <Helmet
             defaultTitle="JS IPFS"
             meta={ [
@@ -39,7 +44,7 @@ class Layout extends Component {
           </Helmet>
 
           <main className={ styles.children }>
-            { children() }
+            { children }
           </main>
           <Footer className={ styles.footer } />
         </div>
@@ -49,7 +54,9 @@ class Layout extends Component {
 }
 
 Layout.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.object,
+  className: PropTypes.string,
+  intlInfo: PropTypes.object.isRequired
 }
 
 export default Layout

@@ -2,7 +2,7 @@ import React from 'react'
 import { injectIntl } from 'react-intl'
 import { PropTypes } from 'prop-types'
 import classNames from 'classnames'
-import { defaultLocale, availableLocales } from 'shared/intl-config'
+import { defaultLocale, availableLocales } from 'intl/config'
 
 import Link from 'shared/components/link'
 import styles from './index.module.css'

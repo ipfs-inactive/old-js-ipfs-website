@@ -1,9 +1,7 @@
-import runtime from 'serviceworker-webpack-plugin/lib/runtime'
-
 export const register = () => {
   return getRegistration().then((registration) => {
     if (!registration) {
-      return runtime.register()
+      return navigator.serviceWorker.register('sw.js')
     }
     return Promise.reject() // eslint-disable-line prefer-promise-reject-errors
   })
