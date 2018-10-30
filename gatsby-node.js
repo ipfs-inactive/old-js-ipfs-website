@@ -102,6 +102,14 @@ module.exports.onCreateWebpackConfig = ({ actions, loaders, getConfig, stage }) 
     )
   }
 
+  // Shrink CSS module class names in production
+  if (stage === 'build-css' || stage === 'build-javascript' || stage === 'build-html') {
+    const oneOfConfig = (config.module.rules.find((rule) => Boolean(rule.oneOf))).oneOf
+    const cssLoaders = (oneOfConfig.find((rule) => rule.test.test('.module.css'))).use
+    const cssLoader = cssLoaders.find((loader) => loader.loader.includes('css-loader'))
+    cssLoader.options.localIdentName = '[hash:base64:10]'
+  }
+
   actions.replaceWebpackConfig(config)
 }
 
