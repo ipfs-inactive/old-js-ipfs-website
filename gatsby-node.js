@@ -3,26 +3,22 @@ const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
 const SvgStorePlugin = require('external-svg-sprite-loader')
 const { defaultLocale, availableLocales } = require('./intl/config')
 
-module.exports.onCreateWebpackConfig = ({ actions, loaders, getConfig, stage }) => {
-  const config = getConfig()
+const addModules = (config, modules) => {
+  config.resolve.modules = modules
 
-  // Modules
-  config.resolve.modules = [
-    'node_modules',
-    path.join(__dirname, 'src')
-  ]
+  return config
+}
+const addAliases = (config, aliases) => {
+  config.resolve.alias = { ...config.resolve.alias, ...aliases }
 
-  // Aliases
-  config.resolve.alias.intl = path.join(__dirname, 'intl')
+  return config
+}
+const addAliasFields = (config, aliasFields) => {
+  config.resolve.aliasFields = aliasFields
 
-  // Target
-  config.resolve.aliasFields = ['browser']
-
-  // Ensure that the Gatsby's default SVG handling doesn't mess with the following declarations
-  const defaultImageLoader = config.module.rules.find((rule) => /\bsvg\b/.test(rule.test.toString()))
-  defaultImageLoader.exclude = /\.svg$/
-
-  // SVGs (standard + inline + external)
+  return config
+}
+const addSvgsConfig = (config) => {
   config.module.rules.push({
     // Standard SVGs referenced by a URL
     test: /\.svg$/,
@@ -91,23 +87,57 @@ module.exports.onCreateWebpackConfig = ({ actions, loaders, getConfig, stage }) 
     ]
   })
 
+  return config
+}
+const addPluginsToConfig = (config, plugin) => {
+  config.plugins.push(plugin)
+
+  return config
+}
+const changeCssloaderOptions = (config, options) => {
+  const oneOfConfig = (config.module.rules.find((rule) => Boolean(rule.oneOf))).oneOf
+  const cssLoaders = (oneOfConfig.find((rule) => rule.test.test('.module.css'))).use
+  const cssLoader = cssLoaders.find((loader) => loader.loader.includes('css-loader'))
+  cssLoader.options = { ...cssLoader.options, ...options }
+
+  return config
+}
+
+module.exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
+  let config = getConfig()
+
+  // Modules
+  const modules = ['node_modules', path.join(__dirname, 'src')]
+  addModules(config, modules)
+
+  // Aliases
+  const aliases = { intl: path.join(__dirname, 'intl') }
+  addAliases(config, aliases)
+
+  // Target
+  const aliasFields = ['browser']
+  addAliasFields(config, aliasFields)
+
+  // Ensure that the Gatsby's default SVG handling doesn't mess with the following declarations
+  const defaultImageLoader = config.module.rules.find((rule) => /\bsvg\b/.test(rule.test.toString()))
+  defaultImageLoader.exclude = /\.svg$/
+
+  // SVGs (standard + inline + external)
+  addSvgsConfig(config)
+
   // Plugins
-  config.plugins.push(new SvgStorePlugin())
+  addPluginsToConfig(config, new SvgStorePlugin())
 
   if (stage === 'build-javascript' || stage === 'develop') {
-    config.plugins.push(
-      new ServiceWorkerWebpackPlugin({
-        entry: path.join(__dirname, 'src/service-worker/sw.js')
-      })
-    )
+    addPluginsToConfig(config, new ServiceWorkerWebpackPlugin({
+      entry: path.join(__dirname, 'src/service-worker/sw.js')
+    }))
   }
 
   // Shrink CSS module class names in production
   if (stage === 'build-css' || stage === 'build-javascript' || stage === 'build-html') {
-    const oneOfConfig = (config.module.rules.find((rule) => Boolean(rule.oneOf))).oneOf
-    const cssLoaders = (oneOfConfig.find((rule) => rule.test.test('.module.css'))).use
-    const cssLoader = cssLoaders.find((loader) => loader.loader.includes('css-loader'))
-    cssLoader.options.localIdentName = '[hash:base64:10]'
+    const option = { localIdentName: '[hash:base64:10]' }
+    changeCssloaderOptions(config, option)
   }
 
   actions.replaceWebpackConfig(config)
