@@ -4,7 +4,7 @@ module.exports = {
   },
   pathPrefix: '.',
   plugins: [
-    'gatsby-plugin-postcss'
-    // 'gatsby-plugin-ipfs'
+    'gatsby-plugin-postcss',
+    'gatsby-plugin-ipfs'
   ]
 }

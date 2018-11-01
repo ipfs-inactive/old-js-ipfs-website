@@ -8,16 +8,19 @@ const addModules = (config, modules) => {
 
   return config
 }
+
 const addAliases = (config, aliases) => {
   config.resolve.alias = { ...config.resolve.alias, ...aliases }
 
   return config
 }
+
 const addAliasFields = (config, aliasFields) => {
   config.resolve.aliasFields = aliasFields
 
   return config
 }
+
 const addSvgsConfig = (config) => {
   config.module.rules.push({
     // Standard SVGs referenced by a URL
@@ -89,11 +92,13 @@ const addSvgsConfig = (config) => {
 
   return config
 }
+
 const addPluginsToConfig = (config, plugin) => {
   config.plugins.push(plugin)
 
   return config
 }
+
 const changeCssloaderOptions = (config, options) => {
   const oneOfConfig = (config.module.rules.find((rule) => Boolean(rule.oneOf))).oneOf
   const cssLoaders = (oneOfConfig.find((rule) => rule.test.test('.module.css'))).use
