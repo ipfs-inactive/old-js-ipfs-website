@@ -34,6 +34,10 @@ class Link extends Component {
   }
 }
 
+Link.defaultProps = {
+  prefixLocale: true
+}
+
 Link.propTpes = {
   to: PropTypes.string,
   href: PropTypes.string,

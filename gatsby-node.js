@@ -112,8 +112,6 @@ module.exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
   let config = getConfig()
 
   config.resolve.symlinks = false
-  config.optimization = config.optimization || {}
-  config.optimization.minimize = false
 
   // Modules
   const modules = ['node_modules', path.join(__dirname, 'src')]
