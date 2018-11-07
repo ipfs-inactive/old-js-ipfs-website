@@ -15,18 +15,12 @@ const { defaultLocale, availableLocales } = require('./intl/config')
 module.exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
   let config = getConfig()
 
-  // The default gatsby config perfer resolving dependencies to the root `node_modules`
-  // This is wrong and was causing problems when the same dependency but with different versions were installed
-  // Webpack should prefer resolving a sub-dependency starting from its deep node_modules folder and go up in the tree
-  // See https://github.com/gatsbyjs/gatsby/blob/a0cbbcb5519e53d2358a06be2c1a6ca0688280b7/packages/gatsby/src/utils/webpack.config.js#L363
+  // Fix Gatsby setting `resolve.modulesDirectories` to `path.resolve(__dirname, "node_modules")`
+  // which causes module resolution errors when the npm tree is deduped
+  // See both https://github.com/webpack/webpack/issues/6538#issuecomment-367324775 and
+  // https://github.com/gatsbyjs/gatsby/blob/a0cbbcb5519e53d2358a06be2c1a6ca0688280b7/packages/gatsby/src/utils/webpack.config.js#L363
   // Furthermore, we add the `src` folder so that we can import internal modules without having to use relative paths
   config.resolve.modules = ['node_modules', path.join(__dirname, 'src')]
-
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    // Add an alias to 'intl' so that we can import the intl config from within the src/
-    intl: path.join(__dirname, 'intl')
-  }
 
   // Some of our dependencies have `browser` field in their package.json that should be interpreted as aliases
   config.resolve.aliasFields = ['browser']

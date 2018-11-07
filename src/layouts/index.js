@@ -8,7 +8,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { addLocaleData, IntlProvider } from 'react-intl'
-import classNames from 'classnames'
 import Footer from 'shared/components/footer'
 import { withPrefix } from 'gatsby'
 
@@ -26,11 +25,11 @@ class Layout extends Component {
   render () {
     this.maybeLoadLocaleData()
 
-    const { children, className, pageContext: { intl } } = this.props
+    const { children, pageContext: { intl } } = this.props
 
     return (
       <IntlProvider locale={ intl.acronym } messages={ intl.messages }>
-        <div className={ classNames(styles.app, className) }>
+        <div className={ styles.app }>
           <Helmet
             defaultTitle="JS IPFS"
             meta={ [
@@ -67,7 +66,6 @@ class Layout extends Component {
 
 Layout.propTypes = {
   children: PropTypes.object,
-  className: PropTypes.string,
   pageContext: PropTypes.object.isRequired
 }
 
