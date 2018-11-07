@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import GatsbyLink from 'gatsby-link'
+import { Link as GatsbyLink } from 'gatsby'
 
 class Link extends Component {
   render () {
@@ -32,6 +32,10 @@ class Link extends Component {
 
     return finalTo
   }
+}
+
+Link.defaultProps = {
+  prefixLocale: true
 }
 
 Link.propTpes = {

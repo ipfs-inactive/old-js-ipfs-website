@@ -47,7 +47,7 @@ class MobileNavBar extends Component {
           <li><Link className={ styles.menuLink } href="https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC"> { messages.navBar.item3 } </Link> </li>
           <li className={ styles.githubContributers }>
             <Link className={ styles.menuLink } href="https://github.com/ipfs/js-ipfs"> { messages.navBar.item4 } </Link>
-            <iframe src='https://ghbtns.com/github-btn.html?user=ipfs&repo=js-ipfs&type=star&count=true' frameBorder='0' scrolling='0'/>
+            <iframe title="mobile-github-stars" src="https://ghbtns.com/github-btn.html?user=ipfs&repo=js-ipfs&type=star&count=true" frameBorder="0" scrolling="0"/>
           </li>
         </ul>
       </div>

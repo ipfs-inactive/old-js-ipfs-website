@@ -1,4 +1,5 @@
-/* eslint-disable import/first */
+/* eslint-disable import/first, no-new-func */
+/* global ReactIntlLocaleData:false */
 typeof window !== 'undefined' && require('intersection-observer')
 
 import 'shared/styles/index.css'
@@ -7,22 +8,29 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { addLocaleData, IntlProvider } from 'react-intl'
-import localeData from 'react-intl/locale-data/<%= locale.split("-")[0] %>'
+import classNames from 'classnames'
 import Footer from 'shared/components/footer'
-import messages from '../../intl/messages/<%= locale %>.json'
-import { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby'
 
 import styles from './index.module.css'
 
-addLocaleData(localeData)
+const loadLocaleData = function (intl) {
+  const fn = Function(intl.localeDataCode)
+  const fnThis = typeof window !== 'undefined' ? window : global
+
+  fn.call(fnThis)
+  addLocaleData(ReactIntlLocaleData[intl.acronym])
+}
 
 class Layout extends Component {
   render () {
-    const { children } = this.props
+    this.maybeLoadLocaleData()
+
+    const { children, className, pageContext: { intl } } = this.props
 
     return (
-      <IntlProvider locale="<%= locale %>" messages={ messages }>
-        <div className={ styles.app }>
+      <IntlProvider locale={ intl.acronym } messages={ intl.messages }>
+        <div className={ classNames(styles.app, className) }>
           <Helmet
             defaultTitle="JS IPFS"
             meta={ [
@@ -39,17 +47,28 @@ class Layout extends Component {
           </Helmet>
 
           <main className={ styles.children }>
-            { children() }
+            { children }
           </main>
           <Footer className={ styles.footer } />
         </div>
       </IntlProvider>
     )
   }
+
+  maybeLoadLocaleData () {
+    const { intl } = this.props.pageContext
+
+    if (this.previousIntl !== intl) {
+      this.previousIntl = intl
+      loadLocaleData(intl)
+    }
+  }
 }
 
 Layout.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.object,
+  className: PropTypes.string,
+  pageContext: PropTypes.object.isRequired
 }
 
 export default Layout

@@ -36,8 +36,6 @@ class GettingStarted extends Component {
     super(props)
     this.scopeAdd = null
     this.scopeGet = null
-    this.refAdd = React.createRef()
-    this.refGet = React.createRef()
     this.ipfs = null
   }
 
@@ -79,7 +77,7 @@ class GettingStarted extends Component {
             <p className={ styles.liveSnippetTitle }>{ messages.gettingStarted.addDataToIPFS }</p>
             <LiveProvider key="add" className={ styles.liveSnippet } code={ codeAdd } scope={ this.scopeAdd } mountStylesheet={ false } transformCode={ transformCode }>
               <div className={ styles.liveSnippetEditorContainer }>
-                <LiveEditor ref={ this.refAdd } className={ 'language-js ' + styles.liveSnippetEditor }/>
+                <LiveEditor name="add" setRun={ this.handleSetRun } className={ 'language-js ' + styles.liveSnippetEditor }/>
                 <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('add') }>Run</button>
               </div>
               <div className={ styles.liveSnippetPreview } >
@@ -96,7 +94,7 @@ class GettingStarted extends Component {
             <LiveProvider key="get" className={ styles.liveSnippet } code={ codeGet(cid) } scope={ this.scopeGet } mountStylesheet={ false } transformCode={ transformCode }>
 
               <div className={ styles.liveSnippetEditorContainer }>
-                <LiveEditor ref={ this.refGet } className={ 'language-js ' + styles.liveSnippetEditor }/>
+                <LiveEditor name="get" setRun={ this.handleSetRun } className={ 'language-js ' + styles.liveSnippetEditor }/>
                 <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('get') }>Run</button>
               </div>
               <div className={ styles.liveSnippetPreview } >
@@ -123,6 +121,14 @@ jsipfs cat ${cid}` } language='bash' />
     )
   }
 
+  handleSetRun = (func, name) => {
+    if (name === 'add') {
+      this.addCode = func
+    } else if (name === 'get') {
+      this.getCode = func
+    }
+  }
+
   handleChange = (editor) => (content) => {
     if (content instanceof Error) {
       content = content.message
@@ -145,10 +151,10 @@ jsipfs cat ${cid}` } language='bash' />
   handleRunClick = (editor) => () => {
     if (editor === 'add') {
       this.setState({ runAdd: true, runGet: false, outputGet: '' })
-      this.refAdd.current.run()
+      this.addCode()
     } else {
       this.setState({ runGet: true })
-      this.refGet.current.run()
+      this.getCode()
     }
   }
 }

@@ -50,7 +50,8 @@ class WhatYouCanBuild extends PureComponent {
 
     return (
       <div className={ styles.iframeContainer }>
-        <iframe scrolling='no'
+        <iframe title="codepen-example"
+          scrolling="no"
           src={ `${activeLink}?theme-id=dark&default-tab=js,result&embed-version=2` }
           onLoad={ this.handleIframeLoad } />
         <div className={ loadingContainerClasses }>

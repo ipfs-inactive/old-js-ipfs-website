@@ -1,27 +1,36 @@
 import React, { Component } from 'react'
-import { LiveProvider, Editor } from 'react-live'
+import { withLive, Editor } from 'react-live'
 
-export default class LiveEditor extends Component {
-  static contextTypes = LiveProvider.childContextTypes
+class LiveEditor extends Component {
+  // static contextTypes = LiveProvider.childContextTypes
 
-  constructor (props, context) {
-    super(props, context)
-    this.code = context.live.code
+  constructor (props) {
+    super(props)
+
+    this.code = props.live.code
   }
 
-  run () {
-    this.context.live.onChange(this.code)
+  componentDidMount () {
+    const { name, setRun } = this.props
+
+    setRun && setRun(this.run, name)
   }
 
   componentDidUpdate () {
-    this.code = this.context.live.code
+    this.code = this.props.live.code
+  }
+
+  run = () => {
+    this.props.live.onChange(this.code)
   }
 
   render () {
+    const { setRun, ...rest } = this.props
+
     return (
       <Editor
-        { ...this.props }
-        code={ this.context.live.code }
+        { ...rest }
+        code={ this.props.live.code }
         onChange={ (code) => {
           this.code = code
         } }
@@ -29,3 +38,5 @@ export default class LiveEditor extends Component {
     )
   }
 }
+
+export default withLive(LiveEditor)

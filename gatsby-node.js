@@ -8,229 +8,178 @@
 
 const path = require('path')
 const fs = require('fs')
-const template = require('lodash/template')
-const wrap = require('lodash/wrap')
-const { defaultLocale, availableLocales } = require('./intl/config')
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
-const SvgStorePlugin = require('external-svg-sprite-loader/lib/SvgStorePlugin')
+const SvgStorePlugin = require('external-svg-sprite-loader')
+const { defaultLocale, availableLocales } = require('./intl/config')
 
-module.exports.modifyWebpackConfig = ({ config, program, stage }) => {
-  // Allow requires from the src/ folder
-  config.merge({
-    resolve: {
-      root: path.join(__dirname, 'src')
-    },
-    target: 'web'
-  })
+module.exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
+  let config = getConfig()
 
-  // Fix Gatsby setting `resolve.modulesDirectories` to `path.resolve(__dirname, "node_modules")`
-  // which causes module resolution errors when the npm tree is deduped
-  // See https://github.com/webpack/webpack/issues/6538#issuecomment-367324775
-  config.merge((current) => {
-    current.resolve.modulesDirectories = ['node_modules']
+  // The default gatsby config perfer resolving dependencies to the root `node_modules`
+  // This is wrong and was causing problems when the same dependency but with different versions were installed
+  // Webpack should prefer resolving a sub-dependency starting from its deep node_modules folder and go up in the tree
+  // See https://github.com/gatsbyjs/gatsby/blob/a0cbbcb5519e53d2358a06be2c1a6ca0688280b7/packages/gatsby/src/utils/webpack.config.js#L363
+  // Furthermore, we add the `src` folder so that we can import internal modules without having to use relative paths
+  config.resolve.modules = ['node_modules', path.join(__dirname, 'src')]
 
-    return current
-  })
+  config.resolve.alias = {
+    ...config.resolve.alias,
+    // Add an alias to 'intl' so that we can import the intl config from within the src/
+    intl: path.join(__dirname, 'intl')
+  }
 
-  // Allow requires from the src/ folder for postcss
-  config.merge((current) => {
-    const importPath = [
-      path.join(__dirname, 'src')
-    ]
-
-    if (typeof current.postcss === 'function') {
-      current.postcss = wrap(current.postcss, (postcss, wp) => [
-        require('postcss-import')({ addDependencyTo: wp, path: importPath }),
-        ...postcss(wp).slice(1, 3),
-        // Fix some weird reporting errors, see https://github.com/gatsbyjs/gatsby/issues/673#issuecomment-344245406
-        // This makes sure that the most recent updated `postcss-reporter` is used
-        require('postcss-reporter')
-      ])
-    } else if (current.postcss) {
-      current.postcss[0] = require('postcss-import')({ path: importPath })
-    }
-
-    return current
-  })
-
-  // Setup Babel & PostCSS
-  config.merge((current) => {
-    config.loader('js', (current) => {
-      current.query = {
-        ...current.query,
-        presets: [
-          [require.resolve('babel-preset-moxy'), {
-            react: true,
-            modules: 'commonjs',
-            targets: {
-              browsers: program.browserslist
-            }
-          }]
-        ],
-        plugins: [
-          require.resolve('react-hot-loader/babel'),
-          require.resolve('gatsby/dist/utils/babel-plugin-extract-graphql')
-        ]
-      }
-
-      return current
-    })
-
-    return current
-  })
-
-  // Optimize bundle
-  config.merge((current) => {
-    current.node = {
-      ...current.node,
-      module: false,
-      clearImmediate: false,
-      setImmediate: false
-    }
-
-    return current
-  })
-
-  // Setup service worker gateway
-  config.merge((current) => {
-    current.plugins.push(new ServiceWorkerWebpackPlugin({
-      entry: path.join(__dirname, 'src/shared/service-worker/sw.js')
-    }))
-
-    return current
-  })
-
-  // SVGs (external + inline + standard)
-  config.merge((current) => {
-    // External SVGs
-    config.loader('external-svgs-1', (current) => ({
-      test: /\.sprite\.svg$/,
-      loader: 'external-svg-sprite-loader',
-      query: {
-        test: /\.svg$/,
-        name: 'static/svg-sprite.[hash].svg'
-      }
-    }))
-
-    config.loader('external-svgs-2', (current) => ({
-      test: /\.sprite\.svg$/,
-      loader: 'svgo-loader',
-      query: {
-        plugins: [
-          { removeViewBox: false },
-          { removeDimensions: true },
-          { inlineStyles: { onlyMatchedOnce: false } },
-          { removeAttrs: { attrs: 'class' } }
-        ]
-      }
-    }))
-
-    current.plugins.push(new SvgStorePlugin())
-
-    // Inline SVGs
-    config.loader('inline-svgs-1', () => ({
-      loader: 'raw-loader',
-      test: /\.inline\.svg$/
-    }))
-
-    config.loader('inline-svgs-2', () => ({
-      loader: 'svgo-loader',
-      test: /\.inline\.svg$/,
-      query: {
-        plugins: [
-          { removeDimensions: true },
-          { cleanupIDs: false }
-        ]
-      }
-    }))
-
-    config.loader('inline-svgs-3', () => ({
-      loader: 'svg-css-modules-loader',
-      test: /\.inline\.svg$/,
-      query: {
-        transformId: true
-      }
-    }))
-
-    // Standard SVGs referenced by a URL
-    config.loader('standard-svgs-1', () => ({
-      test: /\.svg$/,
-      exclude: [/\.sprite\.svg$/, /\.inline\.svg$/],
-      loader: 'file-loader'
-    }))
-
-    config.loader('standard-svgs-2', () => ({
-      test: /\.svg$/,
-      exclude: [/\.sprite\.svg$/, /\.inline\.svg$/],
-      loader: 'svgo-loader',
-      query: {
-        plugins: [
-          { inlineStyles: { onlyMatchedOnce: false } },
-          { removeAttrs: { attrs: 'class' } }
-        ]
-      }
-    }))
-
-    // Ensure that the Gatsby's default SVG handling doesn't mess with the previous declarations
-    config.loader('url-loader', (current) => ({
-      ...current,
-      exclude: /\.svg$/
-    }))
-
-    return current
-  })
-
-  // Do not inline images
-  // We have a lot of small images that summed together increase the inital HTML files by a lot
-  config.loader('url-loader', (current) => ({
-    ...current,
-    loader: 'file-loader'
-  }))
+  // Some of our dependencies have `browser` field in their package.json that should be interpreted as aliases
+  config.resolve.aliasFields = ['browser']
 
   // Shrink CSS module class names in production
   if (stage === 'build-css' || stage === 'build-javascript' || stage === 'build-html') {
-    config.loader('cssModules', (current) => ({
-      ...current,
-      loader: current.loader.replace(/localIdentName=[^!]+/, 'localIdentName=[hash:base64:10]')
-    }))
+    const oneOfConfig = (config.module.rules.find((rule) => Boolean(rule.oneOf))).oneOf
+    const cssLoaders = (oneOfConfig.find((rule) => rule.test.test('.module.css'))).use
+    const cssLoader = cssLoaders.find((loader) => loader.loader.includes('css-loader'))
+    cssLoader.options = {
+      ...cssLoader.options,
+      localIdentName: '[hash:base64:10]'
+    }
   }
-}
 
-exports.createLayouts = () => {
-  // Create a layout for each locale, based on a template
-  const layoutTemplate = fs.readFileSync(path.join(__dirname, 'src/layouts/index.js'))
+  // SVGs (standard + inline + external)
+  {
+    // Ensure that the Gatsby's default SVG handling doesn't mess with the following declarations
+    const defaultImageLoader = config.module.rules.find((rule) => /\bsvg\b/.test(rule.test.toString()))
+    defaultImageLoader.exclude = /\.svg$/
 
-  availableLocales.forEach((locale) => {
-    const acronym = locale.acronym
-    const localeLayout = template(layoutTemplate)({ locale: acronym })
-      .replace(/LayoutQuery/, `LayoutQuery_${acronym}`)
-
-    fs.writeFileSync(path.join(__dirname, `src/layouts/index-${acronym}.js`), localeLayout)
-  })
-}
-
-exports.onCreatePage = ({ page, boundActionCreators }) => {
-  // Create a localized page for each locale
-  const { createPage, deletePage } = boundActionCreators
-
-  deletePage(page)
-
-  availableLocales.forEach((locale) => {
-    const acronym = locale.acronym
-
-    createPage({
-      ...page,
-      layout: `index-${acronym}`,
-      path: `/${acronym}${page.path}`
+    config.module.rules.push({
+      // Standard SVGs referenced by a URL
+      test: /\.svg$/,
+      exclude: [/\.sprite\.svg$/, /\.inline\.svg$/],
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: 'static/[name]-[hash].[ext]'
+          }
+        },
+        {
+          loader: require.resolve('svgo-loader'),
+          options: {
+            plugins: [
+              { inlineStyles: { onlyMatchedOnce: false } },
+              { removeAttrs: { attrs: 'class' } }
+            ]
+          }
+        }
+      ]
     })
 
-    // If this is the default locale, create the page without the language in the path
-    if (acronym === defaultLocale) {
+    // Inline SVGs
+    config.module.rules.push({
+      test: /\.inline\.svg$/,
+      use: [
+        require.resolve('raw-loader'),
+        {
+          loader: 'svgo-loader',
+          options: {
+            plugins: [
+              { removeDimensions: true },
+              { cleanupIDs: false }
+            ]
+          }
+        },
+        // Uniquify classnames and ids so they don't conflict with eachother
+        {
+          loader: require.resolve('svg-css-modules-loader'),
+          options: {
+            transformId: true
+          }
+        }
+      ]
+    })
+
+    // External SVGs - sprite for performance
+    config.module.rules.push({
+      test: /\.sprite\.svg$/,
+      use: [
+        {
+          loader: require.resolve(SvgStorePlugin.loader),
+          options: {
+            name: 'static/svg-sprite.[hash].svg',
+            svgoOptions: {
+              plugins: [
+                { removeViewBox: false },
+                { removeDimensions: true },
+                { inlineStyles: { onlyMatchedOnce: false } },
+                { removeAttrs: { attrs: 'class' } }
+              ]
+            }
+          }
+        }
+      ]
+    })
+
+    config.plugins.push(new SvgStorePlugin())
+  }
+
+  // Add ServiceWorkerWebpackPlugin so that the sw.js is built
+  // An error was being throw when rendering the static pages, so we skip it during that phase
+  // Moreover, we pass the `registration.js` to a `null-loader` to avoid "ServiceWorkerWebpackPlugin is not present
+  // in your webpack config"
+  if (stage === 'build-javascript' || stage === 'develop') {
+    config.plugins.push(new ServiceWorkerWebpackPlugin({
+      entry: path.join(__dirname, 'src/service-worker/sw.js')
+    }))
+  } else {
+    config.module.rules.unshift({
+      test: require.resolve('./src/service-worker/registration'),
+      loader: 'null-loader'
+    })
+  }
+
+  actions.replaceWebpackConfig(config)
+}
+
+exports.onCreatePage = ({ page, actions }) => {
+  // Create a localized page for each locale, injecting the `intl` into the `pageContext` that contains
+  // the locale messages, data and acronym
+  const { createPage, deletePage } = actions
+
+  return new Promise((resolve, reject) => {
+    deletePage(page)
+
+    availableLocales.forEach((currentLocale) => {
+      const acronym = currentLocale.acronym
+      const localizedPath = `/${acronym}${page.path}`
+
+      const messages = require(`./intl/messages/${acronym}.json`)
+      const localeDataCode = fs.readFileSync(require.resolve(`react-intl/locale-data/${acronym}`)).toString()
+
       createPage({
         ...page,
-        layout: `index-${acronym}`,
-        path: page.path
+        path: localizedPath,
+        context: {
+          intl: {
+            messages,
+            acronym,
+            localeDataCode
+          }
+        }
       })
-    }
+
+      // If this is the default locale, create the page without the language in the path
+      if (acronym === defaultLocale) {
+        createPage({
+          ...page,
+          path: page.path,
+          context: {
+            intl: {
+              messages,
+              acronym,
+              localeDataCode
+            }
+          }
+        })
+      }
+    })
+
+    resolve()
   })
 }

@@ -2,10 +2,12 @@ module.exports = {
   siteMetadata: {
     title: 'JS IPFS'
   },
-  pathPrefix: '.',
+  pathPrefix: '__GATSBY_IPFS_PATH_PREFIX__',
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-postcss',
     'gatsby-plugin-ipfs',
+    'gatsby-plugin-layout',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -26,12 +28,6 @@ module.exports = {
             type: 'image/png'
           }
         ]
-      }
-    },
-    {
-      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
-      options: {
-        analyzerPort: 3000
       }
     }
   ]
