@@ -1,4 +1,8 @@
 {
+  "notFoundPage": {
+    "mainMessage": "Page not found",
+    "detailedMessage": "You just hit a route that does not exist... the sadness."
+  },
   "buttons": {
     "buttonLearnMore": "Learn More",
     "buttonGithub": "Github",
