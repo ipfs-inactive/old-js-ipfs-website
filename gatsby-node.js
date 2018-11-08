@@ -15,7 +15,7 @@ const { defaultLocale, availableLocales } = require('./intl/config')
 module.exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
   let config = getConfig()
 
-  // Fix Gatsby setting `resolve.modulesDirectories` to `path.resolve(__dirname, "node_modules")`
+  // Fix Gatsby setting `resolve.modules` to `path.resolve(__dirname, "node_modules")`
   // which causes module resolution errors when the npm tree is deduped
   // See both https://github.com/webpack/webpack/issues/6538#issuecomment-367324775 and
   // https://github.com/gatsbyjs/gatsby/blob/a0cbbcb5519e53d2358a06be2c1a6ca0688280b7/packages/gatsby/src/utils/webpack.config.js#L363
