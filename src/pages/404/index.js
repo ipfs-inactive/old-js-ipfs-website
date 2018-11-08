@@ -1,12 +1,15 @@
 import React from 'react'
+import { injectIntl } from 'react-intl'
 
-const NotFoundPage = () => {
+import styles from './index.module.css'
+
+const NotFoundPage = ({ intl: { messages } }) => {
   return (
     <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that does not exist... the sadness.</p>
+      <h1 className={ styles.title }>{ messages.notFoundPage.mainMessage }</h1>
+      <p>{ messages.notFoundPage.detailedMessage }</p>
     </div>
   )
 }
 
-export default NotFoundPage
+export default injectIntl(NotFoundPage)

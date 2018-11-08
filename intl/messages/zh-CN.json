@@ -1,4 +1,8 @@
 {
+  "notFoundPage": {
+    "mainMessage": "",
+    "detailedMessage": ""
+  },
   "buttons": {
     "buttonLearnMore": "了解更多",
     "buttonGithub": "Github",
