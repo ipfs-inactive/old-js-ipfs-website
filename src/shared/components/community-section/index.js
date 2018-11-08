@@ -38,7 +38,7 @@ class Community extends Component {
               </div>
             </div>
           </div>
-          { showContributors && <iframe frameBorder="0" src={ data.contributorsLink } /> }
+          { showContributors && <iframe title="contributors" frameBorder="0" src={ data.contributorsLink } /> }
         </div>
       </Observer>
     )

@@ -3,7 +3,7 @@ import { injectIntl } from 'react-intl'
 import { Slide, ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import classNames from 'classnames'
-import { isCompatible, register, unregister, getRegistration } from 'shared/service-worker/registration'
+import { isCompatible, register, unregister, getRegistration } from 'service-worker/registration'
 import Observer from '@researchgate/react-intersection-observer'
 
 import GatewaySvgAnimation from './gateway-svg-animation'

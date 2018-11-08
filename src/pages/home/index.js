@@ -9,10 +9,9 @@ import WhatArePeopleBuilding from 'shared/components/what-are-people-building-se
 import Gateway from 'shared/components/gateway-section'
 import PublicationsAndTalks from 'shared/components/publications-and-talks-section'
 import Community from 'shared/components/community-section'
-import styles from './index.module.css'
 
 const Home = () => (
-  <div className={ styles.container }>
+  <div>
     <ScreenSizeProvider>
       <Hero />
       <Features />
