@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { injectIntl } from 'react-intl'
 import classNames from 'classnames'
+import Observer from '@researchgate/react-intersection-observer'
 
 import NavPill from 'shared/components/nav-pill'
 import appsArr from 'shared/data/what-you-can-build'
@@ -10,26 +11,29 @@ import styles from './index.module.css'
 
 class WhatYouCanBuild extends PureComponent {
   state = {
+    isVisible: false,
     activePillIndex: 0,
     isIframeLoaded: false
   }
 
   render () {
     const { intl: { messages } } = this.props
-    const { activePillIndex, isIframeLoaded } = this.state
+    const { isVisible, activePillIndex, isIframeLoaded } = this.state
     const activeLink = appsArr[activePillIndex].link
 
     return (
-      <div className={ styles.container }>
-        <div className={ styles.content }>
-          <h1>{ messages.whatYouCanBuild.sectionTitle }</h1>
-          <ReactMarkdown className={ styles.sectionDescription } source={ messages.whatYouCanBuild.sectionDesc } />
-          <HorizontalScroller className={ styles.horizontalScroller }>
-            { this.renderNavPills() }
-          </HorizontalScroller>
-          { this.renderIframeContainer(isIframeLoaded, activeLink) }
+      <Observer onChange={ this.handleObserverChange }>
+        <div className={ styles.container }>
+          <div className={ styles.content }>
+            <h1>{ messages.whatYouCanBuild.sectionTitle }</h1>
+            <ReactMarkdown className={ styles.sectionDescription } source={ messages.whatYouCanBuild.sectionDesc } />
+            <HorizontalScroller className={ styles.horizontalScroller }>
+              { this.renderNavPills() }
+            </HorizontalScroller>
+            { isVisible && this.renderIframeContainer(isIframeLoaded, activeLink) }
+          </div>
         </div>
-      </div>
+      </Observer>
     )
   }
 
@@ -69,6 +73,11 @@ class WhatYouCanBuild extends PureComponent {
       activePillIndex: index,
       isIframeLoaded: activePillIndex === index
     }))
+
+  handleObserverChange = ({ isIntersecting }) => {
+    // Lazy load iframe content to avoid unnecessary loads on page load
+    (!this.state.isVisible && isIntersecting) && this.setState({ isVisible: true })
+  }
 }
 
 export default injectIntl(WhatYouCanBuild)
