@@ -16,7 +16,7 @@ module.exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
   let config = getConfig()
 
   // Name for non-entry chunk files. E.g. dynamic imports
-  config.output.chunkFilename = '[name].[chunkhash].js';
+  config.output.chunkFilename = '[name].[chunkhash].js'
 
   // Fix Gatsby setting `resolve.modules` to `path.resolve(__dirname, "node_modules")`
   // which causes module resolution errors when the npm tree is deduped
