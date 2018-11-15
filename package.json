@@ -82,12 +82,13 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "commit-msg": "echo $HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
     "*.js": [
-      "node --version",
+      "eslint --fix",
       "git add"
     ],
     "*.css": [
