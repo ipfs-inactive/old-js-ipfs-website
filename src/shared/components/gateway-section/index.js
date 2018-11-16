@@ -23,7 +23,6 @@ class GatewaySection extends Component {
   }
 
   componentDidMount () {
-    console.log('cea')
     Promise.all([
       // Dynamic import to optimize both TTFP (Time To First Paint) and page load
       import(/* webpackChunkName: "gateway" */'./gateway-svg-animation').catch(console.error),
