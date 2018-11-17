@@ -2,6 +2,7 @@
 @import "shared/styles/imports/custom-medias.css";
 
 .footer {
+  /* no-op change for development testing - @mburns */
   position: relative;
   width: 100%;
   z-index: 3;
