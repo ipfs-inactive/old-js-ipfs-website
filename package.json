@@ -46,7 +46,7 @@
     "react-toastify": "^4.4.0",
     "react-tooltip": "^3.9.0",
     "react-youtube": "^7.8.0",
-    "service-worker-gateway": "~0.1.7"
+    "service-worker-gateway": "~0.1.8"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
