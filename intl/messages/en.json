@@ -138,7 +138,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "What you can build with JS-IPFS",
-    "sectionDesc": "There are unlimited options for you to use js-ipfs. The following examples provide you an idea of what you can build with js-ipfs. Try them out!"
+    "sectionDesc": "There are unlimited options for you to use js-ipfs. The following examples provide you an idea of what you can build with js-ipfs. Try them out!",
+    "suggestion": {
+      "text": "Do you have any idea and want to suggest?",
+      "linkText": "Do it here!"
+    }
   },
 
   "publicationsAndTalks": {

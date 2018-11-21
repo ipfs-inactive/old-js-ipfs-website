@@ -108,6 +108,21 @@
         border-radius: 4px;
       }
     }
+
+    & p {
+      margin-top: 35px;
+
+      & > a {
+        margin-left: 5px;
+        color: var(--color-yellow);
+        text-decoration: none;
+        transition: color var(--transition-default-duration) ease;
+
+        &:hover {
+          color: var(--color-yellow-hover);
+        }
+      }
+    }
   }
 }
 
@@ -115,8 +130,19 @@
   .container .content {
     & h1,
     & .sectionDescription,
-    & .iframeContainer {
+    & .iframeContainer,
+    & p {
       width: var(--container-width-mobile);
+    }
+
+    & p {
+      display: flex;
+      flex-direction: column;
+
+      & > a {
+        margin-top: 5px;
+        margin-left: 0;
+      }
     }
 
     & .horizontalScroller {

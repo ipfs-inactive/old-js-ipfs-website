@@ -137,7 +137,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "O que podes construir com JS-IPFS",
-    "sectionDesc": "PT-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "sectionDesc": "PT-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "suggestion": {
+      "text": "",
+      "linkText": ""
+    }
   },
 
   "publicationsAndTalks": {
