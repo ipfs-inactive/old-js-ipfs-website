@@ -127,7 +127,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "TODO Title",
-    "sectionDesc": "TODO description."
+    "sectionDesc": "TODO description.",
+    "suggestion": {
+      "text": "",
+      "linkText": ""
+    }
   },
 
   "publicationsAndTalks": {

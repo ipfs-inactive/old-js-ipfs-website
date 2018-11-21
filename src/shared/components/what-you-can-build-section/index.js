@@ -3,9 +3,10 @@ import ReactMarkdown from 'react-markdown'
 import { injectIntl } from 'react-intl'
 import classNames from 'classnames'
 import Observer from '@researchgate/react-intersection-observer'
+import Link from 'shared/components/link'
 
 import NavPill from 'shared/components/nav-pill'
-import appsArr from 'shared/data/what-you-can-build'
+import appsData from 'shared/data/what-you-can-build'
 import HorizontalScroller from 'shared/components/horizontal-scroller'
 import styles from './index.module.css'
 
@@ -19,7 +20,7 @@ class WhatYouCanBuild extends PureComponent {
   render () {
     const { intl: { messages } } = this.props
     const { isVisible, activePillIndex, isIframeLoaded } = this.state
-    const activeLink = appsArr[activePillIndex].link
+    const activeLink = appsData.apps[activePillIndex].link
 
     return (
       <Observer onChange={ this.handleObserverChange }>
@@ -31,13 +32,19 @@ class WhatYouCanBuild extends PureComponent {
               { this.renderNavPills() }
             </HorizontalScroller>
             { isVisible && this.renderIframeContainer(isIframeLoaded, activeLink) }
+            <p>
+              { messages.whatYouCanBuild.suggestion.text }
+              <Link href={ appsData.repoLink } >
+                { messages.whatYouCanBuild.suggestion.linkText }
+              </Link>
+            </p>
           </div>
         </div>
       </Observer>
     )
   }
 
-  renderNavPills = () => appsArr.map((app, index) => (
+  renderNavPills = () => appsData.apps.map((app, index) => (
     <NavPill
       key={ `app-${index}` }
       index={ index }
