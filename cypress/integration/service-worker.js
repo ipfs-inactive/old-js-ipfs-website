@@ -1,48 +1,39 @@
-describe('The service worker', () => {
-  before(() => {
-    if (window.navigator && navigator.serviceWorker) {
-      navigator.serviceWorker.getRegistrations()
-        .then((registrations) => {
-          for (let registration of registrations) {
-            registration.unregister()
-          }
-        })
-    }
-  })
+describe('Service worker', () => {
+  it('activates and then deactivates successfully', () => {
+    // Visit home page
+    cy.visit('/')
 
-  it('successfully activates', () => {
-    cy.visit('/').then((contentWindow) => {
-      // get all service worker registrations initially
-      contentWindow.navigator.serviceWorker.getRegistrations()
-        .then((registrations) => {
-          expect(registrations.length).to.be.equal(0)
-        })
-
-      // Click on service worker button to activate it
-      cy.get('#serviceWorkerButton').click().then(() => {
-        // get all service worker registrations again
-        contentWindow.navigator.serviceWorker.getRegistrations()
-          .then((registrations) => {
-            expect(registrations.length).to.be.equal(1)
-          })
-      })
+    // Get window object
+    cy.window().then((win) => {
+      // Ensure that there are no service worker registrations initially
+      return win.navigator.serviceWorker.getRegistrations()
+        .then((registrations) => expect(registrations.length).to.be.equal(0))
     })
-  })
 
-  it('successfully deactivates', () => {
-    // Click to deactivate service worker
-    cy.get('#serviceWorkerButton').click().then(() => {
-      // wait 5s until reload page
-      cy.wait(5000).then(() => {
-        // reload page
-        cy.reload().then(() => {
-          // check if there are registrations
-          window.navigator.serviceWorker.getRegistrations()
-            .then((registrations) => {
-              expect(registrations.length).to.be.equal(0)
-            })
-        })
-      })
+    // Wait 3s before clicking the button (to make sure everything is properly set up)
+    cy.wait(3000)
+
+    // Click service worker button to turn it on
+    cy.get('#serviceWorkerButton').click()
+
+    // Get window object again
+    cy.window().then((win) => {
+      // Ensure that there is one service worker registration after the click
+      return win.navigator.serviceWorker.getRegistrations()
+        .then((registrations) => expect(registrations.length).to.be.equal(1))
+    })
+
+    // Wait 3s one more time before clicking
+    cy.wait(3000)
+
+    // Click service worker button to turn it off
+    cy.get('#serviceWorkerButton').click()
+
+    // Get window object again
+    cy.window().then((win) => {
+      // Ensure that there are no service worker registrations
+      return win.navigator.serviceWorker.getRegistrations()
+        .then((registrations) => expect(registrations.length).to.be.equal(0))
     })
   })
 })
