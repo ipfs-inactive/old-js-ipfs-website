@@ -17,7 +17,9 @@
     "serve": "gatsby serve",
     "lint": "aegir lint && stylelint \"**/*.css\"",
     "cy:open": "cypress open",
-    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open"
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test serve http://localhost:9000 cy:run"
   },
   "dependencies": {
     "@researchgate/react-intersection-observer": "~0.7.3",
