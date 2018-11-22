@@ -13,7 +13,7 @@ const SvgStorePlugin = require('external-svg-sprite-loader')
 const { defaultLocale, availableLocales } = require('./intl/config')
 
 module.exports.onCreateWebpackConfig = ({ actions, getConfig, stage }) => {
-  let config = getConfig();
+  let config = getConfig()
 
   // Name for non-entry chunk files. E.g. dynamic imports
   config.output.chunkFilename = '[name].[chunkhash].js'
