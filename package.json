@@ -15,7 +15,12 @@
     "develop": "gatsby develop",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
-    "lint": "aegir lint && stylelint \"**/*.css\""
+    "lint": "aegir lint && stylelint \"**/*.css\"",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test serve http://localhost:9000 cy:run",
+    "test:e2e:hook": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "dependencies": {
     "@researchgate/react-intersection-observer": "~0.7.3",
@@ -62,6 +67,7 @@
     "babel-plugin-macros": "^2.4.2",
     "babel-preset-moxy": "^2.3.5",
     "commitlint": "^7.2.1",
+    "cypress": "^3.1.1",
     "eslint": "^5.8.0",
     "eslint-config-aegir": "^1.0.1",
     "eslint-plugin-import": "^2.14.0",
@@ -75,6 +81,7 @@
     "raw-loader": "~0.5.1",
     "rimraf": "^2.6.2",
     "serviceworker-webpack-plugin": "^1.0.1",
+    "start-server-and-test": "^1.7.9",
     "stylelint": "^9.7.0",
     "stylelint-config-moxy": "^5.0.0",
     "svg-css-modules-loader": "^1.6.1",
@@ -83,7 +90,8 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm run test:e2e:hook"
     }
   },
   "lint-staged": {

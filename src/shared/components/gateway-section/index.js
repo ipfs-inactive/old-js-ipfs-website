@@ -76,6 +76,7 @@ class GatewaySection extends Component {
             }
           </div>
           <ToggleButton
+            id="serviceWorkerButton"
             isActive={ isActive }
             onClick={ this.handleToggleClick }
             className={ styles.toggle }
