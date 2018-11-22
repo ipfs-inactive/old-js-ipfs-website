@@ -55,11 +55,13 @@
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@commitlint/config-conventional": "^7.1.2",
     "aegir": "^17.0.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-macros": "^2.4.2",
     "babel-preset-moxy": "^2.3.5",
+    "commitlint": "^7.2.1",
     "eslint": "^5.8.0",
     "eslint-config-aegir": "^1.0.1",
     "eslint-plugin-import": "^2.14.0",
@@ -67,6 +69,8 @@
     "external-svg-sprite-loader": "^4.0.0-beta.7",
     "file-loader": "^2.0.0",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.3",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.0.4",
     "postcss-reporter": "^6.0.0",
     "raw-loader": "~0.5.1",
     "rimraf": "^2.6.2",
@@ -75,6 +79,27 @@
     "stylelint-config-moxy": "^5.0.0",
     "svg-css-modules-loader": "^1.6.1",
     "svgo-loader": "^2.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "browserslist": [
     "last 1 Chrome versions",
