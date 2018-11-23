@@ -12,6 +12,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf public",
+    "postinstall": "rimraf .git/hooks/* && node node_modules/husky/husky.js install",
     "develop": "gatsby develop",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
