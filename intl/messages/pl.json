@@ -1,7 +1,7 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "Nie znaleziono strony",
+    "detailedMessage": "Wybrana droga prowadzi donikąd... smutek."
   },
   "buttons": {
     "buttonLearnMore": "Dowiedz się więcej",
@@ -18,10 +18,22 @@
   },
 
   "hero": {
-    "welcomeMessage": "Pełna implementacja protokołu P2P w JavaScript",
-    "textDescription": "js-ipfs dostarcza implementację protokołu IPFS dla przeglądarek internetowych. Napisana w pełni w JavaScript działa w kontekstach takich jak: przeglądarka, Service Worker, WebExtension oraz Node.js, otwierając drzwi do świata nowych możliwości.",
-    "currentVersion": "Aktualna wersja: {version}",
-    "latestUpdate": "Ostatnia aktualizacja: {date}",
+    "welcomeMessage": {
+      "long": "Pełna implementacja protokołu P2P w JavaScript",
+      "short": "Protokół P2P w JavaScript"
+    },
+    "textDescription": {
+      "long": "js-ipfs dostarcza implementację protokołu IPFS dla przeglądarek internetowych. Napisana w pełni w JavaScript działa w kontekstach takich jak: przeglądarka, Service Worker, WebExtension oraz Node.js, otwierając drzwi do świata nowych możliwości.",
+      "short": "js-ipfs działa w kontekstach takich jak: przeglądarka, Service Worker, WebExtension oraz Node.js, otwierając drzwi do świata nowych możliwości."
+    },
+    "currentVersion": {
+      "long": "Aktualna wersja: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Ostatnia aktualizacja: {date}",
+      "short": "Aktualizacja {date}"
+      },
     "downloadsLastMonth": "Pobrań w ubiegłym miesiącu: {count}",
     "errorPckMessage": "Nie udało się pobrać informacji o pakiecie IPFS.",
     "animationButton": {
@@ -99,8 +111,6 @@
     "activatedToggleText": "Disable Service Worker"
   },
 
-  "whatCanYouBuildTitle": "Co możesz zbudować dzięki js-ipfs",
-
   "whatArePeopleBuilding": {
     "sectionTitle": "Przykładowe projekty",
     "list": [
@@ -127,10 +137,10 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "TODO Title",
-    "sectionDesc": "TODO description.",
+    "sectionDesc": "Istnieje nieskończenie wiele zastosowań dla js-ipfs. Poniższe przykłady pokazują wybrane pomysły na to, co można zbudować z js-ipfs. Sprawdź je!",
     "suggestion": {
-      "text": "",
-      "linkText": ""
+      "text": "Czy masz pomysł który chcesz zasugerować? ",
+      "linkText": "Kliknij tu!"
     }
   },
 

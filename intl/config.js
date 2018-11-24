@@ -2,7 +2,7 @@ module.exports = {
   defaultLocale: 'en',
   availableLocales: [
     { acronym: 'en', fullForm: 'English' },
-    // { acronym: 'pl', fullForm: 'Polski' },
+    { acronym: 'pl', fullForm: 'Polski' },
     // { acronym: 'it', fullForm: 'Italiano' },
     { acronym: 'da', fullForm: 'Dansk' },
     { acronym: 'fr', fullForm: 'Français' },
