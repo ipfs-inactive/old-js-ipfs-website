@@ -144,10 +144,17 @@ exports.onCreatePage = ({ page, actions }) => {
 
     availableLocales.forEach((currentLocale) => {
       const acronym = currentLocale.acronym
+      let loadedAcronym = acronym
       const localizedPath = `/${acronym}${page.path}`
-
       const messages = require(`./intl/messages/${acronym}.json`)
-      const localeDataCode = fs.readFileSync(require.resolve(`react-intl/locale-data/${acronym}`)).toString()
+
+      try {
+        require.resolve(`react-intl/locale-data/${acronym}`)
+      } catch (err) {
+        loadedAcronym = acronym.split('-')[0]
+      }
+
+      const localeDataCode = fs.readFileSync(require.resolve(`react-intl/locale-data/${loadedAcronym}`)).toString()
 
       createPage({
         ...page,
@@ -156,6 +163,7 @@ exports.onCreatePage = ({ page, actions }) => {
           intl: {
             messages,
             acronym,
+            loadedAcronym,
             localeDataCode
           }
         }

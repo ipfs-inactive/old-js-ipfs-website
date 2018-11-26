@@ -18,7 +18,7 @@ const loadLocaleData = function (intl) {
   const fnThis = typeof window !== 'undefined' ? window : global
 
   fn.call(fnThis)
-  addLocaleData(ReactIntlLocaleData[intl.acronym])
+  addLocaleData(ReactIntlLocaleData[intl.loadedAcronym])
 }
 
 class Layout extends Component {
