@@ -3,7 +3,7 @@ module.exports = {
   availableLocales: [
     { acronym: 'en', fullForm: 'English' },
     { acronym: 'pl', fullForm: 'Polski' },
-    // { acronym: 'it', fullForm: 'Italiano' },
+    { acronym: 'it', fullForm: 'Italiano' },
     { acronym: 'nl', fullForm: 'Nederlands' },
     { acronym: 'da', fullForm: 'Dansk' },
     // { acronym: 'fr', fullForm: 'Français' },
