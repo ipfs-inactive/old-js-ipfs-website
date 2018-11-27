@@ -23,7 +23,7 @@
       "short": "Un protocollo P2P in JavaCcript"
     },
     "textDescription": {
-      "long": "js-ipfs permette di implementare il protocollo IPFS direttamente nei Browsers. Scritto interamente in JavaScript, usabile nel Browser, nei Service Worker, nelle Web Extension e con Node.js, apre le porte ad un mondo di possibilit&agrave;.",
+      "long": "js-ipfs permette di implementare il protocollo IPFS direttamente nei Browsers. Scritto interamente in JavaScript, usabile nel Browser, nei Service Worker, nelle Web Extension e con Node.js, apre le porte ad un mondo di possibilità.",
       "short": "js-ipfs è utilizzabile nei Browser, nei Service Worker, nelle Web Extension e in Node.js, aprendo le porte a un mondo di possibilità."
     },
     "currentVersion": {
