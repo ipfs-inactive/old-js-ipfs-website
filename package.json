@@ -82,7 +82,7 @@
     "raw-loader": "~0.5.1",
     "rimraf": "^2.6.2",
     "serviceworker-webpack-plugin": "^1.0.1",
-    "start-server-and-test": "^1.7.9",
+    "start-server-and-test": "^1.7.11",
     "stylelint": "^9.7.0",
     "stylelint-config-moxy": "^5.0.0",
     "svg-css-modules-loader": "^1.6.1",
