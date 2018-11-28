@@ -1,7 +1,7 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "Page non trouvée",
+    "detailedMessage": "Vous venez de tomber sur un itinéraire qui n'existe pas… trop triste."
   },
   "buttons": {
     "buttonLearnMore": "En  apprendre Plus",
@@ -137,10 +137,10 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "Ce que vous pouvez construire avec JS-IPFS",
-    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "sectionDesc": "Il existe une infinité de raisons pour utiliser js-ipfs. Les exemples suivants vous donnent une idée de ce que vous pouvez construire avec js-ipfs. Essayez-les!",
     "suggestion": {
-      "text": "",
-      "linkText": ""
+      "text": "Avez-vous une idée et voulez la suggérer?",
+      "linkText": "Faites le ici!"
     }
   },
 
