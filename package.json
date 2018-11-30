@@ -24,7 +24,7 @@
     "test:e2e:hook": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@researchgate/react-intersection-observer": "~0.7.3",
+    "@researchgate/react-intersection-observer": "~0.7.4",
     "axios": "~0.18.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.0",
@@ -52,7 +52,7 @@
     "react-toastify": "^4.4.0",
     "react-tooltip": "^3.9.0",
     "react-youtube": "^7.8.0",
-    "service-worker-gateway": "~0.1.8"
+    "service-worker-gateway": "~0.1.11"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
