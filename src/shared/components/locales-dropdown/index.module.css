@@ -82,6 +82,15 @@
       &:hover {
         color: var(--color-yellow);
       }
+
+      & i {
+        width: 18px;
+        height: 18px;
+
+        & svg {
+          fill: var(--color-white);
+        }
+      }
     }
   }
 
