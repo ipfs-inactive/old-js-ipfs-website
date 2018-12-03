@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import { defaultLocale, availableLocales } from 'shared/intl-config'
 
+import Svg from 'shared/components/svg'
+import iconAdd from 'shared/media/images/icon-add.sprite.svg'
 import Link from 'shared/components/link'
 import styles from './index.module.css'
 
@@ -61,6 +63,9 @@ class LocalesDropdown extends Component {
         </button>
         <div className={ dropdownContentClasses }>
           { availableLocalesOptions }
+          <Link className={ styles.addLanguage } href="https://github.com/ipfs/js.ipfs.io#translations">
+            <Svg svg={ iconAdd } />
+          </Link>
         </div>
       </div>
     )

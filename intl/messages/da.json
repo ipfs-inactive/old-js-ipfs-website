@@ -1,13 +1,14 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "Siden blev ikke fundet",
+    "detailedMessage": "Du har ramt en rute som ikke findes... hvor trist"
   },
   "buttons": {
     "buttonLearnMore": "Lær mere",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode"
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "Tilføj dit sprog"
   },
 
   "navBar": {
@@ -137,12 +138,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "Hvad du kan bygge med js-ipfs",
-    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "sectionDesc": "Der er ubegrænsede muligheder hvor at du kan bruge js-ipfs. Følgende eksempler er gode eksempler på hvad du kan bygge med js-ipfs. Prøv dem!",
     "suggestion": {
-      "text": "",
-      "linkText": ""
+      "text": "Har du en idé som du ønsker at foreslå?",
+      "linkText": "Gør det her!"
     }
-
   },
 
   "publicationsAndTalks": {
