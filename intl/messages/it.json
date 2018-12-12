@@ -1,13 +1,14 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "Pagina non trovata",
+    "detailedMessage": "Hai trovato una pagina che non esiste... che tristezza."
   },
   "buttons": {
     "buttonLearnMore": "Leggi ancora",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode"
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "Aggiungi la tua lingua"
   },
 
   "navBar": {
@@ -18,25 +19,37 @@
   },
 
   "hero": {
-    "welcomeMessage": "Un protocollo P2P completo e scritto interamente in JavaScript",
-    "textDescription": "js-ipfs permette di implementare il protocollo IPFS direttamente nei Browsers. Scritto interamente in JavaScript, usabile nel Browser, nei Service Worker, nelle Web Extension e con Node.js, apre le porte ad un mondo di possibilit&agrave;.",
-    "currentVersion": "Versione corrente: {version}",
-    "latestUpdate": "Ultimo update: {date}",
-    "downloadsLastMonth": "Download dell'ultimo mese: {count}",
+    "welcomeMessage": {
+      "long": "Un protocollo P2P completo e scritto interamente in JavaScript",
+      "short": "Un protocollo P2P in JavaCcript"
+    },
+    "textDescription": {
+      "long": "js-ipfs permette di implementare il protocollo IPFS direttamente nei Browsers. Scritto interamente in JavaScript, usabile nel Browser, nei Service Worker, nelle Web Extension e con Node.js, apre le porte ad un mondo di possibilità.",
+      "short": "js-ipfs è utilizzabile nei Browser, nei Service Worker, nelle Web Extension e in Node.js, aprendo le porte a un mondo di possibilità."
+    },
+    "currentVersion": {
+      "long": "Versione corrente: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Ultimo update: {date}",
+      "short": "Aggiornato il {date}"
+      },
+    "downloadsLastMonth": "Download nell'ultimo mese: {count}",
     "errorPckMessage": "Impossibile recuperare i dati da IPFS.",
     "animationButton": {
-      "enable": "Enable Animation",
-      "disable": "Disable Animation"
+      "enable": "Attiva Animazione",
+      "disable": "Disattiva Animazione"
     }
   },
 
   "banner": {
-    "highlightMessage": "La libreria js-ipfs &egrave; in stato Alpha.",
+    "highlightMessage": "La libreria js-ipfs è in stato Alpha.",
     "message": "Il codice non è stato verificato da specialisti della sicurezza e non deve essere utilizzato per archiviare, condividere o pubblicare informazioni riservate."
   },
 
   "features": {
-    "sectionTitle": "Caratteristiche",
+    "sectionTitle": "Funzionalità",
     "sectionDesc": "Ricco di tutto ciò che conosci e ami di IPFS. Questa implementazione include anche alcune cose importanti che sono uniche per il Browser. È il toolkit per far funzionare tutte le tue applicazioni DWeb.",
     "list": [
       {
@@ -60,22 +73,22 @@
         "desc": "IPFS usa [IPLD](https://ipld.io/), the InterPlanetary Linked-Data, un modello che consente di interagire con i dati provenienti da più fonti, come git, blockchain e altro."
       },
       {
-        "title": "libp2p è built-in",
+        "title": "libp2p è incluso",
         "desc": "[libp2p](https://libp2p.io/) è lo stack di rete modulare creato per IPFS e che puoi utilizzare direttamente, tramite IPFS, per le tue applicazioni."
       },
       {
-        "title": "Esegui come daemon",
-        "desc": "js-ipfs ha l'opzione di essere come un demone, con il quale puoi interagire tramite le HTTP API che già conosci familiarità con go-ipfs."
+        "title": "Esegui come demone",
+        "desc": "js-ipfs ha l'opzione di essere come un demone, con il quale puoi interagire tramite le HTTP API che già conosci da go-ipfs."
       },
       {
         "title": "Crea indirizzi fissi per la modifica dei dati",
-        "desc": "js-ipfs ha all'interno IPNS, InterPlanetary Name System, un modo per creare indirizzi (record) mutabili per distribuire gli aggiornamenti dei tuoi file in modo autenticato e certificato."
+        "desc": "js-ipfs ha all'interno IPNS, InterPlanetary Name System, un modo per gestire indirizzi (record) mutabili per distribuire gli aggiornamenti dei tuoi file in modo autenticato e certificato."
       }
     ]
   },
 
   "gettingStarted": {
-    "sectionTitle": "Inizia con js-ipfs",
+    "sectionTitle": "Primi Passi",
     "sectionDesc": "IPFS ti offre i primitivi per il Content Addressing per tutti i tuoi dati sul DWeb. È possibile rendere i dati disponibili alla rete o recuperare i dati esistenti attraverso il suo indirizzo CID, il Content Identifier. Provalo qui sotto!",
     "addDataToIPFS": "Aggiungere dati su IPFS",
     "output": "Output",
@@ -89,7 +102,7 @@
     "sectionTitle": "Service Worker Gateway",
     "sectionDesc": "Trasforma questa pagina in un gateway IPFS senza toccare alcun server o utilizzare HTTP per recuperare i contenuti dalla rete IPFS! Sì, avete letto bene, il Service Worker Gateway con js-ipfs può connettersi direttamente alla rete IPFS!",
     "activationSuccessTitle": "Congratulazioni! Il tuo browser è ora un gateway IPFS pienamente operativo!",
-    "activationSuccessText": "Carica qualsiasi contenuto come faresti normalmente con https://gateway.ipfs.io. Ecco alcuni esempi per te da provare:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw](https://js.ipfs.io/ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nProva con qualsiasi altro hash aprendo https://js.ipfs.io/ipfs/<your hash>",
+    "activationSuccessText": "Carica qualsiasi contenuto come faresti normalmente con https://gateway.ipfs.io. Ecco alcuni esempi per te da provare:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY](https://js.ipfs.io/ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nProva con qualsiasi altro hash aprendo https://js.ipfs.io/ipfs/<your hash>",
     "toggleText": "Abilita Service Worker",
     "activatingToggleText": "Abilitando Service Worker...",
     "activationErrorMessage": "C'è stato un problema abilitando il Service Worker.",
@@ -98,8 +111,6 @@
     "incompatibleMessageText": "This browser does not support Service Workers.",
     "activatedToggleText": "Disable Service Worker"
   },
-
-  "whatCanYouBuildTitle": "Cosa puoi creare con js-ipfs",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "Cosa stanno creando gli altri",
@@ -127,7 +138,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "TODO Title",
-    "sectionDesc": "TODO description."
+    "sectionDesc": "Ci sono infinite opzioni per te per usare js-ipfs. Gli esempi seguenti offrono un'idea di cosa puoi costruire con js-ipfs. Provali!",
+    "suggestion": {
+      "text": "Hai un'idea e vuoi fare un suggerimento?",
+      "linkText": "Fallo qui!"
+    }
   },
 
   "publicationsAndTalks": {
@@ -142,7 +157,7 @@
   },
 
   "footer": {
-    "rightContent": "js-ipfs è stato avviato ed è sponsorizzato da",
+    "rightContent": "js-ipfs è stato creato ed è sponsorizzato da",
     "leftContent": "Protocol Labs | Ad eccezione di quanto indicato, contenuto autorizzato CC-BY 3.0"
   }
 }

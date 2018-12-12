@@ -1,13 +1,14 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "Siden blev ikke fundet",
+    "detailedMessage": "Du har ramt en rute som ikke findes... hvor trist"
   },
   "buttons": {
     "buttonLearnMore": "Lær mere",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode"
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "Tilføj dit sprog"
   },
 
   "navBar": {
@@ -101,7 +102,7 @@
     "sectionTitle": "Service Worker Gateway",
     "sectionDesc": "Omdan denne side til en fuld IPFS Gateway uden a røre servere eller at benytte HTTP til at downloade indhold fra IPFS netværket! Ja, du læste rigtigt, Server Worker Gateway med js-ipfs kan forbinde direkte til IPFS netværket.",
     "activationSuccessTitle": "Tillykke! Din browser er nu en velfungerende IPFS Gateway.",
-    "activationSuccessText": "Indlæs ethvert indhold som du normalt ville gøre med https://gateway.ipfs.io. Her er nogle eksempler du kan prøve:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw](https://js.ipfs.io/ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nPrøv med andre hashes ved at åbne https://js.ipfs.io/ipfs/",
+    "activationSuccessText": "Indlæs ethvert indhold som du normalt ville gøre med https://gateway.ipfs.io. Her er nogle eksempler du kan prøve:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY](https://js.ipfs.io/ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nPrøv med andre hashes ved at åbne https://js.ipfs.io/ipfs/",
     "toggleText": "Aktivere Service Worker",
     "activatingToggleText": "Aktiverer Service Worker...",
     "activationErrorMessage": "En fejl opstod ved aktivering af Service Worker'en",
@@ -137,7 +138,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "Hvad du kan bygge med js-ipfs",
-    "sectionDesc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "sectionDesc": "Der er ubegrænsede muligheder hvor at du kan bruge js-ipfs. Følgende eksempler er gode eksempler på hvad du kan bygge med js-ipfs. Prøv dem!",
+    "suggestion": {
+      "text": "Har du en idé som du ønsker at foreslå?",
+      "linkText": "Gør det her!"
+    }
   },
 
   "publicationsAndTalks": {

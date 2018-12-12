@@ -12,13 +12,19 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf public",
+    "postinstall": "rimraf .git/hooks/* && node node_modules/husky/husky.js install",
     "develop": "gatsby develop",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
-    "lint": "aegir lint && stylelint \"**/*.css\""
+    "lint": "aegir lint && stylelint \"**/*.css\"",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test develop http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test serve http://localhost:9000 cy:run",
+    "test:e2e:hook": "start-server-and-test develop http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@researchgate/react-intersection-observer": "~0.7.3",
+    "@researchgate/react-intersection-observer": "~0.7.4",
     "axios": "~0.18.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.0.0",
@@ -46,7 +52,7 @@
     "react-toastify": "^4.4.0",
     "react-tooltip": "^3.9.0",
     "react-youtube": "^7.8.0",
-    "service-worker-gateway": "~0.1.7"
+    "service-worker-gateway": "~0.1.11"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -55,11 +61,14 @@
     "@babel/plugin-transform-runtime": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "@commitlint/config-conventional": "^7.1.2",
     "aegir": "^17.0.1",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.4",
     "babel-plugin-macros": "^2.4.2",
     "babel-preset-moxy": "^2.3.5",
+    "commitlint": "^7.2.1",
+    "cypress": "^3.1.1",
     "eslint": "^5.8.0",
     "eslint-config-aegir": "^1.0.1",
     "eslint-plugin-import": "^2.14.0",
@@ -67,14 +76,39 @@
     "external-svg-sprite-loader": "^4.0.0-beta.7",
     "file-loader": "^2.0.0",
     "gatsby-plugin-webpack-bundle-analyzer": "^1.0.3",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.0.4",
     "postcss-reporter": "^6.0.0",
     "raw-loader": "~0.5.1",
     "rimraf": "^2.6.2",
     "serviceworker-webpack-plugin": "^1.0.1",
+    "start-server-and-test": "^1.7.11",
     "stylelint": "^9.7.0",
     "stylelint-config-moxy": "^5.0.0",
     "svg-css-modules-loader": "^1.6.1",
     "svgo-loader": "^2.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-push": "npm run test:e2e:hook"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.css": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "browserslist": [
     "last 1 Chrome versions",

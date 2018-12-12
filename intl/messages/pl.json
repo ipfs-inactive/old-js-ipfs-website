@@ -1,13 +1,14 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "Nie znaleziono strony",
+    "detailedMessage": "Wybrana droga prowadzi donikąd... smutek."
   },
   "buttons": {
     "buttonLearnMore": "Dowiedz się więcej",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode"
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "Dodaj swój język"
   },
 
   "navBar": {
@@ -18,10 +19,22 @@
   },
 
   "hero": {
-    "welcomeMessage": "Pełna implementacja protokołu P2P w JavaScript",
-    "textDescription": "js-ipfs dostarcza implementację protokołu IPFS dla przeglądarek internetowych. Napisana w pełni w JavaScript działa w kontekstach takich jak: przeglądarka, Service Worker, WebExtension oraz Node.js, otwierając drzwi do świata nowych możliwości.",
-    "currentVersion": "Aktualna wersja: {version}",
-    "latestUpdate": "Ostatnia aktualizacja: {date}",
+    "welcomeMessage": {
+      "long": "Pełna implementacja protokołu P2P w JavaScript",
+      "short": "Protokół P2P w JavaScript"
+    },
+    "textDescription": {
+      "long": "js-ipfs dostarcza implementację protokołu IPFS dla przeglądarek internetowych. Napisana w pełni w JavaScript działa w kontekstach takich jak: przeglądarka, Service Worker, WebExtension oraz Node.js, otwierając drzwi do świata nowych możliwości.",
+      "short": "js-ipfs działa w kontekstach takich jak: przeglądarka, Service Worker, WebExtension oraz Node.js, otwierając drzwi do świata nowych możliwości."
+    },
+    "currentVersion": {
+      "long": "Aktualna wersja: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Ostatnia aktualizacja: {date}",
+      "short": "Aktualizacja {date}"
+      },
     "downloadsLastMonth": "Pobrań w ubiegłym miesiącu: {count}",
     "errorPckMessage": "Nie udało się pobrać informacji o pakiecie IPFS.",
     "animationButton": {
@@ -89,7 +102,7 @@
     "sectionTitle": "Service Worker jako bramka",
     "sectionDesc": "Zmień tę stronę w pełni funkcjonalną bramkę IPFS bez zewnętrznego serwera, bez wysyłania zapytań HTTP. Właśnie tak, js-ipfs działający jako Service Worker jest w stanie pobierać dane bezpośrednio z IPFS!",
     "activationSuccessTitle": "Gratulacje! Twoja przeglądarka jest w pełni działającą bramką IPFS!",
-    "activationSuccessText": "Otwórz dowolne treści, tak jak zwykle to robisz przy użyciu https://gateway.ipfs.io. Poniżej parę przykładów do wypróbowania:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw](https://js.ipfs.io/ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nSpróbuj z dowolnym CID otwierając https://js.ipfs.io/ipfs/<twój CID>",
+    "activationSuccessText": "Otwórz dowolne treści, tak jak zwykle to robisz przy użyciu https://gateway.ipfs.io. Poniżej parę przykładów do wypróbowania:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY](https://js.ipfs.io/ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nSpróbuj z dowolnym CID otwierając https://js.ipfs.io/ipfs/<twój CID>",
     "toggleText": "Włącz Service Worker",
     "activatingToggleText": "Włączam Service Worker...",
     "activationErrorMessage": "Wystąpił błąd podczas włączania Service Worker.",
@@ -98,8 +111,6 @@
     "incompatibleMessageText": "This browser does not support Service Workers.",
     "activatedToggleText": "Disable Service Worker"
   },
-
-  "whatCanYouBuildTitle": "Co możesz zbudować dzięki js-ipfs",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "Przykładowe projekty",
@@ -127,7 +138,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "TODO Title",
-    "sectionDesc": "TODO description."
+    "sectionDesc": "Istnieje nieskończenie wiele zastosowań dla js-ipfs. Poniższe przykłady pokazują wybrane pomysły na to, co można zbudować z js-ipfs. Sprawdź je!",
+    "suggestion": {
+      "text": "Czy masz pomysł który chcesz zasugerować? ",
+      "linkText": "Kliknij tu!"
+    }
   },
 
   "publicationsAndTalks": {

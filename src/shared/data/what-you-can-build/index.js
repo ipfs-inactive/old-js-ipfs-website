@@ -1,12 +1,15 @@
-const apps = [
-  {
-    title: 'Browser Video Streaming',
-    link: 'https://codepen.io/pedromssantos/embed/wYKydW'
-  },
-  {
-    title: 'Exchange Files in Browser',
-    link: 'https://codepen.io/pedromssantos/embed/oaxqZK'
-  }
-]
+const appsData = {
+  apps: [
+    {
+      title: 'Browser Video Streaming',
+      link: 'https://codepen.io/ipfs/embed/XyVXRN'
+    },
+    {
+      title: 'Exchange Files in Browser',
+      link: 'https://codepen.io/ipfs/embed/LXeGGL'
+    }
+  ],
+  repoLink: 'https://github.com/ipfs/js.ipfs.io/issues'
+}
 
-export default apps
+export default appsData

@@ -1,13 +1,14 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "Página não encontrada",
+    "detailedMessage": "Infelizmente estás a tentar aceder a uma página que não existe."
   },
   "buttons": {
     "buttonLearnMore": "Descobre mais",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode"
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "Adiciona a tua língua"
   },
 
   "navBar": {
@@ -101,7 +102,7 @@
     "sectionTitle": "Service Worker Gateway",
     "sectionDesc": "Transforma esta página num Gateway de IPFS sem tocar em nenhum servidor ou usar HTTP para obter conteúdo da rede do IPFS. Sim, leste bem, o Service Worker Gateway com o js-ipfs conseguem conectar-se à rede do IPFS.",
     "activationSuccessTitle": "Parabéns! O teu browser é agora um Gateway de IPFS completamente operacional",
-    "activationSuccessText": "Carrega qualquer conteúdo como fazes normalmente com https://gateway.ipfs.io. Aqui ficam alguns exemplos para experimentares:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw](https://js.ipfs.io/ipfs/QmcF7aJ2pXUv4ujGa1modsbJwWwX4xidDUJsK4RgeK5eWw)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n- [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nExperimenta outra hash qualquer abrindo https://js.ipfs.io/ipfs/<your hash>",
+    "activationSuccessText": "Carrega qualquer conteúdo como fazes normalmente com https://gateway.ipfs.io. Aqui ficam alguns exemplos para experimentares:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY](https://js.ipfs.io/ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n- [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nExperimenta outra hash qualquer abrindo https://js.ipfs.io/ipfs/<your hash>",
     "toggleText": "Ativar Service Worker",
     "activatingToggleText": "A ativar o Service Worker...",
     "activationErrorMessage": "Ocorreu um problema ao ativar o Service Worker.",
@@ -137,7 +138,11 @@
 
   "whatYouCanBuild": {
     "sectionTitle": "O que podes construir com JS-IPFS",
-    "sectionDesc": "PT-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "sectionDesc": "Existem múltiplas formas de utilizar o js-ipfs. Os exemplos seguintes oferecem-te uma ideia daquilo que podes construir com o js-ipfs. Experimenta-os!",
+    "suggestion": {
+      "text": "Tens alguma ideia nova e queres sugerir?",
+      "linkText": "Sugere aqui!"
+    }
   },
 
   "publicationsAndTalks": {

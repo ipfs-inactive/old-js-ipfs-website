@@ -8,7 +8,7 @@ import styles from './index.module.css'
 
 class ToggleButton extends Component {
   render () {
-    const { isActive, incompatible, inProgress, type, className } = this.props
+    const { id, isActive, incompatible, inProgress, type, className } = this.props
     const { messages } = this.props.intl
     const wrapperClasses = classnames(styles.wrapper, className, {
       [styles.incompatible]: incompatible,
@@ -24,7 +24,7 @@ class ToggleButton extends Component {
 
     return (
       <div data-tip data-for='incompatible-sw' className={ wrapperClasses }>
-        <label className={ styles.switch } onClick={ this.handleToggleButton }>
+        <label id={ id } className={ styles.switch } onClick={ this.handleToggleButton }>
           <span className={ sliderClasses } />
         </label>
         <span className={ titleClasses }>
@@ -60,6 +60,7 @@ ToggleButton.defaultProps = {
 }
 
 ToggleButton.propTypes = {
+  id: PropTypes.string,
   onClick: PropTypes.func.isRequired,
   isActive: PropTypes.bool.isRequired,
   type: PropTypes.oneOf(['round', 'rect']),

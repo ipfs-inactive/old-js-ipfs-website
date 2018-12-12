@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   justify-content: center;
   font-size: var(--typography-text-size-small);
-  transition: all var(--transition-default-duration) ease;
+  transition: color var(--transition-default-duration) ease;
 
   & a {
     margin-top: 5px;
@@ -22,10 +22,25 @@
 
     &:hover {
       color: var(--color-white);
+
+      &.addLanguage i use {
+        fill: var(--color-white);
+      }
     }
 
     &.active {
       color: var(--color-yellow);
+    }
+
+    &.addLanguage i {
+      width: 15px;
+      height: 15px;
+      margin-right: 5px;
+
+      & use {
+        transition: fill var(--transition-default-duration) ease;
+        fill: var(--color-blue-dark-shade);
+      }
     }
   }
 }
