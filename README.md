@@ -10,12 +10,13 @@ Welcome to the js.ipfs.io Website repo. This website uses [gatsbyjs](https://www
 
 ## Table of Contents
 
-- [Internationalization](#internationalization-i18n)
-- [Listing a talk on the website](#)
-- [Want to show what's possible to build with `js-ipfs`?](#)
-- [Development](#development)
-- [Publish](#publish)
-- [Contribute](#contribute)
+- Contribute to the Website Content
+  - [Internationalization](#internationalization-i18n)
+  - [Listing a talk on the website](#listing-a-talk-on-the-website)
+  - [Want to show what's possible to build with `js-ipfs`?](#want-to-show-whats-possible-to-build-with-js-ipfs)
+- Development and Release Cycle
+  - [Development](#development)
+  - [Publish](#publish)
 - [License](#license)
 
 ## Internationalization `i18n`
@@ -167,16 +168,6 @@ After that, go to the [messages](https://github.com/ipfs/js.ipfs.io/tree/master/
 ```
 
 **Note:** This process will be automated as soon as we tackle [this issue](https://github.com/ipfs/js.ipfs.io/issues/171).
-
-## Contribute
-
-Please contribute! There's a lot of ways you can help us out:
-- Don't see the Website translated in your language? Did you find an invalid translation? [Check here](#translations) how you can help us!
-- Add your talk to the website! [See how](#talk) you can do it.
-- Want to show what's possible to build with `js-ipfs`? [Check here](#apps) how to add your app to the website!
-- Take a look at the [issues](https://github.com/ipfs/js.ipfs.io/issues) or open a PR.
-
-[![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
 
 ## License
 
