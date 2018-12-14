@@ -1,11 +1,11 @@
 const appsData = {
   apps: [
     {
-      title: 'Browser Video Streaming',
+      title: 'Stream Video through IPFS',
       link: 'https://codepen.io/ipfs/embed/XyVXRN'
     },
     {
-      title: 'Exchange Files in Browser',
+      title: 'Upload and send files',
       link: 'https://codepen.io/ipfs/embed/LXeGGL'
     }
   ],
