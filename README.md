@@ -19,8 +19,8 @@ Most of the website content is data-driven, you can check the [data](https://git
 
 ### Dependencies
 
-- `gatsbyjs v1` to build the website
-- `Node.js >= v8.11` and `npm` for build tools
+- `gatsbyjs v2` to build the website
+- `Node.js >= v10` and `npm` for build tools
 - `Transifex Client` for locales
 - `ipfs` to deploy changes
 
