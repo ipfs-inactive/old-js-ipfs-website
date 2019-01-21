@@ -34,7 +34,7 @@
     "gatsby-plugin-postcss": "^2.0.0",
     "gatsby-plugin-react-helmet": "^3.0.1",
     "intersection-observer": "~0.5.0",
-    "ipfs": "~0.33.1",
+    "ipfs": "~0.34.0",
     "normalize.css": "^8.0.0",
     "postcss-import": "^12.0.0",
     "postcss-preset-moxy": "^2.3.1",
@@ -52,7 +52,7 @@
     "react-toastify": "^4.4.0",
     "react-tooltip": "^3.9.0",
     "react-youtube": "^7.8.0",
-    "service-worker-gateway": "~0.1.11"
+    "service-worker-gateway": "~0.1.12"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
