@@ -1,13 +1,14 @@
 {
   "notFoundPage": {
-    "mainMessage": "",
-    "detailedMessage": ""
+    "mainMessage": "页面未找到",
+    "detailedMessage": "你刚点了一个不存在的链接…… ㄒoㄒ"
   },
   "buttons": {
     "buttonLearnMore": "了解更多",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC聊天频道"
+    "buttonIrcFreenode": "IRC聊天频道",
+    "buttonAddLanguage": "添加你的语言"
   },
 
   "navBar": {
@@ -18,15 +19,27 @@
   },
 
   "hero": {
-    "welcomeMessage": "一个完全使用JavaScript编写的完整版的P2P协议",
-    "textDescription": "js-ipfs为在浏览器中直接使用IPFS协议奠定了基础。 它完全使用JavaScript编写，可以运行在浏览器、Service Worker、浏览器插件和Node.js中，为应用打开了通往各种可能性的大门。",
-    "currentVersion": "当前版本：{version}",
-    "latestUpdate": "最近更新：{date}",
+    "welcomeMessage": {
+      "long": "完全用JavaScript编写的完整P2P协议",
+      "short": "P2P JavaScript协议"
+    },
+    "textDescription": {
+      "long": "js-ipfs为浏览器实现IPFS协议铺平了道路。 它完全用JavaScript编写，运行在浏览器、Service Worker、Web扩展和Node.js中，打开了通向无限可能世界的大门。",
+      "short": "js-ipfs 运行在浏览器、Service Worker、Web扩展和Node.js中，打开了通向无限可能世界的大门！"
+    },
+    "currentVersion": {
+      "long": "当前版本：{version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "最近更新: {date}",
+      "short": "已经更新 {date}"
+      },
     "downloadsLastMonth": "最近一个月的下载量：{count}",
     "errorPckMessage": "无法获取IPFS数据包。",
     "animationButton": {
-      "enable": "Enable Animation",
-      "disable": "Disable Animation"
+      "enable": "开启动画",
+      "disable": "关闭动画"
     }
   },
 
@@ -53,7 +66,7 @@
       },
       {
         "title": "从IPFS网络中的任何位置添加和检索文件",
-        "desc": "IPFS旨在利用内容寻址和进程寻址的强大功能来查找网络中包含您要查找内容的节点并进行数据检索。 其它节点也可以以同样的方式找到您添加的任何数据。"
+        "desc": "IPFS被设计用来通过内容寻址能力去从网络中寻找有你想要内容的节点。其它节点也能通过同样的方式找到你添加的数据。"
       },
       {
         "title": "利用DAG API遍历任意哈希链数据结构",
@@ -89,17 +102,15 @@
     "sectionTitle": "Service Worker网关",
     "sectionDesc": "无需借助任何服务器，也无需使用HTTP从IPFS网络获取内容即可将此页面转换为完整的IPFS网关！ 是的，你没看错，带有js-ipfs的Service Worker网关可以直接连接到IPFS网络。",
     "activationSuccessTitle": "恭喜！ 您的浏览器现在是一个完全可用的IPFS网关",
-    "activationSuccessText": "与使用 https://gateway.ipfs.io网关一样，您可以从IPFS里面下载任何数据。试试下面的例子:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY](https://js.ipfs.io/ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\n通过下面的链接地址试一下其它哈希值 https://js.ipfs.io/ipfs/<你的哈希值>",
+    "activationSuccessText": "与使用 https://gateway.ipfs.io网关一样，您可以从IPFS里面下载任何数据。试试下面的例子:\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY](https://js.ipfs.io/ipfs/QmRtGNgfNuefDjVTPY3ybDMYCDsGdcDfvNdRU8FfnpMRWY)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\n通过链接 https://js.ipfs.io/ipfs/你的哈希码 试试其它哈希码",
     "toggleText": "启用Service Worker",
     "activatingToggleText": "正在激活Service Worker...",
     "activationErrorMessage": "启用Service Worker时发生错误。",
     "deactivationErrorMessage": "禁用Service Worker时发生错误。",
     "nonRootScopeWarningMessage": "当前页面无法激活Service Worker。 请尝试从 https://js.ipfs.io 激活",
-    "incompatibleMessageText": "This browser does not support Service Workers.",
-    "activatedToggleText": "Disable Service Worker"
+    "incompatibleMessageText": "此浏览器不支持Service Workers.",
+    "activatedToggleText": "禁用Service Worker"
   },
-
-  "whatCanYouBuildTitle": "您可以用js-ipfs做什么",
 
   "whatArePeopleBuilding": {
     "sectionTitle": "看看大家正在使用它做什么",
@@ -126,11 +137,11 @@
   },
 
   "whatYouCanBuild": {
-    "sectionTitle": "TODO Title",
-    "sectionDesc": "TODO description.",
+    "sectionTitle": "你能通过js-ipfs做什么",
+    "sectionDesc": "你有很多种方式来使用js-ipfs。下面的示例给您提供了一个你能通过js-ipfs做什么的想法。试试吧！",
     "suggestion": {
-      "text": "",
-      "linkText": ""
+      "text": "您有什么想法或建议吗？",
+      "linkText": "在这儿提出来！"
     }
   },
 
