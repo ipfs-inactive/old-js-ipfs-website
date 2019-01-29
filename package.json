@@ -2,7 +2,7 @@
   "name": "js-ipfs-www",
   "description": "JS IPFS website",
   "version": "0.0.0",
-  "author": "Pedro Santos <pedro.santos@moxy.studio>",
+  "leadMaintainer": "Pedro Santos <pedro.santos@moxy.studio>",
   "keywords": [
     "ipfs",
     "website",
