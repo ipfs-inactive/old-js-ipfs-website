@@ -36,6 +36,24 @@ module.exports = {
         analyzerPort: 3000,
         openAnalyzer: false
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        trackingIds: [
+          'UA-96910779-5'
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_name: 'gaCookie',
+          cookie_domain: 'js.ipfs.io',
+          cookie_expires: 0
+        },
+        pluginConfig: {
+          head: true,
+          respectDNT: true
+        }
+      }
     }
   ]
 }
