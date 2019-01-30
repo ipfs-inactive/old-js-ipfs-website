@@ -1,4 +1,5 @@
 {
+
   "notFoundPage": {
     "mainMessage": "페이지를 찾을 수 없습니다.",
     "detailedMessage": "당신은 존재하지 않는 주소에 접근했습니다. 슬프군요..."
@@ -102,7 +103,7 @@
     "sectionTitle": "서비스 워커 게이트웨이",
     "sectionDesc": "이 페이지를 IPFS 게이트웨이로 전환하세요. 서버를 작동시키거나, HTTP를 사용하여 네트워크에서 콘텐츠를 가져오지 않아도 됩니다. 그래요! 서비스 워커 게이트웨이를 가진 js-ipfs가 IPFS 네트워크에 직접 연결됩니다.",
     "activationSuccessTitle": "축하합니다! 당신의 브라우저가 완벽하게 작동하는 IPFS 게이트웨이가 되었습니다.",
-    "activationSuccessText": "https://gateway.ipfs.io 로 할 수 있었던 콘텐츠를 불러오세요. 여기 당신이 시도해볼 수 있는 예제들을 준비했습니다.\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/Qmba841E3f7MZwTbCex8fkUwPWE26Ru5eT4DpKsCgKbiBP](https://js.ipfs.io/ipfs/Qmba841E3f7MZwTbCex8fkUwPWE26Ru5eT4DpKsCgKbiBP)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nhttps://js.ipfs.io/ipfs/<your hash> 에 있는 다른 해시로도 시도해보세요.",
+    "activationSuccessText": "https://gateway.ipfs.io 로 할 수 있었던 콘텐츠를 불러오세요. 여기 당신이 시도해볼 수 있는 예제들을 준비했습니다.\n- [ipfs.io - /ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao](https://js.ipfs.io/ipfs/QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao)\n- [js.ipfs.io - /ipfs/QmcckYa6Z3myL9Hz9d1vuRAmJheAgam8YQCaAyusUwxQFt](https://js.ipfs.io/ipfs/QmcckYa6Z3myL9Hz9d1vuRAmJheAgam8YQCaAyusUwxQFt)\n- [awesome.ipfs.io - /ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54](https://js.ipfs.io/ipfs/Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54)\n - [peerpad.net - /ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v](https://js.ipfs.io/ipfs/QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v)\n\nhttps://js.ipfs.io/ipfs/<your hash> 에 있는 다른 해시로도 시도해보세요.",
     "toggleText": "서비스 워커 활성화",
     "activatingToggleText": "서비스 워커 활성화 중...",
     "activationErrorMessage": "서비스 워커를 활성화 할 때 오류가 발생했습니다.",
