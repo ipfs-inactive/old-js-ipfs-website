@@ -5,7 +5,7 @@ const data = 'Hello, <YOUR NAME HERE>'
 // once the node is ready
 node.once('ready', () => {
   // convert your data to a Buffer and add it to IPFS
-  node.files.add(node.types.Buffer.from(data), (err, files) => {
+  node.add(node.types.Buffer.from(data), (err, files) => {
     if (err) return console.error(err)
 
     // 'hash', known as CID, is a string uniquely addressing the data
@@ -18,7 +18,7 @@ node.once('ready', () => {
 const codeGet = (cid) => `const node = new IPFS()
 
 node.once('ready', () => {
-  node.files.cat('${cid}', (err, data) => {
+  node.cat('${cid}', (err, data) => {
     if (err) return console.error(err)
 
     // convert Buffer back to string
