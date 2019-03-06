@@ -24,7 +24,7 @@
       "short": "Um protocolo P2P escrito em JavaScript"
     },
     "textDescription": {
-      "long": "js-ipfs estabelece o caminho para a implementação do protocolo IPFS no Browser. Programado competamente em JavaScript, pode ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades.",
+      "long": "js-ipfs estabelece o caminho para a implementação do protocolo IPFS no Browser. Programado completamente em JavaScript, podendo ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades.",
       "short": "js-ipfs pode ser usado no Browser, num Service Worker, numa Web Extension e em Node.js, abrindo as portas para um mundo de possibilidades."
     },
     "currentVersion": {
