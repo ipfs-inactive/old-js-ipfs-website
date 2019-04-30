@@ -142,7 +142,7 @@ When a branch gets `merged` to master, it is deployed to [dev.js.ipfs](https://d
 
 To deploy to [js.ipfs.io](https://js.ipfs.io/) the code should be merged into the `production` branch.
 
-**Important:** Before a deploy you need to add the website to IPFS and update the resulting hash in each translation file. 
+**Important:** Before a deploy you need to add the website to IPFS and update the resulting hash on [constants](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/constants) folder.
 Thus, you must:
 1. Build the project
 ```sh
@@ -158,14 +158,7 @@ Thus, you must:
 added <resulting-hash>
 ```
 
-After that, go to the [messages](https://github.com/ipfs/js.ipfs.io/tree/master/intl/messages) folder and paste the resulting hash on the `serviceWorker` object. Note that all `json` files must be updated. Example:
-```js
-"serviceWorker": {
-    ...
-    "activationSuccessText": "(...)js.ipfs.io - /ipfs/<resulting-hash>](https://js.ipfs.io/ipfs/<resulting-hash>\n(...)"
-    ...
-}
-```
+After that, go to the [constants](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/constants) folder and paste the resulting hash on the `jsIpfsWebsite` property of the exported object.
 
 **Note:** This process will be automated as soon as we tackle [this issue](https://github.com/ipfs/js.ipfs.io/issues/171).
 
