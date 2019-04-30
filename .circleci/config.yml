@@ -21,7 +21,6 @@ jobs:
       - image: olizilla/ipfs-dns-deploy:latest
         environment:
           DOMAIN: js.ipfs.io
-          DEV_DOMAIN: dev.js.ipfs.io
           BUILD_DIR: public
     steps:
       - attach_workspace:
@@ -37,9 +36,6 @@ jobs:
 
             if [ "$CIRCLE_BRANCH" == "production" ] ; then
               dnslink-dnsimple -d $DOMAIN -r _dnslink -l /ipfs/$hash
-
-            elif [ "$CIRCLE_BRANCH" == "master" ] ; then
-              dnslink-dnsimple -d $DEV_DOMAIN -r _dnslink -l /ipfs/$hash
 
             fi
 
