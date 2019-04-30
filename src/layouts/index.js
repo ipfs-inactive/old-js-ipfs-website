@@ -42,6 +42,9 @@ class Layout extends Component {
               { rel: 'icon', sizes: '32x32', href: withPrefix('/favicon/favicon-32x32.png'), type: 'image/png' },
               { rel: 'icon', sizes: '16x16', href: withPrefix('/favicon/favicon-16x16.png'), type: 'image/png' },
               { rel: 'mask-icon', href: withPrefix('/favicon/safari-pinned-tab.svg'), color: '#0a1732' }
+            ] }
+            script={ [
+              { src: 'https://camp.ipfs.io/ribbon.min.js', async: true }
             ] } >
           </Helmet>
 
