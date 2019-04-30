@@ -3,6 +3,7 @@ import { injectIntl } from 'react-intl'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import ReactMarkdown from 'react-markdown'
+import { HASHES } from 'shared/constants'
 
 import Svg from 'shared/components/svg'
 import mobileGatewaySvg from '../images/animation/mobile-gateway.inline.svg'
@@ -48,12 +49,22 @@ import styles from './index.module.css'
 
 class GatewaySvgAnimation extends Component {
   render () {
-    const { isActive, inView, isMessageVisible, intl: { messages } } = this.props
+    const { isActive, inView, isMessageVisible, intl: { messages, formatMessage } } = this.props
     const containerClasses = classNames(styles.container, {
       [styles.active]: isActive,
       [styles.animationOff]: !inView,
       [styles.messageClosed]: isActive && !isMessageVisible
     })
+
+    const messageBodyText = formatMessage(
+      { id: '_dummy', defaultMessage: messages.serviceWorker.activationSuccessText },
+      {
+        ipfsWebsiteHash: HASHES.ipfsWebsite,
+        jsIpfsWebsiteHash: HASHES.jsIpfsWebsite,
+        awesomeIpfsWebsiteHash: HASHES.awesomeIpfsWebsite,
+        peerpadWebsiteHash: HASHES.peerpadWebsite
+      }
+    )
 
     return (
       <div className={ containerClasses }>
@@ -69,7 +80,7 @@ class GatewaySvgAnimation extends Component {
             </div>
           </div>
           <div className={ styles.body }>
-            <ReactMarkdown source={ messages.serviceWorker.activationSuccessText } />
+            <ReactMarkdown source={ messageBodyText } />
           </div>
         </div>
       </div>
