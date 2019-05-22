@@ -41,7 +41,7 @@ function log (fn) {
   }
 }
 
-function stubIpfs (node) {
+function stubIpfs (node, IPFS) {
   node.once = (e, fn) => {
     fn()
   }
@@ -54,7 +54,7 @@ function stubIpfs (node) {
     return node
   }
 
-  return WrapIPFS
+  return Object.assign(WrapIPFS, IPFS)
 }
 
 function getIpfs (opts) {
