@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Getting Started",
-    "sectionDesc": "IPFS gives you a Content Addressing primitive for all your data on the DWeb. You can make data available to the network or fetch existing data through its CID, the Content Identifier. Try it out below!",
+    "sectionDesc": "IPFS gives you a Content Addressing primitive for all your data on the DWeb. You can make data available to the network or fetch existing data through its CID, the Content Identifier. Try it out below or [explore our ProtoSchool tutorials](https://proto.school/#/tutorials)!",
     "addDataToIPFS": "Adding data to IPFS",
     "output": "Output",
     "getDataFromIPFS": "Getting data from IPFS",
@@ -141,8 +141,8 @@
     "sectionTitle": "What you can build with JS-IPFS",
     "sectionDesc": "There are unlimited options for you to use js-ipfs. The following examples provide you an idea of what you can build with js-ipfs. Try them out!",
     "suggestion": {
-      "text": "Do you have any idea and want to suggest?",
-      "linkText": "Do it here!"
+      "text": "Have suggestions?",
+      "linkText": "Share them here!"
     }
   },
 
@@ -153,7 +153,7 @@
 
   "community": {
     "sectionTitle": "Community",
-    "sectionDesc": "js-ipfs is an MIT Licensed, Open Source project from the IPFS community. There are many ways you can contribute: help write the specification, code implementations and tools using libp2p, craft examples and tutorials, and join our regular product calls to discuss libp2p with us.",
+    "sectionDesc": "js-ipfs is an MIT Licensed, Open Source project from the IPFS community. There are many ways you can contribute: help write the specification, code implementations and tools using js-ipfs, craft examples and tutorials, and join our working group calls to discuss IPFS with us.",
     "socialNetworksText": "Come hang out!"
   },
 
