@@ -10,6 +10,7 @@ import Svg from 'shared/components/svg'
 import Button from 'shared/components/button'
 import Link from 'shared/components/link'
 import SyntaxHighlighter from 'shared/components/syntax-highlighter'
+import ReactMarkdown from 'react-markdown'
 import {
   transformCode,
   log,
@@ -70,9 +71,7 @@ class GettingStarted extends Component {
         </div>
         <div className={ styles.content }>
           <h1>{ messages.gettingStarted.sectionTitle }</h1>
-          <span className={ styles.sectionDescription }>
-            <p>{ messages.gettingStarted.sectionDesc }</p>
-          </span>
+          <ReactMarkdown className={ styles.sectionDescription } source={ messages.gettingStarted.sectionDesc } />
           <div className={ styles.panel } >
             <p className={ styles.liveSnippetTitle }>{ messages.gettingStarted.addDataToIPFS }</p>
             <LiveProvider key="add" className={ styles.liveSnippet } code={ codeAdd } scope={ this.scopeAdd } mountStylesheet={ false } transformCode={ transformCode }>
