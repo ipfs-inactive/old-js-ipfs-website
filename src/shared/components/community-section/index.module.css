@@ -61,9 +61,20 @@
 
       & p {
         width: 60%;
+        z-index: 1;
         font-size: var(--typography-text-size);
         font-weight: var(--typography-text-weight);
         line-height: var(--line-height-medium);
+      }
+
+      & a {
+        color: var(--color-yellow);
+        text-decoration: none;
+        transition: color var(--transition-default-duration) ease;
+
+        &:hover {
+          color: var(--color-yellow-hover);
+        }
       }
     }
 
