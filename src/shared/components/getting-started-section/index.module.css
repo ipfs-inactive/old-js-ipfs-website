@@ -74,11 +74,6 @@
   border-radius: 2px;
 }
 
-.liveSnippet pre[class*="language-"] {
-  margin: 0;
-  border-radius: 0;
-}
-
 .liveSnippetTitle {
   color: var(--color-syntax-highlighter-background);
   font-size: 28px;
@@ -96,12 +91,6 @@
 
 .liveSnippetCliContainer {
   margin-bottom: 75px;
-}
-
-.liveSnippetEditor {
-  position: relative;
-  outline: none;
-  background: var(--color-syntax-highlighter-background) !important;
 }
 
 .liveSnippetPreview {

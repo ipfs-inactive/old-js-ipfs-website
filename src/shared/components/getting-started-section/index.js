@@ -74,35 +74,38 @@ class GettingStarted extends Component {
           <ReactMarkdown className={ styles.sectionDescription } source={ messages.gettingStarted.sectionDesc } />
           <div className={ styles.panel } >
             <p className={ styles.liveSnippetTitle }>{ messages.gettingStarted.addDataToIPFS }</p>
-            <LiveProvider key="add" className={ styles.liveSnippet } code={ codeAdd } scope={ this.scopeAdd } mountStylesheet={ false } transformCode={ transformCode }>
-              <div className={ styles.liveSnippetEditorContainer }>
-                <LiveEditor name="add" setRun={ this.handleSetRun } className={ 'language-js ' + styles.liveSnippetEditor }/>
-                <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('add') }>Run</button>
-              </div>
-              <div className={ styles.liveSnippetPreview } >
-                <p className={ styles.liveSnippetOutput }>{ messages.gettingStarted.output }</p>
-                <pre>
-                  <code>{ outputAdd }</code>
-                </pre>
-                { (ipfsLoaded && runAdd) && <LivePreview/> }
-                { ipfsLoaded && <LiveError/> }
+            <LiveProvider key="add" code={ codeAdd } scope={ this.scopeAdd } mountStylesheet={ false } transformCode={ transformCode }>
+              <div className={ styles.liveSnippet }>
+                <div className={ styles.liveSnippetEditorContainer }>
+                  <LiveEditor name="add" setRun={ this.handleSetRun } language='js' />
+                  <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('add') }>Run</button>
+                </div>
+                <div className={ styles.liveSnippetPreview } >
+                  <p className={ styles.liveSnippetOutput }>{ messages.gettingStarted.output }</p>
+                  <pre>
+                    <code>{ outputAdd }</code>
+                  </pre>
+                  { (ipfsLoaded && runAdd) && <LivePreview/> }
+                  { ipfsLoaded && <LiveError/> }
+                </div>
               </div>
             </LiveProvider>
             <p className={ styles.liveSnippetTitle }>{ messages.gettingStarted.getDataFromIPFS }</p>
             <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingJavascript }</p>
-            <LiveProvider key="get" className={ styles.liveSnippet } code={ codeGet(cid) } scope={ this.scopeGet } mountStylesheet={ false } transformCode={ transformCode }>
-
-              <div className={ styles.liveSnippetEditorContainer }>
-                <LiveEditor name="get" setRun={ this.handleSetRun } className={ 'language-js ' + styles.liveSnippetEditor }/>
-                <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('get') }>Run</button>
-              </div>
-              <div className={ styles.liveSnippetPreview } >
-                <p className={ styles.liveSnippetOutput }>{ messages.gettingStarted.output }</p>
-                <pre>
-                  <code>{ outputGet }</code>
-                </pre>
-                { (ipfsLoaded && runGet) && <LivePreview/> }
-                { ipfsLoaded && <LiveError/> }
+            <LiveProvider key="get" code={ codeGet(cid) } scope={ this.scopeGet } mountStylesheet={ false } transformCode={ transformCode }>
+              <div className={ styles.liveSnippet }>
+                <div className={ styles.liveSnippetEditorContainer }>
+                  <LiveEditor name="get" setRun={ this.handleSetRun } language='js' />
+                  <button className={ styles.liveSnippetRun } onClick={ this.handleRunClick('get') }>Run</button>
+                </div>
+                <div className={ styles.liveSnippetPreview } >
+                  <p className={ styles.liveSnippetOutput }>{ messages.gettingStarted.output }</p>
+                  <pre>
+                    <code>{ outputGet }</code>
+                  </pre>
+                  { (ipfsLoaded && runGet) && <LivePreview/> }
+                  { ipfsLoaded && <LiveError/> }
+                </div>
               </div>
             </LiveProvider>
             <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingCli }</p>
