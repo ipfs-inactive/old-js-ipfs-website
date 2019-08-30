@@ -4,9 +4,10 @@
 .gatsbyHighlight .preCustom {
   width: 75%;
   margin: auto;
+  padding: 15px;
   outline: none;
-  background: var(--color-syntax-highlighter-background);
   border-radius: 2px;
+  text-align: left;
 }
 
 @media (--layout-lte-medium) {

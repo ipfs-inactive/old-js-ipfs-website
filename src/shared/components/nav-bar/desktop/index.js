@@ -21,7 +21,7 @@ class DesktopNavBar extends Component {
           <Link href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials">
             { messages.navBar.item2 }
           </Link>
-          <Link href="https://github.com/ipfs/interface-ipfs-core/tree/master/SPEC">
+          <Link href="https://github.com/ipfs/interface-js-ipfs-core/tree/master/SPEC">
             { messages.navBar.item3 }
           </Link>
           <Link href="https://github.com/ipfs/js-ipfs">

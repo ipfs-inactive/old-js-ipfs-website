@@ -1,20 +1,30 @@
 import React from 'react'
-import Prism from 'prismjs'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-
-import 'prismjs/themes/prism-okaidia.css'
+import Highlight, { Prism } from 'prism-react-renderer'
 import styles from './index.module.css'
+import okaidia from '../react-live/okaidia'
 
-const SyntaxHighlighter = ({ codeStr, language, className }) => {
-  const htmlCode = Prism.highlight(codeStr, Prism.languages.js, language)
+const SyntaxHighlighter = ({ codeStr, language, className, theme }) => {
   const preClasses = classNames(`language-${language}`, styles.preCustom)
 
   return (
     <div className={ styles.gatsbyHighlight + ' ' + className } >
-      <pre className={ preClasses }>
-        <code dangerouslySetInnerHTML={ { __html: htmlCode } } />
-      </pre>
+      <Highlight Prism={ Prism } code={ codeStr } theme={ theme || okaidia } language={ language }>
+        { ({ tokens, getLineProps, getTokenProps, style }) => (
+          <pre aria-hidden='true' style={ style } className={ preClasses }>
+            { tokens.map((line, i) => (
+              // eslint-disable-next-line react/jsx-key
+              <div { ...getLineProps({ line, key: i }) }>
+                { line.map((token, key) => (
+                  // eslint-disable-next-line react/jsx-key
+                  <span { ...getTokenProps({ token, key }) } />
+                )) }
+              </div>
+            )) }
+          </pre>
+        ) }
+      </Highlight>
     </div>
   )
 }

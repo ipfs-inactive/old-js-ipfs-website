@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { withLive, Editor } from 'react-live'
+import okaidia from './okaidia'
 
 class LiveEditor extends Component {
   // static contextTypes = LiveProvider.childContextTypes
@@ -29,6 +30,8 @@ class LiveEditor extends Component {
 
     return (
       <Editor
+        theme={ okaidia }
+        padding={ 15 }
         { ...rest }
         code={ this.props.live.code }
         onChange={ (code) => {
