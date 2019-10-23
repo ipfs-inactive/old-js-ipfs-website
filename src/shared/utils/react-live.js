@@ -2,8 +2,9 @@ const codeAdd = `const node = await IPFS.create()
 
 const data = 'Hello, <YOUR NAME HERE>'
 
-// convert your data to a Buffer and add it to IPFS
-const files = await node.add(IPFS.Buffer.from(data))
+// add your data to to IPFS - this can be a string, a Buffer,
+// a stream of Buffers, etc
+const files = await node.add(data)
 
 // 'hash', known as CID, is a string uniquely addressing the data
 // and can be used to get it again. 'files' is an array because
@@ -14,7 +15,7 @@ const codeGet = (cid) => `const node = await IPFS.create()
 
 const data = await node.cat('${cid}')
 
-// convert Buffer back to string
+// data is returned as a Buffer, conver it back to a string
 console.log(data.toString())`
 
 function transformCode (code) {
