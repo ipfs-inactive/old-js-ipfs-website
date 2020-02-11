@@ -36,7 +36,7 @@ class GettingStarted extends Component {
       this.IPFS = await getIpfs()
     } catch (err) {
       console.log(err)
-      toast.error('Error getting IPFS')
+      return toast.error('Error getting IPFS')
     }
 
     const node = await this.IPFS.create()
@@ -130,18 +130,15 @@ jsipfs cat ${cid}` } language='bash' />
   handleRunClick = (editor) => async () => {
     const handleLog = this.handleChange(editor)
     const scope = { IPFS: this.IPFS, console: log(handleLog) }
+    const code = editor === 'add' ? this.state.codeAdd : this.state.codeGet
+    const outputKey = editor === 'add' ? 'outputAdd' : 'outputGet'
 
     try {
-      if (editor === 'add') {
-        this.setState({ outputAdd: '' })
-        await runCode(this.state.codeAdd, scope)
-      } else {
-        this.setState({ outputGet: '' })
-        await runCode(this.state.codeGet, scope)
-      }
+      this.setState({ [outputKey]: '' })
+      await runCode(code, scope)
     } catch (err) {
       console.error(err)
-      return handleLog(err)
+      this.setState({ [outputKey]: err.message })
     }
   }
 }

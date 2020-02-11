@@ -2,6 +2,9 @@
 /* global ReactIntlLocaleData:false */
 typeof window !== 'undefined' && require('intersection-observer')
 
+// TODO remove when https://github.com/mikeal/dag-cbor-sync/pull/35 is released
+require('util.promisify/shim')()
+
 import 'shared/styles/index.css'
 
 import React, { Component } from 'react'
