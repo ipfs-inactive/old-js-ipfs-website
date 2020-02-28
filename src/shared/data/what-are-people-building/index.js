@@ -20,7 +20,7 @@ import peerpadImage from './images/peerpad.jpg'
 
 const projects = [
   {
-    translationListIndex: 2,
+    translationListIndex: 0,
     icon: <Svg svg={ dwebArchiveSvg } />,
     iconRatio: '97.1%',
     iconMaxWidth: '90px',
@@ -28,21 +28,21 @@ const projects = [
     link: 'https://dweb.archive.org'
   },
   {
-    translationListIndex: 3,
+    translationListIndex: 1,
     icon: <Svg svg={ peerpadSvg } />,
     iconRatio: '32.4%',
     image: peerpadImage,
     link: 'https://peerpad.net'
   },
   {
-    translationListIndex: 4,
+    translationListIndex: 2,
     icon: <Svg svg={ companionSvg } />,
     iconRatio: '45%',
     image: companionImage,
     link: 'https://github.com/ipfs-shipyard/ipfs-companion'
   },
   {
-    translationListIndex: 5,
+    translationListIndex: 3,
     icon: <Svg svg={ orbitchatSvg } />,
     iconRatio: '36.6%',
     image: orbitchatImage,
