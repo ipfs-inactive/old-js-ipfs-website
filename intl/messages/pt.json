@@ -116,12 +116,6 @@
     "sectionTitle": "O que está a ser criado",
     "list": [
       {
-        "desc": "Paratii implementa tecnologia em código-fonte aberto para transmissão e gestão de vídeo, utilizando js-ipfs e contratos Ethereum. Portal é uma web app de vídeos curados relacionados com criptografia que corre sobre IPFS."
-      },
-      {
-        "desc": "O WeTransfer descentralizado. Filenation é a forma mais simples de enviar os seus ficheiros para todo o mundo, permitindo enviar ficheiros através de um link para um email usando IPFS."
-      },
-      {
         "desc": "Todo o Internet Archive, mas descentralizado. Aceda a mais de 40 milhões de conteúdo do arquivo através da DWeb. Utilize um gateway para fazer seeding do conteúdo e uma UI escrita em JavaScript para Firefox e Chrome."
       },
       {

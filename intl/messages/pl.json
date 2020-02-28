@@ -116,12 +116,6 @@
     "sectionTitle": "Przykładowe projekty",
     "list": [
       {
-        "desc": "Paratii buduje technologie open source do transmisji i kuracji wideo. Wykorzystuje js-ipfs oraz kontrakty Ethereum. Portal jest aplikacją webową z materiałami wideo na IPFS."
-      },
-      {
-        "desc": "Filenation jest najłatwiejszym sposobem przesyłania plików przy użyciu IPFS. Umożliwia wysłanie e-maila z linkiem do plików opublikowanych na IPFS."
-      },
-      {
         "desc": "Internet Archive w zdecentralizowanej formie. Przeglądaj ponad 40 milionów pozycji dzięki połączeniu bramki IPFS oraz interfejsu w javascript dla Firefox i Chrome."
       },
       {

@@ -117,12 +117,6 @@
     "sectionDesc": "",
     "list": [
       {
-        "desc": "Paratii builds open source technology for video streaming and curation, with js-ipfs and Ethereum contracts. The Portal is a web app with curated crypto-related videos that runs on IPFS."
-      },
-      {
-        "desc": "The Decentralized WeTransfer. Filenation is the simplest way to send your files around the world using IPFS, it lets you send files as a link to an email using IPFS."
-      },
-      {
         "desc": "The whole Internet Archive, but decentralized. Access the archive's over 40m items via the DWeb. Combining a seeding gateway and a javascript UI for Firefox and Chrome."
       },
       {
