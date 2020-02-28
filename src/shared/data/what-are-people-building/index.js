@@ -5,12 +5,8 @@ import companionSvg from './images/companion-logo.svg'
 import companionImage from './images/companion.jpg'
 import dwebArchiveImage from './images/dwebarchive.jpg'
 import dwebArchiveSvg from './images/dwebarchive-logo.svg'
-import filenationImage from './images/filenation.jpg'
-import filenationSvg from './images/filenation-logo.svg'
 import orbitchatImage from './images/orbitchat.jpg'
 import orbitchatSvg from './images/orbitchat-logo.svg'
-import paratiiSvg from './images/paratii-logo.svg'
-import paratiiImage from './images/paratii.jpg'
 import peerpadSvg from './images/peerpad-logo.svg'
 import peerpadImage from './images/peerpad.jpg'
 
@@ -23,20 +19,6 @@ import peerpadImage from './images/peerpad.jpg'
 */
 
 const projects = [
-  {
-    translationListIndex: 0,
-    icon: <Svg svg={ paratiiSvg } />,
-    iconRatio: '29.2%',
-    image: paratiiImage,
-    link: 'https://paratii.video'
-  },
-  {
-    translationListIndex: 1,
-    icon: <Svg svg={ filenationSvg } />,
-    iconRatio: '29.3%',
-    image: filenationImage,
-    link: 'https://filenation.io'
-  },
   {
     translationListIndex: 2,
     icon: <Svg svg={ dwebArchiveSvg } />,

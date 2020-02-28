@@ -116,12 +116,6 @@
     "sectionTitle": "Wat bouwen mensen ermee",
     "list": [
       {
-        "desc": "Paratii bouwt open source-technologie voor video-streaming en -beheer, met js-ipfs en Ethereum-contracten. The Portal is een web-app met gecureerde crypto-gerelateerde video's dat draait op IPFS."
-      },
-      {
-        "desc": "De gedecentraliseerde WeTransfer. Filenatie is de eenvoudigste manier om uw bestanden over de hele wereld te verzenden met behulp van IPFS, maak een link aan met behulp van IPFS en deel deze via e-mail."
-      },
-      {
         "desc": "Het hele Internet Archive, maar gedecentraliseerd. Krijg toegang tot de meer dan 40 miljoen items van het archief via de DWeb door een combinatie van een seeding-gateway en een JavaScript-UI voor Firefox en Chrome."
       },
       {

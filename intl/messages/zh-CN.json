@@ -116,12 +116,6 @@
     "sectionTitle": "看看大家正在使用它做什么",
     "list": [
       {
-        "desc": "Paratii使用js-ipfs和以太坊合约构建了一套用于视频流和内容管理的开源技术。Portal是一个网络应用程序，用来管理运行在IPFS上的加密视频。"
-      },
-      {
-        "desc": "去中心化的WeTransfer。Filenation利用IPFS提供了一种最简单的文件分享方式，它允许您使用IPFS将文件作为链接发送到电子邮件。"
-      },
-      {
         "desc": "去中心化的Internet Archive。支持访问分布式Web中超过四千万份的存档文件。使用内容种子网关和JavaScript编写用户界面，同时支持Firefox和Chrome。"
       },
       {

@@ -116,12 +116,6 @@
     "sectionTitle": "Cosa stanno creando gli altri",
     "list": [
       {
-        "desc": "Paratii implementa tecnologie open source per lo streaming e la gestione di video, con js-ipfs e contratti Ethereum. Il portale è una Web App con video curati sul tema della crittografia, il tutto su IPFS."
-      },
-      {
-        "desc": "WeTransfer decentralizzato. Filenation è il modo più semplice per inviare i tuoi file in tutto il mondo tramite IPFS, ti consente di inviare file come un link in un'email usando IPFS."
-      },
-      {
         "desc": "Tutto l'Internet Archive, ma decentralizzato. Accedi ad oltre 40 milioni di contenuti dell'archivio tramite DWeb. Utilizza un gateway per il seeding dei contenuti e un'interfaccia utente scritta in JavaScript per Firefox e Chrome."
       },
       {

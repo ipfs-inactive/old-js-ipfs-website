@@ -116,12 +116,6 @@
     "sectionTitle": "Hvad andre bygger med det",
     "list": [
       {
-        "desc": "Paratii bygger open source teknologi for video streaming og kuratering, med js-ipfs og Ethererum kontrakter. Portalen er en web applikation med kurateret krypto-relaterede videoer som afvikles på IPFS."
-      },
-      {
-        "desc": "Det decentraliserede WeTransfer. Filenation er den simpleste måde at sende dine filer på tværs af kloden med IPFS, der lader dig sende filer som link i en e-mail vha. IPFS."
-      },
-      {
         "desc": "Det fulde Internet Arkiv (Internet Archive), men på decentraliseret vis. Adgang til arkivets over 40 mio. elementer via Dweb. Kombinationen af en gateway der seeder og en javascript brugergrænseflade til Firefox og Chrome."
       },
       {
