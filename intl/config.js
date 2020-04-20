@@ -9,6 +9,7 @@ module.exports = {
     { acronym: 'fr', fullForm: 'Français' },
     { acronym: 'pt', fullForm: 'Português' },
     { acronym: 'zh-CN', fullForm: '简体中文' },
-    { acronym: 'ko-KR', fullForm: '한국어' }
+    { acronym: 'ko-KR', fullForm: '한국어' },
+    { acronym: 'ja-JP', fullForm: '日本語' }
   ]
 }
