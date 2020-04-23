@@ -1,0 +1,157 @@
+{
+  "notFoundPage": {
+    "mainMessage": "No s'ha trobat la pàgina",
+    "detailedMessage": "Quina tristor... has seguit una ruta que no existeix."
+  },
+  "buttons": {
+    "buttonLearnMore": "Saber-ne més",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "Freenode IRC",
+    "buttonAddLanguage": "Afegir el teu idioma"
+  },
+
+  "navBar": {
+    "item1": "Inicia-t'hi",
+    "item2": "Tutorials",
+    "item3": "API",
+    "item4": "Codi Obert"
+  },
+
+  "hero": {
+    "welcomeMessage": {
+      "long": "Un protocol P2P complet escrit íntegrament en Javascript",
+      "short": "Un protocol P2P en Javascript"
+    },
+    "textDescription": {
+      "long": "js-ipfs aplana el camí al Navegador per implementar el protocol IPFS. Escrit íntegrament en JavaScript, funciona al Navegador, com a Service Worker, com a Extensió de Navegador i a Node.js. Això obre les portes a un tot un món de possibilitats.",
+      "short": "js-ipfs funciona al Navegador, com a Service Worker, com a Extensió de Navegador i amb Node.js. Això obre les portes a un tot un món de possibilitats."
+    },
+    "currentVersion": {
+      "long": "Versió actual: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Última actualització: {date}",
+      "short": "Actualitzat {date}"
+      },
+    "downloadsLastMonth": "Descàrregues durant el mes passat: {count}",
+    "errorPckMessage": "No s'ha pogut aconseguir el paquet d'informació IPFS",
+    "animationButton": {
+      "enable": "Activar Animació",
+      "disable": "Desactivar Animació"
+    }
+  },
+
+  "banner": {
+    "highlightMessage": "La llibreria js-ipfs està en estat Alpha",
+    "message": "El codi no ha estat auditat per experts en seguretat i no s'hauria d'utilitzar per emmagatzemar, compartir o publicar informació delicada."
+  },
+
+  "features": {
+    "sectionTitle": "Prestacions",
+    "sectionDesc": "Inclout totes les coses que coneixes i t'agraden de l'IPFS. Aquesta implementació també porta algunes coses extra que són pròpies del Navegador. És la caixa d'eines per potenciar totes les teves Aplicacions DWeb.",
+    "list": [
+      {
+        "title": "Funciona amb Node.js i al Navegador",
+        "desc": "js-ipfs funciona amb Node.js, Electron i qualsevol navegador modern. A més, és costumitzable per naturalesa i el pots utilitzar en el teu entorn preferit."
+      },
+      {
+        "title": "Implementa tot l'Stack IPFS",
+        "desc": "Cap prestació ha quedat enrere. js-ipfs no és un client lleuger, és la implementació íntegra del protocol IPFS."
+      },
+      {
+        "title": "Utilitza PubSub per comunicar-te amb altres peers en temps real.",
+        "desc": "Els node IPFS poden crear topologies de xarxa basades en temes d'interès per emetre esdeveniments a temps real."
+      },
+      {
+        "title": "Afegeix i aconsegueix arxius de qualsevol lloc de la Xarxa IPFS",
+        "desc": "IPFS ha estat dissenyar utilitzar la potencia del Direccionament per Contingut per trobar nodes a la xarxa que tinguin el contingut que s'està cercant. Així mateix, pots afegir dades i altres nodes també el trobaran."
+      },
+      {
+        "title": "Utilitza l'API DAG per explorar qualsevol hash d'estructura encadenada d'informació",
+        "desc": "IPFS utilitza [IPLD](https://ipld.io/), InterPlanetary Linked-Data, un model que et permet interactuar amb informació procedent de diversos llocs, com git, blockchains i altres."
+      },
+      {
+        "title": "libp2p hi està incorporat",
+        "desc": "[libp2p](https://libp2p.io/)  és l'Stack Modular per Networking creat per IPFS i que ara pots utilitzar directament a la teva aplicació a través de l'IPFS."
+      },
+      {
+        "title": "Executa'l com un procés ",
+        "desc": "js-ipfs també ve amb l'opció de funcionar com a procés de fons. Així hi pots interactuar amb l'API HTTP que ja coneixes del go-ifps. "
+      },
+      {
+        "title": "Crea direccions estables per l'intercanvi d'informació",
+        "desc": "Inclou IPNS, l'Interplanetary Naming System, una manera de crear apuntadors mutables (registres) per distribuir actualitzacions d'una manera autenticada i certificada."
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "Com Començar",
+    "sectionDesc": "IPFS t'ofereix un primitiu de Direcionament per Contingut per totes les teves dades a la DWeb. Pots fer les teves dades accessibles a la xarxa o accedir a informació existent per mitjà del seu CID, el Content Identifier; Identificador de Contingut en anglès. Prova-ho aquí a sota o explora els nostres [ProtoSchool tutorials](https://proto.school/#/tutorials)!",
+    "addDataToIPFS": "Afegir informació a l'IPFS",
+    "output": "Sortida",
+    "getDataFromIPFS": "Aconseguir informació de l'IPFS",
+    "usingJavascript": "Utilitzant Javascript al Navegador o Node.js",
+    "usingCli": "Fer servir la CLI",
+    "usingGateway": "Fer servir el Gateway HTTP"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Gateway del Service Worker",
+    "sectionDesc": "Converteix aquesta pàgina en un Gateway IPFS complet sense tocar cap servidor o fes servir HTTP per aconseguir contingut de la xarxa IPFS! Sï, ho has llegit bé, el Service Worker Gateway    amb el js-ipfs pot connectar directament a la xarxa IPFS.",
+    "activationSuccessTitle": "Enhorabona! El teu navegador ja és un Gateway IPFS plenament operacional.",
+    "activationSuccessText": "Carrega qualsevol contingut tal i com ho faries normalment amb https://gateway.ipfs.io. Aquí tens alguns exemples que pots provar: \n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nProva qualsevol altres hash obrint  https://js.ipfs.io/ipfs/<your hash>",
+    "toggleText": "Activar Service Worker",
+    "activatingToggleText": "Activant Service Worker...",
+    "activationErrorMessage": "Hi ha hagut un problema mentre s'activava el Service Worker.",
+    "deactivationErrorMessage": "Hi ha hagut un problema mentre es desactivava el Service Worker.",
+    "nonRootScopeWarningMessage": "No es pot activar el Service Worker des d'aquesta URL. Prova-ho des de https://js.ipfs.io.",
+    "incompatibleMessageText": "Aquest navegador no suporta Service Workers",
+    "activatedToggleText": "Desactivar el Service Worker"
+  },
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "Què n'està construint la gent",
+    "list": [
+      {
+        "desc": "Tot l'Internet Archive però descentralitzat. Accedeix als seus 40m d'items des de la web descentralitzada,  DWeb. Això, bo i combinant un gateway de disseminació i una UI en javascript per a Firefox o Chrome."
+      },
+      {
+        "desc": "PeerPad és un editor col·laboratiu a temps real que funciona a la web descentralitzada, construïda sobre l'IPFS i Y.js. No hi ha intermediaris: Tots els nodes participants parlen directament l'un amb l'altre sense un servei central."
+      },
+      {
+        "desc": "Dota el teu Navegador de súper poders amb l'Extensió Web IPFS. L'Acompanyant IPFS és una extensió que pot ser utilitzada als navegadors Chrome, Firefox i Brave per donar-te accés a la xarxa IPFS. També inclou prestacions extra tals com la compartició d'arxius i APIs pels Desenvolupadors Web."
+      },
+      {
+        "desc": "[Orbit Chat](https://orbit.chat) és un xat serverless, distribuït i peer-to-peer construït sobre de l'OrbitDB. OrbitDB utilitza [IPFS](https://ipfs.io)  com a emmagatzematge de dades i [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) per sincronitzar automàticament les bases de dades amb els peers."
+      }
+    ]
+  },
+
+  "whatYouCanBuild": {
+    "sectionTitle": "Què pots construir amb JS-IPFS",
+    "sectionDesc": "Les opcions d'ús de js-ipfs són il·limitades. Amb els següents exemples pots fer-te'n una idea. Prova'ls!",
+    "suggestion": {
+      "text": "Tens suggeriments?",
+      "linkText": "Comparteix-los aquí!"
+    }
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "Publicacions i Conferències",
+    "sectionDesc": "Segueix les actualitzacions, demos i altres xerredes de la Comunitat IPFS sobre el projecte JavaScript d'IPFS. Anirem afegint moltes més xerrades de les Dev Meetings de IPFS."
+  },
+
+  "community": {
+    "sectionTitle": "Comunitat",
+    "sectionDesc": "js-ipfs és un projecte de Codi Obert de la comunitat IPFS subjecta a la llicència MIT. Pots contribuir-hi de diverses maneres: Ajuda a escriure especificacions, implementa eines que utilitzin js-ipfs, crea exemples i tutorials i uneix-te al nostre [grup de treball](https://github.com/ipfs/team-mgmt#synchronous-communication) per debatre l'IPFS amb nosaltres.",
+    "socialNetworksText": "Vine i troba'ns!"
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs va ser iniciat i patrocinat per",
+    "leftContent": "Protocol Labs | Si no s'especifica el contrari, contingut llicenciat sota CC-BY 3.0"
+  }
+}

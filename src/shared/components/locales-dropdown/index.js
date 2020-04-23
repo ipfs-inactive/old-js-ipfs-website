@@ -63,7 +63,7 @@ class LocalesDropdown extends Component {
         </button>
         <div className={ dropdownContentClasses }>
           { availableLocalesOptions }
-          <Link className={ styles.addLanguage } href="https://github.com/ipfs/js.ipfs.io#translations">
+          <Link className={ styles.addLanguage } href="https://github.com/ipfs/js.ipfs.io#internationalization-i18n">
             <Svg svg={ iconAdd } />
           </Link>
         </div>
