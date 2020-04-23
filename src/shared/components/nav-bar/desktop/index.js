@@ -28,7 +28,7 @@ class DesktopNavBar extends Component {
             { messages.navBar.item4 }
           </Link>
           <div className={ styles.starContainer }>
-            <iframe title="desktop-github-stars" src="https://ghbtns.com/github-btn.html?user=ipfs&repo=js-ipfs&type=star&count=true" frameBorder="0" scrolling="0"/>
+            <iframe title="desktop-github-stars" src="https://ghbtns.com/github-btn.html?user=ipfs&repo=js-ipfs&type=star&count=true" frameBorder="0" scrolling="0" sandbox="allow-scripts" />
           </div>
         </div>
       </div>
