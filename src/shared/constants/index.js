@@ -1,6 +1,6 @@
 export const HASHES = {
-  ipfsWebsite: 'QmYNQJoKGNHTpPxCBPh9KkDpaExgd2duMa3aF6ytMpHdao',
-  jsIpfsWebsite: 'Qmf9GHohGFvL8yki65yYi58XYTA1mQj9NWRfdbCPJsLeoh',
-  awesomeIpfsWebsite: 'Qmcwy9pCEeyhj7rwSRtoAHVDskWpTumjbgLSBsS24PMY54',
-  peerpadWebsite: 'QmXRTzu4dUFnA1nLR7ogifE1EeY2hEsVyQNkZu4CzF6g2v'
+  ipfsWebsite: 'bafybeidhycjoffkqxrzx3gutcf5quq3tczkikxfsocdayt6o3lzqiqqj4q',
+  jsIpfsWebsite: 'bafybeih7cx7tuyluql76qw5bqcp4hqkbia776vhyifrrc6wdi5c2evzol4',
+  awesomeIpfsWebsite: 'bafybeihpvvo24uxi46i7fdwrbml6qx3qkhhjequ5ooateuxb3l6a2uee7y',
+  peerpadWebsite: 'QmaGkbAyWFExzD5U4aAqTjf77JJLNbdxCCQb9CGA56aXpu'
 }
