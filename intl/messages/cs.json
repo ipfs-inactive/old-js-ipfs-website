@@ -1,0 +1,157 @@
+{
+  "notFoundPage": {
+    "mainMessage": "Stránka nenalezena",
+    "detailedMessage": "Právě jste narazili na trasu, která neexistuje... to je smutné."
+  },
+  "buttons": {
+    "buttonLearnMore": "Více informací",
+    "buttonGithub": "GitHub",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "Přidejte svůj jazyk"
+  },
+
+  "navBar": {
+    "item1": "Začít",
+    "item2": "Návody",
+    "item3": "API",
+    "item4": "Open Source"
+  },
+
+  "hero": {
+    "welcomeMessage": {
+      "long": "Úplný protokol P2P napsaný výhradně v jazyce JavaScript",
+      "short": "P2P JavaScript protokol"
+    },
+    "textDescription": {
+      "long": "js-ipfs připravuje cestu pro implementaci protokolu IPFS prohlížeči. Napsáno výhradně v JavaScriptu, běží v prohlížeči, v Servise Workeru, ve webovém rozšíření a v Node.js a otevírá dveře do světa možností.",
+      "short": "js-ipfs běží v prohlížeči, v Service Workeru, ve webovém rozšíření a v Node.js, což otevírá dveře do světa možností."
+    },
+    "currentVersion": {
+      "long": "Aktuální verze: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Poslední aktualizace: {date}",
+      "short": "Aktualizováno {date}"
+      },
+    "downloadsLastMonth": "Stažení za poslední měsíc: {count}",
+    "errorPckMessage": "Data balíčku IPFS se nepodařilo načíst.",
+    "animationButton": {
+      "enable": "Povolit animace",
+      "disable": "Zakázat animace"
+    }
+  },
+
+  "banner": {
+    "highlightMessage": "Knihovna js-ipfs je ve stavu Alpha.",
+    "message": "Codebase nebyl auditován bezpečnostními specialisty a neměl by být používán k ukládání, sdílení nebo publikování citlivých informací."
+  },
+
+  "features": {
+    "sectionTitle": "Funkce",
+    "sectionDesc": "Balíček se všemi věcmi, které znáte a milujete o IPFS. Tato implementace také přináší některé další elegantní věci, které jsou jedinečné pro prohlížeč. Je to sada nástrojů k napájení všech vašich aplikací DWeb.",
+    "list": [
+      {
+        "title": "Běží na Node.js a v prohlížeči",
+        "desc": "js-ipfs funguje na Node.js, Electronu a jakémkoli moderním prohlížeči. Je také přizpůsobitelný podle návrhu, takže jej můžete použít ve své oblíbeném runtime."
+      },
+      {
+        "title": "Implementuje plný zásobník IPFS",
+        "desc": "Nezůstala žádná funkce. js-ipfs není lehký klient, jedná se o plnou implementaci protokolu IPFS."
+      },
+      {
+        "title": "Pomocí PubSub můžete komunikovat v reálném čase s ostatními uzly",
+        "desc": "Uzly IPFS mohou vytvářet topologie sítí na základě témat, která jsou předmětem zájmu o vysílání událostí v reálném čase."
+      },
+      {
+        "title": "Přidejte a načtěte soubory odkudkoli v síti IPFS",
+        "desc": "IPFS je navržen tak, aby využíval sílu adresování obsahu k nalezení uzlů v síti, které mají hledaný obsah. Stejným způsobem můžete přidávat data a další uzly je také najdou."
+      },
+      {
+        "title": "Pomocí rozhraní DAG API můžete procházet jakoukoli zahashovanou strukturu spojených dat",
+        "desc": "IPFS používá [IPLD] (https://ipld.io/), InterPlanetary Linked-Data, model, který umožňuje interakci s daty z více zdrojů, jako jsou git, blockchains a další."
+      },
+      {
+        "title": "libp2p je vestavěn",
+        "desc": "[libp2p] (https://libp2p.io/) je Modular Networking Stack, který byl vytvořen pro IPFS a nyní jej můžete přímo používat také prostřednictvím IPFS pro vaši aplikaci."
+      },
+      {
+        "title": "Spusťte ho jako démona",
+        "desc": "js-ipfs také přichází s možností spustit ho jako démona, takže s ní můžete komunikovat pomocí HTTP API, které znáte z go-ipfs."
+      },
+      {
+        "title": "Vytvořte stabilní adresy pro změnu dat",
+        "desc": "Dodává se s IPNS, meziplanetárním jmenným systémem, což je způsob, jak autorizovat proměnné ukazatele (záznamy) pro distribuci aktualizací autentizovaným a certifikovaným způsobem."
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "Začínáme",
+    "sectionDesc": "IPFS vám dává primitivní řešení pro všechna vaše data na DWebu. Data můžete zpřístupnit do sítě nebo načíst stávající data prostřednictvím svého CID, identifikátoru obsahu. Vyzkoušejte to níže nebo si prohlédněte naše [ProtoSchool návody] (https://proto.school/#/tutorials)!",
+    "addDataToIPFS": "Přidávám data do IPFS",
+    "output": "Výstup",
+    "getDataFromIPFS": "Získávám data z IPFS",
+    "usingJavascript": "Použití Javascriptu v prohlížeči nebo Node.js",
+    "usingCli": "Pomocí CLI",
+    "usingGateway": "Používání brány HTTP"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Brána Service Workeru",
+    "sectionDesc": "Proměňte tuto stránku v úplnou bránu IPFS, aniž byste se dotkli jakýchkoli serverů nebo pomocí protokolu HTTP načtěte obsah ze sítě IPFS! Ano, čtete to správně, služba Service Worker Gateway s js-ipfs se může připojit přímo k síti IPFS.",
+    "activationSuccessTitle": "Gratulujeme! Váš prohlížeč je nyní plně funkční bránou IPFS",
+    "activationSuccessText": "Načtěte veškerý obsah, jak byste normálně dělali s https://gateway.ipfs.io. Zde je několik příkladů, které můžete vyzkoušet:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nZkuste s jakýmkoli jiným hashem otevřením https://js.ipfs.io/ipfs/<your hash>",
+    "toggleText": "Povolit Service Worker",
+    "activatingToggleText": "Aktivace Service Workeru...",
+    "activationErrorMessage": "Při aktivaci Service Workeru došlo k chybě.",
+    "deactivationErrorMessage": "Při deaktivaci Service Workeru došlo k chybě.",
+    "nonRootScopeWarningMessage": "Při prohlížení z této adresy URL nelze Service Worker aktivovat. Zkuste místo toho https://js.ipfs.io.",
+    "incompatibleMessageText": "Tento prohlížeč nepodporuje Service Workery.",
+    "activatedToggleText": "Zakázat Service Worker"
+  },
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "Co s tím lidé staví",
+    "list": [
+      {
+        "desc": "Celý internetový archiv, ale decentralizovaný. Získejte přístup k více než 40m položkám archivu přes DWeb. Kombinace počáteční brány a javascript UI pro Firefox a Chrome."
+      },
+      {
+        "desc": "PeerPad je kooperativní editor v reálném čase, který pracuje na decentralizovaném webu postaveném na IPFS a Y.js. Nepoužívá druhé nebo třetí strany: všechny zúčastněné uzly mluví přímo spolu bez centrální služby."
+      },
+      {
+        "desc": "Dejte webovému prohlížeči rozšíření IPFS. IPFS Companion je rozšíření, které lze v prohlížečích Chrome, Firefox a Brave použít k bezproblémovému přístupu k síti IPFS. Obsahuje také další funkce, jako je sdílení souborů a API pro webové vývojáře."
+      },
+      {
+        "desc": "[Orbit Chat] (https://orbit.chat) je serverová, distribuovaná, peer-to-peer chatová aplikace postavená na OrbitDB. OrbitDB používá jako úložiště dat [IPFS] (https://ipfs.io) a [IPFS Pubsub] (https://ipfs.io/blog/29-js-ipfs-pubsub) pro automatickou synchronizaci databází s uzly."
+      }
+    ]
+  },
+
+  "whatYouCanBuild": {
+    "sectionTitle": "Co můžete postavit s JS-IPFS",
+    "sectionDesc": "Pro použití js-ipfs máte neomezené možnosti. Následující příklady vám poskytují představu o tom, co můžete pomocí js-ipfs vytvořit. Vyzkoušejte je!",
+    "suggestion": {
+      "text": "Máte nějaké návrhy?",
+      "linkText": "Sdílejte je zde!"
+    }
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "Publikace a diskuze",
+    "sectionDesc": "Sledujte aktualizace projektu, ukázky a další rozhovory komunity IPFS o projektu JavaScript IPFS. Brzy přidáme desítky dalších rozhovorů z IPFS Dev Meetings."
+  },
+
+  "community": {
+    "sectionTitle": "Komunita",
+    "sectionDesc": "js-ipfs je projekt pod MIT Licencí, Open Source projekt od komunity IPFS. Existuje mnoho způsobů, jak můžete přispět: pomozte napsat specifikaci, implementaci kódu a nástroje pomocí js-ipfs, příklady z tvorby a návody, a připojit se k našim [voláním pracovní skupiny] (https://github.com/ipfs/team-mgmt#synchronous-communication) diskutovat s námi o IPFS.",
+    "socialNetworksText": "Pojďte si zahangoutovat."
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs byl založen a je sponzorován",
+    "leftContent": "Protocol Labs | Pokud není uvedeno jinak, s licencí na obsah CC-BY 3.0"
+  }
+}

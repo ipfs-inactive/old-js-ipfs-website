@@ -1,30 +1,37 @@
-const codeAdd = `const node = await IPFS.create()
+const codeAdd = (placeholder) => `const node = await IPFS.create()
 
-const data = 'Hello, <YOUR NAME HERE>'
+const data = '${placeholder}'
 
 // add your data to to IPFS - this can be a string, a Buffer,
 // a stream of Buffers, etc
-const files = await node.add(data)
+const results = node.add(data)
 
-// 'hash', known as CID, is a string uniquely addressing the data
-// and can be used to get it again. 'files' is an array because
-// 'add' supports multiple additions, but we only added one entry
-console.log(files[0].hash)`
+// we loop over the results because 'add' supports multiple 
+// additions, but we only added one entry here so we only see
+// one log line in the output
+for await (const { cid } of results) {
+  // CID (Content IDentifier) uniquely addresses the data
+  // and can be used to get it again.
+  console.log(cid.toString())
+}`
 
 const codeGet = (cid) => `const node = await IPFS.create()
 
-const data = await node.cat('${cid}')
+const stream = node.cat('${cid}')
+let data = ''
 
-// data is returned as a Buffer, conver it back to a string
-console.log(data.toString())`
+for await (const chunk of stream) {
+  // chunks of data are returned as a Buffer, convert it back to a string
+  data += chunk.toString()
+}
 
-function transformCode (code) {
-  return `function () {
-    (async function () {
-      ${code}
-    })()
-    return null
-  }`
+console.log(data)`
+
+function runCode (code, scope) {
+  const entries = Object.entries(scope)
+  // eslint-disable-next-line no-new-func
+  const res = new Function(...entries.map(e => e[0]), `return (async () => { ${code} })()`)
+  return res(...entries.map(e => e[1]))
 }
 
 function log (fn) {
@@ -35,30 +42,17 @@ function log (fn) {
   }
 }
 
-function stubIpfs (node, IPFS) {
-  node.once = (e, fn) => fn()
-  node.on = (e, fn) => fn()
-
-  const WrapIPFS = function () {
-    return node
-  }
-
-  return Object.assign(WrapIPFS, IPFS, { create: async () => node })
-}
-
 async function getIpfs (opts) {
   // We are using webpackChunkName in the comment so that our chunk
   // will be named `ipfs.[hash].js` instead of `[id].[hash].js`
-  const { default: Ipfs } = await import(/* webpackChunkName: "ipfs" */ 'ipfs')
-  const node = await Ipfs.create({ repo: 'getting-started' })
-
-  return stubIpfs(node, Ipfs)
+  const { default: IPFS } = await import(/* webpackChunkName: "ipfs" */ 'ipfs')
+  const node = await IPFS.create({ repo: 'getting-started' })
+  return Object.assign({}, IPFS, { create: async () => node })
 }
 
 export {
-  transformCode,
+  runCode,
   log,
-  stubIpfs,
   getIpfs,
   codeAdd,
   codeGet

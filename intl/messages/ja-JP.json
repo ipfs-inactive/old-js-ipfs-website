@@ -1,0 +1,157 @@
+{
+  "notFoundPage": {
+    "mainMessage": "ページがみつかりません",
+    "detailedMessage": "あなたは存在しないページに接近しました、、、悲しい"
+  },
+  "buttons": {
+    "buttonLearnMore": "もっと見る",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "あなたの言語を追加"
+  },
+
+  "navBar": {
+    "item1": "入門",
+    "item2": "チュートリアル",
+    "item3": "API",
+    "item4": "オープンソース"
+  },
+
+  "hero": {
+    "welcomeMessage": {
+      "long": "完全にJavascriptで書いたP2Pプロトコル",
+      "short": "P2P JavaScriptプロトコル"
+    },
+    "textDescription": {
+      "long": "js-ipfsはブラウザためにIPFSプロトコルを実現するために道を開いてくれました。完全にJavaScriptで書いて、ブラウザ、Service Worker、Webの拡張、Node.jsで実行されて、無限の可能性を見せてくれました。",
+      "short": "js-ipfsはブラウザ、Service Worker、Webの拡張、Node.jsで実行されて、無限の可能性を見せてくれました。"
+    },
+    "currentVersion": {
+      "long": "現在バージョン：{version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "最近の更新: {date}",
+      "short": "{date} に更新"
+      },
+    "downloadsLastMonth": "最近一个月のダウンロード：{count}",
+    "errorPckMessage": "IPFSのページが見つかりません。",
+    "animationButton": {
+      "enable": "アニメーション有効化",
+      "disable": "アニメーション無効化"
+    }
+  },
+
+  "banner": {
+    "highlightMessage": "このjs-ipfsライブラリはAlphaバージョン。",
+    "message": "ソースコードはセキュリティ専門家による審査がなく、重要なデータは保存しなようにしてください。"
+  },
+
+  "features": {
+    "sectionTitle": "特徴",
+    "sectionDesc": "js-ipfsはあなたが知ってる、好きなIPFSの機能を全部実現してます。当時にブラウザのために特有な機能を実装し、DWebアプリケーションのためにも強力なツールを提供します。",
+    "list": [
+      {
+        "title": "Node.jsとブラウザで実行",
+        "desc": "js-ipfsはNode.js, Electronとモダンなブラウザで即時に使用できます。設計によってあなたがほしいランタイム上で使用可能です。"
+      },
+      {
+        "title": "IPFSのフルスタックを実装",
+        "desc": "実装できてない機能はありません。js-ipfsはライトなクライアントではなく、全てのIPFSプロトコルの機能をすべて実現してます。"
+      },
+      {
+        "title": "PubSubを使用して他のノードとリアルタイムで通信",
+        "desc": "IPFSノードのイベントをリアルタイムで通信するためにブロードキャストを基盤にネットワークを構成できます。"
+      },
+      {
+        "title": "IPFSネットワークのどこでもファイルを追加と検索",
+        "desc": "IPFSはあなたが探したいコンテンツを持ってるノードを見つけるためにアドレス指定可能に設定されてます。同じ方法であなたはデータを追加できて他のノードがそれを見つけることができます。"
+      },
+      {
+        "title": "DAG APIを使用して、任意のハッシュリンクされたデータ構造を横断検索",
+        "desc": "IPFSは [IPLD](https://ipld.io/) (InterPlanetary Linked-Data)を使用して、このモデルは、Git, Blockchainなど複数のデータソースと交互にやり取りすることができます。"
+      },
+      {
+        "title": "libp2p内蔵",
+        "desc": "[libp2p](https://libp2p.io/)は IPFS用に作られたModular Networking Stackで、IPFSを介して直接アプリケーションにも使えるようになっています。"
+      },
+      {
+        "title": "デーモンとして実行",
+        "desc": "js-ipfs にはデーモンとして実行するオプションもあり、go-ipfs でお馴染みの HTTP API を使って js-ipfs を操作することができます。"
+      },
+      {
+        "title": "変更されるデータに固定のアドレス",
+        "desc": "IPNS(Interplanetary Naming System)を利用し、認証済みの方式で可変ポインター（レコード）で新しい変更を反映します。"
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "入門",
+    "sectionDesc": "IPFS は、DWeb 上のすべてのデータに対して Content Addressing プリミティブを提供します。ネットワークにデータを公開したり、CID（コンテンツ識別子）を使って既存のデータを取得したりすることができます。以下で試してみたり、[ProtoSchoolチュートリアル](https://proto.school/#/tutorials)をご覧ください。",
+    "addDataToIPFS": "IPFSへのデータの追加",
+    "output": "結果出力",
+    "getDataFromIPFS": "IPFSからデータ取得",
+    "usingJavascript": "ブラウザやNode.jsでJavascriptを使う",
+    "usingCli": "CLIを使用",
+    "usingGateway": "HTTP Gatewayを使用"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Service Workerゲートウェイ",
+    "sectionDesc": "このページをIPFSネットワークからコンテンツを取得するためにサーバーに触れたり、HTTPを使用したりすることなく、完全なIPFSゲートウェイに変身させましょう! js-ipfs を搭載した Service Worker Gateway は IPFS ネットワークに直接接続できます。",
+    "activationSuccessTitle": "おめでとうございます。お使いのブラウザが完全に動作するようになりました。",
+    "activationSuccessText": "https://gateway.ipfs.io と同様に、任意のコンテンツを読み込んでください。試してみてください:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nあなたのハッシュで試してみてください。 https://js.ipfs.io/ipfs/<あなたのハッシュ>",
+    "toggleText": "サービスワーカーを有効にする",
+    "activatingToggleText": "サービスワーカーの活性化...",
+    "activationErrorMessage": "サービスワーカーを有効にする際にエラーが発生しました。",
+    "deactivationErrorMessage": "サービスワーカーを無効にするときにエラーが発生しました。",
+    "nonRootScopeWarningMessage": "このURLからの閲覧では、サービスワーカーを有効にすることができません。代わりに https://js.ipfs.io でお試しください。",
+    "incompatibleMessageText": "このブラウザはサービスワーカーに対応していません。",
+    "activatedToggleText": "サービスワーカーを無効にする"
+  },
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "人々がそれで何を構築しているのか",
+    "list": [
+      {
+        "desc": "全体のインターネットアーカイブですが、分散化されています。DWebを介してアーカイブの4千万以上のアイテムにアクセスします。FirefoxとChrome用のjavascript UIを組み合わせています。"
+      },
+      {
+        "desc": "PeerPadは、IPFSとY.jsの上に構築された、分散型ウェブ上で動作するリアルタイムの共同エディタです。参加するすべてのノードは、中央のサービスを介さずに直接通信します。"
+      },
+      {
+        "desc": "IPFS ウェブ拡張機能でブラウザに超強力なパワーを与えましょう。IPFS Companion は、Chrome、Firefox、Brave Browsers で使用できる拡張機能で、IPFS ネットワークにシームレスにアクセスできます。また、Web 開発者向けのファイル共有や API などの追加機能も搭載しています。"
+      },
+      {
+        "desc": "Orbit Chat](https://orbit.chat)は、OrbitDBの上に構築されたサーバーレスの分散型ピアツーピアチャットアプリケーションです。OrbitDBは、データストレージとして[IPFS](https://ipfs.io)を使用し、データベースを自動的にピアと同期するために[IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub)を使用しています。"
+      }
+    ]
+  },
+
+  "whatYouCanBuild": {
+    "sectionTitle": "JS-IPFSで構築できるもの",
+    "sectionDesc": "js-ipfsを使う方法は無限にあります。以下の例では、js-ipfsを使ってどんなものが作れるかを紹介しています。ぜひ試してみてください。",
+    "suggestion": {
+      "text": "アイディアと提案はありますか？",
+      "linkText": "ここで共有しましょう！"
+    }
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "出版物と講演",
+    "sectionDesc": "IPFS の JavaScript プロジェクトに関する IPFS コミュニティによるプロジェクトのアップデート、デモ、その他のトークをご覧ください。IPFS Dev Meetings で行われた講演を近日中に追加する予定です。"
+  },
+
+  "community": {
+    "sectionTitle": "コミュニティ",
+    "sectionDesc": "js-ipfs は IPFS コミュニティによる MIT ライセンスのオープンソースプロジェクトです。貢献できる方法はたくさんあります: 仕様書の作成、js-ipfs を使った実装やツールのコード作成、サンプルやチュートリアルの作成、私たちの [ワーキンググループコール](https://github.com/ipfs/team-mgmt#synchronous-communication) に参加して IPFS について議論してください。",
+    "socialNetworksText": "参加しましょう！"
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs が開始時以下のスポンサーによって応援されてます。",
+    "leftContent": "Protocol Labs｜特に記載のない限り、コンテンツはCC-BY 3.0でライセンスされています。"
+  }
+}
