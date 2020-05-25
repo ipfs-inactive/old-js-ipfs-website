@@ -34,7 +34,7 @@ You can do it in 2 steps:
 
 In the file [intl/config](intl/config.js), add a line for your language. Example, if you were to add Portuguese, you would only have to add the new language to the `availableLocales` array:
 
-```
+```js
 module.exports = {
   defaultLocale: 'en',
   availableLocales: [
