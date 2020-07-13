@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "入門",
-    "sectionDesc": "IPFS は、DWeb 上のすべてのデータに対して Content Addressing プリミティブを提供します。ネットワークにデータを公開したり、CID（コンテンツ識別子）を使って既存のデータを取得したりすることができます。以下で試してみたり、[ProtoSchoolチュートリアル](https://proto.school/#/tutorials)をご覧ください。",
+    "sectionDesc": "IPFS は、DWeb 上のすべてのデータに対して Content Addressing プリミティブを提供します。ネットワークにデータを公開したり、CID（コンテンツ識別子）を使って既存のデータを取得したりすることができます。以下で試してみたり、[ProtoSchoolチュートリアル](https://proto.school/#/tutorials?course=ipfs)をご覧ください。",
     "addDataToIPFS": "IPFSへのデータの追加",
     "output": "結果出力",
     "getDataFromIPFS": "IPFSからデータ取得",

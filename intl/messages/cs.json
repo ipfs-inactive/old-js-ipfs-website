@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Začínáme",
-    "sectionDesc": "IPFS vám dává primitivní řešení pro všechna vaše data na DWebu. Data můžete zpřístupnit do sítě nebo načíst stávající data prostřednictvím svého CID, identifikátoru obsahu. Vyzkoušejte to níže nebo si prohlédněte naše [ProtoSchool návody] (https://proto.school/#/tutorials)!",
+    "sectionDesc": "IPFS vám dává primitivní řešení pro všechna vaše data na DWebu. Data můžete zpřístupnit do sítě nebo načíst stávající data prostřednictvím svého CID, identifikátoru obsahu. Vyzkoušejte to níže nebo si prohlédněte naše [ProtoSchool návody] (https://proto.school/#/tutorials?course=ipfs)!",
     "addDataToIPFS": "Přidávám data do IPFS",
     "output": "Výstup",
     "getDataFromIPFS": "Získávám data z IPFS",

@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Getting Started",
-    "sectionDesc": "IPFS gives you a Content Addressing primitive for all your data on the DWeb. You can make data available to the network or fetch existing data through its CID, the Content Identifier. Try it out below or explore our [ProtoSchool tutorials](https://proto.school/#/tutorials)!",
+    "sectionDesc": "IPFS gives you a Content Addressing primitive for all your data on the DWeb. You can make data available to the network or fetch existing data through its CID, the Content Identifier. Try it out below or explore our [ProtoSchool tutorials](https://proto.school/#/tutorials?course=ipfs)!",
     "addDataToIPFS": "Adding data to IPFS",
     "output": "Output",
     "getDataFromIPFS": "Getting data from IPFS",
