@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Com Començar",
-    "sectionDesc": "IPFS t'ofereix un primitiu de Direcionament per Contingut per totes les teves dades a la DWeb. Pots fer les teves dades accessibles a la xarxa o accedir a informació existent per mitjà del seu CID, el Content Identifier; Identificador de Contingut en anglès. Prova-ho aquí a sota o explora els nostres [ProtoSchool tutorials](https://proto.school/#/tutorials)!",
+    "sectionDesc": "IPFS t'ofereix un primitiu de Direcionament per Contingut per totes les teves dades a la DWeb. Pots fer les teves dades accessibles a la xarxa o accedir a informació existent per mitjà del seu CID, el Content Identifier; Identificador de Contingut en anglès. Prova-ho aquí a sota o explora els nostres [ProtoSchool tutorials](https://proto.school/#/tutorials?course=ipfs)!",
     "addDataToIPFS": "Afegir informació a l'IPFS",
     "output": "Sortida",
     "getDataFromIPFS": "Aconseguir informació de l'IPFS",

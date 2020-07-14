@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Commencer",
-    "sectionDesc": "IPFS vous fournit une primitive d'indexation par le contenu de toutes vos données sur le DWeb. Vous pouver rendre des données accessibles ou accéder à des données existantes grâce à leur CID, le Content Identifier. Essayez-le ci-dessous ou explorez nos [tutoriaux ProtoSchool](https://proto.school/#/tutorials)!",
+    "sectionDesc": "IPFS vous fournit une primitive d'indexation par le contenu de toutes vos données sur le DWeb. Vous pouver rendre des données accessibles ou accéder à des données existantes grâce à leur CID, le Content Identifier. Essayez-le ci-dessous ou explorez nos [tutoriaux ProtoSchool](https://proto.school/#/tutorials?course=ipfs)!",
     "addDataToIPFS": "Ajouter des données à IPFS",
     "output": "Sortie",
     "getDataFromIPFS": "Obtenir des données depuis IPFS",

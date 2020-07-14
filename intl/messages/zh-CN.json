@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "入门指南",
-    "sectionDesc": "IPFS 为您在DWeb上的所有数据提供原始内容寻址。您可以向网络添加数据，也可以通过内容标识符CID获取数据。试试以下内容，或者浏览我们的[ProtoSchool 教程](https://proto.school/#/tutorials)！",
+    "sectionDesc": "IPFS 为您在DWeb上的所有数据提供原始内容寻址。您可以向网络添加数据，也可以通过内容标识符CID获取数据。试试以下内容，或者浏览我们的[ProtoSchool 教程](https://proto.school/#/tutorials?course=ipfs)！",
     "addDataToIPFS": "添加数据到IPFS",
     "output": "输出结果",
     "getDataFromIPFS": "从IPFS获取数据",
