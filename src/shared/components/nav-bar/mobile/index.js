@@ -43,7 +43,7 @@ class MobileNavBar extends Component {
         </div>
         <ul className={ styles.menuList } ref={ this.handleMenuListRef } style={ { maxHeight: menuListHeight } } >
           <li><div className={ styles.menuLink } onClick={ this.handleGettingStartedClick }> { messages.navBar.item1 } </div> </li>
-          <li><Link className={ styles.menuLink } href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials"> { messages.navBar.item2 } </Link> </li>
+          <li><Link className={ styles.menuLink } href="https://proto.school/#/tutorials?course=ipfs"> { messages.navBar.item2 } </Link> </li>
           <li><Link className={ styles.menuLink } href="https://github.com/ipfs/js-ipfs/tree/master/docs/core-api"> { messages.navBar.item3 } </Link> </li>
           <li className={ styles.githubContributers }>
             <Link className={ styles.menuLink } href="https://github.com/ipfs/js-ipfs"> { messages.navBar.item4 } </Link>
