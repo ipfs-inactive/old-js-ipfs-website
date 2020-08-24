@@ -12,6 +12,7 @@ module.exports = {
     { acronym: 'ca', fullForm: 'Català' },
     { acronym: 'zh-CN', fullForm: '简体中文' },
     { acronym: 'ko-KR', fullForm: '한국어' },
-    { acronym: 'ja-JP', fullForm: '日本語' }
+    { acronym: 'ja-JP', fullForm: '日本語' },
+    { acronym: 'ro-RO', fullForm: 'Română' },
   ]
 }

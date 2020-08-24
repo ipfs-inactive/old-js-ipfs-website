@@ -1,0 +1,157 @@
+{
+  "notFoundPage": {
+    "mainMessage": "Pagină negăsită",
+    "detailedMessage": "Ai ajuns pe o rută care nu există... ce trist"
+  },
+  "buttons": {
+    "buttonLearnMore": "Află mai multe",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Freenode",
+    "buttonAddLanguage": "Adaugă limbajul tău"
+  },
+
+  "navBar": {
+    "item1": "Pornește",
+    "item2": "Tutoriale",
+    "item3": "API",
+    "item4": "Open Source"
+  },
+
+  "hero": {
+    "welcomeMessage": {
+      "long": "Un protocol complet P2P scris în întregime în JavaScript",
+      "short": "Un protocol P2P în JavaScript"
+    },
+    "textDescription": {
+      "long": "js-ipfs deschide drumul implementării în Browser a protocolului IPFS. Este scris în întregime în JavaScript, rulează într-un Browser, într-un Service Worker, o extensie Web și în Node.js, deschizând poarta către o lume a posibilităților.",
+      "short": "js-ipfs rulează într-un Browser, într-un Service Worker, o extensie Web și în Node.js, deschizând poarta către o lume a posibilităților."
+    },
+    "currentVersion": {
+      "long": "Versiunea curentă: {version}",
+      "short": "v{version}"
+      },
+    "latestUpdate": {
+      "long": "Ultimul update: {date}",
+      "short": "Actualizat {date}"
+      },
+    "downloadsLastMonth": "Descărcări de luna trecută: {count}",
+    "errorPckMessage": "Nu am putut aduce datele pachetului IPFS",
+    "animationButton": {
+      "enable": "Activează animația",
+      "disable": "Dezactivează animația"
+    }
+  },
+
+  "banner": {
+    "highlightMessage": "Biblioteca js-ipfs este în Alpha",
+    "message": "Codebase-ul nu a fost auditat de specialiști în securitate și nu ar trebui folosit pentru a stoca, partaja sau publica informații sensibile."
+  },
+
+  "features": {
+    "sectionTitle": "Caracteristici",
+    "sectionDesc": "Plin cu toate lucrurile pe care le știi și pe care le iubești la IPFS. Această implementare include câteva lucruri faine care sunt unice în Browser. Este toolkit-ul care-ți motorizează toate aplicațiile DWeb.",
+    "list": [
+      {
+        "title": "Rulează pe Node.js și în Browser",
+        "desc": "js-ipfs lucrează fără probleme pe Node.js, Electron și cu oricare browser modern. Permite particularizare astfel că îl poți folosi cu runtime-ul preferat."
+      },
+      {
+        "title": "Implementează întreaga arhitectură IPFS",
+        "desc": "Niciun feature nu a fost ignorat. js-ipfs nu este un simplu client, este întreaga implementare a protocolului IPFS."
+      },
+      {
+        "title": "Folosește PubSub pentru a comunica în timp real cu alți colegi",
+        "desc": "Nodurile IPFS pot crea topologii de rețea pe baza subiectelor de interes pentru a emite evenimente în timp real."
+      },
+      {
+        "title": "Adaugă și descarcă fișiere de oriune din rețeaua IPFS",
+        "desc": "IPFS este proiectat pentru a utiliza forța pe care Content Addressing (conținut adresabil) pentru a găsi nodurile din rețea care au conținutul căutat. În același fel, poți adăuga date pe care alte noduri le vor găsi la rândul lor."
+      },
+      {
+        "title": "Folosește API-ul DAG pentru a parcurge orice structură formată din date interconectate (linked data)",
+        "desc": "IPFS folosește  [IPLD](https://ipld.io/), InterPlanetary Linked-Data, un model care permite interacțiunea cu datele din surse multiple cum ar fi git, blockchain-uri și multe altele."
+      },
+      {
+        "title": "libp2p este elaborat la",
+        "desc": "[libp2p](https://libp2p.io/) este o Stivă de Rețea Modulară (Modular Networking Stack) creată pentru IPFS pe care o poți folosi prin IPFS direct și din aplicația ta."
+      },
+      {
+        "title": "Rulează ca daemon",
+        "desc": "js-ipfs permite executarea ca daemon, lucru care permite interacțiunea cu aceasta folosind API-ul HTTP cu care go-ipfs te-a obișnuit deja."
+      },
+      {
+        "title": "Creează adrese stabile pentru a modifica date",
+        "desc": "Prin IPNS, Interplanetary Naming System este oferită o modalitate prin care poți crea mutable poiters (înregistrări) pentru a distribui actualizări într-o manieră autentificată și certificată,"
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "Linia de start",
+    "sectionDesc": "IPFS oferă o primitivă Content Addressing pentru toate datele tale din Dweb. Poți face datele disponibile în rețea sau poți aduce date existente prin CID-urile (Content Identifier) acestora. Poți testa mai jos pentru a explora [ProtoSchool tutorials](https://proto.school/#/tutorials?course=ipfs)!",
+    "addDataToIPFS": "Adăugare date în IPFS",
+    "output": "Rezultat",
+    "getDataFromIPFS": "Obține date din IPFS",
+    "usingJavascript": "Folosirea JavaScript în Browser sau Node.js",
+    "usingCli": "Folosirea CLI-ului",
+    "usingGateway": "Folosirea Gateway-ului HTTP"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Service Worker Gateway",
+    "sectionDesc": "Transformă această pagină într-un Gateway IPFS fără să atingi niciun server sau să aduci conținut din rețeaua IPFS! Dai, ai citit corect, Service Worker Gateway cu js-ipfs se poate conecta direct la rețeaua IPFS.",
+    "activationSuccessTitle": "Felicitări! Browserul tău este un Gateway IPFS operațional.",
+    "activationSuccessText": "Încarcă orice conținut precum ai face în mod obișnuit cu https://gateway.ipfs.io. Aici sunt câteva exemple pe care le poți încerca:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nExperimentează cu oricare alt hash prin deschiderea lui https://js.ipfs.io/ipfs/<your hash>",
+    "toggleText": "Activează Service Worker-ul",
+    "activatingToggleText": "Activez Service Worker-ul...",
+    "activationErrorMessage": "La activarea Service Worker-ului a apărut o eroare.",
+    "deactivationErrorMessage": "A apărut o eroare la dezactivarea Service Worker-ului.",
+    "nonRootScopeWarningMessage": "Service Worker-ul nu poate fi activat când se privește de la acest URL. Ai putea încerca cu https://js.ipfs.io.",
+    "incompatibleMessageText": "Acest browser are suport pentru Service Worker-i.",
+    "activatedToggleText": "Dezactivează Service Worker-ul"
+  },
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "Care sunt oamenii care construiesc be baza lui",
+    "list": [
+      {
+        "desc": "Întregul site Internet Archive, dar o versiune descentralizată. Accesează arhiva cu cele peste 40 de milioane de înregistrări prin intermediul SWeb. Combinarea unui gateway folosit pentru seeding cu un UI în JavaScript pentru Firefox și Chrome."
+      },
+      {
+        "desc": "PeerPad este un editor colaborativ în timp real care funcționează pe web-ul descentralizat, fiind construit pe IPFS și Y.js. Nu folosește alte dependințe directe sau de la terți: toate nodurile participante vorbesc direct unele cu celelalte fără a avea un serviciu central."
+      },
+      {
+        "desc": "Conferă-i browserului tău super-puteri prin extensia IPFS Web Extension. IPFS Companion este o extensie care poate fi utilizată în browserele Chrome, Firefox și Brave pentru a oferi acces fără probleme la rețeaua IPFS. Extensia are funcționalități suplimentare cum ar fi partajarea de fișiere și API-uri pentru dezvoltatorii web."
+      },
+      {
+        "desc": "[Orbit Chat](https://orbit.chat) este o aplicație de chat peer-to-peer care nu are un server central, este distribuită, fiind construită pe baza lui OrbitDB. OrbitDB folosește [IPFS](https://ipfs.io) și stocarea de date, precum și [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) pentru a sincroniza automat bazele de date cu participanții."
+      }
+    ]
+  },
+
+  "whatYouCanBuild": {
+    "sectionTitle": "Ce poți construi cu JS-IPFS",
+    "sectionDesc": "Js-ipfs oferă o scară nelimitată de opțiuni. Următoarele exemple își vor da o idee despre ce poți construi cu js-ipfs. Încearcă-le!",
+    "suggestion": {
+      "text": "Ai sugestii?",
+      "linkText": "Salvează-le aici!"
+    }
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "Publicații & Dezbateri",
+    "sectionDesc": "Urmărește actualizările proiectului, demonstrațiile și alte dezbateri ale comunității IPFS privind proiectul IPFS în JavaScript. Vom adăuga o mulțime de alte dezbateri cât de curând de la Întâlnirile IPFS Dev."
+  },
+
+  "community": {
+    "sectionTitle": "Comunitate",
+    "sectionDesc": "js-ipfs este un proiect Open Source licențiat MIT al comunității IPFS. Sunt o mulțime de moduri în care poți contribui: ajută la scrierea specificațiilor, cu implementări de cod și instrumente care folosesc js-ipfs, exemple de construcții și tutoriale și poți să te alături [apelurilor grupului de lucru](https://github.com/ipfs/team-mgmt#synchronous-communication) pentru a discuta IPFS cu noi.",
+    "socialNetworksText": "Hai cu noi!"
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs a fost inițiat și sponsorizat de",
+    "leftContent": "Protocol Labs | Excepții menționate, conținut licențiat cu CC-BY 3.0"
+  }
+}
