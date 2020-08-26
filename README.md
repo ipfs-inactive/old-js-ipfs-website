@@ -28,35 +28,44 @@ Welcome to the js.ipfs.io Website repo. This website uses [gatsbyjs](https://www
 
 ### Missing language? Help us translate!
 
-You can do it in 2 steps:
+Everyone can help by translating content at Transifex:
 
-**1. Create a PR that adds a line to the config file with a new language code**
+- Go to https://www.transifex.com/ipfs/js-ipfs-website and start translating.
+- If your language is missing request it on Transifex.
 
-In the file [intl/config](intl/config.js), add a line for your language. Example, if you were to add Portuguese, you would only have to add the new language to the `availableLocales` array:
 
-```js
+### Synchronizing translations (maintainer task)
+
+Once in a while the maintainer of this repo synchronizes translations.  
+**Below steps are done by admin, regular translators only work on Transifex.**
+
+To download updates of all locales:
+```console
+$ tx pull -a
+```
+
+Then check if any language is missing in the file [intl/config](intl/config.js), if so, add a line for missing one. 
+
+For example, if you were to add Portuguese, you would only have to add the new language to the `availableLocales` array:
+
+```diff
 module.exports = {
   defaultLocale: 'en',
   availableLocales: [
     { acronym: 'en', fullForm: 'English' },
-    { acronym: 'pt', fullForm: 'Português' }
++    { acronym: 'pt', fullForm: 'Português' }
   ]
 }
 ```
 
-**2. Translate content at Transifex**
-
-- Go to https://www.transifex.com/ipfs/js-ipfs-website and start translating.
-- If your language is missing request it on Transifex or as an issue in this repo.
-- To download and add translations to the PR:
-```sh
-  $ tx pull -l <lang>
-  $ git add intl
-  $ git commit
+Then, to download updates of specific locale:
+```console
+$ tx pull -l pt
 ```
-This step can be done by you or a person reviewing the PR. Replace `<lang>` with the code added to `intl/config.js`
 
-When you are finished, submit it as a PR to this repo. Once it gets merged into master it will be live at [dev.js.ipfs.io](https://dev.js.ipfs.io/). It will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `production` branch is updated.
+Finally, commit changes to `./src/i18n.js` and `public/locales/`.
+
+**Note:** newly added language will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `production` branch is updated.
 
 ### Learn more on how to use Transifex
 
