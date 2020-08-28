@@ -36,7 +36,7 @@ Everyone can help by translating content at Transifex:
 
 ### Synchronizing translations (maintainer task)
 
-Once in a while the maintainer of this repo synchronizes translations.  
+Periodically, a maintainer of this repo will need to synchronize translations to ensure everything is up to date.  
 **Below steps are done by admin, regular translators only work on Transifex.**
 
 To download updates of all locales:
