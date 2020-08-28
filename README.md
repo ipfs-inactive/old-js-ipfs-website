@@ -65,7 +65,7 @@ $ tx pull -l pt
 
 Finally, commit changes to `./src/i18n.js` and `public/locales/`.
 
-**Note:** newly added language will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `production` branch is updated.
+**Note:** Newly added language(s) will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `production` branch is updated.
 
 ### Learn more on how to use Transifex
 
