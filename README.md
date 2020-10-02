@@ -1,4 +1,4 @@
-# [js.ipfs.io](https://js.ipfs.io) - The js-ipfs project Website.
+# [js.ipfs.io](https://js.ipfs.io) - THE JAVASCRIPT-IPFS PROJECT WEBSITE.
 
 Welcome to the js.ipfs.io Website repo. This website uses [gatsbyjs](https://www.gatsbyjs.org/). Most of the website content is data-driven, you can check the [data](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/data) directory to see the sections information bundled as `js` files.
 
@@ -34,7 +34,7 @@ Everyone can help by translating content at Transifex:
 - If your language is missing request it on Transifex.
 
 
-### Synchronizing translations (maintainer task)
+### SYNCHRONISING TRANSLATIONS (maintainer task)
 
 Periodically, a maintainer of this repo will need to synchronize translations to ensure everything is up to date.  
 **NOTE: The steps below are for admins and can be ignored if you're a translator; all translation work happens in Transifex only.**
@@ -67,7 +67,7 @@ Finally, commit changes to `./src/i18n.js` and `public/locales/`.
 
 **Note:** Newly added language(s) will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `production` branch is updated.
 
-### Learn more on how to use Transifex
+### Learn more on how to use TRANSIFEX
 
 - [Installing the Transifex Client](https://docs.transifex.com/client/installing-the-client)
 - [Understanding `.tx/config` file](https://docs.transifex.com/client/client-configuration#section-tx-config)
@@ -110,7 +110,7 @@ const apps = [
 ]
 ```
 
-## Development
+## DEVELOPMENT
 
 ### Dependencies
 
