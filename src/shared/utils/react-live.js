@@ -2,7 +2,7 @@ const codeAdd = (placeholder) => `const node = await IPFS.create()
 
 const data = '${placeholder}'
 
-// add your data to to IPFS - this can be a string, a Buffer,
+// add your data to IPFS - this can be a string, a Buffer,
 // a stream of Buffers, etc
 const results = node.add(data)
 
