@@ -18,7 +18,7 @@ class DesktopNavBar extends Component {
       <div className={ navBarClasses } >
         <div className={ styles.navBarMenu }>
           <div className={ styles.link } onClick={ this.handleGettingStartedClick }> { messages.navBar.item1 } </div>
-          <Link href="https://proto.school/#/tutorials?course=ipfs">
+          <Link href="https://proto.school/course/ipfs">
             { messages.navBar.item2 }
           </Link>
           <Link href="https://github.com/ipfs/js-ipfs/tree/master/docs/core-api">
