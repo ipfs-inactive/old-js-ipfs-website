@@ -6,18 +6,27 @@ Welcome to the js.ipfs.io Website repo. This website uses [gatsbyjs](https://www
 
 ## Lead Maintainer
 
-[Pedro Santos](https://github.com/PedroMiguelSS)
+🦗🎶
 
 ## Table of Contents
 
-- Contribute to the Website Content
-  - [Internationalization](#internationalization-i18n)
+- [js.ipfs.io - The js-ipfs project Website.](#jsipfsio---the-js-ipfs-project-website)
+  - [Lead Maintainer](#lead-maintainer)
+  - [Table of Contents](#table-of-contents)
+  - [Internationalization `i18n`](#internationalization-i18n)
+    - [Incorrect translation, help us fix it!](#incorrect-translation-help-us-fix-it)
+    - [Missing language? Help us translate!](#missing-language-help-us-translate)
+    - [Synchronizing translations (maintainer task)](#synchronizing-translations-maintainer-task)
+    - [Learn more on how to use Transifex](#learn-more-on-how-to-use-transifex)
   - [Listing a talk on the website](#listing-a-talk-on-the-website)
   - [Want to show what's possible to build with `js-ipfs`?](#want-to-show-whats-possible-to-build-with-js-ipfs)
-- Development and Release Cycle
   - [Development](#development)
+    - [Dependencies](#dependencies)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Supported Browsers Versions](#supported-browsers-versions)
   - [Publish](#publish)
-- [License](#license)
+  - [License](#license)
 
 ## Internationalization `i18n`
 
@@ -147,26 +156,11 @@ We are currently targeting:
 
 ## Publish
 
-When a branch gets `merged` to master, it is deployed to [dev.js.ipfs](https://dev.js.ipfs.io/).
+When a PR gets merged to master, it is deployed to [js.ipfs.io](https://js.ipfs.io/) by Fleek CI.
 
-To deploy to [js.ipfs.io](https://js.ipfs.io/) the code should be merged into the `production` branch.
 
-1. Build the project
-```sh
-> npm run build
-```
-2. Init your `ipfs` daemon (if you haven't done it before)
-```sh
-> ipfs init
-```
-3. Add the `public` folder to IPFS
-```sh
-> ipfs add -r public/
-added <resulting-hash>
-```
-4. Finally, go to the [constants](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/constants) folder and paste the resulting hash on the `jsIpfsWebsite` property of the exported object.
-
-**Note:** This process will be automated as soon as we tackle [this issue](https://github.com/ipfs/js.ipfs.io/issues/171).
+1. Wait for Fleek CI to build the project and add it to IPFS
+2. Finally, go to the [constants](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/constants) folder and paste the resulting hash on the `jsIpfsWebsite` property of the exported object.
 
 ## License
 
