@@ -18,11 +18,12 @@ for await (const { cid } of results) {
 const codeGet = (cid) => `const node = await IPFS.create()
 
 const stream = node.cat('${cid}')
+const decoder = new TextDecoder()
 let data = ''
 
 for await (const chunk of stream) {
-  // chunks of data are returned as a Buffer, convert it back to a string
-  data += chunk.toString()
+  // chunks of data are returned as a Uint8Array, convert it back to a string
+  data += decoder.decode(chunk, { stream: true })
 }
 
 console.log(data)`
