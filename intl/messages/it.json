@@ -89,7 +89,7 @@
 
   "gettingStarted": {
     "sectionTitle": "Primi Passi",
-    "sectionDesc": "IPFS ti offre i primitivi per il Content Addressing per tutti i tuoi dati sul DWeb. È possibile rendere i dati disponibili alla rete o recuperare i dati esistenti attraverso il suo indirizzo CID, il Content Identifier. Provalo qui sotto!",
+    "sectionDesc": "IPFS ti dà un primitivo Content Addressing per tutti i vostri dati sul DWeb. Puoi rendere i dati disponibili alla rete o recuperare i dati esistenti attraverso il suo CID, il Content Identifier. Provalo qui sotto o esplora i nostri [tutorial di ProtoSchool](https://proto.school/course/ipfs)!",
     "addDataToIPFS": "Aggiungere dati su IPFS",
     "output": "Output",
     "getDataFromIPFS": "Recuperare dati da IPFS",
@@ -114,9 +114,10 @@
 
   "whatArePeopleBuilding": {
     "sectionTitle": "Cosa stanno creando gli altri",
+    "sectionDesc": "",
     "list": [
       {
-        "desc": "Tutto l'Internet Archive, ma decentralizzato. Accedi ad oltre 40 milioni di contenuti dell'archivio tramite DWeb. Utilizza un gateway per il seeding dei contenuti e un'interfaccia utente scritta in JavaScript per Firefox e Chrome."
+        "desc": "Tutto l'archivio internet, ma decentralizzato. Accedi ad oltre 40 milioni di contenuti dell'archivio tramite il DWeb. Utilizza un gateway per il seeding dei contenuti e un'interfaccia utente scritta in JavaScript per Firefox e Chrome."
       },
       {
         "desc": "PeerPad è un editor collaborativo in tempo reale che funziona sul Web Decentralizzato, basato su IPFS e Y.js. Non utilizza seconde o terze parti: tutti i nodi partecipanti comunicano direttamente tra loro senza un servizio centrale."
@@ -134,8 +135,8 @@
     "sectionTitle": "TODO Title",
     "sectionDesc": "Ci sono infinite opzioni per te per usare js-ipfs. Gli esempi seguenti offrono un'idea di cosa puoi costruire con js-ipfs. Provali!",
     "suggestion": {
-      "text": "Hai un'idea e vuoi fare un suggerimento?",
-      "linkText": "Fallo qui!"
+      "text": "Hai suggerimenti?",
+      "linkText": "Condividili qui!"
     }
   },
 
@@ -146,7 +147,7 @@
 
   "community": {
     "sectionTitle": "Community",
-    "sectionDesc": "js-ipfs è un progetto open source con licenza MIT. Ci sono molti modi in cui puoi contribuire: aiuta a scrivere le specs, le implementazioni del codice e altri tools che usano libp2p, crea esempi ed esercitazioni e unisciti alle nostre chiamate settimanali per discutere di libp2p con noi.",
+    "sectionDesc": "js-ipfs è sotto la licenza MIT, ed è un progetto Open Source della community IPFS. Tu puoi contribuire in molti modi: puoi aiutare a scrivere specifiche, codice e strumenti oppure esempi e tutorial. Partecipa alle nostre [chiamate di gruppo](https://github.com/ipfs/team-mgmt#synchronous-communication) per discutere con noi di IPFS.",
     "socialNetworksText": "Divertiti con noi!"
   },
 

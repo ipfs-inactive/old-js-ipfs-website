@@ -1,0 +1,158 @@
+{
+  "notFoundPage": {
+    "mainMessage": "Sayfa bulunamadı",
+    "detailedMessage": "Az önce var olmayan bir rotaya çarptın ... üzgünüm."
+  },
+  "buttons": {
+    "buttonLearnMore": "Daha fazla bilgi edin",
+    "buttonGithub": "Github",
+    "buttonTwitter": "Twitter",
+    "buttonIrcFreenode": "IRC Serbest Mod",
+    "buttonAddLanguage": "Dilinizi ekleyin"
+  },
+
+  "navBar": {
+    "item1": "Başla",
+    "item2": "Öğreticiler",
+    "item3": "UPA",
+    "item4": "Açık Kaynak"
+  },
+
+  "hero": {
+    "welcomeMessage": {
+      "long": "Tamamen JavaScript ile yazılmış tam bir P2P protokolü",
+      "short": "Bir P2P JavaScript protokolü"
+    },
+    "textDescription": {
+      "long": "js-ipfs, IPFS protokolünün Tarayıcı uygulamasının yolunu açar. Tamamen JavaScript ile yazılmıştır, bir Tarayıcı, Hizmet Çalışanı, Web Uzantısı ve Node.js ile çalışır ve bir olasılıklar dünyasının kapısını açar.",
+      "short": "js-ipfs bir Tarayıcı, Servis Çalışanı, Web Uzantısı ve Node.js'de çalışır ve olasılıklar dünyasının kapısını açar."
+    },
+    "currentVersion": {
+      "long": "Mevcut sürüm: {version}",
+      "short": "s{version}"
+      },
+    "latestUpdate": {
+      "long": "Son güncelleme: {date}",
+      "short": "Güncellenmiş {date}"
+      },
+    "downloadsLastMonth": "Geçen ay indirilenler: {count}",
+    "errorPckMessage": "IPFS paket verileri alınamadı.",
+    "animationButton": {
+      "enable": "Animasyonu Etkinleştir",
+      "disable": "Animasyonu Devre Dışı Bırak"
+    }
+  },
+
+  "banner": {
+    "highlightMessage": "js-ipfs kitaplığı Alfa durumundadır.",
+    "message": "Kod tabanı, güvenlik uzmanları tarafından denetlenmemiştir ve hassas bilgileri depolamak, paylaşmak veya yayınlamak için kullanılmamalıdır."
+  },
+
+  "features": {
+    "sectionTitle": "Özellikleri",
+    "sectionDesc": "IPFS hakkında bildiğiniz ve sevdiğiniz her şeyle doludur. Bu uygulama aynı zamanda Tarayıcıya özgü bazı ekstra temiz şeyleri de taşır. Tüm DWeb Uygulamalarınızı güçlendirmek için araç takımıdır.",
+    "list": [
+      {
+        "title": "Node.js ve Tarayıcıda çalıştırın",
+        "desc": "js-ipfs, Node.js, Electron ve herhangi bir modern tarayıcıda kutudan çıktığı gibi çalışır. Ayrıca tasarım gereği özelleştirilebilir, böylece en sevdiğiniz çalışma zamanında kullanabilirsiniz."
+      },
+      {
+        "title": "Tam IPFS Yığını uygular",
+        "desc": "Geride hiçbir özellik kalmadı. js-ipfs hafif bir istemci değildir, IPFS protokolünün tam uygulamasıdır."
+      },
+      {
+        "title": "Diğer eşlerle gerçek zamanlı iletişim kurmak için PubSub'ı kullanın",
+        "desc": "IPFS düğümleri, olayları gerçek zamanlı olarak yayınlamak için ilgi alanlarına göre ağ topolojileri oluşturabilir."
+      },
+      {
+        "title": "IPFS Ağının herhangi bir yerinden dosya ekleyin ve alın",
+        "desc": "IPFS, aradığınız içeriğe sahip ağdaki düğümleri bulmak için İçerik Adreslemenin gücünü kullanmak üzere tasarlanmıştır. Aynı şekilde, veri ekleyebilirsiniz ve diğer düğümler de onu bulacaktır."
+      },
+      {
+        "title": "Karma bağlantılı herhangi bir veri yapısı üzerinden geçiş yapmak için DAG UPA'yı kullanın",
+        "desc": "IPFS, git, blok zincirleri ve daha fazlası gibi birden çok kaynaktan gelen verilerle etkileşim kurmanızı sağlayan bir model olan Gezegenler Arası Bağlantılı Veriler olan [IPLD] (https://ipld.io/) kullanır."
+      },
+      {
+        "title": "libp2p yerleşiktir",
+        "desc": "[libp2p] (https://libp2p.io/), IPFS için oluşturulan Modüler Ağ Yığınıdır ve artık bunu uygulamanız için de IPFS aracılığıyla doğrudan kullanabilirsiniz."
+      },
+      {
+        "title": "Arka plan programı olarak çalıştırın",
+        "desc": "js-ipfs ayrıca onu bir arka plan programı olarak çalıştırma seçeneğiyle birlikte gelir, böylece go-ipfs'den aşina olduğunuz HTTP UPA'sını kullanarak onunla etkileşim kurabilirsiniz."
+      },
+      {
+        "title": "Verileri değiştirmek için kararlı adresler oluşturun",
+        "desc": "Güncellemeleri doğrulanmış ve onaylanmış bir şekilde dağıtmak için değiştirilebilir işaretçiler (kayıtlar) yazmanın bir yolu olan Gezegenler Arası Adlandırma Sistemi olan IPNS ile birlikte gelir."
+      }
+    ]
+  },
+
+  "gettingStarted": {
+    "sectionTitle": "Başlangıç",
+    "sectionDesc": "IPFS, DWeb'deki tüm verileriniz için size bir İçerik Adresleme basiti sunar. Verileri ağ için kullanılabilir hale getirebilir veya CID, İçerik Tanımlayıcı aracılığıyla mevcut verileri getirebilirsiniz. Aşağıda deneyin veya [ProtoSchool öğreticilerimizi] (https://proto.school/course/ipfs) keşfedin!",
+    "addDataToIPFS": "IPFS'ye veri ekleme",
+    "output": "Çıktı",
+    "getDataFromIPFS": "IPFS'den veri alma",
+    "usingJavascript": "Tarayıcıda veya Node.js'de Javascript kullanma",
+    "usingCli": "Komut satırı arayüzünü kullanma",
+    "usingGateway": "HTTP Ağ Geçidini Kullanma"
+  },
+
+  "serviceWorker": {
+    "sectionTitle": "Hizmet Çalışanı Ağ Geçidi",
+    "sectionDesc": "Bu sayfayı herhangi bir sunucuya dokunmadan veya IPFS Ağından içerik almak için HTTP kullanmadan tam bir IPFS Ağ Geçidine dönüştürün! Evet, doğru okudunuz, js-ipfs ile Service Worker Gateway doğrudan IPFS Ağına bağlanabilir.",
+    "activationSuccessTitle": "Tebrikler! Tarayıcınız artık tamamen işlevsel bir IPFS Ağ Geçidi",
+    "activationSuccessText": "Herhangi bir içeriği normalde https://gateway.ipfs.io ile yaptığınız gibi yükleyin. İşte deneyebileceğiniz bazı örnekler: \n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\n https://js.ipfs.io/ipfs/<your hash> sayfasını açarak başka bir özütle deneyin",
+    "toggleText": "Hizmet Çalışanını Etkinleştirin",
+    "activatingToggleText": "Hizmet Çalışanı Etkinleştiriliyor ...",
+    "activationErrorMessage": "Hizmet Çalışanı etkinleştirilirken bir hata oluştu.",
+    "deactivationErrorMessage": "Hizmet Çalışanı devre dışı bırakılırken bir hata oluştu.",
+    "nonRootScopeWarningMessage": "Hizmet Çalışanı bu URL'den görüntülenirken etkinleştirilemez. Bunun yerine https://js.ipfs.io 'u deneyin.",
+    "incompatibleMessageText": "Bu tarayıcı Hizmet Çalışanlarını desteklemiyor.",
+    "activatedToggleText": "Hizmet Çalışanını Devre Dışı Bırak"
+  },
+
+  "whatArePeopleBuilding": {
+    "sectionTitle": "İnsanlar onunla ne inşa ediyor",
+    "sectionDesc": "",
+    "list": [
+      {
+        "desc": "Tüm İnternet Arşivi, ancak merkezi olmayan. Arşivdeki 40 milyondan fazla öğeye DWeb aracılığıyla erişin. Bir tohumlama ağ geçidi ile Firefox ve Chrome için bir javascript kullanıcı arayüzünü birleştirin."
+      },
+      {
+        "desc": "PeerPad, IPFS ve Y.js üzerine kurulu, merkezi olmayan web üzerinde çalışan, ortak çalışmaya dayalı bir gerçek zamanlı düzenleyicidir. İkinci veya üçüncü taraf kullanmaz: katılan tüm düğümler, merkezi bir hizmet olmadan doğrudan birbirleriyle konuşur."
+      },
+      {
+        "desc": "IPFS Web Uzantısı ile Tarayıcınıza süper güçler verin. IPFS Companion, IPFS Ağına sorunsuz bir şekilde erişmenizi sağlamak için Chrome, Firefox ve Brave Browsers'da kullanılabilen bir uzantıdır. Ayrıca, Web Geliştiricileri için dosya paylaşımı ve UPA'lar gibi ekstra özellikleri de içerir."
+      },
+      {
+        "desc": "[Orbit Chat](https://orbit.chat), OrbitDB üzerine inşa edilmiş, sunucusuz, dağıtılmış, eşler arası bir sohbet uygulamasıdır. OrbitDB, veri depolama alanı olarak [IPFS](https://ipfs.io) ve veritabanlarını eşlerle otomatik olarak senkronize etmek için [IPFS Pubsub] (https://ipfs.io/blog/29-js-ipfs-pubsub) kullanır."
+      }
+    ]
+  },
+
+  "whatYouCanBuild": {
+    "sectionTitle": "JS-IPFS ile neler oluşturabilirsiniz",
+    "sectionDesc": "js-ipfs'i kullanmanız için sınırsız seçenekler vardır. Aşağıdaki örnekler, js-ipfs ile neler oluşturabileceğiniz konusunda size bir fikir verir. Onları deneyin!",
+    "suggestion": {
+      "text": "Önerileriniz mi var?",
+      "linkText": "Burada paylaşın!"
+    }
+  },
+
+  "publicationsAndTalks": {
+    "sectionTitle": "Yayınlar & Konuşmalar",
+    "sectionDesc": "IPFS'nin JavaScript projesi hakkında IPFS Topluluğu tarafından yapılan proje güncellemelerini, demoları ve diğer konuşmaları izleyin. Yakında IPFS Geliştirici Toplantılarından onlarca konuşma daha ekleyeceğiz."
+  },
+
+  "community": {
+    "sectionTitle": "Topluluk",
+    "sectionDesc": "js-ipfs, IPFS topluluğundan bir MIT Lisanslı, Açık Kaynak projesidir. Katkıda bulunmanın birçok yolu vardır: js-ipfs kullanarak belirtim, kod uygulamaları ve araçları yazmaya yardımcı olun, örnekler ve öğreticiler oluşturun ve IPFS'yi bizimle tartışmak için bize [çalışma grubu çağrıları] (https://github.com/ipfs/team-mgmt#synchronous-communication) katılın.",
+    "socialNetworksText": "Hadi takıl!"
+  },
+
+  "footer": {
+    "rightContent": "js-ipfs başlatıldı ve sponsoru",
+    "leftContent": "Protokol Laboratuvarları | Belirtilenler dışında, lisanslı içerik CC-BY 3.0"
+  }
+}

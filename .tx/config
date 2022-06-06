@@ -1,11 +1,11 @@
 [main]
 host = https://www.transifex.com
 
-[js-ipfs-website.messages-json]
-file_filter = intl/messages/<lang>.json
+[o:ipfs:p:js-ipfs-website:r:messages-json]
+file_filter  = intl/messages/<lang>.json
+source_file  = intl/messages/en.json
+source_lang  = en
+type         = KEYVALUEJSON
 minimum_perc = 100
-source_file = intl/messages/en.json
-source_lang = en
-lang_map = zh_CN: zh-CN, zh_HK: zh-HK, zh_TW: zh-TW, ko_KR: ko-KR, ja_JP: ja-JP, pt_PT: pt-PT, pt_BR: pt-BR
-type = KEYVALUEJSON
+lang_map     = ko_KR: ko-KR, ja_JP: ja-JP, pt_PT: pt-PT, pt_BR: pt-BR, zh_CN: zh-CN, zh_HK: zh-HK, zh_TW: zh-TW
 

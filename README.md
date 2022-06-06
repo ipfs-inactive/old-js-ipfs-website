@@ -55,16 +55,12 @@ $ tx pull -a
 
 Then check if any language is missing in the file [intl/config](intl/config.js), if so, add a line for missing one. 
 
-For example, if you were to add Portuguese, you would only have to add the new language to the `availableLocales` array:
+For example, if you were to add Portuguese, you would only have to add the new language to the `locales` array:
 
 ```diff
-module.exports = {
-  defaultLocale: 'en',
-  availableLocales: [
-    { acronym: 'en', fullForm: 'English' },
-+    { acronym: 'pt', fullForm: 'Português' }
-  ]
-}
+const locales = [
+ 'en',
++ 'pt'
 ```
 
 Then, to download updates of specific locale:
@@ -74,7 +70,7 @@ $ tx pull -l pt
 
 Finally, commit changes to `./src/i18n.js` and `public/locales/`.
 
-**Note:** Newly added language(s) will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `production` branch is updated.
+**Note:** Newly added language(s) will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `master` branch is updated.
 
 ### Learn more on how to use Transifex
 
