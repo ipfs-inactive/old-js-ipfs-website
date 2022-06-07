@@ -37,6 +37,8 @@
     "intersection-observer": "~0.5.0",
     "ipfs": "~0.41.0",
     "is-ipfs": "~0.6.3",
+    "langmap": "0.0.16",
+    "libp2p-websockets": "^0.13.6",
     "normalize.css": "^8.0.0",
     "postcss-import": "^12.0.0",
     "postcss-preset-moxy": "^2.3.1",
@@ -88,6 +90,9 @@
     "stylelint-config-moxy": "^5.0.0",
     "svg-css-modules-loader": "^1.6.1",
     "svgo-loader": "^2.2.0"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "husky": {
     "hooks": {

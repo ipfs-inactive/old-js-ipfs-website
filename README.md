@@ -24,7 +24,6 @@ Welcome to the js.ipfs.io Website repo. This website uses [gatsbyjs](https://www
     - [Dependencies](#dependencies)
     - [Install](#install)
     - [Usage](#usage)
-    - [Supported Browsers Versions](#supported-browsers-versions)
   - [Publish](#publish)
   - [License](#license)
 
@@ -55,16 +54,12 @@ $ tx pull -a
 
 Then check if any language is missing in the file [intl/config](intl/config.js), if so, add a line for missing one. 
 
-For example, if you were to add Portuguese, you would only have to add the new language to the `availableLocales` array:
+For example, if you were to add Portuguese, you would only have to add the new language to the `locales` array:
 
 ```diff
-module.exports = {
-  defaultLocale: 'en',
-  availableLocales: [
-    { acronym: 'en', fullForm: 'English' },
-+    { acronym: 'pt', fullForm: 'Português' }
-  ]
-}
+const locales = [
+ 'en',
++ 'pt'
 ```
 
 Then, to download updates of specific locale:
@@ -74,7 +69,7 @@ $ tx pull -l pt
 
 Finally, commit changes to `./src/i18n.js` and `public/locales/`.
 
-**Note:** Newly added language(s) will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `production` branch is updated.
+**Note:** Newly added language(s) will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `master` branch is updated.
 
 ### Learn more on how to use Transifex
 
@@ -124,7 +119,7 @@ const apps = [
 ### Dependencies
 
 - `gatsbyjs v2` to build the website
-- `Node.js >= v10` and `npm` for build tools
+- `Node.js v10` and `npm` for build tools
 - `Transifex Client` for locales
 - `ipfs` to deploy changes
 
@@ -132,7 +127,7 @@ const apps = [
 
 ```sh
 > git clone https://github.com/ipfs/js.ipfs.io
-> npm install
+> npm ci
 ```
 
 ### Usage
@@ -142,16 +137,6 @@ The following commands are available:
 - `npm run develop` - Starts a hot-reloading development environment at [localhost:8000](localhost:8000).
 - `npm run build` - Generates the static HTML and JavaScript code bundles by performing a production build.
 - `npm run lint` - Runs [aegir](https://github.com/ipfs/aegir) lint.
-
-### Supported Browsers Versions
-
-We are currently targeting:
-
-| Browser       | Versions      |
-| ------------- |:-------------:|
-| Chrome        | >= 69         |
-| Firefox       | >= 62         |
-| Safari        | >= 11.1       |
 
 
 ## Publish
