@@ -119,7 +119,7 @@ const apps = [
 ### Dependencies
 
 - `gatsbyjs v2` to build the website
-- `Node.js >= v16` and `npm` for build tools
+- `Node.js v10` and `npm` for build tools
 - `Transifex Client` for locales
 - `ipfs` to deploy changes
 
