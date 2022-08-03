@@ -9,7 +9,7 @@ const appsData = {
       link: 'https://codepen.io/ipfs/embed/LXeGGL'
     }
   ],
-  repoLink: 'https://github.com/ipfs/js.ipfs.io/issues'
+  repoLink: 'https://github.com/ipfs/js.ipfs.tech/issues'
 }
 
 export default appsData

@@ -23,6 +23,7 @@ const loadLocaleData = function (intl) {
 
 class Layout extends Component {
   render () {
+    this.maybeRedirectToNewDomain()
     this.maybeLoadLocaleData()
 
     const { children, pageContext: { intl } } = this.props
@@ -43,9 +44,6 @@ class Layout extends Component {
               { rel: 'icon', sizes: '16x16', href: withPrefix('/favicon/favicon-16x16.png'), type: 'image/png' },
               { rel: 'mask-icon', href: withPrefix('/favicon/safari-pinned-tab.svg'), color: '#0a1732' }
             ] }
-            script={ [
-              { src: 'https://camp.ipfs.io/ribbon.min.js', async: true }
-            ] } >
           </Helmet>
 
           <main className={ styles.children }>
@@ -64,6 +62,17 @@ class Layout extends Component {
       this.previousIntl = intl
       loadLocaleData(intl)
     }
+  }
+
+  maybeRedirectToNewDomain () {
+    // https://github.com/protocol/bifrost-infra/issues/2018#issue-1319432302
+    const { href } = window.location
+		if (href.includes('js.ipfs.tech')) {
+			window.location.replace(href.replace('js.ipfs.tech', 'js.ipfs.tech'))
+		}
+		if (href.includes('js.ipfs.tech')) {
+			window.location.replace(href.replace('js.ipfs.tech', 'js-ipfs-tech'))
+		}
   }
 }
 

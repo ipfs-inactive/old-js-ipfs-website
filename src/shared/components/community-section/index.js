@@ -32,7 +32,7 @@ class Community extends Component {
             <div className={ styles.socialLinksContainer }>
               <p>{ messages.community.socialNetworksText }</p>
               <div className={ styles.socialLinks }>
-                <Button translationId="buttonCommunity" href="https://docs.ipfs.io/community/" />
+                <Button translationId="buttonCommunity" href="https://docs.ipfs.tech/community/" />
                 <Button translationId="buttonGithub" href="https://github.com/ipfs/js-ipfs" modifier="github" />
                 <Button translationId="buttonTwitter" href="https://twitter.com/IPFS" modifier="twitter" />
               </div>

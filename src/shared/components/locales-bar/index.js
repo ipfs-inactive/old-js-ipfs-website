@@ -27,7 +27,7 @@ const LocalesBar = ({ intl: { locale: currentLocale, messages }, className }) =>
   return (
     <div className={ localesBarClassName }>
       { renderLocales }
-      <Link className={ styles.addLanguage } href="https://github.com/ipfs/js.ipfs.io#internationalization-i18n">
+      <Link className={ styles.addLanguage } href="https://github.com/ipfs/js.ipfs.tech#internationalization-i18n">
         <Svg svg={ iconAdd } />
         { messages.buttons.buttonAddLanguage }
       </Link>
