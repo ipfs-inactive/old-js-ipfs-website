@@ -7,7 +7,7 @@
     "buttonLearnMore": "Узнать больше",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode",
+    "buttonCommunity": "Сообщество",
     "buttonAddLanguage": "Добавьте ваш язык"
   },
 
@@ -102,12 +102,12 @@
     "sectionTitle": "Шлюз Service Worker'а",
     "sectionDesc": "Превратите эту траницу в полноценный шлюз IPFS, не прикасаясь ни к каким серверам и не используя HTTP для получения содержимого из сети IPFS! Да, вы прочитали это правильно, шлюз Service Worker'а вместе с js-ipfs могут напрямую соединяться с сетью IPFS.",
     "activationSuccessTitle": "Поздравляем! Теперь ваш браузер это полнофункциональный шлюз IPFS.",
-    "activationSuccessText": "Загружайте любое содержимое так же, как вы бы делали это в обычный способ с помощью https://gateway.ipfs.io. Вот несколько примеров, которые стоит попробовать:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n- [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nПопробуйте любой другой хеш, открыв https://js.ipfs.io/ipfs/<your hash>",
+    "activationSuccessText": "Загружайте любое содержимое так же, как вы бы делали это в обычный способ с помощью https://gateway.ipfs.io. Вот несколько примеров, которые стоит попробовать:\n- [ipfs.tech - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.tech/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.tech - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.tech - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{awesomeIpfsWebsiteHash})\n- [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.tech/ipfs/{peerpadWebsiteHash})\n\nПопробуйте любой другой хеш, открыв https://js.ipfs.tech/ipfs/<your hash>",
     "toggleText": "Активировать Service Worker",
     "activatingToggleText": "Service Worker активируется...",
     "activationErrorMessage": "При активации Service Worker'а произошла ошибка.",
     "deactivationErrorMessage": "При деактивации Service Worker'а произошла ошибка.",
-    "nonRootScopeWarningMessage": "Service Worker не может быть активирован при просмотре через этот URL. Вместо этого попробуйте https://js.ipfs.io.",
+    "nonRootScopeWarningMessage": "Service Worker не может быть активирован при просмотре через этот URL. Вместо этого попробуйте https://js.ipfs.tech.",
     "incompatibleMessageText": "Этот браузер не поддерживает Service Worker'ы.",
     "activatedToggleText": "Деактивировать Service Worker."
   },

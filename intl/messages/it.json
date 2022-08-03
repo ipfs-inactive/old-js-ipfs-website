@@ -7,7 +7,7 @@
     "buttonLearnMore": "Leggi ancora",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode",
+    "buttonCommunity": "Community",
     "buttonAddLanguage": "Aggiungi la tua lingua"
   },
 
@@ -102,12 +102,12 @@
     "sectionTitle": "Service Worker Gateway",
     "sectionDesc": "Trasforma questa pagina in un gateway IPFS senza toccare alcun server o utilizzare HTTP per recuperare i contenuti dalla rete IPFS! Sì, avete letto bene, il Service Worker Gateway con js-ipfs può connettersi direttamente alla rete IPFS!",
     "activationSuccessTitle": "Congratulazioni! Il tuo browser è ora un gateway IPFS pienamente operativo!",
-    "activationSuccessText": "Carica qualsiasi contenuto come faresti normalmente con https://gateway.ipfs.io. Ecco alcuni esempi per te da provare:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nProva con qualsiasi altro hash aprendo https://js.ipfs.io/ipfs/<your hash>",
+    "activationSuccessText": "Carica qualsiasi contenuto come faresti normalmente con https://gateway.ipfs.io. Ecco alcuni esempi per te da provare:\n- [ipfs.tech - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.tech/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.tech - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.tech - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.tech/ipfs/{peerpadWebsiteHash})\n\nProva con qualsiasi altro hash aprendo https://js.ipfs.tech/ipfs/<your hash>",
     "toggleText": "Abilita Service Worker",
     "activatingToggleText": "Abilitando Service Worker...",
     "activationErrorMessage": "C'è stato un problema abilitando il Service Worker.",
     "deactivationErrorMessage": "C'è stato un problema disabilitando il Service Worker.",
-    "nonRootScopeWarningMessage": "Il Service Worker non pu&ograve; essere attivato quando carica da questo URL. Prova su https://js.ipfs.io.",
+    "nonRootScopeWarningMessage": "Il Service Worker non pu&ograve; essere attivato quando carica da questo URL. Prova su https://js.ipfs.tech.",
     "incompatibleMessageText": "This browser does not support Service Workers.",
     "activatedToggleText": "Disable Service Worker"
   },

@@ -7,7 +7,7 @@
     "buttonLearnMore": "Daha fazla bilgi edin",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Serbest Mod",
+    "buttonCommunity": "Topluluk",
     "buttonAddLanguage": "Dilinizi ekleyin"
   },
 
@@ -102,12 +102,12 @@
     "sectionTitle": "Hizmet Çalışanı Ağ Geçidi",
     "sectionDesc": "Bu sayfayı herhangi bir sunucuya dokunmadan veya IPFS Ağından içerik almak için HTTP kullanmadan tam bir IPFS Ağ Geçidine dönüştürün! Evet, doğru okudunuz, js-ipfs ile Service Worker Gateway doğrudan IPFS Ağına bağlanabilir.",
     "activationSuccessTitle": "Tebrikler! Tarayıcınız artık tamamen işlevsel bir IPFS Ağ Geçidi",
-    "activationSuccessText": "Herhangi bir içeriği normalde https://gateway.ipfs.io ile yaptığınız gibi yükleyin. İşte deneyebileceğiniz bazı örnekler: \n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\n https://js.ipfs.io/ipfs/<your hash> sayfasını açarak başka bir özütle deneyin",
+    "activationSuccessText": "Herhangi bir içeriği normalde https://gateway.ipfs.io ile yaptığınız gibi yükleyin. İşte deneyebileceğiniz bazı örnekler: \n- [ipfs.tech - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.tech/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.tech - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.tech - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.tech/ipfs/{peerpadWebsiteHash})\n\n https://js.ipfs.tech/ipfs/<your hash> sayfasını açarak başka bir özütle deneyin",
     "toggleText": "Hizmet Çalışanını Etkinleştirin",
     "activatingToggleText": "Hizmet Çalışanı Etkinleştiriliyor ...",
     "activationErrorMessage": "Hizmet Çalışanı etkinleştirilirken bir hata oluştu.",
     "deactivationErrorMessage": "Hizmet Çalışanı devre dışı bırakılırken bir hata oluştu.",
-    "nonRootScopeWarningMessage": "Hizmet Çalışanı bu URL'den görüntülenirken etkinleştirilemez. Bunun yerine https://js.ipfs.io 'u deneyin.",
+    "nonRootScopeWarningMessage": "Hizmet Çalışanı bu URL'den görüntülenirken etkinleştirilemez. Bunun yerine https://js.ipfs.tech 'u deneyin.",
     "incompatibleMessageText": "Bu tarayıcı Hizmet Çalışanlarını desteklemiyor.",
     "activatedToggleText": "Hizmet Çalışanını Devre Dışı Bırak"
   },

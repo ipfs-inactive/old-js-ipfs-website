@@ -7,7 +7,7 @@
     "buttonLearnMore": "أعرف أكثر",
     "buttonGithub": "جيثب",
     "buttonTwitter": "تويتر",
-    "buttonIrcFreenode": "IRC Freenode",
+    "buttonCommunity": "المجتمع",
     "buttonAddLanguage": "أضف لغتك"
   },
 
@@ -102,12 +102,12 @@
     "sectionTitle": "مدخل عامل الخدمة",
     "sectionDesc": "حول هذه الصفحة إلى مدخل IPFS كاملة دون لمس أي خوادم أو استخدام HTTP لجلب المحتوى من شبكة IPFS! نعم ، لقد قرأتها بشكل صحيح ، يمكن أن تتصل بمدخل عامل الخدمة مع js-ipfs مباشرة بشبكة IPFS.",
     "activationSuccessTitle": "تهانينا! متصفحك الآن مدخل IPFS تعمل بكامل طاقتها",
-    "activationSuccessText": "قم بتحميل أي محتوى كما تفعل عادةً بواسطة  https://gateway.ipfs.io. إليك بعض الأمثلة لتجربتها:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/\n{ipfsWebsiteHash}\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/\n{jsIpfsWebsiteHash}\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/\n{awesomeIpfsWebsiteHash}\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/\n{peerpadWebsiteHash}\nجرب أي تجزئة أخرى عن طريق الفتح /https://js.ipfs.io/ipfs <your hash>",
+    "activationSuccessText": "قم بتحميل أي محتوى كما تفعل عادةً بواسطة  https://gateway.ipfs.io. إليك بعض الأمثلة لتجربتها:\n- [ipfs.tech - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.tech/ipfs/\n{ipfsWebsiteHash}\n- [js.ipfs.tech - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/\n{jsIpfsWebsiteHash}\n- [awesome.ipfs.tech - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/\n{awesomeIpfsWebsiteHash}\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.tech/ipfs/\n{peerpadWebsiteHash}\nجرب أي تجزئة أخرى عن طريق الفتح /https://js.ipfs.tech/ipfs <your hash>",
     "toggleText": "تمكين عامل الخدمة",
     "activatingToggleText": "تنشيط عامل الخدمة ...",
     "activationErrorMessage": "حدث خطأ عند تمكين عامل الخدمة.",
     "deactivationErrorMessage": "حدث خطأ عند تعطيل عامل الخدمة.",
-    "nonRootScopeWarningMessage": "لا يمكن تنشيط عامل الخدمة عند المشاهدة من عنوان URL هذا. حاول في https://js.ipfs.io بدلاً من ذلك.",
+    "nonRootScopeWarningMessage": "لا يمكن تنشيط عامل الخدمة عند المشاهدة من عنوان URL هذا. حاول في https://js.ipfs.tech بدلاً من ذلك.",
     "incompatibleMessageText": "هذا المتصفح لا يدعم عمال الخدمة.",
     "activatedToggleText": "تعطيل عامل الخدمة"
   },

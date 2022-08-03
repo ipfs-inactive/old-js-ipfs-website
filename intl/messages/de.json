@@ -7,7 +7,7 @@
     "buttonLearnMore": "Mehr erfahren",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC-Freenode",
+    "buttonCommunity": "Community",
     "buttonAddLanguage": "Füge Deine Sprache hinzu"
   },
 
@@ -102,12 +102,12 @@
     "sectionTitle": "Service-Worker-Gateway",
     "sectionDesc": "Verwandele diese Seite in ein vollständiges IPFS-Gateway, ohne irgendwelche Server zu berühren oder HTTP zum Abrufen von Inhalten aus dem IPFS-Netzwerk zu verwenden! Ja, du hast richtig gelesen, das Service Worker Gateway mit js-ipfs kann sich direkt mit dem IPFS-Netzwerk verbinden.",
     "activationSuccessTitle": "Herzlichen Glückwunsch! Dein Browser ist nun ein voll einsatzfähiges IPFS-Gateway",
-    "activationSuccessText": "Lade jeden Inhalt, wie du es normalerweise von https://gateway.ipfs.io gewohnt bist. Hier sind ein paar Beispiele zum ausprobieren:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nProbiere es mit jedem anderen Hash indem du https://js.ipfs.io/ipfs/<your hash> öffnest.",
+    "activationSuccessText": "Lade jeden Inhalt, wie du es normalerweise von https://gateway.ipfs.io gewohnt bist. Hier sind ein paar Beispiele zum ausprobieren:\n- [ipfs.tech - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.tech/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.tech - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.tech - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{awesomeIpfsWebsiteHash})\n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.tech/ipfs/{peerpadWebsiteHash})\n\nProbiere es mit jedem anderen Hash indem du https://js.ipfs.tech/ipfs/<your hash> öffnest.",
     "toggleText": "Service-Worker aktivieren",
     "activatingToggleText": "Service-Worker wird aktiviert…",
     "activationErrorMessage": "Ein Fehler ist bei der Aktivierung des Service-Worker aufgetreten.",
     "deactivationErrorMessage": "Ein Fehler ist bei der Deaktivierung des Service-Worker aufgetreten.",
-    "nonRootScopeWarningMessage": "Der Service-Worker kann von dieser URL nicht aktiviert werden. Versuche es stattdessen auf https://js.ipfs.io",
+    "nonRootScopeWarningMessage": "Der Service-Worker kann von dieser URL nicht aktiviert werden. Versuche es stattdessen auf https://js.ipfs.tech",
     "incompatibleMessageText": "Dieser Browser unterstützt Service-Worker nicht.",
     "activatedToggleText": "Service-Worker deaktivieren"
   },

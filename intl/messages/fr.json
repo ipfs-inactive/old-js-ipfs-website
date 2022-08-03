@@ -4,15 +4,15 @@
     "detailedMessage": "Vous venez de tomber sur un chemin qui n'existe pas… quelle tristesse..."
   },
   "buttons": {
-    "buttonLearnMore": "En apprendre plus",
+    "buttonLearnMore": "En savoir plus",
     "buttonGithub": "GitHub",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode",
+    "buttonCommunity": "Communauté",
     "buttonAddLanguage": "Ajoutez votre langue"
   },
 
   "navBar": {
-    "item1": "Démarrer",
+    "item1": "Commencer",
     "item2": "Tutoriels",
     "item3": "API",
     "item4": "Open-Source"
@@ -35,7 +35,7 @@
       "long": "Dernière mise à jour: {date}",
       "short": "Mis à jour {date}"
       },
-    "downloadsLastMonth": "Téléchargements le mois dernier:",
+    "downloadsLastMonth": "Téléchargements le mois dernier: {count}",
     "errorPckMessage": "La récupération des données du paquet a échoué.",
     "animationButton": {
       "enable": "Activer Animation",
@@ -66,7 +66,7 @@
       },
       {
         "title": "Ajouter et récupérer des fichiers de n'importe où dans le réseau IPFS",
-        "desc": "IPFS est conçu pour utiliser la puissance de l'indexation par le contenu pour trouver les nœuds du réseau ayant le contenu que vous recherchez et les récupérer. De la même manière, vous pouvez ajouter n'importe quelles données et d'autres nœuds les trouveront aussi."
+        "desc": "IPFS est conçu pour utiliser la puissance de l'indexation par le contenu pour trouver les nœuds du réseau ayant le contenu que vous recherchez. De la même manière, vous pouvez ajouter n'importe quelles données et d'autres nœuds les trouveront aussi."
       },
       {
         "title": "Utilise l'API DAG pour traverser n'importe quelle structures de données basée sur des hash",
@@ -74,22 +74,22 @@
       },
       {
         "title": "libp2p est intégré",
-        "desc": "[libp2p](https://libp2p.io/) est la pile de networking modulaire qui a été créée pour IPFS, et maintenant vous pouvez l'utiliser directement via IPFS pour votre application."
+        "desc": "[libp2p](https://libp2p.io/) est la pile de networking modulaire qui a été créée pour IPFS, et vous pouvez maintenant l'utiliser directement via IPFS pour votre application."
       },
       {
         "title": "Exécuter en tant que processus d'arrière-plan",
-        "desc": "js-ipfs a aussi une option pour l'exécuter en tant que processus d'arrière-plan afin que vous puissiez interagir avec lui en utilisant l'API HTTP que vous utilisez déjà avec go-ipfs."
+        "desc": "js-ipfs a aussi une option pour l'exécuter comme daemon afin que vous puissiez interagir avec lui via l'API HTTP que vous utilisez déjà avec go-ipfs."
       },
       {
         "title": "Créer des adresses stables pour changer les données",
-        "desc": "Il est livré avec IPNS, l'InterPlanetary Naming System, un moyen d'utiliser des noms mutables pour distribuer les mises à jour de manière authentifiée et certifiée."
+        "desc": "Il est livré avec IPNS, l'InterPlanetary Naming System, un moyen d'utiliser des pointeurs mutables (enregistrements) pour distribuer les mises-à-jour de manière authentifiée et certifiée."
       }
     ]
   },
 
   "gettingStarted": {
     "sectionTitle": "Commencer",
-    "sectionDesc": "IPFS vous fournit une primitive d'indexation par le contenu de toutes vos données sur le DWeb. Vous pouver rendre des données accessibles ou accéder à des données existantes grâce à leur CID, le Content Identifier. Essayez-le ci-dessous ou explorez nos [tutoriaux ProtoSchool](https://proto.school/course/ipfs)!",
+    "sectionDesc": "IPFS vous donne une primitive d'Adressage par le Contenu pour toutes vos données sur le DWeb. Vous pouvez rendre vos données disponibles sur le réseau ou accéder à celles déjà presentes grâce au CID, le Content Identifier. Essayez juste en-dessous ou explorer nos [tutoriaux ProtoSchool](https://proto.school/course/ipfs)!",
     "addDataToIPFS": "Ajouter des données à IPFS",
     "output": "Sortie",
     "getDataFromIPFS": "Obtenir des données depuis IPFS",
@@ -100,20 +100,21 @@
 
   "serviceWorker": {
     "sectionTitle": "Passerelle du Service Worker",
-    "sectionDesc": "Transformez cette page en passerelle IPFS complète sans toucher à aucun serveur ni en utilisant HTTP pour récupérer le contenu du réseau IPFS! Oui, vous avez bien lu, la passerelle du Service Worker avec js-ipfs peut se connecter directement au réseau IPFS.",
+    "sectionDesc": "Transformez cette page en passerelle IPFS complète sans toucher à aucun serveur ni utiliser HTTP pour récupérer le contenu du réseau IPFS ! Oui, exactement, la passerelle utilisant le Service Worker et js-ipfs peut se connecter directement au réseau IPFS.",
     "activationSuccessTitle": "Félicitations ! Votre navigateur est maintenant une passerelle IPFS entièrement opérationnelle",
-    "activationSuccessText": "Chargez n'importe quel contenu comme vous le feriez normalement avec https://gateway.ipfs.io. Voici quelques exemples que vous pouvez essayer: \n - [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash}) \n - [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash}) \n - [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash}) \n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash}) \n Essayez avec n'importe quel autre hash en vous rendant sur https://js.ipfs.io/ipfs/<your hash>",
+    "activationSuccessText": "Chargez n'importe quel contenu comme vous le feriez normalement avec https://gateway.ipfs.io. Voici quelques exemples que vous pouvez essayer: \n - [ipfs.tech - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.tech/ipfs/{ipfsWebsiteHash}) \n - [js.ipfs.tech - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{jsIpfsWebsiteHash}) \n - [awesome.ipfs.tech - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{awesomeIpfsWebsiteHash}) \n - [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.tech/ipfs/{peerpadWebsiteHash}) \n Essayez avec n'importe quel autre hash en vous rendant sur https://js.ipfs.tech/ipfs/<your hash>",
     "toggleText": "Activer le Service Worker",
     "activatingToggleText": "Activation du Service Worker...",
     "activationErrorMessage": "Une erreur s'est produite lors de l'activation du Service Worker.",
     "deactivationErrorMessage": "Une erreur s'est produite lors de la désactivation du Service Worker",
-    "nonRootScopeWarningMessage": "Le Service Worker ne peut pas être activé lors de la visualisation à partir de cette URL. Essayez plutôt avec https://js.ipfs.io.",
+    "nonRootScopeWarningMessage": "Le Service Worker ne peut pas être activé lors de la visualisation à partir de cette URL. Essayez plutôt avec https://js.ipfs.tech.",
     "incompatibleMessageText": "Ce navigateur ne supporte pas les Service Worker.",
     "activatedToggleText": "Désactiver le Service Worker"
   },
 
   "whatArePeopleBuilding": {
-    "sectionTitle": "Ce que les gens construisent avec ",
+    "sectionTitle": "Ce que les gens construisent avec js-ipfs",
+    "sectionDesc": "",
     "list": [
       {
         "desc": "L'ensemble de Internet Archive, mais décentralisé. Accédez à plus de 40 millions d'objets de l'archive via le DWeb. Combine une passerelle et une interface JavaScript pour Firefox et Chrome."

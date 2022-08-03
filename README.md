@@ -1,8 +1,8 @@
-# [js.ipfs.io](https://js.ipfs.io) - The js-ipfs project Website.
+# [js.ipfs.tech](https://js.ipfs.tech) - The js-ipfs project Website.
 
-Welcome to the js.ipfs.io Website repo. This website uses [gatsbyjs](https://www.gatsbyjs.org/). Most of the website content is data-driven, you can check the [data](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/data) directory to see the sections information bundled as `js` files.
+Welcome to the js.ipfs.tech Website repo. This website uses [gatsbyjs](https://www.gatsbyjs.org/). Most of the website content is data-driven, you can check the [data](https://github.com/ipfs/js.ipfs.tech/tree/master/src/shared/data) directory to see the sections information bundled as `js` files.
 
-[![](https://ipfs.io/ipfs/QmRNFokLYeHZiSkXVCSmTKjbGAKCeP2pVZe5fbdvUWtsPL)](https://js.ipfs.io)
+[![](https://ipfs.io/ipfs/QmRNFokLYeHZiSkXVCSmTKjbGAKCeP2pVZe5fbdvUWtsPL)](https://js.ipfs.tech)
 
 ## Lead Maintainer
 
@@ -10,7 +10,7 @@ Welcome to the js.ipfs.io Website repo. This website uses [gatsbyjs](https://www
 
 ## Table of Contents
 
-- [js.ipfs.io - The js-ipfs project Website.](#jsipfsio---the-js-ipfs-project-website)
+- [js.ipfs.tech - The js-ipfs project Website.](#jsipfsio---the-js-ipfs-project-website)
   - [Lead Maintainer](#lead-maintainer)
   - [Table of Contents](#table-of-contents)
   - [Internationalization `i18n`](#internationalization-i18n)
@@ -69,7 +69,7 @@ $ tx pull -l pt
 
 Finally, commit changes to `./src/i18n.js` and `public/locales/`.
 
-**Note:** Newly added language(s) will be live at [js.ipfs.io](https://js.ipfs.io/) as soon as the `master` branch is updated.
+**Note:** Newly added language(s) will be live at [js.ipfs.tech](https://js.ipfs.tech/) as soon as the `master` branch is updated.
 
 ### Learn more on how to use Transifex
 
@@ -81,7 +81,7 @@ Finally, commit changes to `./src/i18n.js` and `public/locales/`.
 
 ## Listing a talk on the website
 
-You can add your talk to the website by creating a PR. You just need to add an object to the [`publicationsAndTalks`](https://github.com/ipfs/js.ipfs.io/blob/master/src/shared/data/publications-and-talks/index.js) array. Example, if you were to add a new entry, you would have to add the `link` to your talk and its `title`:
+You can add your talk to the website by creating a PR. You just need to add an object to the [`publicationsAndTalks`](https://github.com/ipfs/js.ipfs.tech/blob/master/src/shared/data/publications-and-talks/index.js) array. Example, if you were to add a new entry, you would have to add the `link` to your talk and its `title`:
 
 ```js
 const publicationsAndTalks = [
@@ -99,7 +99,7 @@ const publicationsAndTalks = [
 
 ## Want to show what's possible to build with `js-ipfs`?
 
-Sharing your app with us is very simple! You just need to host your code on [codesandbox](https://codesandbox.io/) and edit [`apps` array](https://github.com/ipfs/js.ipfs.io/blob/master/src/shared/data/what-you-can-build/index.js). Example, if you want to add a new app, you only have to add a new entry to the `apps` array by adding its title and the corresponding `codesandbox` share link:
+Sharing your app with us is very simple! You just need to host your code on [codesandbox](https://codesandbox.io/) and edit [`apps` array](https://github.com/ipfs/js.ipfs.tech/blob/master/src/shared/data/what-you-can-build/index.js). Example, if you want to add a new app, you only have to add a new entry to the `apps` array by adding its title and the corresponding `codesandbox` share link:
 
 ```js
 const apps = [
@@ -126,7 +126,7 @@ const apps = [
 ### Install
 
 ```sh
-> git clone https://github.com/ipfs/js.ipfs.io
+> git clone https://github.com/ipfs/js.ipfs.tech
 > npm ci
 ```
 
@@ -141,11 +141,11 @@ The following commands are available:
 
 ## Publish
 
-When a PR gets merged to master, it is deployed to [js.ipfs.io](https://js.ipfs.io/) by Fleek CI.
+When a PR gets merged to master, it is deployed to [js.ipfs.tech](https://js.ipfs.tech/) by Fleek CI.
 
 
 1. Wait for Fleek CI to build the project and add it to IPFS
-2. Finally, go to the [constants](https://github.com/ipfs/js.ipfs.io/tree/master/src/shared/constants) folder and paste the resulting hash on the `jsIpfsWebsite` property of the exported object.
+2. Finally, go to the [constants](https://github.com/ipfs/js.ipfs.tech/tree/master/src/shared/constants) folder and paste the resulting hash on the `jsIpfsWebsite` property of the exported object.
 
 ## License
 

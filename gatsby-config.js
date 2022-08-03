@@ -46,7 +46,7 @@ module.exports = {
         gtagConfig: {
           anonymize_ip: true,
           cookie_name: 'gaCookie',
-          cookie_domain: 'js.ipfs.io',
+          cookie_domain: 'js.ipfs.tech',
           cookie_expires: 0
         },
         pluginConfig: {

@@ -7,7 +7,7 @@
     "buttonLearnMore": "Belajarlah lagi",
     "buttonGithub": "Github",
     "buttonTwitter": "Twitter",
-    "buttonIrcFreenode": "IRC Freenode",
+    "buttonCommunity": "Komunitas",
     "buttonAddLanguage": "Tambahkan bahasa Anda"
   },
 
@@ -102,12 +102,12 @@
     "sectionTitle": "Gerbang Pekerja Layanan",
     "sectionDesc": "Ubah halaman ini menjadi Gerbang IPFS penuh tanpa menyentuh server apa pun atau menggunakan HTTP untuk mengambil konten dari Jaringan IPFS! Ya, Anda membacanya dengan benar, Gerbang Pekerja Layanan dengan js-ipfs dapat terhubung langsung ke Jaringan IPFS.",
     "activationSuccessTitle": "Selamat! Peramban Anda sekarang menjadi Gerbang IPFS yang beroperasi penuh",
-    "activationSuccessText": "Muat konten apa pun seperti yang biasa Anda lakukan dengan https://gateway.ipfs.io. Berikut adalah beberapa contoh untuk Anda coba:\n- [ipfs.io - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.io/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.io - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.io - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.io/ipfs/{awesomeIpfsWebsiteHash})\n- [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.io/ipfs/{peerpadWebsiteHash})\n\nCoba dengan hash lain dengan membuka https://js.ipfs.io/ipfs/<your hash>",
+    "activationSuccessText": "Muat konten apa pun seperti yang biasa Anda lakukan dengan https://gateway.ipfs.io. Berikut adalah beberapa contoh untuk Anda coba:\n- [ipfs.tech - /ipfs/{ipfsWebsiteHash}](https://js.ipfs.tech/ipfs/{ipfsWebsiteHash})\n- [js.ipfs.tech - /ipfs/{jsIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{jsIpfsWebsiteHash})\n- [awesome.ipfs.tech - /ipfs/{awesomeIpfsWebsiteHash}](https://js.ipfs.tech/ipfs/{awesomeIpfsWebsiteHash})\n- [peerpad.net - /ipfs/{peerpadWebsiteHash}](https://js.ipfs.tech/ipfs/{peerpadWebsiteHash})\n\nCoba dengan hash lain dengan membuka https://js.ipfs.tech/ipfs/<your hash>",
     "toggleText": "Aktifkan Pekerja Layanan",
     "activatingToggleText": "Mengaktifkan Pekerja Layanan...",
     "activationErrorMessage": "Terjadi kesalahan saat mengaktifkan Pekerja Layanan.",
     "deactivationErrorMessage": "Terjadi kesalahan saat menonaktifkan Pekerja Layanan.",
-    "nonRootScopeWarningMessage": "Pekerja Layanan tidak dapat diaktifkan saat melihat dari URL ini. Coba di https://js.ipfs.io sebagai gantinya.",
+    "nonRootScopeWarningMessage": "Pekerja Layanan tidak dapat diaktifkan saat melihat dari URL ini. Coba di https://js.ipfs.tech sebagai gantinya.",
     "incompatibleMessageText": "Peramban ini tidak mendukung Pekerja Layanan.",
     "activatedToggleText": "Nonaktifkan Pekerja Layanan"
   },
