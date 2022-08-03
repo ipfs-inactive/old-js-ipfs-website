@@ -67,11 +67,11 @@ class Layout extends Component {
   maybeRedirectToNewDomain () {
     // https://github.com/protocol/bifrost-infra/issues/2018#issue-1319432302
     const { href } = window.location
-		if (href.includes('js.ipfs.tech')) {
-			window.location.replace(href.replace('js.ipfs.tech', 'js.ipfs.tech'))
+		if (href.includes('js.ipfs.io')) {
+			window.location.replace(href.replace('js.ipfs.io', 'js.ipfs.tech'))
 		}
-		if (href.includes('js.ipfs.tech')) {
-			window.location.replace(href.replace('js.ipfs.tech', 'js-ipfs-tech'))
+		if (href.includes('js-ipfs-io')) {
+			window.location.replace(href.replace('js-ipfs-io', 'js-ipfs-tech'))
 		}
   }
 }
