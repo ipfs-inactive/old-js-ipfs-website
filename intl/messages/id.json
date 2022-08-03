@@ -126,7 +126,7 @@
         "desc": "Berikan kekuatan super Peramban Anda dengan Ekstensi Web IPFS. Sahabat IPFS adalah ekstensi yang dapat digunakan di peramban Chrome, Firefox, dan Brave untuk memberi Anda akses ke Jaringan IPFS dengan mulus. Ini juga mengemas fitur tambahan seperti berbagi berkas dan API untuk Pengembang Web."
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat) adalah aplikasi obrolan peer-to-peer tanpa server, terdistribusi, yang dibangun di atas OrbitDB. OrbitDB menggunakan [IPFS](https://ipfs.io) sebagai penyimpanan datanya dan [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) untuk menyinkronkan database dengan peer secara otomatis."
+        "desc": "[Orbit Chat](https://orbit.chat) adalah aplikasi obrolan peer-to-peer tanpa server, terdistribusi, yang dibangun di atas OrbitDB. OrbitDB menggunakan [IPFS](https://ipfs.tech) sebagai penyimpanan datanya dan [IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub) untuk menyinkronkan database dengan peer secara otomatis."
       }
     ]
   },

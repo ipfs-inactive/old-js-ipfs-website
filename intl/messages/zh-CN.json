@@ -126,7 +126,7 @@
         "desc": "IPFS web插件赋予了浏览器强大的功能。IPFS Companion是一个可用于Chrome，Firefox和Brave浏览器的插件，可让您轻松访问IPFS网络。它还包含其它特有的功能，如文件共享和供Web开发人员使用的API。"
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat) 是一个建立在OrbitDB之上的无服务器，分布式，点对点聊天应用程序。 OrbitDB使用[IPFS](https://ipfs.io)作为其数据存储，使用[IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub)和其它节点自动同步数据库。"
+        "desc": "[Orbit Chat](https://orbit.chat) 是一个建立在OrbitDB之上的无服务器，分布式，点对点聊天应用程序。 OrbitDB使用[IPFS](https://ipfs.tech)作为其数据存储，使用[IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub)和其它节点自动同步数据库。"
       }
     ]
   },

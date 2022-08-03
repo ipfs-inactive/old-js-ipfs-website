@@ -126,7 +126,7 @@
         "desc": "Gib deinem Browser Superkräfte mit den IPFS Web-Erweiterungen. IPFS Companion ist eine Erweiterung welche in Chrome, Firefox und dem Brave Browser verwendet werden kann um dir natlosen Zugang zum IPFS-Netzwerk zu ermöglichen. Es beinhaltet auch zusätzliche Funktionen wie file sharing und APIs für Web-Entwickler. "
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat) ist eine serverlose, verteilte, Peer-to-Peer-Chat-Anwendung, die auf OrbitDB basiert. OrbitDB verwendet das [IPFS](https://ipfs.io) als Datenspeicher und [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub), um Datenbanken automatisch mit Peers zu synchronisieren."
+        "desc": "[Orbit Chat](https://orbit.chat) ist eine serverlose, verteilte, Peer-to-Peer-Chat-Anwendung, die auf OrbitDB basiert. OrbitDB verwendet das [IPFS](https://ipfs.tech) als Datenspeicher und [IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub), um Datenbanken automatisch mit Peers zu synchronisieren."
       }
     ]
   },

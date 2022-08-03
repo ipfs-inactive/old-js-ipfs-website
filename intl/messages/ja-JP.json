@@ -125,7 +125,7 @@
         "desc": "IPFS ウェブ拡張機能でブラウザに超強力なパワーを与えましょう。IPFS Companion は、Chrome、Firefox、Brave Browsers で使用できる拡張機能で、IPFS ネットワークにシームレスにアクセスできます。また、Web 開発者向けのファイル共有や API などの追加機能も搭載しています。"
       },
       {
-        "desc": "Orbit Chat](https://orbit.chat)は、OrbitDBの上に構築されたサーバーレスの分散型ピアツーピアチャットアプリケーションです。OrbitDBは、データストレージとして[IPFS](https://ipfs.io)を使用し、データベースを自動的にピアと同期するために[IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub)を使用しています。"
+        "desc": "Orbit Chat](https://orbit.chat)は、OrbitDBの上に構築されたサーバーレスの分散型ピアツーピアチャットアプリケーションです。OrbitDBは、データストレージとして[IPFS](https://ipfs.tech)を使用し、データベースを自動的にピアと同期するために[IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub)を使用しています。"
       }
     ]
   },

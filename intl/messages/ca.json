@@ -125,7 +125,7 @@
         "desc": "Dota el teu Navegador de súper poders amb l'Extensió Web IPFS. L'Acompanyant IPFS és una extensió que pot ser utilitzada als navegadors Chrome, Firefox i Brave per donar-te accés a la xarxa IPFS. També inclou prestacions extra tals com la compartició d'arxius i APIs pels Desenvolupadors Web."
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat) és un xat serverless, distribuït i peer-to-peer construït sobre de l'OrbitDB. OrbitDB utilitza [IPFS](https://ipfs.io)  com a emmagatzematge de dades i [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) per sincronitzar automàticament les bases de dades amb els peers."
+        "desc": "[Orbit Chat](https://orbit.chat) és un xat serverless, distribuït i peer-to-peer construït sobre de l'OrbitDB. OrbitDB utilitza [IPFS](https://ipfs.tech)  com a emmagatzematge de dades i [IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub) per sincronitzar automàticament les bases de dades amb els peers."
       }
     ]
   },

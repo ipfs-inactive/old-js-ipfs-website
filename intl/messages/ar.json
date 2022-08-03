@@ -126,7 +126,7 @@
         "desc": "امنح متصفحك صلاحيات فائقة باستخدام ملحق ويب IPFS. يعد IPFS Companion امتدادًا يمكن استخدامه في Chrome و Firefox و Brave Browsers لمنحك الوصول إلى شبكة IPFS بسلاسة. كما أنه يحزم ميزات إضافية مثل مشاركة الملفات وواجهات برمجة التطبيقات لمطوري الويب."
       },
       {
-        "desc": "[Orbit Chat] (https://orbit.chat) هو تطبيق دردشة بدون خادم وموزع من نظير إلى نظير مبني على قمة OrbitDB. يستخدم OrbitDB [IPFS] (https://ipfs.io) كمخزن للبيانات و [IPFS Pubsub] (https://ipfs.io/blog/29-js-ipfs-pubsub) لمزامنة قواعد البيانات تلقائيًا مع أقرانهم."
+        "desc": "[Orbit Chat] (https://orbit.chat) هو تطبيق دردشة بدون خادم وموزع من نظير إلى نظير مبني على قمة OrbitDB. يستخدم OrbitDB [IPFS] (https://ipfs.tech) كمخزن للبيانات و [IPFS Pubsub] (https://blog.ipfs.io/29-js-ipfs-pubsub) لمزامنة قواعد البيانات تلقائيًا مع أقرانهم."
       }
     ]
   },

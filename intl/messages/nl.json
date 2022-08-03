@@ -125,7 +125,7 @@
         "desc": "Geef je browser superkrachten met de IPFS Web Extensie. IPFS Companion is een extensie die kan worden gebruikt in Chrome, Firefox en de Brave Browsers om gemakkelijk het IPFS-netwerk te benaderen. Het bevat ook extra functies, zoals het delen van bestanden en API's voor ontwikkelaars."
       },
       {
-        "desc": "[Orbit Chat] (https://orbit.chat) is een serverloze, gedistribueerde peer-to-peer chattoepassing die bovenop OrbitDB is gebouwd. OrbitDB gebruikt [IPFS] (https://ipfs.io) als gegevensopslag en [IPFS Pubsub] (https://ipfs.io/blog/29-js-ipfs-pubsub) om databases automatisch te synchroniseren met peers."
+        "desc": "[Orbit Chat] (https://orbit.chat) is een serverloze, gedistribueerde peer-to-peer chattoepassing die bovenop OrbitDB is gebouwd. OrbitDB gebruikt [IPFS] (https://ipfs.tech) als gegevensopslag en [IPFS Pubsub] (https://blog.ipfs.io/29-js-ipfs-pubsub) om databases automatisch te synchroniseren met peers."
       }
     ]
   },

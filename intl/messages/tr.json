@@ -126,7 +126,7 @@
         "desc": "IPFS Web Uzantısı ile Tarayıcınıza süper güçler verin. IPFS Companion, IPFS Ağına sorunsuz bir şekilde erişmenizi sağlamak için Chrome, Firefox ve Brave Browsers'da kullanılabilen bir uzantıdır. Ayrıca, Web Geliştiricileri için dosya paylaşımı ve UPA'lar gibi ekstra özellikleri de içerir."
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat), OrbitDB üzerine inşa edilmiş, sunucusuz, dağıtılmış, eşler arası bir sohbet uygulamasıdır. OrbitDB, veri depolama alanı olarak [IPFS](https://ipfs.io) ve veritabanlarını eşlerle otomatik olarak senkronize etmek için [IPFS Pubsub] (https://ipfs.io/blog/29-js-ipfs-pubsub) kullanır."
+        "desc": "[Orbit Chat](https://orbit.chat), OrbitDB üzerine inşa edilmiş, sunucusuz, dağıtılmış, eşler arası bir sohbet uygulamasıdır. OrbitDB, veri depolama alanı olarak [IPFS](https://ipfs.tech) ve veritabanlarını eşlerle otomatik olarak senkronize etmek için [IPFS Pubsub] (https://blog.ipfs.io/29-js-ipfs-pubsub) kullanır."
       }
     ]
   },
