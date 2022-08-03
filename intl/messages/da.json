@@ -125,7 +125,7 @@
         "desc": "Giv din browser superkræfter med IPFS web udvidelsen. IPFS Følgesvend er en udvidelse som kan benyttes i Chrome, Firefox og Brave browsere giver dig gnidningsfri adgang til IPFS netværket. Pakket med ekstra funktionalitet som eksempelvis fil-deling og API'er for web-udviklere."
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat) er et serverløst, distribueret, klient-til-klient chat program baseret på OrbitDB. OrbitDB benytter [IPFS](https://ipfs.io) som dets data fundament og [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) for automatisk at synkronisere databaser med andre klienter."
+        "desc": "[Orbit Chat](https://orbit.chat) er et serverløst, distribueret, klient-til-klient chat program baseret på OrbitDB. OrbitDB benytter [IPFS](https://ipfs.tech) som dets data fundament og [IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub) for automatisk at synkronisere databaser med andre klienter."
       }
     ]
   },

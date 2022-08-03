@@ -126,7 +126,7 @@
         "desc": "Dê super poderes ao seu navegador de Internet com a extensão web IPFS. O Complemento IPFS é uma extensão que pode ser adicionada no Chrome, Firefox e no Brave Browser para dar acesso à rede IPFS sem problemas. Também possui algumas funcionalidades adicionais como compartilhamento de arquivos e APIs para desenvolvedores web."
       },
       {
-        "desc": "O [Orbit Chat](https://orbit.chat) é um aplicativo de bate-papo par-a-par, distribuído e sem servidor feito em OrbitDB. O OrbitDB usa [IPFS](https://ipfs.io) para armazenamento de dados e [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) para sincronizar automaticamente as bases de dados com os pares."
+        "desc": "O [Orbit Chat](https://orbit.chat) é um aplicativo de bate-papo par-a-par, distribuído e sem servidor feito em OrbitDB. O OrbitDB usa [IPFS](https://ipfs.tech) para armazenamento de dados e [IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub) para sincronizar automaticamente as bases de dados com os pares."
       }
     ]
   },

@@ -125,7 +125,7 @@
         "desc": "Dodaj wsparcie dla IPFS do swojej przeglądarki. IPFS Companion jest rozszerzeniem dla Chrome, Firefox oraz Brave które umożliwia wygodny dostęp do zasobów sieci IPFS. Dodatkowo dostarcza funkcje takie jak szybkie udostępnianie plików oraz API dla webdeweloperów."
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat) to rozproszona aplikacja P2P umożliwiająca rozmowy tekstowe. Zbudowana przy użyciu OrbitDB, używa [IPFS](https://ipfs.io) jako repozytorium historycznych danych oraz [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) do ich synchronizacji między uczestnikami."
+        "desc": "[Orbit Chat](https://orbit.chat) to rozproszona aplikacja P2P umożliwiająca rozmowy tekstowe. Zbudowana przy użyciu OrbitDB, używa [IPFS](https://ipfs.tech) jako repozytorium historycznych danych oraz [IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub) do ich synchronizacji między uczestnikami."
       }
     ]
   },

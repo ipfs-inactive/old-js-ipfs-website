@@ -126,7 +126,7 @@
         "desc": "Dejte webovému prohlížeči rozšíření IPFS. IPFS Companion je rozšíření, které lze v prohlížečích Chrome, Firefox a Brave použít k bezproblémovému přístupu k síti IPFS. Obsahuje také další funkce, jako je sdílení souborů a API pro webové vývojáře."
       },
       {
-        "desc": "[Orbit Chat](https://orbit.chat) je serverová, distribuovaná, peer-to-peer chatová aplikace postavená na OrbitDB. OrbitDB používá jako úložiště dat [IPFS](https://ipfs.io) a [IPFS Pubsub](https://ipfs.io/blog/29-js-ipfs-pubsub) pro automatickou synchronizaci databází s uzly."
+        "desc": "[Orbit Chat](https://orbit.chat) je serverová, distribuovaná, peer-to-peer chatová aplikace postavená na OrbitDB. OrbitDB používá jako úložiště dat [IPFS](https://ipfs.tech) a [IPFS Pubsub](https://blog.ipfs.io/29-js-ipfs-pubsub) pro automatickou synchronizaci databází s uzly."
       }
     ]
   },
