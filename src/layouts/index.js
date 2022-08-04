@@ -68,14 +68,18 @@ class Layout extends Component {
   }
 
   maybeRedirectToNewDomain () {
+    const isBrowser = typeof window !== 'undefined'
+    if (!isBrowser) {
+      return
+    }
     // https://github.com/protocol/bifrost-infra/issues/2018#issue-1319432302
     const { href } = window.location
-		if (href.includes('js.ipfs.io')) {
-			window.location.replace(href.replace('js.ipfs.io', 'js.ipfs.tech'))
-		}
-		if (href.includes('js-ipfs-io')) {
-			window.location.replace(href.replace('js-ipfs-io', 'js-ipfs-tech'))
-		}
+    if (href.includes('js.ipfs.io')) {
+      window.location.replace(href.replace('js.ipfs.io', 'js.ipfs.tech'))
+    }
+    if (href.includes('js-ipfs-io')) {
+      window.location.replace(href.replace('js-ipfs-io', 'js-ipfs-tech'))
+    }
   }
 }
 
