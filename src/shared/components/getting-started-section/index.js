@@ -102,7 +102,7 @@ jsipfs cat ${cid}` } language='bash' />
             <p className={ styles.liveSnippetSubtitle }>{ messages.gettingStarted.usingGateway }</p>
             <Link className={ styles.liveSnippetLink } href={ `https://ipfs.io/ipfs/${cid}` }>{ `https://ipfs.io/ipfs/${cid}` }</Link>
           </div>
-          <Button translationId="buttonLearnMore" href="https://github.com/ipfs/js-ipfs/tree/master/examples#js-ipfs-examples-and-tutorials" />
+          <Button translationId="buttonLearnMore" href="https://github.com/ipfs-examples/js-ipfs-examples" />
         </div>
       </div>
     )
